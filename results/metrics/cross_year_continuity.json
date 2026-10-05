@@ -1,0 +1,163 @@
+{
+  "2001_2002": {
+    "locations_in_year_T": 314,
+    "locations_in_year_T_plus_1": 314,
+    "common_locations": 314,
+    "added_locations_count": 0,
+    "removed_locations_count": 0
+  },
+  "2002_2003": {
+    "locations_in_year_T": 314,
+    "locations_in_year_T_plus_1": 314,
+    "common_locations": 314,
+    "added_locations_count": 0,
+    "removed_locations_count": 0
+  },
+  "2003_2004": {
+    "locations_in_year_T": 314,
+    "locations_in_year_T_plus_1": 314,
+    "common_locations": 314,
+    "added_locations_count": 0,
+    "removed_locations_count": 0
+  },
+  "2004_2005": {
+    "locations_in_year_T": 314,
+    "locations_in_year_T_plus_1": 314,
+    "common_locations": 314,
+    "added_locations_count": 0,
+    "removed_locations_count": 0
+  },
+  "2005_2006": {
+    "locations_in_year_T": 314,
+    "locations_in_year_T_plus_1": 314,
+    "common_locations": 314,
+    "added_locations_count": 0,
+    "removed_locations_count": 0
+  },
+  "2006_2007": {
+    "locations_in_year_T": 314,
+    "locations_in_year_T_plus_1": 314,
+    "common_locations": 314,
+    "added_locations_count": 0,
+    "removed_locations_count": 0
+  },
+  "2007_2008": {
+    "locations_in_year_T": 314,
+    "locations_in_year_T_plus_1": 314,
+    "common_locations": 314,
+    "added_locations_count": 0,
+    "removed_locations_count": 0
+  },
+  "2008_2009": {
+    "locations_in_year_T": 314,
+    "locations_in_year_T_plus_1": 321,
+    "common_locations": 314,
+    "added_locations_count": 7,
+    "removed_locations_count": 0
+  },
+  "2009_2010": {
+    "locations_in_year_T": 321,
+    "locations_in_year_T_plus_1": 314,
+    "common_locations": 314,
+    "added_locations_count": 0,
+    "removed_locations_count": 7
+  },
+  "2010_2011": {
+    "locations_in_year_T": 314,
+    "locations_in_year_T_plus_1": 314,
+    "common_locations": 314,
+    "added_locations_count": 0,
+    "removed_locations_count": 0
+  },
+  "2011_2012": {
+    "locations_in_year_T": 314,
+    "locations_in_year_T_plus_1": 314,
+    "common_locations": 314,
+    "added_locations_count": 0,
+    "removed_locations_count": 0
+  },
+  "2012_2013": {
+    "locations_in_year_T": 314,
+    "locations_in_year_T_plus_1": 314,
+    "common_locations": 314,
+    "added_locations_count": 0,
+    "removed_locations_count": 0
+  },
+  "2013_2014": {
+    "locations_in_year_T": 314,
+    "locations_in_year_T_plus_1": 314,
+    "common_locations": 314,
+    "added_locations_count": 0,
+    "removed_locations_count": 0
+  },
+  "2014_2015": {
+    "locations_in_year_T": 314,
+    "locations_in_year_T_plus_1": 314,
+    "common_locations": 314,
+    "added_locations_count": 0,
+    "removed_locations_count": 0
+  },
+  "2015_2016": {
+    "locations_in_year_T": 314,
+    "locations_in_year_T_plus_1": 314,
+    "common_locations": 314,
+    "added_locations_count": 0,
+    "removed_locations_count": 0
+  },
+  "2016_2017": {
+    "locations_in_year_T": 314,
+    "locations_in_year_T_plus_1": 314,
+    "common_locations": 314,
+    "added_locations_count": 0,
+    "removed_locations_count": 0
+  },
+  "2017_2018": {
+    "locations_in_year_T": 314,
+    "locations_in_year_T_plus_1": 314,
+    "common_locations": 314,
+    "added_locations_count": 0,
+    "removed_locations_count": 0
+  },
+  "2018_2019": {
+    "locations_in_year_T": 314,
+    "locations_in_year_T_plus_1": 343,
+    "common_locations": 314,
+    "added_locations_count": 29,
+    "removed_locations_count": 0
+  },
+  "2019_2020": {
+    "locations_in_year_T": 343,
+    "locations_in_year_T_plus_1": 343,
+    "common_locations": 342,
+    "added_locations_count": 1,
+    "removed_locations_count": 1
+  },
+  "2020_2021": {
+    "locations_in_year_T": 343,
+    "locations_in_year_T_plus_1": 343,
+    "common_locations": 343,
+    "added_locations_count": 0,
+    "removed_locations_count": 0
+  },
+  "2021_2022": {
+    "locations_in_year_T": 343,
+    "locations_in_year_T_plus_1": 353,
+    "common_locations": 343,
+    "added_locations_count": 10,
+    "removed_locations_count": 0
+  },
+  "2022_2023": {
+    "locations_in_year_T": 353,
+    "locations_in_year_T_plus_1": 353,
+    "common_locations": 353,
+    "added_locations_count": 0,
+    "removed_locations_count": 0
+  },
+  "2023_2024": {
+    "locations_in_year_T": 353,
+    "locations_in_year_T_plus_1": 419,
+    "common_locations": 353,
+    "added_locations_count": 66,
+    "removed_locations_count": 0
+  }
+}

@@ -1,0 +1,110 @@
+# Configuration for Odisha Flood Intelligence & Early Warning System
+
+project:
+  name: "Odisha Flood Intelligence & Early Warning System"
+  subtitle: "Spatio-temporal flood prediction using 24 years of rainfall and SRC-derived flood observations"
+  version: "2.0.0"
+  random_seed: 42
+
+paths:
+  # Standardized Data Architecture Paths
+  raw_historical_dir: "data/raw/historical"
+  raw_operational_dir: "data/raw/operational"
+  processed_dir: "data/processed"
+  processed_historical_path: "data/processed/historical_2001_2024.csv"
+  processed_operational_path: "data/processed/operational_2025.csv"
+  predictions_dir: "data/predictions"
+  predictions_2025_path: "data/predictions/2025_flood_risk_predictions.csv"
+  
+  # Backward Compatibility Aliases
+  source_data_dir: "data/raw/historical"
+  combined_data_path: "data/processed/historical_2001_2024.csv"
+  external_data_dir: "data/external"
+  
+  # Model and Artifact Paths
+  models_dir: "models"
+  flood_models_dir: "models/flood_prediction"
+  downscaling_models_dir: "models/downscaling"
+  results_metrics_dir: "results/metrics"
+  results_plots_dir: "results/plots"
+  results_downscaling_dir: "results/downscaling"
+
+split:
+  train_years: [2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018]
+  val_years: [2019, 2020, 2021]
+  test_years: [2022, 2023, 2024]
+  unseen_inference_year: 2025
+
+target:
+  name: "Flood_Next_Day"
+  binary: true
+
+features:
+  id_cols:
+    - "District"
+    - "Block/Station"
+    - "Date"
+  temporal_cols:
+    - "Year"
+    - "Month_Number"
+    - "Day"
+    - "Day_of_Year"
+    - "Day_of_Week"
+    - "Month_sin"
+    - "Month_cos"
+  rainfall_cols:
+    - "Rainfall (mm)"
+    - "Rainfall_Missing"
+    - "Rainfall_Lag_1d"
+    - "Rainfall_Lag_2d"
+    - "Rainfall_Lag_3d"
+    - "Rainfall_Lag_7d"
+    - "Rainfall_Prev_3d_Sum"
+    - "Rainfall_Prev_7d_Sum"
+    - "Rainfall_Prev_15d_Sum"
+    - "Rainfall_Prev_30d_Sum"
+    - "Rainfall_Prev_3d_Max"
+    - "Rainfall_Prev_7d_Max"
+    - "Rainfall_Prev_15d_Max"
+    - "Rainfall_Prev_30d_Max"
+    - "Rainy_Days_Prev_3d"
+    - "Rainy_Days_Prev_7d"
+    - "Rainy_Days_Prev_15d"
+    - "Rainy_Days_Prev_30d"
+    - "Consecutive_Rainy_Days_Before"
+  same_day_flood_col: "Flood_Occurred"
+  target_col: "Flood_Next_Day"
+
+models:
+  logistic_regression:
+    max_iter: 1000
+    class_weight: "balanced"
+    solver: "lbfgs"
+  decision_tree:
+    max_depth: 8
+    min_samples_leaf: 50
+    class_weight: "balanced"
+    random_state: 42
+  random_forest:
+    n_estimators: 100
+    max_depth: 14
+    class_weight: "balanced_subsample"
+    n_jobs: -1
+    random_state: 42
+  xgboost:
+    n_estimators: 150
+    max_depth: 6
+    learning_rate: 0.05
+    scale_pos_weight: 1.0
+    random_state: 42
+    n_jobs: -1
+  ann:
+    hidden_layer_sizes: [64, 32]
+    activation: "relu"
+    max_iter: 50
+    random_state: 42
+
+risk_thresholds:
+  low_max: 0.30
+  moderate_max: 0.70
+  high_min: 0.70

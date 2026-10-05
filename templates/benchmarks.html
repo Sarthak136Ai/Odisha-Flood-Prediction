@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+
+{% block title %}Model Benchmarks | Flood Intelligence{% endblock %}
+{% block page_title %}Model Benchmarks & Probability Calibration Evaluation{% endblock %}
+
+{% block content %}
+<div class="container-fluid p-0">
+  <!-- Champion Model Performance Banner -->
+  <div class="dashboard-card mb-4" style="background: linear-gradient(135deg, rgba(15,28,56,0.95), rgba(0,180,216,0.1)); border-color: rgba(0,180,216,0.3);">
+    <div class="row align-items-center">
+      <div class="col-md-8">
+        <div class="d-flex align-items-center gap-2 mb-1">
+          <span class="badge bg-success px-2 py-1"><i class="fa-solid fa-crown me-1"></i> Production Champion Model</span>
+          <span class="badge bg-dark text-info">Trained on 2001–2018, Validated on 2019–2021, Tested on 2022–2024</span>
+        </div>
+        <h4 class="fw-bold text-light mb-1">Calibrated Balanced Logistic Regression (StandardScaler)</h4>
+        <p class="text-muted small mb-0">
+          Selected for state-wide deployment based on exceptional class-imbalance resilience, highest test PR-AUC (0.8306), minimal Brier score (0.0111), and reliable well-calibrated posterior probabilities.
+        </p>
+      </div>
+      <div class="col-md-4 text-md-end mt-3 mt-md-0">
+        <div class="d-inline-flex gap-3 text-center">
+          <div class="p-2 rounded bg-dark border border-secondary">
+            <div class="small text-muted">Test ROC-AUC</div>
+            <div class="h5 fw-bold text-success mb-0">0.9693</div>
+          </div>
+          <div class="p-2 rounded bg-dark border border-secondary">
+            <div class="small text-muted">Test PR-AUC</div>
+            <div class="h5 fw-bold text-success mb-0">0.8306</div>
+          </div>
+          <div class="p-2 rounded bg-dark border border-secondary">
+            <div class="small text-muted">Brier Score</div>
+            <div class="h5 fw-bold text-light mb-0">0.0111</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Full Model Comparison Table -->
+  <div class="dashboard-card mb-4">
+    <div class="card-header-clean">
+      <h3><i class="fa-solid fa-table text-cyan"></i> Comprehensive 5-Architecture Benchmark League Table</h3>
+      <span class="badge bg-secondary">Evaluated on Independent Test Set (2022–2024, 343,758 observations)</span>
+    </div>
+
+    <div class="table-responsive">
+      <table class="custom-table">
+        <thead>
+          <tr>
+            <th>Architecture / Pipeline</th>
+            <th>Optimal Threshold</th>
+            <th>Test ROC-AUC</th>
+            <th>Test PR-AUC</th>
+            <th>Test F1</th>
+            <th>Test Recall</th>
+            <th>Test Precision</th>
+            <th>Test Specificity</th>
+            <th>Brier Score</th>
+            <th>ECE Calibration</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for m in comparison_records %}
+          <tr {% if m.Model == 'Logistic Regression' %}class="table-active" style="background: rgba(0, 180, 216, 0.08);"{% endif %}>
+            <td class="fw-bold text-light">
+              {% if m.Model == 'Logistic Regression' %}<i class="fa-solid fa-check text-success me-1"></i>{% endif %}
+              {{ m.Model }}
+            </td>
+            <td class="text-warning fw-bold">{{ m.Optimal_Threshold|round(4) if m.Optimal_Threshold else '0.5000' }}</td>
+            <td class="text-success fw-bold">{{ m.Test_ROC_AUC|round(4) if m.Test_ROC_AUC else 'N/A' }}</td>
+            <td class="text-cyan fw-bold">{{ m.Test_PR_AUC|round(4) if m.Test_PR_AUC else 'N/A' }}</td>
+            <td class="fw-bold text-light">{{ m.Test_F1|round(4) if m.Test_F1 else 'N/A' }}</td>
+            <td class="text-info">{{ (m.Test_Recall * 100)|round(2) if m.Test_Recall else 'N/A' }}%</td>
+            <td class="text-info">{{ (m.Test_Precision * 100)|round(2) if m.Test_Precision else 'N/A' }}%</td>
+            <td class="text-muted">{{ (m.Test_Specificity * 100)|round(2) if m.Test_Specificity else 'N/A' }}%</td>
+            <td class="text-light">{{ m.Test_Brier_Score|round(4) if m.Test_Brier_Score else 'N/A' }}</td>
+            <td class="text-muted">{{ m.Test_Calibration_ECE|round(4) if m.Test_Calibration_ECE else 'N/A' }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Performance Plots Grid -->
+  <div class="row g-4 mb-4">
+    <div class="col-md-6">
+      <div class="dashboard-card h-100">
+        <div class="card-header-clean">
+          <h3><i class="fa-solid fa-chart-line text-info"></i> ROC Curves (Receiver Operating Characteristic)</h3>
+        </div>
+        <div class="text-center p-2">
+          <img src="{{ url_for('static', filename='images/plots/roc_curve.png') }}" class="img-fluid rounded border border-secondary" alt="ROC Curves">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="dashboard-card h-100">
+        <div class="card-header-clean">
+          <h3><i class="fa-solid fa-chart-area text-cyan"></i> Precision-Recall Curves (Class Imbalance Metric)</h3>
+        </div>
+        <div class="text-center p-2">
+          <img src="{{ url_for('static', filename='images/plots/precision_recall_curve.png') }}" class="img-fluid rounded border border-secondary" alt="Precision-Recall Curves">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="dashboard-card h-100">
+        <div class="card-header-clean">
+          <h3><i class="fa-solid fa-chart-simple text-warning"></i> Reliability & Probability Calibration Curves</h3>
+        </div>
+        <div class="text-center p-2">
+          <img src="{{ url_for('static', filename='images/plots/calibration_curves.png') }}" class="img-fluid rounded border border-secondary" alt="Calibration Curves">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="dashboard-card h-100">
+        <div class="card-header-clean">
+          <h3><i class="fa-solid fa-table-cells text-success"></i> Confusion Matrix (Test Set: 2022–2024)</h3>
+        </div>
+        <div class="text-center p-2">
+          <img src="{{ url_for('static', filename='images/plots/confusion_matrix.png') }}" class="img-fluid rounded border border-secondary" alt="Confusion Matrix">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,279 @@
+{% extends "base.html" %}
+
+{% block title %}Real-Time Forecaster | Flood Intelligence{% endblock %}
+{% block page_title %}Real-Time Flood Early Warning Forecaster{% endblock %}
+
+{% block content %}
+<div class="container-fluid p-0">
+  <div class="row g-4">
+    <!-- Left Column: Input Form -->
+    <div class="col-lg-6">
+      <div class="dashboard-card">
+        <div class="card-header-clean">
+          <h3><i class="fa-solid fa-cloud-bolt text-cyan"></i> Station Meteorological Inputs</h3>
+          <button type="button" class="btn btn-sm btn-outline-info" id="autoFillPresetBtn">
+            <i class="fa-solid fa-wand-magic-sparkles me-1"></i> Load Heavy Monsoon Preset
+          </button>
+        </div>
+
+        <form id="forecasterForm">
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
+              <label class="form-label-clean">District:</label>
+              <select id="predDistrict" name="district" class="form-control form-control-dark" required>
+                {% for d in districts %}
+                <option value="{{ d }}" {% if d == default_district %}selected{% endif %}>{{ d }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label-clean">Block / Station Name:</label>
+              <input type="text" id="predBlock" name="block" class="form-control form-control-dark" value="Banki" required>
+            </div>
+          </div>
+
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
+              <label class="form-label-clean">Forecast Date (Observation Time T):</label>
+              <input type="date" id="predDate" name="date" class="form-control form-control-dark" value="2025-08-15" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label-clean">Today's Precipitation (mm):</label>
+              <input type="number" step="0.1" min="0" max="600" id="predRainfall" name="rainfall" class="form-control form-control-dark" value="85.0" required>
+            </div>
+          </div>
+
+          <div class="p-3 mb-3 rounded bg-dark border border-secondary">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="fw-bold text-light small"><i class="fa-solid fa-clock-rotate-left text-warning me-1"></i> Antecedent & Lagged Rainfall Parameters</span>
+              <button type="button" class="btn btn-sm btn-outline-light py-0 px-2" id="autoDeriveLagsBtn" style="font-size: 11px;">
+                Auto-Derive from Daily Rain
+              </button>
+            </div>
+
+            <div class="row g-2">
+              <div class="col-6 col-sm-3">
+                <label class="text-muted" style="font-size: 10px;">Lag 1-Day (mm)</label>
+                <input type="number" step="0.1" min="0" id="predLag1" name="lag_1d" class="form-control form-control-dark form-control-sm" value="65.0">
+              </div>
+              <div class="col-6 col-sm-3">
+                <label class="text-muted" style="font-size: 10px;">Lag 2-Day (mm)</label>
+                <input type="number" step="0.1" min="0" id="predLag2" name="lag_2d" class="form-control form-control-dark form-control-sm" value="40.0">
+              </div>
+              <div class="col-6 col-sm-3">
+                <label class="text-muted" style="font-size: 10px;">Lag 3-Day (mm)</label>
+                <input type="number" step="0.1" min="0" id="predLag3" name="lag_3d" class="form-control form-control-dark form-control-sm" value="30.0">
+              </div>
+              <div class="col-6 col-sm-3">
+                <label class="text-muted" style="font-size: 10px;">Lag 7-Day (mm)</label>
+                <input type="number" step="0.1" min="0" id="predLag7" name="lag_7d" class="form-control form-control-dark form-control-sm" value="20.0">
+              </div>
+            </div>
+
+            <div class="row g-2 mt-2">
+              <div class="col-6 col-sm-3">
+                <label class="text-muted" style="font-size: 10px;">3-Day Sum (mm)</label>
+                <input type="number" step="0.1" min="0" id="predRf3d" name="rf_3d" class="form-control form-control-dark form-control-sm" value="190.0">
+              </div>
+              <div class="col-6 col-sm-3">
+                <label class="text-muted" style="font-size: 10px;">7-Day Sum (mm)</label>
+                <input type="number" step="0.1" min="0" id="predRf7d" name="rf_7d" class="form-control form-control-dark form-control-sm" value="280.0">
+              </div>
+              <div class="col-6 col-sm-3">
+                <label class="text-muted" style="font-size: 10px;">15-Day Sum (mm)</label>
+                <input type="number" step="0.1" min="0" id="predRf15d" name="rf_15d" class="form-control form-control-dark form-control-sm" value="410.0">
+              </div>
+              <div class="col-6 col-sm-3">
+                <label class="text-muted" style="font-size: 10px;">30-Day Sum (mm)</label>
+                <input type="number" step="0.1" min="0" id="predRf30d" name="rf_30d" class="form-control form-control-dark form-control-sm" value="580.0">
+              </div>
+            </div>
+
+            <div class="row g-2 mt-2">
+              <div class="col-6 col-sm-4">
+                <label class="text-muted" style="font-size: 10px;">Rainy Days (Prev 7d)</label>
+                <input type="number" min="0" max="7" id="predRainy7" name="rainy_7d" class="form-control form-control-dark form-control-sm" value="5">
+              </div>
+              <div class="col-6 col-sm-4">
+                <label class="text-muted" style="font-size: 10px;">Rainy Days (Prev 30d)</label>
+                <input type="number" min="0" max="30" id="predRainy30" name="rainy_30d" class="form-control form-control-dark form-control-sm" value="18">
+              </div>
+              <div class="col-12 col-sm-4">
+                <label class="text-muted" style="font-size: 10px;">Consecutive Rainy Days</label>
+                <input type="number" min="0" max="30" id="predConsec" name="consec_rainy" class="form-control form-control-dark form-control-sm" value="4">
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-primary-custom w-100 justify-content-center py-2 fs-6" id="submitPredictBtn">
+            <i class="fa-solid fa-bolt"></i> Generate Next-Day Flood Risk Prediction
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Right Column: Prediction Result Output -->
+    <div class="col-lg-6">
+      <div class="dashboard-card h-100 d-flex flex-column">
+        <div class="card-header-clean">
+          <h3><i class="fa-solid fa-gauge-simple-high text-warning"></i> Model Prediction Output (T+1 Forecast)</h3>
+          <span class="badge bg-dark text-info" id="predModelName">{{ frozen_model_name }}</span>
+        </div>
+
+        <div id="predOutputEmpty" class="text-center py-5 my-auto">
+          <i class="fa-solid fa-cloud-sun-rain fa-3x text-muted mb-3"></i>
+          <p class="text-muted">Enter meteorological observations and click <strong>Generate Prediction</strong>.</p>
+        </div>
+
+        <div id="predOutputCard" class="d-none flex-grow-1 d-flex flex-column justify-content-between">
+          <div>
+            <!-- Probability Gauge Card -->
+            <div class="p-4 rounded text-center mb-4" style="background: linear-gradient(135deg, rgba(15,28,56,0.9), rgba(21,36,69,0.9)); border: 1px solid var(--border-color);">
+              <div class="text-muted text-uppercase small fw-bold mb-1">Estimated Next-Day Flood Probability</div>
+              <div class="display-3 fw-bold text-cyan mb-2" id="outProbability">74.8%</div>
+              
+              <div class="mb-2">
+                <span class="badge-risk high px-3 py-2 fs-6" id="outRiskBadge">HIGH RISK</span>
+              </div>
+              
+              <div class="h6 fw-bold mt-3" id="outDecisionText" style="color: #ef4444;">
+                <i class="fa-solid fa-triangle-exclamation me-1"></i> CRITICAL: Elevated Flood Hazard Detected for Tomorrow
+              </div>
+              <div class="small text-muted">
+                Decision Threshold: <span class="text-light fw-bold">{{ optimal_threshold|round(4) }}</span> | Target: <span class="badge bg-secondary">Flood_Next_Day (T+1)</span>
+              </div>
+            </div>
+
+            <!-- Top Factors Attribution Table -->
+            <h5 class="text-light fs-6 fw-bold mb-2">
+              <i class="fa-solid fa-brain text-warning me-1"></i> Top Contributing Factors (SHAP Local Importance)
+            </h5>
+            <div class="table-responsive">
+              <table class="custom-table" id="outFactorsTable">
+                <thead>
+                  <tr>
+                    <th>Feature Name</th>
+                    <th>Value</th>
+                    <th>SHAP Contribution</th>
+                    <th>Impact Direction</th>
+                  </tr>
+                </thead>
+                <tbody id="outFactorsBody">
+                  <!-- Populated via JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="p-2 rounded bg-dark border border-secondary text-center small text-muted mt-3">
+            <i class="fa-solid fa-shield-halved text-success me-1"></i>
+            This warning is derived from calibrated statistical learning models for disaster mitigation planning.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("forecasterForm");
+    const autoDeriveBtn = document.getElementById("autoDeriveLagsBtn");
+    const autoFillBtn = document.getElementById("autoFillPresetBtn");
+
+    function deriveLags() {
+      const rf = parseFloat(document.getElementById("predRainfall").value) || 0;
+      document.getElementById("predLag1").value = (rf * 0.75).toFixed(1);
+      document.getElementById("predLag2").value = (rf * 0.50).toFixed(1);
+      document.getElementById("predLag3").value = (rf * 0.35).toFixed(1);
+      document.getElementById("predLag7").value = (rf * 0.20).toFixed(1);
+      
+      const s3 = rf + (rf * 0.75) + (rf * 0.50);
+      document.getElementById("predRf3d").value = s3.toFixed(1);
+      document.getElementById("predRf7d").value = (s3 + 60).toFixed(1);
+      document.getElementById("predRf15d").value = (s3 + 140).toFixed(1);
+      document.getElementById("predRf30d").value = (s3 + 280).toFixed(1);
+    }
+
+    autoDeriveBtn.addEventListener("click", deriveLags);
+
+    autoFillBtn.addEventListener("click", () => {
+      document.getElementById("predDistrict").value = "CUTTACK";
+      document.getElementById("predBlock").value = "Banki";
+      document.getElementById("predRainfall").value = 135.0;
+      deriveLags();
+      document.getElementById("predRainy7").value = 6;
+      document.getElementById("predRainy30").value = 22;
+      document.getElementById("predConsec").value = 5;
+    });
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById("submitPredictBtn");
+      btn.disabled = true;
+      btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Running Frozen Inference Pipeline...`;
+
+      const formData = new FormData(form);
+      const payload = Object.fromEntries(formData.entries());
+
+      try {
+        const res = await fetch("/api/predict", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+        btn.disabled = false;
+        btn.innerHTML = `<i class="fa-solid fa-bolt"></i> Generate Next-Day Flood Risk Prediction`;
+
+        if (data.status === "success") {
+          document.getElementById("predOutputEmpty").classList.add("d-none");
+          const outCard = document.getElementById("predOutputCard");
+          outCard.classList.remove("d-none");
+
+          const probPct = (data.flood_probability * 100).toFixed(1);
+          document.getElementById("outProbability").textContent = `${probPct}%`;
+
+          const riskBadge = document.getElementById("outRiskBadge");
+          riskBadge.className = `badge-risk ${data.risk_level.toLowerCase()} px-3 py-2 fs-6`;
+          riskBadge.textContent = `${data.risk_level} RISK`;
+
+          const decText = document.getElementById("outDecisionText");
+          if (data.risk_level === "HIGH") {
+            decText.style.color = "#ef4444";
+            decText.innerHTML = `<i class="fa-solid fa-triangle-exclamation me-1"></i> CRITICAL: Elevated Flood Hazard Detected for Tomorrow`;
+          } else if (data.risk_level === "MODERATE") {
+            decText.style.color = "#f59e0b";
+            decText.innerHTML = `<i class="fa-solid fa-triangle-exclamation me-1"></i> WARNING: Moderate Inundation Potential (Monitor Catchment Telemetry)`;
+          } else {
+            decText.style.color = "#10b981";
+            decText.innerHTML = `<i class="fa-solid fa-circle-check me-1"></i> ADVISORY: Normal Riverine Flow (Low Flood Probability)`;
+          }
+
+          // Populate Factors Table
+          const tbody = document.getElementById("outFactorsBody");
+          tbody.innerHTML = "";
+          (data.top_contributing_factors || []).forEach(f => {
+            const tr = document.createElement("tr");
+            tr.innerHTML = `
+              <td class="fw-bold text-light">${f.feature}</td>
+              <td class="text-cyan">${f.value}</td>
+              <td class="fw-bold ${f.contribution > 0 ? 'text-danger' : 'text-success'}">${f.contribution > 0 ? '+' : ''}${f.contribution}</td>
+              <td><span class="badge ${f.contribution > 0 ? 'bg-danger' : 'bg-success'}">${f.direction}</span></td>
+            `;
+            tbody.appendChild(tr);
+          });
+        } else {
+          alert(`Prediction error: ${data.message}`);
+        }
+      } catch (err) {
+        btn.disabled = false;
+        btn.innerHTML = `<i class="fa-solid fa-bolt"></i> Generate Next-Day Flood Risk Prediction`;
+        alert("Failed to connect to prediction engine.");
+      }
+    });
+  });
+</script>
+{% endblock %}

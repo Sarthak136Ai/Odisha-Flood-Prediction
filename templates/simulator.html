@@ -1,0 +1,240 @@
+{% extends "base.html" %}
+
+{% block title %}What-If Simulator | Flood Intelligence{% endblock %}
+{% block page_title %}Controlled What-If Flood Risk Simulator{% endblock %}
+
+{% block content %}
+<div class="container-fluid p-0">
+  <div class="row g-4">
+    <!-- Left Column: Simulation Controls -->
+    <div class="col-lg-5">
+      <div class="dashboard-card h-100">
+        <div class="card-header-clean">
+          <h3><i class="fa-solid fa-sliders text-warning"></i> Scenario Parameter Controls</h3>
+          <span class="badge bg-secondary">Model Sensitivity</span>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label-clean">Target District:</label>
+          <select id="simDistrict" class="form-control form-control-dark">
+            {% for d in districts %}
+            <option value="{{ d }}" {% if d == default_district %}selected{% endif %}>{{ d }}</option>
+            {% endfor %}
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label-clean">Seasonal Timing (Month):</label>
+          <select id="simMonth" class="form-control form-control-dark">
+            <option value="6">June (Monsoon Onset)</option>
+            <option value="7">July (Monsoon Active)</option>
+            <option value="8" selected>August (Peak Vulnerability)</option>
+            <option value="9">September (Late Monsoon / Depressions)</option>
+            <option value="10">October (Post-Monsoon Cyclones)</option>
+          </select>
+        </div>
+
+        <div class="mb-4">
+          <div class="d-flex justify-content-between align-items-center mb-1">
+            <label class="form-label-clean mb-0">Baseline Observed Precipitation:</label>
+            <span class="fw-bold text-cyan" id="baseRainLabel">30.0 mm</span>
+          </div>
+          <input type="range" class="form-range" id="baseRainSlider" min="0" max="150" step="5" value="30">
+        </div>
+
+        <div class="mb-4 p-3 rounded bg-dark border border-secondary">
+          <div class="d-flex justify-content-between align-items-center mb-1">
+            <label class="form-label-clean text-warning fw-bold mb-0">Simulated Hypothetical Rain:</label>
+            <span class="fw-bold text-warning fs-5" id="simRainLabel">95.0 mm</span>
+          </div>
+          <input type="range" class="form-range" id="simRainSlider" min="0" max="250" step="5" value="95">
+          <div class="d-flex justify-content-between small text-muted mt-1">
+            <span>0 mm (Dry)</span>
+            <span>64.5 mm (Heavy)</span>
+            <span>115.5 mm (Very Heavy)</span>
+            <span>250 mm (Extreme)</span>
+          </div>
+        </div>
+
+        <div class="d-grid gap-2">
+          <button class="btn-primary-custom justify-content-center py-2" id="runSimulationBtn">
+            <i class="fa-solid fa-play"></i> Compute Scenario Shift & Sensitivity
+          </button>
+        </div>
+
+        <div class="mt-4 p-2 rounded bg-dark border border-secondary text-center small text-muted">
+          <i class="fa-solid fa-circle-info text-info me-1"></i>
+          <strong>Notice:</strong> This is a statistical model-based what-if sensitivity analysis, not a numerical hydraulic 2D floodplain flow simulation.
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Simulation Output & Comparison -->
+    <div class="col-lg-7">
+      <div class="dashboard-card mb-4">
+        <div class="card-header-clean">
+          <h3><i class="fa-solid fa-scale-balanced text-cyan"></i> Baseline vs. Simulated Scenario Comparison</h3>
+        </div>
+
+        <div class="row g-3 text-center">
+          <div class="col-sm-4">
+            <div class="p-3 rounded bg-dark border border-secondary h-100">
+              <div class="text-muted small text-uppercase">Baseline Probability</div>
+              <div class="display-6 fw-bold text-light my-2" id="outBaseProb">4.2%</div>
+              <span class="badge-risk low" id="outBaseRisk">LOW RISK</span>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="p-3 rounded bg-dark border border-secondary h-100">
+              <div class="text-muted small text-uppercase">Simulated Probability</div>
+              <div class="display-6 fw-bold text-warning my-2" id="outSimProb">68.5%</div>
+              <span class="badge-risk moderate" id="outSimRisk">MODERATE RISK</span>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="p-3 rounded bg-dark border border-secondary h-100">
+              <div class="text-muted small text-uppercase">Net Probability Shift</div>
+              <div class="display-6 fw-bold text-danger my-2" id="outDeltaProb">+64.3%</div>
+              <span class="badge bg-danger text-light">Significant Surge</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sensitivity Response Curve -->
+      <div class="dashboard-card">
+        <div class="card-header-clean">
+          <h3><i class="fa-solid fa-chart-line text-info"></i> Non-Linear Flood Risk Sensitivity Curve</h3>
+          <span class="text-muted small">T+1 Probability vs. 24-Hour Precipitation Volume</span>
+        </div>
+
+        <div style="height: 280px;">
+          <canvas id="sensitivityChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  let sensChart = null;
+
+  function renderSensitivityChart(curvePoints, currentSimRain) {
+    const ctx = document.getElementById("sensitivityChart");
+    if (!ctx) return;
+
+    if (sensChart) {
+      sensChart.destroy();
+    }
+
+    const labels = curvePoints.map(p => `${p.rainfall_mm}mm`);
+    const data = curvePoints.map(p => (p.probability * 100).toFixed(1));
+
+    sensChart = new Chart(ctx, {
+      type: "line",
+      data: {
+        labels: labels,
+        datasets: [{
+          label: "Estimated Flood Probability (%)",
+          data: data,
+          borderColor: "#00b4d8",
+          backgroundColor: "rgba(0, 180, 216, 0.15)",
+          borderWidth: 2.5,
+          fill: true,
+          tension: 0.3,
+          pointRadius: curvePoints.map(p => Math.abs(p.rainfall_mm - currentSimRain) < 10 ? 8 : 3),
+          pointBackgroundColor: curvePoints.map(p => Math.abs(p.rainfall_mm - currentSimRain) < 10 ? "#ef4444" : "#00b4d8")
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          x: { grid: { color: "rgba(255, 255, 255, 0.05)" }, ticks: { color: "#64748b" } },
+          y: {
+            min: 0,
+            max: 100,
+            title: { display: true, text: "Flood Probability (%)", color: "#00b4d8" },
+            grid: { color: "rgba(255, 255, 255, 0.05)" },
+            ticks: { color: "#94a3b8" }
+          }
+        },
+        plugins: {
+          legend: { labels: { color: "#94a3b8" } }
+        }
+      }
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const baseSlider = document.getElementById("baseRainSlider");
+    const simSlider = document.getElementById("simRainSlider");
+    const baseLabel = document.getElementById("baseRainLabel");
+    const simLabel = document.getElementById("simRainLabel");
+    const runBtn = document.getElementById("runSimulationBtn");
+
+    baseSlider.addEventListener("input", (e) => {
+      baseLabel.textContent = `${e.target.value}.0 mm`;
+    });
+
+    simSlider.addEventListener("input", (e) => {
+      simLabel.textContent = `${e.target.value}.0 mm`;
+    });
+
+    async function executeSimulation() {
+      const bRain = parseFloat(baseSlider.value);
+      const sRain = parseFloat(simSlider.value);
+      const month = parseInt(document.getElementById("simMonth").value);
+
+      runBtn.disabled = true;
+      runBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Simulating...`;
+
+      try {
+        const res = await fetch("/api/simulate", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            baseline_rainfall: bRain,
+            simulated_rainfall: sRain,
+            month: month
+          })
+        });
+        const data = await res.json();
+        runBtn.disabled = false;
+        runBtn.innerHTML = `<i class="fa-solid fa-play"></i> Compute Scenario Shift & Sensitivity`;
+
+        if (data.status === "success") {
+          document.getElementById("outBaseProb").textContent = `${(data.baseline_probability * 100).toFixed(1)}%`;
+          const baseBadge = document.getElementById("outBaseRisk");
+          baseBadge.className = `badge-risk ${data.baseline_risk.toLowerCase()}`;
+          baseBadge.textContent = `${data.baseline_risk} RISK`;
+
+          document.getElementById("outSimProb").textContent = `${(data.simulated_probability * 100).toFixed(1)}%`;
+          const simBadge = document.getElementById("outSimRisk");
+          simBadge.className = `badge-risk ${data.simulated_risk.toLowerCase()}`;
+          simBadge.textContent = `${data.simulated_risk} RISK`;
+
+          const deltaEl = document.getElementById("outDeltaProb");
+          const deltaVal = data.delta_pct;
+          deltaEl.textContent = `${deltaVal > 0 ? '+' : ''}${deltaVal.toFixed(1)}%`;
+          deltaEl.className = `display-6 fw-bold ${deltaVal > 0 ? 'text-danger' : 'text-success'} my-2`;
+
+          renderSensitivityChart(data.sensitivity_curve, sRain);
+        }
+      } catch (err) {
+        runBtn.disabled = false;
+        runBtn.innerHTML = `<i class="fa-solid fa-play"></i> Compute Scenario Shift & Sensitivity`;
+        console.error("Simulation error:", err);
+      }
+    }
+
+    runBtn.addEventListener("click", executeSimulation);
+    // Initial run
+    executeSimulation();
+  });
+</script>
+{% endblock %}

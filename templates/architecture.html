@@ -1,0 +1,148 @@
+{% extends "base.html" %}
+
+{% block title %}System Architecture | Flood Intelligence{% endblock %}
+{% block page_title %}System Architecture, Methodology & Governance{% endblock %}
+
+{% block content %}
+<div class="container-fluid p-0">
+  <!-- System Architecture Diagram Card -->
+  <div class="dashboard-card mb-4">
+    <div class="card-header-clean">
+      <h3><i class="fa-solid fa-sitemap text-cyan"></i> End-to-End System Methodology & Dual-Pipeline Architecture</h3>
+      <span class="badge bg-secondary">State-Wide Multi-Station Pipeline</span>
+    </div>
+
+    <div class="row g-4 mb-4">
+      <!-- Pipeline 1: Historical Training & Benchmark -->
+      <div class="col-lg-6">
+        <div class="p-4 rounded bg-dark border border-secondary h-100">
+          <h5 class="text-cyan fw-bold mb-3">
+            <i class="fa-solid fa-database me-2"></i> 1. Historical Benchmark Pipeline (2001–2024)
+          </h5>
+          <div class="d-flex flex-column gap-2 text-muted small">
+            <div class="p-2 rounded bg-black border border-dark text-light">
+              <strong class="text-cyan">1. Raw Telemetry Ingestion:</strong> 24 Annual CSVs (2001.csv – 2024.csv), 2,752,252 daily station observations across 30 districts.
+            </div>
+            <div class="text-center text-cyan"><i class="fa-solid fa-arrow-down"></i></div>
+            <div class="p-2 rounded bg-black border border-dark text-light">
+              <strong class="text-cyan">2. Feature Engineering & Quality Audit:</strong> Lagged precipitation (1d, 2d, 3d, 7d), cumulative rolling sums/max (3d, 7d, 15d, 30d), antecedent wet spell counts, cyclical month harmonics. Zero data leakage verified.
+            </div>
+            <div class="text-center text-cyan"><i class="fa-solid fa-arrow-down"></i></div>
+            <div class="p-2 rounded bg-black border border-dark text-light">
+              <strong class="text-cyan">3. Chronological Temporal Partition:</strong> Train: 2001–2018 (75%), Validation: 2019–2021 (12.5%), Independent Test: 2022–2024 (12.5%).
+            </div>
+            <div class="text-center text-cyan"><i class="fa-solid fa-arrow-down"></i></div>
+            <div class="p-2 rounded bg-black border border-dark text-light">
+              <strong class="text-cyan">4. Model Benchmark & Calibration:</strong> Evaluated Logistic Regression, Decision Trees, Random Forest, XGBoost, and ANN. Calibrated optimal threshold (0.8345) to balance precision/recall under class imbalance.
+            </div>
+            <div class="text-center text-cyan"><i class="fa-solid fa-arrow-down"></i></div>
+            <div class="p-2 rounded bg-black border border-dark text-light">
+              <strong class="text-cyan">5. Model Freezing:</strong> Weights, threshold (0.8345), and feature schema frozen in <code>best_model.pkl</code>.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pipeline 2: Operational 2025 Inference -->
+      <div class="col-lg-6">
+        <div class="p-4 rounded bg-dark border border-secondary h-100">
+          <h5 class="text-warning fw-bold mb-3">
+            <i class="fa-solid fa-satellite-dish me-2"></i> 2. Operational Unseen Inference Pipeline (2025)
+          </h5>
+          <div class="d-flex flex-column gap-2 text-muted small">
+            <div class="p-2 rounded bg-black border border-dark text-light">
+              <strong class="text-warning">1. Unseen Operational Ingestion:</strong> <code>data/raw/operational/2025.csv</code> (114,610 daily records, unobserved ground truth).
+            </div>
+            <div class="text-center text-warning"><i class="fa-solid fa-arrow-down"></i></div>
+            <div class="p-2 rounded bg-black border border-dark text-light">
+              <strong class="text-warning">2. Schema & District Validation:</strong> Strictly verifies 30 standard district names, ISO dates, null values, and enforces target guardrail (no fabricated flood label).
+            </div>
+            <div class="text-center text-warning"><i class="fa-solid fa-arrow-down"></i></div>
+            <div class="p-2 rounded bg-black border border-dark text-light">
+              <strong class="text-warning">3. Dec 2024 Warm-Up Context Stitching:</strong> Stitches preceding 35 days of December 2024 rainfall to prevent rolling window boundary zero-fill distortions.
+            </div>
+            <div class="text-center text-warning"><i class="fa-solid fa-arrow-down"></i></div>
+            <div class="p-2 rounded bg-black border border-dark text-light">
+              <strong class="text-warning">4. Frozen Model Inference & SHAP Drivers:</strong> Applies frozen model to estimate flood probabilities, classify risk tiers (Low, Moderate, High), and isolate top 3 risk factors.
+            </div>
+            <div class="text-center text-warning"><i class="fa-solid fa-arrow-down"></i></div>
+            <div class="p-2 rounded bg-black border border-dark text-light">
+              <strong class="text-warning">5. Independent Retrospective Engine:</strong> Evaluates future SRC ground truth without ever retraining or modifying the frozen operational model.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Feature Schema Data Dictionary Table -->
+  <div class="dashboard-card">
+    <div class="card-header-clean">
+      <h3><i class="fa-solid fa-book-bookmark text-info"></i> Model Feature Schema & Data Dictionary (20 Features)</h3>
+    </div>
+
+    <div class="table-responsive">
+      <table class="custom-table">
+        <thead>
+          <tr>
+            <th>Feature Name</th>
+            <th>Type</th>
+            <th>Hydrological & Statistical Description</th>
+            <th>Leakage Guardrail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="fw-bold text-light">Rainfall (mm)</td>
+            <td>Continuous (Float)</td>
+            <td>Total precipitation recorded during observation day T.</td>
+            <td><span class="badge bg-success">Observed at T</span></td>
+          </tr>
+          <tr>
+            <td class="fw-bold text-light">Rainfall_Lag_1d ... 7d</td>
+            <td>Continuous (Float)</td>
+            <td>Precipitation recorded 1, 2, 3, and 7 days prior to observation day T.</td>
+            <td><span class="badge bg-success">Historical Shift</span></td>
+          </tr>
+          <tr>
+            <td class="fw-bold text-light">Rainfall_Prev_3d ... 30d_Sum</td>
+            <td>Continuous (Float)</td>
+            <td>Cumulative antecedent rainfall sums over 3, 7, 15, and 30-day rolling windows.</td>
+            <td><span class="badge bg-success">Shift(1) Rolling</span></td>
+          </tr>
+          <tr>
+            <td class="fw-bold text-light">Rainfall_Prev_3d ... 30d_Max</td>
+            <td>Continuous (Float)</td>
+            <td>Peak single-day rainfall recorded within previous 3, 7, 15, and 30-day windows.</td>
+            <td><span class="badge bg-success">Shift(1) Rolling</span></td>
+          </tr>
+          <tr>
+            <td class="fw-bold text-light">Rainy_Days_Prev_3d ... 30d</td>
+            <td>Discrete (Integer)</td>
+            <td>Count of days with rainfall &ge; 2.5 mm (IMD rainy day standard) in prior windows.</td>
+            <td><span class="badge bg-success">Antecedent Count</span></td>
+          </tr>
+          <tr>
+            <td class="fw-bold text-light">Consecutive_Rainy_Days_Before</td>
+            <td>Discrete (Integer)</td>
+            <td>Number of consecutive uninterrupted rainy days leading up to day T.</td>
+            <td><span class="badge bg-success">Wet Spell Multiplier</span></td>
+          </tr>
+          <tr>
+            <td class="fw-bold text-light">Month_sin / Month_cos</td>
+            <td>Continuous (Float)</td>
+            <td>Cyclical sinusoidal transformation of calendar month capturing monsoon seasonality.</td>
+            <td><span class="badge bg-success">Deterministic Cycle</span></td>
+          </tr>
+          <tr style="background: rgba(239, 68, 68, 0.08);">
+            <td class="fw-bold text-warning">Flood_Next_Day</td>
+            <td>Binary (0 / 1)</td>
+            <td><strong>Primary Target Variable:</strong> Inundation observation on day T+1.</td>
+            <td><span class="badge bg-danger">Target Only (Not Feature)</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}

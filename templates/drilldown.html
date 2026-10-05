@@ -1,0 +1,265 @@
+{% extends "base.html" %}
+
+{% block title %}Station Drilldown | Flood Intelligence{% endblock %}
+{% block page_title %}District & Block Level Station Inspection{% endblock %}
+
+{% block content %}
+<div class="container-fluid p-0">
+  <!-- Top Selection Controls -->
+  <div class="dashboard-card mb-4">
+    <div class="card-header-clean">
+      <h3><i class="fa-solid fa-filter text-info"></i> Station & Observation Selector</h3>
+      <span class="text-muted small">Hierarchical Query across 30 Districts & 354 Blocks</span>
+    </div>
+    
+    <div class="row g-3">
+      <div class="col-md-4">
+        <label class="form-label-clean">Select District:</label>
+        <select id="districtSelect" class="form-control form-control-dark">
+          {% for d in districts %}
+          <option value="{{ d }}" {% if d == default_district %}selected{% endif %}>{{ d }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="col-md-4">
+        <label class="form-label-clean">Select Block / Station:</label>
+        <select id="blockSelect" class="form-control form-control-dark">
+          {% for b in default_blocks %}
+          <option value="{{ b }}">{{ b }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="col-md-4">
+        <label class="form-label-clean">Observation Date:</label>
+        <input type="date" id="dateInput" class="form-control form-control-dark" value="2025-08-15">
+      </div>
+    </div>
+  </div>
+
+  <!-- Loading Indicator -->
+  <div id="loadingSpinner" class="text-center py-5 d-none">
+    <i class="fa-solid fa-spinner fa-spin fa-2x text-cyan"></i>
+    <p class="text-muted mt-2">Fetching hydrological records & running SHAP attribution...</p>
+  </div>
+
+  <!-- Main Station Inspection Display -->
+  <div id="stationDisplay">
+    <!-- Risk & Probability Header -->
+    <div class="row g-3 mb-4">
+      <div class="col-lg-4">
+        <div class="dashboard-card h-100 text-center d-flex flex-column justify-content-center">
+          <div class="kpi-label mb-2">Estimated Flood Probability</div>
+          <div class="display-4 fw-bold text-cyan" id="probDisplay">42.0%</div>
+          <div class="mt-2" id="riskBadgeContainer">
+            <span class="badge-risk moderate" id="riskBadge">MODERATE RISK</span>
+          </div>
+          <small class="text-muted mt-2" id="thresholdNote">Model Decision Threshold: {{ optimal_threshold|round(4) }}</small>
+        </div>
+      </div>
+
+      <div class="col-lg-8">
+        <div class="dashboard-card h-100">
+          <div class="card-header-clean">
+            <h3><i class="fa-solid fa-droplet text-primary"></i> Precipitation & Antecedent Wetness Signals</h3>
+            <span class="badge bg-dark text-info" id="stationNameBadge">CUTTACK / Banki</span>
+          </div>
+
+          <div class="row g-3 text-center">
+            <div class="col-sm-3 col-6">
+              <div class="p-2 rounded bg-dark border border-secondary">
+                <div class="text-muted small">Daily Rain</div>
+                <div class="h5 fw-bold text-light mb-0" id="valDailyRain">45.0 mm</div>
+              </div>
+            </div>
+            <div class="col-sm-3 col-6">
+              <div class="p-2 rounded bg-dark border border-secondary">
+                <div class="text-muted small">3-Day Cumulative</div>
+                <div class="h5 fw-bold text-light mb-0" id="val3dRain">90.0 mm</div>
+              </div>
+            </div>
+            <div class="col-sm-3 col-6">
+              <div class="p-2 rounded bg-dark border border-secondary">
+                <div class="text-muted small">7-Day Cumulative</div>
+                <div class="h5 fw-bold text-light mb-0" id="val7dRain">160.0 mm</div>
+              </div>
+            </div>
+            <div class="col-sm-3 col-6">
+              <div class="p-2 rounded bg-dark border border-secondary">
+                <div class="text-muted small">15-Day Cumulative</div>
+                <div class="h5 fw-bold text-light mb-0" id="val15dRain">280.0 mm</div>
+              </div>
+            </div>
+
+            <div class="col-sm-3 col-6">
+              <div class="p-2 rounded bg-dark border border-secondary">
+                <div class="text-muted small">30-Day Cumulative</div>
+                <div class="h5 fw-bold text-light mb-0" id="val30dRain">410.0 mm</div>
+              </div>
+            </div>
+            <div class="col-sm-3 col-6">
+              <div class="p-2 rounded bg-dark border border-secondary">
+                <div class="text-muted small">Rainy Days (7d)</div>
+                <div class="h5 fw-bold text-light mb-0" id="valRainy7d">5 days</div>
+              </div>
+            </div>
+            <div class="col-sm-3 col-6">
+              <div class="p-2 rounded bg-dark border border-secondary">
+                <div class="text-muted small">Rainy Days (30d)</div>
+                <div class="h5 fw-bold text-light mb-0" id="valRainy30d">18 days</div>
+              </div>
+            </div>
+            <div class="col-sm-3 col-6">
+              <div class="p-2 rounded bg-dark border border-secondary">
+                <div class="text-muted small">Consecutive Rain</div>
+                <div class="h5 fw-bold text-light mb-0" id="valConsec">3 days</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SHAP Explainable AI Attribution Breakdown -->
+    <div class="row g-3">
+      <div class="col-12">
+        <div class="dashboard-card">
+          <div class="card-header-clean">
+            <h3><i class="fa-solid fa-brain text-warning"></i> SHAP Local Risk Attribution & Feature Breakdown</h3>
+            <span class="text-muted small">Explains why the model assigned this specific flood probability</span>
+          </div>
+
+          <div class="table-responsive">
+            <table class="custom-table" id="factorTable">
+              <thead>
+                <tr>
+                  <th>Contributing Hydrological Feature</th>
+                  <th>Observed Value</th>
+                  <th>SHAP Impact & Direction</th>
+                  <th>Meteorological Interpretation</th>
+                </tr>
+              </thead>
+              <tbody id="factorTableBody">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+
+          <div class="d-flex gap-2 justify-content-end mt-3">
+            <button class="btn btn-sm btn-outline-info" id="openForecasterBtn">
+              <i class="fa-solid fa-sliders me-1"></i> Send to Forecaster
+            </button>
+            <button class="btn btn-sm btn-outline-warning" id="openSimulatorBtn">
+              <i class="fa-solid fa-flask-vial me-1"></i> Simulate Scenario in What-If
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const distSelect = document.getElementById("districtSelect");
+    const blockSelect = document.getElementById("blockSelect");
+    const dateInput = document.getElementById("dateInput");
+
+    // Check URL parameters for pre-selected district/block
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has("district")) {
+      distSelect.value = urlParams.get("district");
+    }
+
+    async function loadBlocks(district) {
+      try {
+        const data = await fetchJson(`/api/blocks/${district}`);
+        blockSelect.innerHTML = "";
+        if (data.blocks && data.blocks.length > 0) {
+          data.blocks.forEach(b => {
+            const opt = document.createElement("option");
+            opt.value = b;
+            opt.textContent = b;
+            blockSelect.appendChild(opt);
+          });
+          if (urlParams.has("block")) {
+            blockSelect.value = urlParams.get("block");
+          }
+        } else {
+          blockSelect.innerHTML = "<option value='District HQ'>District HQ</option>";
+        }
+        loadStationData();
+      } catch (e) {
+        console.error("Error loading blocks:", e);
+      }
+    }
+
+    async function loadStationData() {
+      const dist = distSelect.value;
+      const block = blockSelect.value;
+      const date = dateInput.value;
+
+      document.getElementById("loadingSpinner").classList.remove("d-none");
+      document.getElementById("stationDisplay").classList.add("d-none");
+
+      try {
+        const res = await fetchJson(`/api/station-data?district=${dist}&block=${encodeURIComponent(block)}&date=${date}`);
+        document.getElementById("loadingSpinner").classList.add("d-none");
+        document.getElementById("stationDisplay").classList.remove("d-none");
+
+        if (res.status === "success" && res.data) {
+          const d = res.data;
+          const prob = (d.Predicted_Probability * 100).toFixed(1);
+          document.getElementById("probDisplay").textContent = `${prob}%`;
+
+          const riskBadge = document.getElementById("riskBadge");
+          riskBadge.className = `badge-risk ${d.Risk_Level.toLowerCase()}`;
+          riskBadge.textContent = `${d.Risk_Level} RISK`;
+
+          document.getElementById("stationNameBadge").textContent = `${dist} / ${block}`;
+          document.getElementById("valDailyRain").textContent = `${Number(d["Rainfall (mm)"] || 0).toFixed(1)} mm`;
+          document.getElementById("val3dRain").textContent = `${Number(d.Rainfall_Prev_3d_Sum || 0).toFixed(1)} mm`;
+          document.getElementById("val7dRain").textContent = `${Number(d.Rainfall_Prev_7d_Sum || 0).toFixed(1)} mm`;
+          document.getElementById("val15dRain").textContent = `${Number(d.Rainfall_Prev_15d_Sum || 0).toFixed(1)} mm`;
+          document.getElementById("val30dRain").textContent = `${Number(d.Rainfall_Prev_30d_Sum || 0).toFixed(1)} mm`;
+
+          // Populate Factors
+          const tbody = document.getElementById("factorTableBody");
+          tbody.innerHTML = "";
+          res.factors.forEach(f => {
+            const tr = document.createElement("tr");
+            tr.innerHTML = `
+              <td class="fw-bold text-light">${f.factor}</td>
+              <td class="text-cyan">${f.factor.includes("Rainfall") ? "Elevated" : "Active"}</td>
+              <td><span class="badge bg-danger">${f.impact}</span></td>
+              <td class="small text-muted">${f.effect}</td>
+            `;
+            tbody.appendChild(tr);
+          });
+        }
+      } catch (err) {
+        document.getElementById("loadingSpinner").classList.add("d-none");
+        console.error("Error loading station data:", err);
+      }
+    }
+
+    distSelect.addEventListener("change", () => loadBlocks(distSelect.value));
+    blockSelect.addEventListener("change", loadStationData);
+    dateInput.addEventListener("change", loadStationData);
+
+    // Initial load
+    loadBlocks(distSelect.value);
+
+    // Quick links
+    document.getElementById("openForecasterBtn").addEventListener("click", () => {
+      window.location.href = `/forecaster?district=${distSelect.value}&block=${blockSelect.value}`;
+    });
+    document.getElementById("openSimulatorBtn").addEventListener("click", () => {
+      window.location.href = `/simulator?district=${distSelect.value}&block=${blockSelect.value}`;
+    });
+  });
+</script>
+{% endblock %}

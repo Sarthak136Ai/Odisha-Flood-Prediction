@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block title %}AI Flood Assistant | Flood Intelligence{% endblock %}
+{% block page_title %}Grounded AI Flood Intelligence Assistant{% endblock %}
+
+{% block content %}
+<div class="container-fluid p-0">
+  <div class="row g-4">
+    <!-- Left Column: Chatbot Window -->
+    <div class="col-lg-8">
+      <div class="dashboard-card p-0 overflow-hidden">
+        <div class="card-header-clean p-3 m-0 bg-dark">
+          <div class="d-flex align-items-center gap-2">
+            <div class="status-dot"></div>
+            <h3 class="mb-0 fs-6"><i class="fa-solid fa-robot text-cyan"></i> Odisha Flood Intelligence Chat Agent</h3>
+          </div>
+          <span class="badge bg-secondary">Grounded in 24-Yr Data & Frozen ML</span>
+        </div>
+
+        <div class="chat-container" style="border: none; border-radius: 0; height: 520px;">
+          <div class="chat-messages" id="chatMessages">
+            <!-- Initial Welcome Message -->
+            <div class="chat-bubble bot">
+              <h6 class="text-cyan fw-bold mb-1">👋 Welcome to the Odisha Flood AI Assistant!</h6>
+              <p class="mb-2 small">
+                I am your domain-specialized meteorological intelligence agent. I can answer questions regarding <strong>real-time flood risk predictions</strong>, <strong>historical flood records (2001–2024)</strong>, <strong>district vulnerability summaries</strong>, and <strong>explainable AI risk drivers</strong>.
+              </p>
+              <div class="small text-muted">Try clicking one of the suggested prompts below or type your query in natural language.</div>
+            </div>
+          </div>
+
+          <form class="chat-input-bar" id="chatForm">
+            <input type="text" id="chatInput" class="form-control form-control-dark" placeholder="Ask a question (e.g. 'Will Cuttack have a flood tomorrow?' or 'Show August 2020 in Puri')..." autocomplete="off" required>
+            <button type="submit" class="btn-primary-custom px-3" id="sendBtn">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Quick Prompt Chips & Knowledge Overview -->
+    <div class="col-lg-4">
+      <div class="dashboard-card mb-3">
+        <div class="card-header-clean">
+          <h3><i class="fa-solid fa-bolt text-warning"></i> Quick Prompt Suggestions</h3>
+        </div>
+        <div class="d-flex flex-column gap-2">
+          <button class="prompt-chip text-start" data-prompt="Will Cuttack have a flood tomorrow?">
+            <i class="fa-solid fa-cloud-bolt text-cyan me-1"></i> Will Cuttack have a flood tomorrow?
+          </button>
+          <button class="prompt-chip text-start" data-prompt="Will Puri have a flood tomorrow?">
+            <i class="fa-solid fa-water text-warning me-1"></i> Will Puri have a flood tomorrow?
+          </button>
+          <button class="prompt-chip text-start" data-prompt="Tell me about August 2020 in Bhadrak">
+            <i class="fa-solid fa-clock-rotate-left text-info me-1"></i> Tell me about August 2020 in Bhadrak
+          </button>
+          <button class="prompt-chip text-start" data-prompt="What are the top flood-prone districts in Odisha?">
+            <i class="fa-solid fa-ranking-star text-danger me-1"></i> What are the top flood-prone districts?
+          </button>
+          <button class="prompt-chip text-start" data-prompt="How does 7-day cumulative rainfall affect flood risk?">
+            <i class="fa-solid fa-brain text-success me-1"></i> How does 7-day rainfall affect flood risk?
+          </button>
+          <button class="prompt-chip text-start" data-prompt="Explain how statistical downscaling works in this project">
+            <i class="fa-solid fa-arrows-split-up-and-left text-cyan me-1"></i> Explain rainfall downscaling
+          </button>
+        </div>
+      </div>
+
+      <div class="dashboard-card">
+        <div class="card-header-clean">
+          <h3><i class="fa-solid fa-shield-halved text-success"></i> Grounding & Guardrails</h3>
+        </div>
+        <ul class="list-unstyled small text-muted mb-0">
+          <li class="mb-2">
+            <strong class="text-light">No Hallucinations:</strong>
+            Queries route directly to trained model pipelines (<code>FloodPredictor</code>) and verified 24-year historical records.
+          </li>
+          <li class="mb-2">
+            <strong class="text-light">Operational Disclaimer:</strong>
+            Predictions provide advisory probability estimates for planning purposes and do not replace official statutory warnings.
+          </li>
+          <li>
+            <strong class="text-light">Dual Inference:</strong>
+            Supports both 2001–2024 historical lookups and 2025 operational assessments.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/assistant.js') }}"></script>
+{% endblock %}

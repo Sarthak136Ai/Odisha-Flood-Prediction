@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% block title %}Odisha Risk Map | Flood Intelligence{% endblock %}
+{% block page_title %}Odisha Geospatial Risk & Vulnerability Atlas{% endblock %}
+
+{% block content %}
+<div class="container-fluid p-0">
+  <div class="row g-3">
+    <!-- Left Col: Interactive Map -->
+    <div class="col-lg-8">
+      <div class="dashboard-card h-100">
+        <div class="card-header-clean">
+          <h3><i class="fa-solid fa-map-location-dot"></i> Interactive 30-District Risk Atlas</h3>
+          <div class="d-flex align-items-center gap-2">
+            <span class="badge bg-danger">High Risk (&ge;3.2% / &ge;3.5k Days)</span>
+            <span class="badge bg-warning text-dark">Moderate (1.8%–3.2%)</span>
+            <span class="badge bg-success">Low (&lt;1.8%)</span>
+          </div>
+        </div>
+        
+        <div id="odisha-map" style="height: 600px;"></div>
+        
+        <div class="d-flex justify-content-between align-items-center mt-3 text-muted small">
+          <div>
+            <i class="fa-solid fa-circle-info text-info me-1"></i>
+            Click any district marker to inspect meteorological summary and drill down to blocks.
+          </div>
+          <div>Center: 20.5° N, 84.5° E | Basemap: Dark Canvas (Layer Switcher Top-Right)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Col: Vulnerability League Table -->
+    <div class="col-lg-4">
+      <div class="dashboard-card h-100 d-flex flex-column">
+        <div class="card-header-clean">
+          <h3><i class="fa-solid fa-ranking-star"></i> District Vulnerability Rank</h3>
+          <span class="badge bg-secondary">24-Year Baseline</span>
+        </div>
+
+        <div class="mb-3">
+          <input type="text" id="districtSearch" class="form-control form-control-dark" placeholder="Search district name...">
+        </div>
+
+        <div class="table-responsive flex-grow-1" style="max-height: 520px; overflow-y: auto;">
+          <table class="custom-table" id="rankTable">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>District</th>
+                <th>Flood Days</th>
+                <th>Rate (%)</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for d in district_data %}
+              <tr>
+                <td class="text-muted">{{ loop.index }}</td>
+                <td class="fw-bold text-light">{{ d.District }}</td>
+                <td>
+                  <span class="fw-bold {% if d.total_flood_days > 500 %}text-danger{% elif d.total_flood_days > 250 %}text-warning{% else %}text-success{% endif %}">
+                    {{ d.total_flood_days }} d
+                  </span>
+                </td>
+                <td class="text-muted">{{ d.flood_frequency_pct|round(2) }}%</td>
+                <td>
+                  <a href="{{ url_for('drilldown') }}?district={{ d.District }}" class="btn btn-sm btn-outline-cyan py-0 px-2" style="font-size: 11px; color: #00b4d8; border-color: #00b4d8;">
+                    Inspect
+                  </a>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/map.js') }}"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    initOdishaMap("odisha-map", true);
+
+    // Search filter for league table
+    const searchInput = document.getElementById("districtSearch");
+    const rankTable = document.getElementById("rankTable");
+    if (searchInput && rankTable) {
+      searchInput.addEventListener("input", (e) => {
+        const query = e.target.value.toLowerCase();
+        const rows = rankTable.querySelectorAll("tbody tr");
+        rows.forEach(r => {
+          const text = r.children[1].textContent.toLowerCase();
+          r.style.display = text.includes(query) ? "" : "none";
+        });
+      });
+    }
+  });
+</script>
+{% endblock %}

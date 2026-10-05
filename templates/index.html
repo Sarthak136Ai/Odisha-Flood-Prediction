@@ -1,0 +1,232 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard | Odisha Flood Intelligence System{% endblock %}
+{% block page_title %}Flood Intelligence Command Center{% endblock %}
+
+{% block content %}
+<div class="container-fluid p-0">
+  <!-- Top KPI Metric Cards -->
+  <div class="row g-3 mb-4">
+    <div class="col-xl-3 col-md-6">
+      <div class="kpi-card">
+        <div>
+          <div class="kpi-label">Monitored Districts</div>
+          <div class="kpi-value">30</div>
+          <small class="text-muted">354 Rain Gauge Stations</small>
+        </div>
+        <div class="kpi-icon">
+          <i class="fa-solid fa-map-location"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6">
+      <div class="kpi-card high-risk">
+        <div>
+          <div class="kpi-label">2025 High Risk Days</div>
+          <div class="kpi-value text-danger">{{ summary_2025.high_risk_count }}</div>
+          <small class="text-muted">Estimated Prob &ge; 70%</small>
+        </div>
+        <div class="kpi-icon text-danger" style="background: rgba(239, 68, 68, 0.1);">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6">
+      <div class="kpi-card mod-risk">
+        <div>
+          <div class="kpi-label">2025 Moderate Risk</div>
+          <div class="kpi-value text-warning">{{ summary_2025.moderate_risk_count }}</div>
+          <small class="text-muted">30% &le; Prob &lt; 70%</small>
+        </div>
+        <div class="kpi-icon text-warning" style="background: rgba(245, 158, 11, 0.1);">
+          <i class="fa-solid fa-cloud-showers-heavy"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6">
+      <div class="kpi-card low-risk">
+        <div>
+          <div class="kpi-label">2025 Low Risk Days</div>
+          <div class="kpi-value text-success">{{ "{:,}".format(summary_2025.low_risk_count) }}</div>
+          <small class="text-muted">Prob &lt; 30%</small>
+        </div>
+        <div class="kpi-icon text-success" style="background: rgba(16, 185, 129, 0.1);">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 2: Geospatial Quick Map + Model Specs -->
+  <div class="row g-3 mb-4">
+    <div class="col-lg-8">
+      <div class="dashboard-card h-100">
+        <div class="card-header-clean">
+          <h3><i class="fa-solid fa-earth-asia"></i> State Spatial Vulnerability Overview</h3>
+          <a href="{{ url_for('risk_map') }}" class="btn btn-sm btn-outline-info">
+            <i class="fa-solid fa-up-right-from-square me-1"></i> Full Interactive Map
+          </a>
+        </div>
+        <div id="odisha-map" style="height: 380px;"></div>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div class="dashboard-card h-100 d-flex flex-column justify-content-between">
+        <div>
+          <div class="card-header-clean">
+            <h3><i class="fa-solid fa-server"></i> Operational Model Specs</h3>
+            <span class="badge bg-success">Active Frozen</span>
+          </div>
+          
+          <ul class="list-unstyled mb-3">
+            <li class="d-flex justify-content-between py-2 border-bottom border-dark">
+              <span class="text-muted">Algorithm:</span>
+              <span class="fw-bold text-info">Balanced Logistic Regression</span>
+            </li>
+            <li class="d-flex justify-content-between py-2 border-bottom border-dark">
+              <span class="text-muted">Decision Threshold:</span>
+              <span class="fw-bold text-warning">{{ optimal_threshold|round(4) }}</span>
+            </li>
+            <li class="d-flex justify-content-between py-2 border-bottom border-dark">
+              <span class="text-muted">Test ROC-AUC:</span>
+              <span class="fw-bold text-success">{{ test_roc_auc }}</span>
+            </li>
+            <li class="d-flex justify-content-between py-2 border-bottom border-dark">
+              <span class="text-muted">Test PR-AUC:</span>
+              <span class="fw-bold text-success">{{ test_pr_auc }}</span>
+            </li>
+            <li class="d-flex justify-content-between py-2 border-bottom border-dark">
+              <span class="text-muted">Brier Score:</span>
+              <span class="fw-bold text-light">0.0111</span>
+            </li>
+            <li class="d-flex justify-content-between py-2 border-bottom border-dark">
+              <span class="text-muted">Historical Coverage:</span>
+              <span class="fw-bold text-light">2001–2024 (2.75M rows)</span>
+            </li>
+            <li class="d-flex justify-content-between py-2">
+              <span class="text-muted">Target Variable:</span>
+              <span class="badge bg-primary">Flood_Next_Day (T+1)</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="p-2 rounded bg-dark border border-secondary text-center small text-muted">
+          <i class="fa-solid fa-circle-check text-success me-1"></i>
+          Model weights are frozen. 2025 inference operates without target leakage.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 3: Charts (Rainfall Trend & Probability Distribution) -->
+  <div class="row g-3 mb-4">
+    <div class="col-lg-6">
+      <div class="dashboard-card">
+        <div class="card-header-clean">
+          <h3><i class="fa-solid fa-chart-area"></i> Annual Extreme Precipitation Trends (2001–2024)</h3>
+        </div>
+        <div style="height: 280px;">
+          <canvas id="historicalRainfallChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="dashboard-card">
+        <div class="card-header-clean">
+          <h3><i class="fa-solid fa-chart-pie"></i> 2025 Risk Tier Distribution</h3>
+          <span class="badge bg-info">114,610 Daily Records</span>
+        </div>
+        <div style="height: 280px;">
+          <canvas id="riskDistributionChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 4: Recent High-Risk Alerts Table -->
+  <div class="row g-3">
+    <div class="col-12">
+      <div class="dashboard-card">
+        <div class="card-header-clean">
+          <h3><i class="fa-solid fa-bell text-warning"></i> Recent Operational Risk Alerts (2025)</h3>
+          <a href="{{ url_for('unseen_2025') }}" class="btn btn-sm btn-outline-light">
+            View All 2025 Predictions &rarr;
+          </a>
+        </div>
+        
+        <div class="table-responsive">
+          <table class="custom-table">
+            <thead>
+              <tr>
+                <th>District</th>
+                <th>Block / Station</th>
+                <th>Date</th>
+                <th>Daily Rainfall (mm)</th>
+                <th>7-Day Acc. (mm)</th>
+                <th>Est. Flood Probability</th>
+                <th>Risk Tier</th>
+                <th>Primary Risk Driver</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for row in recent_alerts %}
+              <tr>
+                <td class="fw-bold text-light">{{ row.District }}</td>
+                <td>{{ row['Block/Station'] }}</td>
+                <td>{{ row.Date }}</td>
+                <td>{{ row['Rainfall (mm)']|round(1) }} mm</td>
+                <td>{{ row.Rainfall_Prev_7d_Sum|round(1) }} mm</td>
+                <td>
+                  <span class="fw-bold {% if row.Risk_Level == 'HIGH' %}text-danger{% elif row.Risk_Level == 'MODERATE' %}text-warning{% else %}text-success{% endif %}">
+                    {{ (row.Predicted_Probability * 100)|round(1) }}%
+                  </span>
+                </td>
+                <td>
+                  <span class="badge-risk {{ row.Risk_Level|lower }}">
+                    {{ row.Risk_Level }}
+                  </span>
+                </td>
+                <td class="small text-muted">{{ row.Top_Risk_Driver_1 }}</td>
+                <td>
+                  <a href="{{ url_for('drilldown') }}?district={{ row.District }}&block={{ row['Block/Station'] }}&date={{ row.Date }}" class="btn btn-sm btn-outline-info">
+                    <i class="fa-solid fa-magnifying-glass"></i> Inspect
+                  </a>
+                </td>
+              </tr>
+              {% else %}
+              <tr>
+                <td colspan="9" class="text-center text-muted py-4">No active high risk alerts in current window.</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/map.js') }}"></script>
+<script src="{{ url_for('static', filename='js/charts.js') }}"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // 1. Initialize Dashboard Quick Map
+    initOdishaMap("odisha-map", false);
+
+    // 2. Initialize Charts
+    initDashboardCharts({
+      low: {{ summary_2025.low_risk_count }},
+      mod: {{ summary_2025.moderate_risk_count }},
+      high: {{ summary_2025.high_risk_count }}
+    });
+  });
+</script>
+{% endblock %}

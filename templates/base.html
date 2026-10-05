@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Odisha Flood Intelligence & Early Warning System{% endblock %}</title>
+  
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <!-- Leaflet Map CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  
+  <!-- Custom Disaster Intelligence CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+  {% block head %}{% endblock %}
+</head>
+<body>
+  <div class="app-wrapper">
+    <!-- SIDEBAR NAVIGATION -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-water"></i>
+        </div>
+        <div class="brand-text">
+          <h1>Odisha Flood Intel</h1>
+          <span>Early Warning v2.5</span>
+        </div>
+      </div>
+      
+      <div class="sidebar-nav">
+        <div class="nav-section-title">Operations & Monitoring</div>
+        <a href="{{ url_for('dashboard') }}" class="nav-link-item {% if active_page == 'dashboard' %}active{% endif %}">
+          <i class="fa-solid fa-gauge-high"></i>
+          <span>Dashboard</span>
+        </a>
+        <a href="{{ url_for('risk_map') }}" class="nav-link-item {% if active_page == 'risk-map' %}active{% endif %}">
+          <i class="fa-solid fa-map-location-dot"></i>
+          <span>Odisha Risk Map</span>
+        </a>
+        <a href="{{ url_for('drilldown') }}" class="nav-link-item {% if active_page == 'drilldown' %}active{% endif %}">
+          <i class="fa-solid fa-magnifying-glass-location"></i>
+          <span>District & Block Drilldown</span>
+        </a>
+        <a href="{{ url_for('historical') }}" class="nav-link-item {% if active_page == 'historical' %}active{% endif %}">
+          <i class="fa-solid fa-timeline"></i>
+          <span>Historical Timeline</span>
+        </a>
+        
+        <div class="nav-section-title">Prediction & Simulation</div>
+        <a href="{{ url_for('forecaster') }}" class="nav-link-item {% if active_page == 'forecaster' %}active{% endif %}">
+          <i class="fa-solid fa-cloud-bolt"></i>
+          <span>Real-Time Forecaster</span>
+        </a>
+        <a href="{{ url_for('simulator') }}" class="nav-link-item {% if active_page == 'simulator' %}active{% endif %}">
+          <i class="fa-solid fa-sliders"></i>
+          <span>What-if Simulator</span>
+        </a>
+        <a href="{{ url_for('unseen_2025') }}" class="nav-link-item {% if active_page == 'unseen-2025' %}active{% endif %}">
+          <i class="fa-solid fa-satellite-dish"></i>
+          <span>2025 Operational Monitor</span>
+        </a>
+        
+        <div class="nav-section-title">Intelligence & Science</div>
+        <a href="{{ url_for('benchmarks') }}" class="nav-link-item {% if active_page == 'benchmarks' %}active{% endif %}">
+          <i class="fa-solid fa-chart-line"></i>
+          <span>Model Benchmarks</span>
+        </a>
+        <a href="{{ url_for('explainability') }}" class="nav-link-item {% if active_page == 'explainability' %}active{% endif %}">
+          <i class="fa-solid fa-brain"></i>
+          <span>Explainable AI (SHAP)</span>
+        </a>
+        <a href="{{ url_for('downscaling') }}" class="nav-link-item {% if active_page == 'downscaling' %}active{% endif %}">
+          <i class="fa-solid fa-arrows-split-up-and-left"></i>
+          <span>Rainfall Downscaling</span>
+        </a>
+        <a href="{{ url_for('assistant') }}" class="nav-link-item {% if active_page == 'assistant' %}active{% endif %}">
+          <i class="fa-solid fa-robot"></i>
+          <span>AI Flood Assistant</span>
+        </a>
+        <a href="{{ url_for('architecture') }}" class="nav-link-item {% if active_page == 'architecture' %}active{% endif %}">
+          <i class="fa-solid fa-sitemap"></i>
+          <span>System Architecture</span>
+        </a>
+      </div>
+      
+      <div class="sidebar-footer">
+        <div class="system-status-indicator">
+          <div class="status-dot"></div>
+          <div>
+            <div class="fw-bold text-light">Operational Engine</div>
+            <div class="small text-muted">Threshold: {{ optimal_threshold|round(3) }}</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT WRAPPER -->
+    <div class="main-content">
+      <!-- TOPBAR -->
+      <header class="topbar">
+        <div class="d-flex align-items-center gap-3">
+          <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="topbar-title">
+            <h2>{% block page_title %}Odisha Flood Intelligence Platform{% endblock %}</h2>
+          </div>
+        </div>
+        
+        <div class="topbar-badges">
+          <div class="badge-tag d-none d-md-flex">
+            <i class="fa-solid fa-microchip text-info"></i>
+            <span>{{ frozen_model_name }}</span>
+          </div>
+          <div class="badge-tag d-none d-lg-flex">
+            <i class="fa-solid fa-bullseye text-success"></i>
+            <span>ROC-AUC: {{ test_roc_auc }}</span>
+          </div>
+          <div class="badge-tag">
+            <i class="fa-regular fa-clock text-warning"></i>
+            <span id="liveClock">{{ now_iso }}</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- CONTENT BODY -->
+      <main class="content-body">
+        <!-- Flash Messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            {% for category, message in messages %}
+              <div class="alert alert-{{ category if category != 'error' else 'danger' }} alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
+      </main>
+      
+      <!-- FOOTER -->
+      <footer class="p-3 text-center text-muted small border-top" style="background: var(--bg-sidebar); border-color: var(--border-color) !important;">
+        <span>Odisha State Disaster Management Authority & Meteorological Research Engine &copy; {{ current_year }}</span>
+        <span class="mx-2">•</span>
+        <span class="text-info">24-Year Continuous Multi-Station Model (2001–2024) + 2025 Operational Pipeline</span>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Leaflet Map JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Main Application JS -->
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  
+  {% block scripts %}{% endblock %}
+</body>
+</html>
