@@ -75,7 +75,7 @@ Odisha_Flood_Prediction/
 ├── config.py                  # Flask configuration, file paths, and thresholds
 ├── requirements.txt           # Python package dependencies
 ├── README.md                  # Project documentation & run guide
-├── progress_tracker.md        # Task continuity and progress log
+├── PROJECT_PROGRESS.md        # Comprehensive master progress & architecture log
 ├── MEMORY.md                  # System architecture, models, and constraints memory
 │
 ├── data/
