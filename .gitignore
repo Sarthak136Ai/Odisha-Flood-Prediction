@@ -49,6 +49,8 @@ Thumbs.db
 # Large dataset files & redundant raw folders (>100MB exceeds GitHub limits)
 data/combined/
 data/processed/historical_*.csv
+data/processed/operational_*.csv
+data/predictions/
 data/raw/historical/
 Rain_new_updated/
 
