@@ -1,0 +1,5 @@
+Split,Total_Records,Negative_Count_0,Negative_Pct_0,Positive_Count_1,Positive_Pct_1,Imbalance_Ratio_Neg_to_Pos,Class_Weight_Multiplier
+Complete Dataset (2001–2024),2751887,2679269,97.361,72618,2.639,36.9,36.9
+Training Set (2001–2018),2063989,2012344,97.498,51645,2.502,38.96,38.96
+Validation Set (2019–2021),344140,332980,96.757,11160,3.243,29.84,29.84
+Test Set (2022–2024),343758,333945,97.145,9813,2.855,34.03,34.03

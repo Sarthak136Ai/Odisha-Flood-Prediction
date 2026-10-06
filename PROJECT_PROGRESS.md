@@ -66,6 +66,7 @@ The **Odisha Flood Intelligence & Early Warning System** is an end-to-end, spati
 | **26** | Automated Data Quality Analysis Engine | **Completed** | 15-dimension raw vs processed audit, HTML/CSV reports, 5 plots, and unit test suite |
 | **27** | Walk-Forward Temporal Validation Engine | **Completed** | 5-fold expanding window cross-validation (2017–2021), strict preprocessor isolation, reports & plots |
 | **28** | Multi-Strategy Threshold Selection & Audit Engine | **Completed** | Validation-only (2019–2021) threshold tuning, 7 strategies (F1, F2, Target Recall >=80%/90%, Youden's J, Cost-Sensitive), zero-leakage proof, model metadata JSON & reports |
+| **29** | Class Imbalance Analysis & Mitigation Engine | **Completed** | Full 24-year target distribution analysis (2.638% flood rate, 36.91:1 imbalance ratio), split & annual tables, SMOTE rejection rationale, confusion matrices, PR-AUC analysis, and plots |
 
 ---
 
@@ -95,7 +96,8 @@ The **Odisha Flood Intelligence & Early Warning System** is an end-to-end, spati
 
 ## 🧪 Automated Test Verification
 
-All **71 test cases** in `tests/` pass with 100% success rate:
+All **76 test cases** in `tests/` pass with 100% success rate:
+- `tests/test_class_imbalance.py`: 5 Target distribution, split consistency, F2 behavior & empirical purity tests
 - `tests/test_threshold_selection.py`: 7 Zero-leakage, multi-strategy, F2/recall-oriented & schema tests
 - `tests/test_temporal_validation.py`: 6 Temporal walk-forward causal order, isolation & metric tests
 - `tests/test_data_quality.py`: 7 Data quality validation rules & report integrity tests
