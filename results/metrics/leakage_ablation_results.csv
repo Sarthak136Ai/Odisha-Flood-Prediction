@@ -1,0 +1,13 @@
+Feature_Set,Model,Num_Features,Val_Optimal_Threshold,Val_ROC_AUC,Val_PR_AUC,Val_F1,Test_ROC_AUC,Test_PR_AUC,Test_F1,Test_Recall,Test_Precision,Test_Brier_Score
+Baseline_Current_All_Features (27 cols),Logistic Regression,27,0.8345,0.97288,0.89243,0.92605,0.9693,0.83061,0.87475,0.87435,0.87515,0.01108
+Baseline_Current_All_Features (27 cols),Random Forest,27,0.3078,0.97875,0.9355,0.91019,0.96204,0.80149,0.82813,0.80108,0.85706,0.01134
+Ablation_No_Flood_Occurred (26 cols),Logistic Regression,26,0.2271,0.84477,0.12575,0.19349,0.81986,0.24862,0.14884,0.738,0.08277,0.06992
+Ablation_No_Flood_Occurred (26 cols),Random Forest,26,0.1216,0.85107,0.10997,0.19613,0.79259,0.07512,0.15158,0.58687,0.08703,0.03073
+Ablation_No_Year (26 cols),Logistic Regression,26,0.8973,0.97319,0.8903,0.92614,0.96947,0.82905,0.87492,0.87466,0.87519,0.01765
+Ablation_No_Year (26 cols),Random Forest,26,0.6396,0.97764,0.9127,0.92469,0.96636,0.78443,0.75479,0.65668,0.88736,0.01578
+Ablation_Pure_Meteorological_No_Flood_No_Year (25 cols),Logistic Regression,25,0.4074,0.84553,0.12855,0.1934,0.82226,0.24383,0.14309,0.74167,0.07918,0.14123
+Ablation_Pure_Meteorological_No_Flood_No_Year (25 cols),Random Forest,25,0.7844,0.85273,0.15289,0.22653,0.82459,0.17397,0.27605,0.37644,0.21794,0.1255
+Ablation_Only_Flood_Occurred (1 col),Logistic Regression,1,0.9978,0.96194,0.8605,0.92634,0.93564,0.76913,0.87496,0.87496,0.87496,0.01179
+Ablation_Only_Flood_Occurred (1 col),Random Forest,1,0.9978,0.96194,0.8605,0.92634,0.93564,0.76913,0.87496,0.87496,0.87496,0.01178
+Ablation_Only_Rainfall_Antecedent (19 rainfall cols),Logistic Regression,19,0.7825,0.80741,0.11009,0.16017,0.81988,0.16248,0.22278,0.49903,0.1434,0.15383
+Ablation_Only_Rainfall_Antecedent (19 rainfall cols),Random Forest,19,0.7881,0.80639,0.12431,0.18809,0.81485,0.15756,0.23333,0.29013,0.19513,0.14765

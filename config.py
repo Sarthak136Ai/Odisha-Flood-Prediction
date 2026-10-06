@@ -43,4 +43,4 @@ class Config:
         "moderate_max": 0.70,
         "high_min": 0.70
     }
-    OPTIMAL_THRESHOLD = 0.8345
+    OPTIMAL_THRESHOLD = 0.8073

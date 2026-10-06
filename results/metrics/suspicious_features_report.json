@@ -1,0 +1,26 @@
+[
+  {
+    "feature": "Flood_Occurred",
+    "correlation_with_target": 0.9136,
+    "verdict": "CRITICAL TARGET PROXY / LEAKAGE MECHANISM",
+    "reason": "Flood_Occurred (Day T) has a 0.9136 Pearson correlation with Flood_Next_Day (Day T+1). Floods in Odisha persist across multiple days (91.59% persistence rate). Using Flood_Occurred converts the model into a flood continuation detector rather than a rainfall-to-flood early warning system. A model trained with solely Flood_Occurred achieves 0.9356 Test ROC-AUC without looking at any rainfall. Furthermore, because real-time flood occurrence is unlabelled in operational 2025 inference, Flood_Occurred is forced to 0 at inference time, causing a catastrophic train-inference distribution shift."
+  },
+  {
+    "feature": "Year",
+    "correlation_with_target": -0.0171,
+    "verdict": "QUESTIONABLE TEMPORAL EXTRAPOLATION ARTIFACT",
+    "reason": "Year is a monotonic integer (2001-2024). In linear models it learns an arbitrary time slope (-0.2091), and in tree models it creates splits that cannot generalize to unseen future years (e.g. 2025)."
+  },
+  {
+    "feature": "Rainfall_Prev_15d_Sum & Rainfall_Prev_30d_Sum",
+    "correlation_with_target": 0.2265,
+    "verdict": "SAFE PHYSICAL HYDROLOGICAL PREDICTOR",
+    "reason": "Computed strictly as s.shift(1).rolling(window).sum(), excluding same-day and future rainfall. Reflects legitimate antecedent catchment soil saturation and river basin accumulation."
+  },
+  {
+    "feature": "Rainfall (mm) & Lags (1d, 2d, 3d, 7d)",
+    "correlation_with_target": 0.1746,
+    "verdict": "SAFE ANTECEDENT METEOROLOGICAL PREDICTOR",
+    "reason": "Rainfall (mm) on day T is known at prediction time when forecasting for day T+1. Lags represent strictly historical previous-day rainfall values."
+  }
+]

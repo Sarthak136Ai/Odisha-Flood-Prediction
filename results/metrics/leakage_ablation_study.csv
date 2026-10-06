@@ -1,0 +1,6 @@
+Configuration,Num_Features,Val_ROC_AUC,Val_PR_AUC,Test_ROC_AUC,Test_PR_AUC,Test_F1,Test_Recall,Test_Precision,Test_Brier,Test_ROC_AUC (Onset Only),Test_PR_AUC (Onset Only)
+Config A: Current Production (27 Features incl. Flood_Occurred & Year),27,0.9729,0.8924,0.9693,0.8306,0.8748,87.44,87.52,0.0111,0.7677,0.0163
+Config B: Solely Flood_Occurred (Persistence Baseline: 1 Feature),1,0.9619,0.8605,0.9356,0.7691,0.875,87.5,87.5,0.0118,0.5,0.0037
+Config C: Exclude Flood_Occurred (26 Features with Year),26,0.8448,0.1258,0.8199,0.2486,0.1488,73.8,8.28,0.0699,0.7344,0.0118
+"Config D: Pure Meteorological / Hydrological (20 Features, NO Flood_Occurred, NO Year)",25,0.8455,0.1285,0.8223,0.2438,0.1431,74.17,7.92,0.1412,0.7359,0.0112
+"Config E: Antecedent Wetness Only (Lags + Rolling Sums + Rainy Days, 16 Features)",17,0.8072,0.1093,0.8201,0.162,0.2231,50.45,14.32,0.1542,0.7242,0.0104

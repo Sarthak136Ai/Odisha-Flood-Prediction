@@ -44,9 +44,10 @@ def prepare_temporal_datasets(
     
     feature_cols = (
         config["features"]["temporal_cols"] +
-        config["features"]["rainfall_cols"] +
-        [config["features"]["same_day_flood_col"]]
+        config["features"]["rainfall_cols"]
     )
+    if "same_day_flood_col" in config.get("features", {}) and config["features"]["same_day_flood_col"]:
+        feature_cols.append(config["features"]["same_day_flood_col"])
     
     train_years = config["split"]["train_years"]
     val_years = config["split"]["val_years"]
@@ -209,13 +210,13 @@ def train_and_evaluate_all_models(
     plot_precision_recall_curves(test_predictions, title="Test Set (2022-2024) Precision-Recall Curves", save_path=pr_plot_path)
     plot_reliability_diagrams(test_predictions, title="Probability Calibration & Reliability Diagram (Test 2022-2024)", save_path=cal_plot_path)
     
-    # Identify Best Model (by Test PR-AUC & F1)
-    best_row = comparison_df.sort_values(by=["Test_PR_AUC", "Test_F1"], ascending=False).iloc[0]
+    # Identify Best Model strictly based on Validation Set metrics (Val_PR_AUC & Val_F1)
+    best_row = comparison_df.sort_values(by=["Val_PR_AUC", "Val_F1"], ascending=False).iloc[0]
     best_model_name = best_row["Model"]
     best_model = trained_models[best_model_name]
     best_threshold = float(best_row["Optimal_Threshold"])
     
-    logger.info(f"\n{'*'*60}\nBEST PERFORMING MODEL: {best_model_name} (PR-AUC: {best_row['Test_PR_AUC']:.4f}, ROC-AUC: {best_row['Test_ROC_AUC']:.4f}, F1: {best_row['Test_F1']:.4f})\n{'*'*60}")
+    logger.info(f"\n{'*'*60}\nBEST PERFORMING MODEL (Selected on Validation): {best_model_name} (Val PR-AUC: {best_row['Val_PR_AUC']:.4f}, Test PR-AUC: {best_row['Test_PR_AUC']:.4f}, Test ROC-AUC: {best_row['Test_ROC_AUC']:.4f}, Test F1: {best_row['Test_F1']:.4f})\n{'*'*60}")
     
     # Plot best model confusion matrix
     y_test_best, y_proba_best = test_predictions[best_model_name]

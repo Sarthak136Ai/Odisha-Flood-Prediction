@@ -47,11 +47,16 @@ def compute_shap_analysis(
     if hasattr(clf, "coef_"):
         explainer = shap.LinearExplainer(clf, X_train_transformed)
         shap_values = explainer(X_test_transformed)
-        values = shap_values.values
-    else:
-        explainer = shap.TreeExplainer(clf)
-        shap_values = explainer(X_test_transformed)
         values = shap_values.values if hasattr(shap_values, "values") else shap_values
+    else:
+        try:
+            explainer = shap.TreeExplainer(clf)
+            shap_values = explainer(X_test_transformed)
+            values = shap_values.values if hasattr(shap_values, "values") else shap_values
+        except Exception:
+            explainer = shap.Explainer(clf.predict_proba, X_train_transformed.iloc[:100])
+            shap_values = explainer(X_test_transformed)
+            values = shap_values.values if hasattr(shap_values, "values") else shap_values
         
     # Mean absolute SHAP values per feature
     if len(values.shape) == 3: # multi-class/output

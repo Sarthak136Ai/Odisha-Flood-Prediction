@@ -1,0 +1,276 @@
+{
+  "correlations": {
+    "Year": -0.051589683931657755,
+    "Month_Number": 0.07148983943964295,
+    "Day": -0.01714800498466322,
+    "Day_of_Year": 0.06937351810982659,
+    "Day_of_Week": -0.0063120068296059996,
+    "Month_sin": -0.1736908117002071,
+    "Month_cos": -0.0932391847898123,
+    "Rainfall (mm)": 0.17593523199912348,
+    "Rainfall_Missing": 0.0002776755631780048,
+    "Rainfall_Lag_1d": 0.1572357130394145,
+    "Rainfall_Lag_2d": 0.14062683142544674,
+    "Rainfall_Lag_3d": 0.13004210361273105,
+    "Rainfall_Lag_7d": 0.10156799447499767,
+    "Rainfall_Prev_3d_Sum": 0.1992478873581972,
+    "Rainfall_Prev_7d_Sum": 0.23088287362514714,
+    "Rainfall_Prev_15d_Sum": 0.23809500569249137,
+    "Rainfall_Prev_30d_Sum": 0.2306290354741155,
+    "Rainfall_Prev_3d_Max": 0.1912453737014793,
+    "Rainfall_Prev_7d_Max": 0.21128317564370222,
+    "Rainfall_Prev_15d_Max": 0.20422891867128082,
+    "Rainfall_Prev_30d_Max": 0.18591916739515246,
+    "Rainy_Days_Prev_3d": 0.17411273131790048,
+    "Rainy_Days_Prev_7d": 0.19982942305145351,
+    "Rainy_Days_Prev_15d": 0.21027031181394204,
+    "Rainy_Days_Prev_30d": 0.2140013620236235,
+    "Consecutive_Rainy_Days_Before": 0.14116356632254826,
+    "Flood_Occurred": 0.9193489802528578
+  },
+  "coefficients": [
+    {
+      "Feature": "Month_cos",
+      "Standardized_Coefficient": -1.486180749752024,
+      "Odds_Ratio": 0.22623505592313864,
+      "Abs_Impact": 1.486180749752024
+    },
+    {
+      "Feature": "Flood_Occurred",
+      "Standardized_Coefficient": 1.2437309248130832,
+      "Odds_Ratio": 3.468530179445269,
+      "Abs_Impact": 1.2437309248130832
+    },
+    {
+      "Feature": "Month_sin",
+      "Standardized_Coefficient": -1.2282895200507504,
+      "Odds_Ratio": 0.2927929661044791,
+      "Abs_Impact": 1.2282895200507504
+    },
+    {
+      "Feature": "Rainy_Days_Prev_15d",
+      "Standardized_Coefficient": -0.646324505881562,
+      "Odds_Ratio": 0.5239680834925218,
+      "Abs_Impact": 0.646324505881562
+    },
+    {
+      "Feature": "Rainy_Days_Prev_30d",
+      "Standardized_Coefficient": 0.5638222390489805,
+      "Odds_Ratio": 1.7573767936324,
+      "Abs_Impact": 0.5638222390489805
+    },
+    {
+      "Feature": "Rainfall_Prev_15d_Sum",
+      "Standardized_Coefficient": 0.5172538870650176,
+      "Odds_Ratio": 1.6774149482114107,
+      "Abs_Impact": 0.5172538870650176
+    },
+    {
+      "Feature": "Month_Number",
+      "Standardized_Coefficient": 0.45089200301416943,
+      "Odds_Ratio": 1.5697117488013317,
+      "Abs_Impact": 0.45089200301416943
+    },
+    {
+      "Feature": "Day_of_Year",
+      "Standardized_Coefficient": 0.4173286802218191,
+      "Odds_Ratio": 1.5179013351016246,
+      "Abs_Impact": 0.4173286802218191
+    },
+    {
+      "Feature": "Rainfall_Prev_15d_Max",
+      "Standardized_Coefficient": -0.3982175175900971,
+      "Odds_Ratio": 0.6715159452447167,
+      "Abs_Impact": 0.3982175175900971
+    },
+    {
+      "Feature": "Day",
+      "Standardized_Coefficient": 0.287013422625498,
+      "Odds_Ratio": 1.3324420982269276,
+      "Abs_Impact": 0.287013422625498
+    },
+    {
+      "Feature": "Rainy_Days_Prev_7d",
+      "Standardized_Coefficient": 0.27480417274829955,
+      "Odds_Ratio": 1.3162728875255,
+      "Abs_Impact": 0.27480417274829955
+    },
+    {
+      "Feature": "Rainfall_Prev_30d_Sum",
+      "Standardized_Coefficient": -0.2547501536247578,
+      "Odds_Ratio": 0.7751101322276145,
+      "Abs_Impact": 0.2547501536247578
+    },
+    {
+      "Feature": "Year",
+      "Standardized_Coefficient": -0.20914751312166763,
+      "Odds_Ratio": 0.8112755530268907,
+      "Abs_Impact": 0.20914751312166763
+    },
+    {
+      "Feature": "Rainfall_Prev_30d_Max",
+      "Standardized_Coefficient": 0.16507469845884706,
+      "Odds_Ratio": 1.1794812208502392,
+      "Abs_Impact": 0.16507469845884706
+    },
+    {
+      "Feature": "Rainfall (mm)",
+      "Standardized_Coefficient": 0.14559301083834797,
+      "Odds_Ratio": 1.156725317570445,
+      "Abs_Impact": 0.14559301083834797
+    },
+    {
+      "Feature": "Rainfall_Prev_7d_Sum",
+      "Standardized_Coefficient": -0.14071589670115353,
+      "Odds_Ratio": 0.8687360874293739,
+      "Abs_Impact": 0.14071589670115353
+    },
+    {
+      "Feature": "Rainfall_Prev_3d_Max",
+      "Standardized_Coefficient": -0.07763057195256237,
+      "Odds_Ratio": 0.9253061974715828,
+      "Abs_Impact": 0.07763057195256237
+    },
+    {
+      "Feature": "Rainy_Days_Prev_3d",
+      "Standardized_Coefficient": 0.0510174609216429,
+      "Odds_Ratio": 1.0523412679712056,
+      "Abs_Impact": 0.0510174609216429
+    },
+    {
+      "Feature": "Day_of_Week",
+      "Standardized_Coefficient": -0.0414964020309033,
+      "Odds_Ratio": 0.9593527870569434,
+      "Abs_Impact": 0.0414964020309033
+    },
+    {
+      "Feature": "Rainfall_Prev_7d_Max",
+      "Standardized_Coefficient": 0.0370627908123983,
+      "Odds_Ratio": 1.0377581804716474,
+      "Abs_Impact": 0.0370627908123983
+    },
+    {
+      "Feature": "Rainfall_Missing",
+      "Standardized_Coefficient": 0.033608877841777775,
+      "Odds_Ratio": 1.034180036887143,
+      "Abs_Impact": 0.033608877841777775
+    },
+    {
+      "Feature": "Rainfall_Lag_1d",
+      "Standardized_Coefficient": 0.0310877982594367,
+      "Odds_Ratio": 1.0315760704941352,
+      "Abs_Impact": 0.0310877982594367
+    },
+    {
+      "Feature": "Consecutive_Rainy_Days_Before",
+      "Standardized_Coefficient": -0.0246275171367152,
+      "Odds_Ratio": 0.9756732659243037,
+      "Abs_Impact": 0.0246275171367152
+    },
+    {
+      "Feature": "Rainfall_Prev_3d_Sum",
+      "Standardized_Coefficient": 0.019112402399031937,
+      "Odds_Ratio": 1.019296213518326,
+      "Abs_Impact": 0.019112402399031937
+    },
+    {
+      "Feature": "Rainfall_Lag_3d",
+      "Standardized_Coefficient": 0.012488649652926443,
+      "Odds_Ratio": 1.0125669584889954,
+      "Abs_Impact": 0.012488649652926443
+    },
+    {
+      "Feature": "Rainfall_Lag_7d",
+      "Standardized_Coefficient": 0.00618176815000755,
+      "Odds_Ratio": 1.0062009147116067,
+      "Abs_Impact": 0.00618176815000755
+    },
+    {
+      "Feature": "Rainfall_Lag_2d",
+      "Standardized_Coefficient": -0.002530663533332083,
+      "Odds_Ratio": 0.9974725358961651,
+      "Abs_Impact": 0.002530663533332083
+    }
+  ],
+  "ablation_results": [
+    {
+      "Feature_Set": "A. Current All Features (including Flood_Occurred & Year)",
+      "Num_Features": 27,
+      "Optimal_Threshold": 0.8345,
+      "Val_ROC_AUC": 0.9729,
+      "Val_PR_AUC": 0.8924,
+      "Test_ROC_AUC": 0.9693,
+      "Test_PR_AUC": 0.8306,
+      "Test_F1": 0.8748,
+      "Test_Recall": "87.44%",
+      "Test_Precision": "87.52%",
+      "Test_Brier": 0.0111
+    },
+    {
+      "Feature_Set": "B. Without Flood_Occurred (Meteorological + Temporal)",
+      "Num_Features": 26,
+      "Optimal_Threshold": 0.2271,
+      "Val_ROC_AUC": 0.8448,
+      "Val_PR_AUC": 0.1258,
+      "Test_ROC_AUC": 0.8199,
+      "Test_PR_AUC": 0.2486,
+      "Test_F1": 0.1488,
+      "Test_Recall": "73.80%",
+      "Test_Precision": "8.28%",
+      "Test_Brier": 0.0699
+    },
+    {
+      "Feature_Set": "C. Without Flood_Occurred and Without Year (Clean Physical Model)",
+      "Num_Features": 25,
+      "Optimal_Threshold": 0.4074,
+      "Val_ROC_AUC": 0.8455,
+      "Val_PR_AUC": 0.1285,
+      "Test_ROC_AUC": 0.8223,
+      "Test_PR_AUC": 0.2438,
+      "Test_F1": 0.1431,
+      "Test_Recall": "74.17%",
+      "Test_Precision": "7.92%",
+      "Test_Brier": 0.1412
+    },
+    {
+      "Feature_Set": "D. Only Flood_Occurred (Pure Autoregressive Baseline)",
+      "Num_Features": 1,
+      "Optimal_Threshold": 0.9978,
+      "Val_ROC_AUC": 0.9619,
+      "Val_PR_AUC": 0.8605,
+      "Test_ROC_AUC": 0.9356,
+      "Test_PR_AUC": 0.7691,
+      "Test_F1": 0.875,
+      "Test_Recall": "87.50%",
+      "Test_Precision": "87.50%",
+      "Test_Brier": 0.0118
+    },
+    {
+      "Feature_Set": "E. Only Rainfall Features (Rainfall + Lags + Rolling Sums/Max)",
+      "Num_Features": 19,
+      "Optimal_Threshold": 0.7825,
+      "Val_ROC_AUC": 0.8074,
+      "Val_PR_AUC": 0.1101,
+      "Test_ROC_AUC": 0.8199,
+      "Test_PR_AUC": 0.1625,
+      "Test_F1": 0.2228,
+      "Test_Recall": "49.90%",
+      "Test_Precision": "14.34%",
+      "Test_Brier": 0.1538
+    }
+  ],
+  "clean_rf_metrics": {
+    "test_roc_auc": 0.8210074642959853,
+    "test_pr_auc": 0.16363939960699048,
+    "test_f1": 0.2582171054919829,
+    "test_recall": 0.37827371853663505,
+    "test_precision": 0.19600802619072763
+  },
+  "clean_xgb_metrics": {
+    "test_roc_auc": 0.8466193826593563,
+    "test_pr_auc": 0.17258839893960976,
+    "test_f1": 0.25243690549812997,
+    "test_recall": 0.4367675532456945,
+    "test_precision": 0.17751822398939696
+  }
+}

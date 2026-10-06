@@ -1,0 +1,666 @@
+{
+  "partitions": {
+    "train": {
+      "years": [
+        2001,
+        2018
+      ],
+      "rows": 2063989,
+      "flood_count": 51645,
+      "flood_rate_pct": 2.502193567892077
+    },
+    "val": {
+      "years": [
+        2019,
+        2021
+      ],
+      "rows": 344140,
+      "flood_count": 11160,
+      "flood_rate_pct": 3.242866275353054
+    },
+    "test": {
+      "years": [
+        2022,
+        2024
+      ],
+      "rows": 343758,
+      "flood_count": 9813,
+      "flood_rate_pct": 2.8546244741940554
+    }
+  },
+  "overlap_and_duplicates": {
+    "exact_duplicates": {
+      "train": 0,
+      "val": 0,
+      "test": 0
+    },
+    "key_duplicates": {
+      "train": 0,
+      "val": 0,
+      "test": 0
+    },
+    "date_overlaps": {
+      "train_val_overlap_days": 0,
+      "train_test_overlap_days": 0,
+      "val_test_overlap_days": 0
+    }
+  },
+  "correlations": [
+    {
+      "feature": "Flood_Occurred",
+      "train_mean": 0.02502193567892077,
+      "test_mean": 0.028546244741940553,
+      "point_biserial_corr": 0.919348980244078,
+      "spearman_corr": 0.919348980252845,
+      "ks_stat_train_test": 0.003524309063019815,
+      "ks_p_value": 0.0013208391731040362
+    },
+    {
+      "feature": "Rainfall_Prev_15d_Sum",
+      "train_mean": 59.70349003797983,
+      "test_mean": 56.49779132412918,
+      "point_biserial_corr": 0.23809500569112793,
+      "spearman_corr": 0.19415003092985608,
+      "ks_stat_train_test": 0.07672460159553207,
+      "ks_p_value": 0.0
+    },
+    {
+      "feature": "Rainfall_Prev_7d_Sum",
+      "train_mean": 27.867955168365725,
+      "test_mean": 26.46445991075117,
+      "point_biserial_corr": 0.23088287362380575,
+      "spearman_corr": 0.18973031856859535,
+      "ks_stat_train_test": 0.05688819990494037,
+      "ks_p_value": 0.0
+    },
+    {
+      "feature": "Rainfall_Prev_30d_Sum",
+      "train_mean": 119.31257947595654,
+      "test_mean": 112.90125146178416,
+      "point_biserial_corr": 0.23062903547324148,
+      "spearman_corr": 0.19708951539330885,
+      "ks_stat_train_test": 0.08586921828612515,
+      "ks_p_value": 0.0
+    },
+    {
+      "feature": "Rainy_Days_Prev_30d",
+      "train_mean": 5.254727617249898,
+      "test_mean": 5.5550910815166485,
+      "point_biserial_corr": 0.2140013620227516,
+      "spearman_corr": 0.19277883925427747,
+      "ks_stat_train_test": 0.07713522845592422,
+      "ks_p_value": 0.0
+    },
+    {
+      "feature": "Rainfall_Prev_7d_Max",
+      "train_mean": 15.969608952029455,
+      "test_mean": 15.146133937246548,
+      "point_biserial_corr": 0.211283175642892,
+      "spearman_corr": 0.1840956846392248,
+      "ks_stat_train_test": 0.0568596855652736,
+      "ks_p_value": 0.0
+    },
+    {
+      "feature": "Rainy_Days_Prev_15d",
+      "train_mean": 2.6292344581293796,
+      "test_mean": 2.7803309304801633,
+      "point_biserial_corr": 0.21027031181263572,
+      "spearman_corr": 0.19026748747115962,
+      "ks_stat_train_test": 0.06158891207523248,
+      "ks_p_value": 0.0
+    },
+    {
+      "feature": "Rainfall_Prev_15d_Max",
+      "train_mean": 25.215326735065283,
+      "test_mean": 23.761782562151286,
+      "point_biserial_corr": 0.20422891867079873,
+      "spearman_corr": 0.18245253150807114,
+      "ks_stat_train_test": 0.0767202512620333,
+      "ks_p_value": 0.0
+    },
+    {
+      "feature": "Rainy_Days_Prev_7d",
+      "train_mean": 1.227228924185158,
+      "test_mean": 1.3030067663879823,
+      "point_biserial_corr": 0.19982942305000087,
+      "spearman_corr": 0.1846713857778396,
+      "ks_stat_train_test": 0.04111415479012248,
+      "ks_p_value": 0.0
+    },
+    {
+      "feature": "Rainfall_Prev_3d_Sum",
+      "train_mean": 11.943479873196997,
+      "test_mean": 11.354956655554197,
+      "point_biserial_corr": 0.19924788735787258,
+      "spearman_corr": 0.17422345118973548,
+      "ks_stat_train_test": 0.03563450069938845,
+      "ks_p_value": 0.0
+    },
+    {
+      "feature": "Rainfall_Prev_3d_Max",
+      "train_mean": 8.944028891189232,
+      "test_mean": 8.515795152403724,
+      "point_biserial_corr": 0.19124537370108938,
+      "spearman_corr": 0.1726924478405854,
+      "ks_stat_train_test": 0.035634016200682295,
+      "ks_p_value": 0.0
+    },
+    {
+      "feature": "Rainfall_Prev_30d_Max",
+      "train_mean": 36.57760562317951,
+      "test_mean": 34.07669092792022,
+      "point_biserial_corr": 0.18591916739395267,
+      "spearman_corr": 0.17761546143503343,
+      "ks_stat_train_test": 0.08580675247954458,
+      "ks_p_value": 0.0
+    },
+    {
+      "feature": "Rainfall (mm)",
+      "train_mean": 3.9811599577323356,
+      "test_mean": 3.7788436341845126,
+      "point_biserial_corr": 0.1759352319989979,
+      "spearman_corr": 0.15777848352604149,
+      "ks_stat_train_test": 0.01924193225576354,
+      "ks_p_value": 3.3106870249268984e-95
+    },
+    {
+      "feature": "Rainy_Days_Prev_3d",
+      "train_mean": 0.5259635589143159,
+      "test_mean": 0.559204440333025,
+      "point_biserial_corr": 0.17411273131721622,
+      "spearman_corr": 0.16756243773670482,
+      "ks_stat_train_test": 0.02232679613263555,
+      "ks_p_value": 4.904787835761511e-128
+    },
+    {
+      "feature": "Rainfall_Lag_1d",
+      "train_mean": 3.981159957732335,
+      "test_mean": 3.7785381867476544,
+      "point_biserial_corr": 0.1572357130393006,
+      "spearman_corr": 0.15077969404042707,
+      "ks_stat_train_test": 0.019262295418220887,
+      "ks_p_value": 2.0854187958989795e-95
+    },
+    {
+      "feature": "Consecutive_Rainy_Days_Before",
+      "train_mean": 0.5305197847469149,
+      "test_mean": 0.621053182762292,
+      "point_biserial_corr": 0.1411635663216306,
+      "spearman_corr": 0.1504505403997953,
+      "ks_stat_train_test": 0.020759850454349138,
+      "ks_p_value": 9.446781324494384e-111
+    },
+    {
+      "feature": "Rainfall_Lag_2d",
+      "train_mean": 3.981159957732335,
+      "test_mean": 3.7861525549950845,
+      "point_biserial_corr": 0.14062683142534116,
+      "spearman_corr": 0.14201788649394617,
+      "ks_stat_train_test": 0.019652104528117942,
+      "ks_p_value": 2.7277304343997414e-99
+    },
+    {
+      "feature": "Rainfall_Lag_3d",
+      "train_mean": 3.981159957732335,
+      "test_mean": 3.7902659138114605,
+      "point_biserial_corr": 0.13004210361263102,
+      "spearman_corr": 0.1380435292129339,
+      "ks_stat_train_test": 0.019963370011394033,
+      "ks_p_value": 1.901082053443444e-102
+    },
+    {
+      "feature": "Rainfall_Lag_7d",
+      "train_mean": 3.981118823792183,
+      "test_mean": 3.7701366368200895,
+      "point_biserial_corr": 0.1015679944743671,
+      "spearman_corr": 0.12805831222258107,
+      "ks_stat_train_test": 0.018599518563517714,
+      "ks_p_value": 5.5375810146518834e-89
+    },
+    {
+      "feature": "Month_Number",
+      "train_mean": 6.522741158019738,
+      "test_mean": 6.517841039335812,
+      "point_biserial_corr": 0.07148983943951595,
+      "spearman_corr": 0.07145125201371197,
+      "ks_stat_train_test": 0.0008541248631783738,
+      "ks_p_value": 0.9824778004109942
+    },
+    {
+      "feature": "Day_of_Year",
+      "train_mean": 183.09507851059283,
+      "test_mean": 183.02694337295424,
+      "point_biserial_corr": 0.0693735181094988,
+      "spearman_corr": 0.06938812159025502,
+      "ks_stat_train_test": 0.0006085303749195914,
+      "ks_p_value": 0.9999047561568049
+    },
+    {
+      "feature": "Rainfall_Missing",
+      "train_mean": 0.0011419634503866058,
+      "test_mean": 8.727069624561465e-06,
+      "point_biserial_corr": 0.0002776755631777824,
+      "spearman_corr": 0.00027767556317780096,
+      "ks_stat_train_test": 0.001133236380762126,
+      "ks_p_value": 0.8431507022634445
+    },
+    {
+      "feature": "Day_of_Week",
+      "train_mean": 2.9995561991851702,
+      "test_mean": 3.0018268665747416,
+      "point_biserial_corr": -0.006312006829566769,
+      "spearman_corr": -0.006311858847912316,
+      "ks_stat_train_test": 0.0011241684321235956,
+      "ks_p_value": 0.8500068554923406
+    },
+    {
+      "feature": "Day",
+      "train_mean": 15.728602720266435,
+      "test_mean": 15.717120765189465,
+      "point_biserial_corr": -0.017148004984582212,
+      "spearman_corr": -0.017227723694113756,
+      "ks_stat_train_test": 0.0008966495716100642,
+      "ks_p_value": 0.9716305697920717
+    },
+    {
+      "feature": "Year",
+      "train_mean": 2009.5002478210881,
+      "test_mean": 2022.999790550329,
+      "point_biserial_corr": -0.0515896839313984,
+      "spearman_corr": -0.05157656625270673,
+      "ks_stat_train_test": 1.0,
+      "ks_p_value": 0.0
+    },
+    {
+      "feature": "Month_cos",
+      "train_mean": -0.002169644159521043,
+      "test_mean": -0.002934610773756408,
+      "point_biserial_corr": -0.09323918478923718,
+      "spearman_corr": -0.10603271877831359,
+      "ks_stat_train_test": 0.010134213080702725,
+      "ks_p_value": 1.024147062438665e-26
+    },
+    {
+      "feature": "Month_sin",
+      "train_mean": -0.004790389989505561,
+      "test_mean": -0.0047725596895023025,
+      "point_biserial_corr": -0.17369081169953168,
+      "spearman_corr": -0.15932741569186767,
+      "ks_stat_train_test": 0.009374825562035893,
+      "ks_p_value": 6.348802956084846e-23
+    }
+  ],
+  "logistic_regression_coefficients": [
+    {
+      "feature": "Month_cos",
+      "raw_coefficient": -1.486180749752024,
+      "abs_coefficient": 1.486180749752024,
+      "odds_ratio_per_sd": 0.22623505592313864,
+      "train_scale_std": 0.7084269390863099
+    },
+    {
+      "feature": "Flood_Occurred",
+      "raw_coefficient": 1.2437309248130832,
+      "abs_coefficient": 1.2437309248130832,
+      "odds_ratio_per_sd": 3.468530179445269,
+      "train_scale_std": 0.15619167203727832
+    },
+    {
+      "feature": "Month_sin",
+      "raw_coefficient": -1.2282895200507504,
+      "abs_coefficient": 1.2282895200507504,
+      "odds_ratio_per_sd": 0.2927929661044791,
+      "train_scale_std": 0.7057645618749737
+    },
+    {
+      "feature": "Rainy_Days_Prev_15d",
+      "raw_coefficient": -0.646324505881562,
+      "abs_coefficient": 0.646324505881562,
+      "odds_ratio_per_sd": 0.5239680834925218,
+      "train_scale_std": 3.2709637782511645
+    },
+    {
+      "feature": "Rainy_Days_Prev_30d",
+      "raw_coefficient": 0.5638222390489805,
+      "abs_coefficient": 0.5638222390489805,
+      "odds_ratio_per_sd": 1.7573767936324,
+      "train_scale_std": 6.01124439609272
+    },
+    {
+      "feature": "Rainfall_Prev_15d_Sum",
+      "raw_coefficient": 0.5172538870650176,
+      "abs_coefficient": 0.5172538870650176,
+      "odds_ratio_per_sd": 1.6774149482114107,
+      "train_scale_std": 96.26490660247777
+    },
+    {
+      "feature": "Month_Number",
+      "raw_coefficient": 0.45089200301416943,
+      "abs_coefficient": 0.45089200301416943,
+      "odds_ratio_per_sd": 1.5697117488013317,
+      "train_scale_std": 3.448471226864625
+    },
+    {
+      "feature": "Day_of_Year",
+      "raw_coefficient": 0.4173286802218191,
+      "abs_coefficient": 0.4173286802218191,
+      "odds_ratio_per_sd": 1.5179013351016246,
+      "train_scale_std": 105.42636198159973
+    },
+    {
+      "feature": "Rainfall_Prev_15d_Max",
+      "raw_coefficient": -0.3982175175900971,
+      "abs_coefficient": 0.3982175175900971,
+      "odds_ratio_per_sd": 0.6715159452447167,
+      "train_scale_std": 38.69043432141263
+    },
+    {
+      "feature": "Day",
+      "raw_coefficient": 0.287013422625498,
+      "abs_coefficient": 0.287013422625498,
+      "odds_ratio_per_sd": 1.3324420982269276,
+      "train_scale_std": 8.799651888182558
+    },
+    {
+      "feature": "Rainy_Days_Prev_7d",
+      "raw_coefficient": 0.27480417274829955,
+      "abs_coefficient": 0.27480417274829955,
+      "odds_ratio_per_sd": 1.3162728875255,
+      "train_scale_std": 1.7201761895520826
+    },
+    {
+      "feature": "Rainfall_Prev_30d_Sum",
+      "raw_coefficient": -0.2547501536247578,
+      "abs_coefficient": 0.2547501536247578,
+      "odds_ratio_per_sd": 0.7751101322276145,
+      "train_scale_std": 165.99915640064964
+    },
+    {
+      "feature": "Year",
+      "raw_coefficient": -0.20914751312166763,
+      "abs_coefficient": 0.20914751312166763,
+      "odds_ratio_per_sd": 0.8112755530268907,
+      "train_scale_std": 5.188044040634489
+    },
+    {
+      "feature": "Rainfall_Prev_30d_Max",
+      "raw_coefficient": 0.16507469845884706,
+      "abs_coefficient": 0.16507469845884706,
+      "odds_ratio_per_sd": 1.1794812208502392,
+      "train_scale_std": 47.44009564397778
+    },
+    {
+      "feature": "Rainfall (mm)",
+      "raw_coefficient": 0.14559301083834797,
+      "abs_coefficient": 0.14559301083834797,
+      "odds_ratio_per_sd": 1.156725317570445,
+      "train_scale_std": 14.297290325291764
+    },
+    {
+      "feature": "Rainfall_Prev_7d_Sum",
+      "raw_coefficient": -0.14071589670115353,
+      "abs_coefficient": 0.14071589670115353,
+      "odds_ratio_per_sd": 0.8687360874293739,
+      "train_scale_std": 54.82169623948185
+    },
+    {
+      "feature": "Rainfall_Prev_3d_Max",
+      "raw_coefficient": -0.07763057195256237,
+      "abs_coefficient": 0.07763057195256237,
+      "odds_ratio_per_sd": 0.9253061974715828,
+      "train_scale_std": 22.03298014891368
+    },
+    {
+      "feature": "Rainy_Days_Prev_3d",
+      "raw_coefficient": 0.0510174609216429,
+      "abs_coefficient": 0.0510174609216429,
+      "odds_ratio_per_sd": 1.0523412679712056,
+      "train_scale_std": 0.8767419972161874
+    },
+    {
+      "feature": "Day_of_Week",
+      "raw_coefficient": -0.0414964020309033,
+      "abs_coefficient": 0.0414964020309033,
+      "odds_ratio_per_sd": 0.9593527870569434,
+      "train_scale_std": 2.0001852629347185
+    },
+    {
+      "feature": "Rainfall_Prev_7d_Max",
+      "raw_coefficient": 0.0370627908123983,
+      "abs_coefficient": 0.0370627908123983,
+      "odds_ratio_per_sd": 1.0377581804716474,
+      "train_scale_std": 30.10075570878562
+    },
+    {
+      "feature": "Rainfall_Missing",
+      "raw_coefficient": 0.033608877841777775,
+      "abs_coefficient": 0.033608877841777775,
+      "odds_ratio_per_sd": 1.034180036887143,
+      "train_scale_std": 0.033773649045736556
+    },
+    {
+      "feature": "Rainfall_Lag_1d",
+      "raw_coefficient": 0.0310877982594367,
+      "abs_coefficient": 0.0310877982594367,
+      "odds_ratio_per_sd": 1.0315760704941352,
+      "train_scale_std": 14.297290325291767
+    },
+    {
+      "feature": "Consecutive_Rainy_Days_Before",
+      "raw_coefficient": -0.0246275171367152,
+      "abs_coefficient": 0.0246275171367152,
+      "odds_ratio_per_sd": 0.9756732659243037,
+      "train_scale_std": 1.544130384229324
+    },
+    {
+      "feature": "Rainfall_Prev_3d_Sum",
+      "raw_coefficient": 0.019112402399031937,
+      "abs_coefficient": 0.019112402399031937,
+      "odds_ratio_per_sd": 1.019296213518326,
+      "train_scale_std": 30.704852464050514
+    },
+    {
+      "feature": "Rainfall_Lag_3d",
+      "raw_coefficient": 0.012488649652926443,
+      "abs_coefficient": 0.012488649652926443,
+      "odds_ratio_per_sd": 1.0125669584889954,
+      "train_scale_std": 14.297290325291769
+    },
+    {
+      "feature": "Rainfall_Lag_7d",
+      "raw_coefficient": 0.00618176815000755,
+      "abs_coefficient": 0.00618176815000755,
+      "odds_ratio_per_sd": 1.0062009147116067,
+      "train_scale_std": 14.297286795362254
+    },
+    {
+      "feature": "Rainfall_Lag_2d",
+      "raw_coefficient": -0.002530663533332083,
+      "abs_coefficient": 0.002530663533332083,
+      "odds_ratio_per_sd": 0.9974725358961651,
+      "train_scale_std": 14.297290325291767
+    }
+  ],
+  "ablation_study": [
+    {
+      "Feature_Set": "Baseline_Current_All_Features (27 cols)",
+      "Model": "Logistic Regression",
+      "Num_Features": 27,
+      "Val_Optimal_Threshold": 0.8345,
+      "Val_ROC_AUC": 0.97288,
+      "Val_PR_AUC": 0.89243,
+      "Val_F1": 0.92605,
+      "Test_ROC_AUC": 0.9693,
+      "Test_PR_AUC": 0.83061,
+      "Test_F1": 0.87475,
+      "Test_Recall": 0.87435,
+      "Test_Precision": 0.87515,
+      "Test_Brier_Score": 0.01108
+    },
+    {
+      "Feature_Set": "Baseline_Current_All_Features (27 cols)",
+      "Model": "Random Forest",
+      "Num_Features": 27,
+      "Val_Optimal_Threshold": 0.3078,
+      "Val_ROC_AUC": 0.97875,
+      "Val_PR_AUC": 0.9355,
+      "Val_F1": 0.91019,
+      "Test_ROC_AUC": 0.96204,
+      "Test_PR_AUC": 0.80149,
+      "Test_F1": 0.82813,
+      "Test_Recall": 0.80108,
+      "Test_Precision": 0.85706,
+      "Test_Brier_Score": 0.01134
+    },
+    {
+      "Feature_Set": "Ablation_No_Flood_Occurred (26 cols)",
+      "Model": "Logistic Regression",
+      "Num_Features": 26,
+      "Val_Optimal_Threshold": 0.2271,
+      "Val_ROC_AUC": 0.84477,
+      "Val_PR_AUC": 0.12575,
+      "Val_F1": 0.19349,
+      "Test_ROC_AUC": 0.81986,
+      "Test_PR_AUC": 0.24862,
+      "Test_F1": 0.14884,
+      "Test_Recall": 0.738,
+      "Test_Precision": 0.08277,
+      "Test_Brier_Score": 0.06992
+    },
+    {
+      "Feature_Set": "Ablation_No_Flood_Occurred (26 cols)",
+      "Model": "Random Forest",
+      "Num_Features": 26,
+      "Val_Optimal_Threshold": 0.1216,
+      "Val_ROC_AUC": 0.85107,
+      "Val_PR_AUC": 0.10997,
+      "Val_F1": 0.19613,
+      "Test_ROC_AUC": 0.79259,
+      "Test_PR_AUC": 0.07512,
+      "Test_F1": 0.15158,
+      "Test_Recall": 0.58687,
+      "Test_Precision": 0.08703,
+      "Test_Brier_Score": 0.03073
+    },
+    {
+      "Feature_Set": "Ablation_No_Year (26 cols)",
+      "Model": "Logistic Regression",
+      "Num_Features": 26,
+      "Val_Optimal_Threshold": 0.8973,
+      "Val_ROC_AUC": 0.97319,
+      "Val_PR_AUC": 0.8903,
+      "Val_F1": 0.92614,
+      "Test_ROC_AUC": 0.96947,
+      "Test_PR_AUC": 0.82905,
+      "Test_F1": 0.87492,
+      "Test_Recall": 0.87466,
+      "Test_Precision": 0.87519,
+      "Test_Brier_Score": 0.01765
+    },
+    {
+      "Feature_Set": "Ablation_No_Year (26 cols)",
+      "Model": "Random Forest",
+      "Num_Features": 26,
+      "Val_Optimal_Threshold": 0.6396,
+      "Val_ROC_AUC": 0.97764,
+      "Val_PR_AUC": 0.9127,
+      "Val_F1": 0.92469,
+      "Test_ROC_AUC": 0.96636,
+      "Test_PR_AUC": 0.78443,
+      "Test_F1": 0.75479,
+      "Test_Recall": 0.65668,
+      "Test_Precision": 0.88736,
+      "Test_Brier_Score": 0.01578
+    },
+    {
+      "Feature_Set": "Ablation_Pure_Meteorological_No_Flood_No_Year (25 cols)",
+      "Model": "Logistic Regression",
+      "Num_Features": 25,
+      "Val_Optimal_Threshold": 0.4074,
+      "Val_ROC_AUC": 0.84553,
+      "Val_PR_AUC": 0.12855,
+      "Val_F1": 0.1934,
+      "Test_ROC_AUC": 0.82226,
+      "Test_PR_AUC": 0.24383,
+      "Test_F1": 0.14309,
+      "Test_Recall": 0.74167,
+      "Test_Precision": 0.07918,
+      "Test_Brier_Score": 0.14123
+    },
+    {
+      "Feature_Set": "Ablation_Pure_Meteorological_No_Flood_No_Year (25 cols)",
+      "Model": "Random Forest",
+      "Num_Features": 25,
+      "Val_Optimal_Threshold": 0.7844,
+      "Val_ROC_AUC": 0.85273,
+      "Val_PR_AUC": 0.15289,
+      "Val_F1": 0.22653,
+      "Test_ROC_AUC": 0.82459,
+      "Test_PR_AUC": 0.17397,
+      "Test_F1": 0.27605,
+      "Test_Recall": 0.37644,
+      "Test_Precision": 0.21794,
+      "Test_Brier_Score": 0.1255
+    },
+    {
+      "Feature_Set": "Ablation_Only_Flood_Occurred (1 col)",
+      "Model": "Logistic Regression",
+      "Num_Features": 1,
+      "Val_Optimal_Threshold": 0.9978,
+      "Val_ROC_AUC": 0.96194,
+      "Val_PR_AUC": 0.8605,
+      "Val_F1": 0.92634,
+      "Test_ROC_AUC": 0.93564,
+      "Test_PR_AUC": 0.76913,
+      "Test_F1": 0.87496,
+      "Test_Recall": 0.87496,
+      "Test_Precision": 0.87496,
+      "Test_Brier_Score": 0.01179
+    },
+    {
+      "Feature_Set": "Ablation_Only_Flood_Occurred (1 col)",
+      "Model": "Random Forest",
+      "Num_Features": 1,
+      "Val_Optimal_Threshold": 0.9978,
+      "Val_ROC_AUC": 0.96194,
+      "Val_PR_AUC": 0.8605,
+      "Val_F1": 0.92634,
+      "Test_ROC_AUC": 0.93564,
+      "Test_PR_AUC": 0.76913,
+      "Test_F1": 0.87496,
+      "Test_Recall": 0.87496,
+      "Test_Precision": 0.87496,
+      "Test_Brier_Score": 0.01178
+    },
+    {
+      "Feature_Set": "Ablation_Only_Rainfall_Antecedent (19 rainfall cols)",
+      "Model": "Logistic Regression",
+      "Num_Features": 19,
+      "Val_Optimal_Threshold": 0.7825,
+      "Val_ROC_AUC": 0.80741,
+      "Val_PR_AUC": 0.11009,
+      "Val_F1": 0.16017,
+      "Test_ROC_AUC": 0.81988,
+      "Test_PR_AUC": 0.16248,
+      "Test_F1": 0.22278,
+      "Test_Recall": 0.49903,
+      "Test_Precision": 0.1434,
+      "Test_Brier_Score": 0.15383
+    },
+    {
+      "Feature_Set": "Ablation_Only_Rainfall_Antecedent (19 rainfall cols)",
+      "Model": "Random Forest",
+      "Num_Features": 19,
+      "Val_Optimal_Threshold": 0.7881,
+      "Val_ROC_AUC": 0.80639,
+      "Val_PR_AUC": 0.12431,
+      "Val_F1": 0.18809,
+      "Test_ROC_AUC": 0.81485,
+      "Test_PR_AUC": 0.15756,
+      "Test_F1": 0.23333,
+      "Test_Recall": 0.29013,
+      "Test_Precision": 0.19513,
+      "Test_Brier_Score": 0.14765
+    }
+  ]
+}

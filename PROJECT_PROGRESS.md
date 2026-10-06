@@ -69,12 +69,11 @@ The **Odisha Flood Intelligence & Early Warning System** is an end-to-end, spati
 ## 📊 Benchmark Summary (Test Split: 2022–2024, 343,758 observations)
 
 | Model Architecture | Optimal Threshold | Test ROC-AUC | Test PR-AUC | Test F1 | Test Recall | Test Precision | Test Brier Score |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Logistic Regression (Production)** | **0.8345** | **0.9693** | **0.8306** | **0.8748** | **87.44%** | **87.52%** | **0.0111** |
-| **Random Forest (Balanced Subsample)** | 0.2745 | 0.9637 | 0.8176 | 0.8452 | 84.55% | 84.48% | 0.0107 |
-| **XGBoost (scale_pos_weight)** | 0.3966 | 0.9082 | 0.6151 | 0.7033 | 61.92% | 81.39% | 0.0138 |
-| **Decision Tree (Baseline)** | 0.9362 | 0.6137 | 0.5107 | 0.6858 | 54.66% | 92.02% | 0.0203 |
-| **ANN (MLP)** | 0.0023 | 0.9281 | 0.5992 | 0.5863 | 44.59% | 85.57% | 0.0237 |
+| **Logistic Regression (Pure Met)** | 0.8503 | **0.8409** | **0.2399** | **0.3226** | **41.15%** | **26.53%** | 0.1490 |
+| **XGBoost (Production Champion)** | **0.8073** | **0.8388** | 0.1593 | 0.2440 | 33.95% | 19.05% | 0.1445 |
+| **Random Forest (Pure Met)** | 0.7690 | 0.8220 | 0.1529 | 0.2448 | 35.10% | 18.80% | 0.1255 |
+| **ANN (MLP)** | 0.1063 | 0.8245 | 0.1332 | 0.2050 | 31.02% | 15.31% | **0.0263** |
+| **Decision Tree (Baseline)** | 0.8265 | 0.8012 | 0.1295 | 0.2312 | 34.54% | 17.38% | 0.1515 |
 
 ---
 

@@ -1,28 +1,23 @@
 Feature,Importance,Signed_Coefficient,Type
-Month_cos,1.486180749752024,-1.486180749752024,Linear Coefficient
-Flood_Occurred,1.2437309248130832,1.2437309248130832,Linear Coefficient
-Month_sin,1.2282895200507504,-1.2282895200507504,Linear Coefficient
-Rainy_Days_Prev_15d,0.646324505881562,-0.646324505881562,Linear Coefficient
-Rainy_Days_Prev_30d,0.5638222390489805,0.5638222390489805,Linear Coefficient
-Rainfall_Prev_15d_Sum,0.5172538870650176,0.5172538870650176,Linear Coefficient
-Month_Number,0.45089200301416943,0.45089200301416943,Linear Coefficient
-Day_of_Year,0.4173286802218191,0.4173286802218191,Linear Coefficient
-Rainfall_Prev_15d_Max,0.3982175175900971,-0.3982175175900971,Linear Coefficient
-Day,0.287013422625498,0.287013422625498,Linear Coefficient
-Rainy_Days_Prev_7d,0.27480417274829955,0.27480417274829955,Linear Coefficient
-Rainfall_Prev_30d_Sum,0.2547501536247578,-0.2547501536247578,Linear Coefficient
-Year,0.20914751312166763,-0.20914751312166763,Linear Coefficient
-Rainfall_Prev_30d_Max,0.16507469845884706,0.16507469845884706,Linear Coefficient
-Rainfall (mm),0.14559301083834797,0.14559301083834797,Linear Coefficient
-Rainfall_Prev_7d_Sum,0.14071589670115353,-0.14071589670115353,Linear Coefficient
-Rainfall_Prev_3d_Max,0.07763057195256237,-0.07763057195256237,Linear Coefficient
-Rainy_Days_Prev_3d,0.0510174609216429,0.0510174609216429,Linear Coefficient
-Day_of_Week,0.0414964020309033,-0.0414964020309033,Linear Coefficient
-Rainfall_Prev_7d_Max,0.0370627908123983,0.0370627908123983,Linear Coefficient
-Rainfall_Missing,0.033608877841777775,0.033608877841777775,Linear Coefficient
-Rainfall_Lag_1d,0.0310877982594367,0.0310877982594367,Linear Coefficient
-Consecutive_Rainy_Days_Before,0.0246275171367152,-0.0246275171367152,Linear Coefficient
-Rainfall_Prev_3d_Sum,0.019112402399031937,0.019112402399031937,Linear Coefficient
-Rainfall_Lag_3d,0.012488649652926443,0.012488649652926443,Linear Coefficient
-Rainfall_Lag_7d,0.00618176815000755,0.00618176815000755,Linear Coefficient
-Rainfall_Lag_2d,0.002530663533332083,-0.002530663533332083,Linear Coefficient
+Rainy_Days_Prev_30d,0.48858747,0.48858747,Tree Gini / Gain
+Month_sin,0.11217824,0.11217824,Tree Gini / Gain
+Rainfall_Prev_30d_Sum,0.11132232,0.11132232,Tree Gini / Gain
+Month_cos,0.07503796,0.07503796,Tree Gini / Gain
+Rainfall (mm),0.037635278,0.037635278,Tree Gini / Gain
+Rainfall_Prev_7d_Sum,0.03564859,0.03564859,Tree Gini / Gain
+Rainfall_Prev_15d_Sum,0.019880204,0.019880204,Tree Gini / Gain
+Rainy_Days_Prev_15d,0.017740022,0.017740022,Tree Gini / Gain
+Rainy_Days_Prev_7d,0.016223848,0.016223848,Tree Gini / Gain
+Consecutive_Rainy_Days_Before,0.011284499,0.011284499,Tree Gini / Gain
+Rainfall_Lag_1d,0.010952588,0.010952588,Tree Gini / Gain
+Rainfall_Prev_3d_Max,0.009830342,0.009830342,Tree Gini / Gain
+Rainfall_Prev_7d_Max,0.009083807,0.009083807,Tree Gini / Gain
+Rainfall_Prev_3d_Sum,0.008376675,0.008376675,Tree Gini / Gain
+Day_of_Week,0.008114217,0.008114217,Tree Gini / Gain
+Rainfall_Prev_15d_Max,0.0058636847,0.0058636847,Tree Gini / Gain
+Rainfall_Prev_30d_Max,0.005333971,0.005333971,Tree Gini / Gain
+Rainfall_Missing,0.004442478,0.004442478,Tree Gini / Gain
+Rainfall_Lag_7d,0.0044414513,0.0044414513,Tree Gini / Gain
+Rainfall_Lag_2d,0.0038880068,0.0038880068,Tree Gini / Gain
+Rainfall_Lag_3d,0.0024227519,0.0024227519,Tree Gini / Gain
+Rainy_Days_Prev_3d,0.0017115362,0.0017115362,Tree Gini / Gain

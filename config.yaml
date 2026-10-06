@@ -45,13 +45,9 @@ features:
     - "Block/Station"
     - "Date"
   temporal_cols:
-    - "Year"
-    - "Month_Number"
-    - "Day"
-    - "Day_of_Year"
-    - "Day_of_Week"
     - "Month_sin"
     - "Month_cos"
+    - "Day_of_Week"
   rainfall_cols:
     - "Rainfall (mm)"
     - "Rainfall_Missing"
@@ -72,7 +68,6 @@ features:
     - "Rainy_Days_Prev_15d"
     - "Rainy_Days_Prev_30d"
     - "Consecutive_Rainy_Days_Before"
-  same_day_flood_col: "Flood_Occurred"
   target_col: "Flood_Next_Day"
 
 models:

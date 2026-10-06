@@ -1,0 +1,256 @@
+{
+  "duplicates": 0,
+  "train_rows": 2063989,
+  "val_rows": 344140,
+  "test_rows": 343758,
+  "feature_correlations": [
+    {
+      "Feature": "Flood_Occurred",
+      "Pearson_Correlation": 0.9193489802528578,
+      "Abs_Correlation": 0.9193489802528578
+    },
+    {
+      "Feature": "Rainfall_Prev_15d_Sum",
+      "Pearson_Correlation": 0.23809500569249137,
+      "Abs_Correlation": 0.23809500569249137
+    },
+    {
+      "Feature": "Rainfall_Prev_7d_Sum",
+      "Pearson_Correlation": 0.23088287362514714,
+      "Abs_Correlation": 0.23088287362514714
+    },
+    {
+      "Feature": "Rainfall_Prev_30d_Sum",
+      "Pearson_Correlation": 0.2306290354741155,
+      "Abs_Correlation": 0.2306290354741155
+    },
+    {
+      "Feature": "Rainy_Days_Prev_30d",
+      "Pearson_Correlation": 0.2140013620236235,
+      "Abs_Correlation": 0.2140013620236235
+    },
+    {
+      "Feature": "Rainfall_Prev_7d_Max",
+      "Pearson_Correlation": 0.21128317564370222,
+      "Abs_Correlation": 0.21128317564370222
+    },
+    {
+      "Feature": "Rainy_Days_Prev_15d",
+      "Pearson_Correlation": 0.21027031181394204,
+      "Abs_Correlation": 0.21027031181394204
+    },
+    {
+      "Feature": "Rainfall_Prev_15d_Max",
+      "Pearson_Correlation": 0.20422891867128082,
+      "Abs_Correlation": 0.20422891867128082
+    },
+    {
+      "Feature": "Rainy_Days_Prev_7d",
+      "Pearson_Correlation": 0.19982942305145351,
+      "Abs_Correlation": 0.19982942305145351
+    },
+    {
+      "Feature": "Rainfall_Prev_3d_Sum",
+      "Pearson_Correlation": 0.1992478873581972,
+      "Abs_Correlation": 0.1992478873581972
+    },
+    {
+      "Feature": "Rainfall_Prev_3d_Max",
+      "Pearson_Correlation": 0.1912453737014793,
+      "Abs_Correlation": 0.1912453737014793
+    },
+    {
+      "Feature": "Rainfall_Prev_30d_Max",
+      "Pearson_Correlation": 0.18591916739515246,
+      "Abs_Correlation": 0.18591916739515246
+    },
+    {
+      "Feature": "Rainfall (mm)",
+      "Pearson_Correlation": 0.17593523199912348,
+      "Abs_Correlation": 0.17593523199912348
+    },
+    {
+      "Feature": "Rainy_Days_Prev_3d",
+      "Pearson_Correlation": 0.17411273131790048,
+      "Abs_Correlation": 0.17411273131790048
+    },
+    {
+      "Feature": "Month_sin",
+      "Pearson_Correlation": -0.1736908117002071,
+      "Abs_Correlation": 0.1736908117002071
+    },
+    {
+      "Feature": "Rainfall_Lag_1d",
+      "Pearson_Correlation": 0.1572357130394145,
+      "Abs_Correlation": 0.1572357130394145
+    },
+    {
+      "Feature": "Consecutive_Rainy_Days_Before",
+      "Pearson_Correlation": 0.14116356632254826,
+      "Abs_Correlation": 0.14116356632254826
+    },
+    {
+      "Feature": "Rainfall_Lag_2d",
+      "Pearson_Correlation": 0.14062683142544674,
+      "Abs_Correlation": 0.14062683142544674
+    },
+    {
+      "Feature": "Rainfall_Lag_3d",
+      "Pearson_Correlation": 0.13004210361273105,
+      "Abs_Correlation": 0.13004210361273105
+    },
+    {
+      "Feature": "Rainfall_Lag_7d",
+      "Pearson_Correlation": 0.10156799447499767,
+      "Abs_Correlation": 0.10156799447499767
+    },
+    {
+      "Feature": "Month_cos",
+      "Pearson_Correlation": -0.0932391847898123,
+      "Abs_Correlation": 0.0932391847898123
+    },
+    {
+      "Feature": "Month_Number",
+      "Pearson_Correlation": 0.07148983943964295,
+      "Abs_Correlation": 0.07148983943964295
+    },
+    {
+      "Feature": "Day_of_Year",
+      "Pearson_Correlation": 0.06937351810982659,
+      "Abs_Correlation": 0.06937351810982659
+    },
+    {
+      "Feature": "Year",
+      "Pearson_Correlation": -0.051589683931657755,
+      "Abs_Correlation": 0.051589683931657755
+    },
+    {
+      "Feature": "Day",
+      "Pearson_Correlation": -0.01714800498466322,
+      "Abs_Correlation": 0.01714800498466322
+    },
+    {
+      "Feature": "Day_of_Week",
+      "Pearson_Correlation": -0.0063120068296059996,
+      "Abs_Correlation": 0.0063120068296059996
+    },
+    {
+      "Feature": "Rainfall_Missing",
+      "Pearson_Correlation": 0.0002776755631780048,
+      "Abs_Correlation": 0.0002776755631780048
+    }
+  ],
+  "ablation_results": [
+    {
+      "Experiment": "1. Full Baseline (Current config with Flood_Occurred & Year)",
+      "Num_Features": 27,
+      "Opt_Threshold": 0.8345,
+      "Val_ROC_AUC": 0.9729,
+      "Val_PR_AUC": 0.8924,
+      "Val_F1": 0.9261,
+      "Test_ROC_AUC": 0.9693,
+      "Test_PR_AUC": 0.8306,
+      "Test_F1": 0.8748,
+      "Test_Recall": 0.8743,
+      "Test_Precision": 0.8751,
+      "Test_Brier": 0.0111
+    },
+    {
+      "Experiment": "2. Without Flood_Occurred (With Year)",
+      "Num_Features": 26,
+      "Opt_Threshold": 0.2271,
+      "Val_ROC_AUC": 0.8448,
+      "Val_PR_AUC": 0.1258,
+      "Val_F1": 0.1935,
+      "Test_ROC_AUC": 0.8199,
+      "Test_PR_AUC": 0.2486,
+      "Test_F1": 0.1488,
+      "Test_Recall": 0.738,
+      "Test_Precision": 0.0828,
+      "Test_Brier": 0.0699
+    },
+    {
+      "Experiment": "3. Pure Meteorological & Seasonal (No Flood_Occurred, No Year)",
+      "Num_Features": 25,
+      "Opt_Threshold": 0.4074,
+      "Val_ROC_AUC": 0.8455,
+      "Val_PR_AUC": 0.1285,
+      "Val_F1": 0.1934,
+      "Test_ROC_AUC": 0.8223,
+      "Test_PR_AUC": 0.2438,
+      "Test_F1": 0.1431,
+      "Test_Recall": 0.7417,
+      "Test_Precision": 0.0792,
+      "Test_Brier": 0.1412
+    },
+    {
+      "Experiment": "4. Pure Rainfall Accumulation Only (No calendar, no persistence)",
+      "Num_Features": 18,
+      "Opt_Threshold": 0.7828,
+      "Val_ROC_AUC": 0.8075,
+      "Val_PR_AUC": 0.1101,
+      "Val_F1": 0.1603,
+      "Test_ROC_AUC": 0.8199,
+      "Test_PR_AUC": 0.1627,
+      "Test_F1": 0.2231,
+      "Test_Recall": 0.4987,
+      "Test_Precision": 0.1437,
+      "Test_Brier": 0.154
+    },
+    {
+      "Experiment": "5. Persistence Only (Flood_Occurred only)",
+      "Num_Features": 1,
+      "Opt_Threshold": 0.9978,
+      "Val_ROC_AUC": 0.9619,
+      "Val_PR_AUC": 0.8605,
+      "Val_F1": 0.9263,
+      "Test_ROC_AUC": 0.9356,
+      "Test_PR_AUC": 0.7691,
+      "Test_F1": 0.875,
+      "Test_Recall": 0.875,
+      "Test_Precision": 0.875,
+      "Test_Brier": 0.0118
+    }
+  ],
+  "pure_meteorological_benchmark": [
+    {
+      "Model": "Logistic Regression (Pure Met)",
+      "Opt_Threshold": 0.4074,
+      "Val_ROC_AUC": 0.8455,
+      "Val_PR_AUC": 0.1285,
+      "Val_F1": 0.1934,
+      "Test_ROC_AUC": 0.8223,
+      "Test_PR_AUC": 0.2438,
+      "Test_F1": 0.1431,
+      "Test_Recall": 0.7417,
+      "Test_Precision": 0.0792,
+      "Test_Brier": 0.1412
+    },
+    {
+      "Model": "Random Forest (Pure Met)",
+      "Opt_Threshold": 0.7372,
+      "Val_ROC_AUC": 0.855,
+      "Val_PR_AUC": 0.1437,
+      "Val_F1": 0.2111,
+      "Test_ROC_AUC": 0.8157,
+      "Test_PR_AUC": 0.1644,
+      "Test_F1": 0.2527,
+      "Test_Recall": 0.4089,
+      "Test_Precision": 0.1829,
+      "Test_Brier": 0.1093
+    },
+    {
+      "Model": "XGBoost (Pure Met)",
+      "Opt_Threshold": 0.7864,
+      "Val_ROC_AUC": 0.8638,
+      "Val_PR_AUC": 0.1493,
+      "Val_F1": 0.2139,
+      "Test_ROC_AUC": 0.8467,
+      "Test_PR_AUC": 0.1696,
+      "Test_F1": 0.2511,
+      "Test_Recall": 0.4054,
+      "Test_Precision": 0.1819,
+      "Test_Brier": 0.1351
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "duplicates": {
+    "exact": 0,
+    "station_date": 0
+  },
+  "date_overlaps": {
+    "train_val": 0,
+    "val_test": 0,
+    "train_test": 0
+  },
+  "contingency_matrix": {
+    "0.0": {
+      "0": 2673159,
+      "1": 6110,
+      "All": 2679269
+    },
+    "1.0": {
+      "0": 6110,
+      "1": 66508,
+      "All": 72618
+    },
+    "All": {
+      "0": 2679269,
+      "1": 72618,
+      "All": 2751887
+    }
+  },
+  "target_correlation": {
+    "Flood_Occurred": 0.9135806085040166,
+    "Rainfall_Prev_15d_Sum": 0.22646025577657164,
+    "Rainfall_Prev_7d_Sum": 0.22410793155841116,
+    "Rainfall_Prev_30d_Sum": 0.21720208499348248,
+    "Rainy_Days_Prev_30d": 0.20804430487260978,
+    "Rainfall_Prev_7d_Max": 0.20509255886567931,
+    "Rainy_Days_Prev_15d": 0.2025853207909338,
+    "Rainfall_Prev_3d_Sum": 0.19673530006059672,
+    "Rainy_Days_Prev_7d": 0.19646551460700484,
+    "Rainfall_Prev_15d_Max": 0.19385119750825916,
+    "Rainfall_Prev_3d_Max": 0.18996101931971163,
+    "Rainfall (mm)": 0.17456593238488358,
+    "Rainfall_Prev_30d_Max": 0.17306440125510833,
+    "Rainy_Days_Prev_3d": 0.1717548317833285,
+    "Rainfall_Lag_1d": 0.15264444616905912,
+    "Consecutive_Rainy_Days_Before": 0.1382983101462473,
+    "Rainfall_Lag_2d": 0.13734354750114994,
+    "Rainfall_Lag_3d": 0.12977469118209523,
+    "Rainfall_Lag_7d": 0.09473696869683844,
+    "Month_Number": 0.07706199255409368,
+    "Day_of_Year": 0.07555902515047434,
+    "Rainfall_Missing": -2.1431206744613083e-05,
+    "Day_of_Week": -0.007523679357132614,
+    "Day": -0.011614212306329589,
+    "Year": -0.01712434185589106,
+    "Month_cos": -0.09064168194743225,
+    "Month_sin": -0.17318033671531244
+  },
+  "ablation_study": [
+    {
+      "Configuration": "Config A: Current Production (27 Features incl. Flood_Occurred & Year)",
+      "Num_Features": 27,
+      "Val_ROC_AUC": 0.9729,
+      "Val_PR_AUC": 0.8924,
+      "Test_ROC_AUC": 0.9693,
+      "Test_PR_AUC": 0.8306,
+      "Test_F1": 0.8748,
+      "Test_Recall": 87.44,
+      "Test_Precision": 87.52,
+      "Test_Brier": 0.0111,
+      "Test_ROC_AUC (Onset Only)": 0.7677,
+      "Test_PR_AUC (Onset Only)": 0.0163
+    },
+    {
+      "Configuration": "Config B: Solely Flood_Occurred (Persistence Baseline: 1 Feature)",
+      "Num_Features": 1,
+      "Val_ROC_AUC": 0.9619,
+      "Val_PR_AUC": 0.8605,
+      "Test_ROC_AUC": 0.9356,
+      "Test_PR_AUC": 0.7691,
+      "Test_F1": 0.875,
+      "Test_Recall": 87.5,
+      "Test_Precision": 87.5,
+      "Test_Brier": 0.0118,
+      "Test_ROC_AUC (Onset Only)": 0.5,
+      "Test_PR_AUC (Onset Only)": 0.0037
+    },
+    {
+      "Configuration": "Config C: Exclude Flood_Occurred (26 Features with Year)",
+      "Num_Features": 26,
+      "Val_ROC_AUC": 0.8448,
+      "Val_PR_AUC": 0.1258,
+      "Test_ROC_AUC": 0.8199,
+      "Test_PR_AUC": 0.2486,
+      "Test_F1": 0.1488,
+      "Test_Recall": 73.8,
+      "Test_Precision": 8.28,
+      "Test_Brier": 0.0699,
+      "Test_ROC_AUC (Onset Only)": 0.7344,
+      "Test_PR_AUC (Onset Only)": 0.0118
+    },
+    {
+      "Configuration": "Config D: Pure Meteorological / Hydrological (20 Features, NO Flood_Occurred, NO Year)",
+      "Num_Features": 25,
+      "Val_ROC_AUC": 0.8455,
+      "Val_PR_AUC": 0.1285,
+      "Test_ROC_AUC": 0.8223,
+      "Test_PR_AUC": 0.2438,
+      "Test_F1": 0.1431,
+      "Test_Recall": 74.17,
+      "Test_Precision": 7.92,
+      "Test_Brier": 0.1412,
+      "Test_ROC_AUC (Onset Only)": 0.7359,
+      "Test_PR_AUC (Onset Only)": 0.0112
+    },
+    {
+      "Configuration": "Config E: Antecedent Wetness Only (Lags + Rolling Sums + Rainy Days, 16 Features)",
+      "Num_Features": 17,
+      "Val_ROC_AUC": 0.8072,
+      "Val_PR_AUC": 0.1093,
+      "Test_ROC_AUC": 0.8201,
+      "Test_PR_AUC": 0.162,
+      "Test_F1": 0.2231,
+      "Test_Recall": 50.45,
+      "Test_Precision": 14.32,
+      "Test_Brier": 0.1542,
+      "Test_ROC_AUC (Onset Only)": 0.7242,
+      "Test_PR_AUC (Onset Only)": 0.0104
+    }
+  ],
+  "suspicious_features": [
+    {
+      "feature": "Flood_Occurred",
+      "correlation_with_target": 0.9136,
+      "verdict": "CRITICAL TARGET PROXY / LEAKAGE MECHANISM",
+      "reason": "Flood_Occurred (Day T) has a 0.9136 Pearson correlation with Flood_Next_Day (Day T+1). Floods in Odisha persist across multiple days (91.59% persistence rate). Using Flood_Occurred converts the model into a flood continuation detector rather than a rainfall-to-flood early warning system. A model trained with solely Flood_Occurred achieves 0.9356 Test ROC-AUC without looking at any rainfall. Furthermore, because real-time flood occurrence is unlabelled in operational 2025 inference, Flood_Occurred is forced to 0 at inference time, causing a catastrophic train-inference distribution shift."
+    },
+    {
+      "feature": "Year",
+      "correlation_with_target": -0.0171,
+      "verdict": "QUESTIONABLE TEMPORAL EXTRAPOLATION ARTIFACT",
+      "reason": "Year is a monotonic integer (2001-2024). In linear models it learns an arbitrary time slope (-0.2091), and in tree models it creates splits that cannot generalize to unseen future years (e.g. 2025)."
+    },
+    {
+      "feature": "Rainfall_Prev_15d_Sum & Rainfall_Prev_30d_Sum",
+      "correlation_with_target": 0.2265,
+      "verdict": "SAFE PHYSICAL HYDROLOGICAL PREDICTOR",
+      "reason": "Computed strictly as s.shift(1).rolling(window).sum(), excluding same-day and future rainfall. Reflects legitimate antecedent catchment soil saturation and river basin accumulation."
+    },
+    {
+      "feature": "Rainfall (mm) & Lags (1d, 2d, 3d, 7d)",
+      "correlation_with_target": 0.1746,
+      "verdict": "SAFE ANTECEDENT METEOROLOGICAL PREDICTOR",
+      "reason": "Rainfall (mm) on day T is known at prediction time when forecasting for day T+1. Lags represent strictly historical previous-day rainfall values."
+    }
+  ]
+}
