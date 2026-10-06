@@ -23,21 +23,57 @@ from sklearn.metrics import (
 def find_optimal_threshold(
     y_true: np.ndarray,
     y_proba: np.ndarray,
-    metric: str = "f1"
+    metric: str = "f1",
+    beta: float = 2.0,
+    target_recall: float = 0.80,
+    target_precision: float = 0.25
 ) -> Tuple[float, float]:
     """
     Find optimal classification probability threshold on validation set.
-    metric: 'f1' or 'recall_at_precision'
+    Supports: 'f1', 'f2', 'f_beta', 'recall_at_precision' / 'recall_target', 'precision_target', 'youden_j'.
     """
+    y_true = np.asarray(y_true).astype(int)
+    y_proba = np.asarray(y_proba).astype(float)
+    
     precisions, recalls, thresholds = precision_recall_curve(y_true, y_proba)
-    # Avoid div by zero in f1 calculation
-    f1_scores = 2 * (precisions * recalls) / (precisions + recalls + 1e-10)
+    prec_t = precisions[:-1]
+    rec_t = recalls[:-1]
     
     if metric == "f1":
-        best_idx = np.argmax(f1_scores[:-1])
-        best_threshold = float(thresholds[best_idx])
-        best_f1 = float(f1_scores[best_idx])
-        return best_threshold, best_f1
+        f1_scores = 2 * (prec_t * rec_t) / (prec_t + rec_t + 1e-10)
+        best_idx = int(np.argmax(f1_scores))
+        return float(thresholds[best_idx]), float(f1_scores[best_idx])
+        
+    elif metric in ["f2", "f_beta"]:
+        b = 2.0 if metric == "f2" else beta
+        beta_sq = b ** 2
+        denom = (beta_sq * prec_t) + rec_t + 1e-10
+        fb_scores = (1 + beta_sq) * (prec_t * rec_t) / denom
+        best_idx = int(np.argmax(fb_scores))
+        return float(thresholds[best_idx]), float(fb_scores[best_idx])
+        
+    elif metric in ["recall_at_precision", "recall_target"]:
+        valid_indices = np.where(rec_t >= target_recall)[0]
+        if len(valid_indices) > 0:
+            best_idx = valid_indices[np.argmax(prec_t[valid_indices])]
+            return float(thresholds[best_idx]), float(rec_t[best_idx])
+        best_idx = int(np.argmax(rec_t))
+        return float(thresholds[best_idx]), float(rec_t[best_idx])
+        
+    elif metric == "precision_target":
+        valid_indices = np.where(prec_t >= target_precision)[0]
+        if len(valid_indices) > 0:
+            best_idx = valid_indices[np.argmax(rec_t[valid_indices])]
+            return float(thresholds[best_idx]), float(prec_t[best_idx])
+        best_idx = int(np.argmax(prec_t))
+        return float(thresholds[best_idx]), float(prec_t[best_idx])
+        
+    elif metric == "youden_j":
+        from sklearn.metrics import roc_curve
+        fpr, tpr, roc_thresh = roc_curve(y_true, y_proba)
+        j_scores = tpr - fpr
+        best_idx = int(np.argmax(j_scores))
+        return float(roc_thresh[best_idx]), float(j_scores[best_idx])
     
     # Default fallback: 0.5
     return 0.5, 0.0

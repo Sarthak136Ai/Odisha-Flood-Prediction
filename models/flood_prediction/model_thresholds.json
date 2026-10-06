@@ -1,0 +1,177 @@
+{
+  "Logistic Regression": {
+    "model_name": "Logistic Regression",
+    "balanced_f1_strategy": {
+      "selected_threshold": 0.8503,
+      "optimization_metric": "f1",
+      "val_f1": 0.2572,
+      "val_precision": 0.2154,
+      "val_recall": 0.319,
+      "val_f2": 0.291,
+      "val_pr_auc": 0.1732,
+      "val_roc_auc": 0.8623,
+      "test_f1_at_val_threshold": 0.32246,
+      "test_recall_at_val_threshold": 0.41149,
+      "test_precision_at_val_threshold": 0.2651
+    },
+    "disaster_averse_f2_strategy": {
+      "selected_threshold": 0.52,
+      "optimization_metric": "f2",
+      "val_f1": 0.2053,
+      "val_f2": 0.3841,
+      "val_precision": 0.1156,
+      "val_recall": 0.9152,
+      "test_f2_at_val_threshold": 0.28627621879151105,
+      "test_recall_at_val_threshold": 0.74034,
+      "test_precision_at_val_threshold": 0.0829
+    },
+    "high_sensitivity_strategy": {
+      "selected_threshold": 0.5292,
+      "optimization_metric": "recall_target_0.80",
+      "val_recall": 0.9133,
+      "val_precision": 0.1157,
+      "test_recall_at_val_threshold": 0.73922,
+      "test_precision_at_val_threshold": 0.08296
+    }
+  },
+  "Decision Tree": {
+    "model_name": "Decision Tree",
+    "balanced_f1_strategy": {
+      "selected_threshold": 0.8265,
+      "optimization_metric": "f1",
+      "val_f1": 0.2206,
+      "val_precision": 0.1744,
+      "val_recall": 0.3001,
+      "val_f2": 0.2623,
+      "val_pr_auc": 0.1429,
+      "val_roc_auc": 0.8393,
+      "test_f1_at_val_threshold": 0.18343,
+      "test_recall_at_val_threshold": 0.20086,
+      "test_precision_at_val_threshold": 0.16878
+    },
+    "disaster_averse_f2_strategy": {
+      "selected_threshold": 0.6184,
+      "optimization_metric": "f2",
+      "val_f1": 0.1997,
+      "val_f2": 0.3768,
+      "val_precision": 0.112,
+      "val_recall": 0.922,
+      "test_f2_at_val_threshold": 0.2887814374297298,
+      "test_recall_at_val_threshold": 0.7538,
+      "test_precision_at_val_threshold": 0.08328
+    },
+    "high_sensitivity_strategy": {
+      "selected_threshold": 0.6184,
+      "optimization_metric": "recall_target_0.80",
+      "val_recall": 0.922,
+      "val_precision": 0.112,
+      "test_recall_at_val_threshold": 0.7538,
+      "test_precision_at_val_threshold": 0.08328
+    }
+  },
+  "Random Forest": {
+    "model_name": "Random Forest",
+    "balanced_f1_strategy": {
+      "selected_threshold": 0.7607,
+      "optimization_metric": "f1",
+      "val_f1": 0.2092,
+      "val_precision": 0.1647,
+      "val_recall": 0.2866,
+      "val_f2": 0.2497,
+      "val_pr_auc": 0.1611,
+      "val_roc_auc": 0.8574,
+      "test_f1_at_val_threshold": 0.23736,
+      "test_recall_at_val_threshold": 0.37043,
+      "test_precision_at_val_threshold": 0.17463
+    },
+    "disaster_averse_f2_strategy": {
+      "selected_threshold": 0.4363,
+      "optimization_metric": "f2",
+      "val_f1": 0.1956,
+      "val_f2": 0.3652,
+      "val_precision": 0.1103,
+      "val_recall": 0.8657,
+      "test_f2_at_val_threshold": 0.29537255379737204,
+      "test_recall_at_val_threshold": 0.76898,
+      "test_precision_at_val_threshold": 0.08528
+    },
+    "high_sensitivity_strategy": {
+      "selected_threshold": 0.4799,
+      "optimization_metric": "recall_target_0.80",
+      "val_recall": 0.8356,
+      "val_precision": 0.111,
+      "test_recall_at_val_threshold": 0.76205,
+      "test_precision_at_val_threshold": 0.08696
+    }
+  },
+  "XGBoost": {
+    "model_name": "XGBoost",
+    "balanced_f1_strategy": {
+      "selected_threshold": 0.8073,
+      "optimization_metric": "f1",
+      "val_f1": 0.2286,
+      "val_precision": 0.1829,
+      "val_recall": 0.3046,
+      "val_f2": 0.2688,
+      "val_pr_auc": 0.1804,
+      "val_roc_auc": 0.8623,
+      "test_f1_at_val_threshold": 0.24401,
+      "test_recall_at_val_threshold": 0.33945,
+      "test_precision_at_val_threshold": 0.19046
+    },
+    "disaster_averse_f2_strategy": {
+      "selected_threshold": 0.5083,
+      "optimization_metric": "f2",
+      "val_f1": 0.1971,
+      "val_f2": 0.3715,
+      "val_precision": 0.1106,
+      "val_recall": 0.9065,
+      "test_f2_at_val_threshold": 0.29301589573895986,
+      "test_recall_at_val_threshold": 0.76776,
+      "test_precision_at_val_threshold": 0.08436
+    },
+    "high_sensitivity_strategy": {
+      "selected_threshold": 0.5226,
+      "optimization_metric": "recall_target_0.80",
+      "val_recall": 0.899,
+      "val_precision": 0.1108,
+      "test_recall_at_val_threshold": 0.76684,
+      "test_precision_at_val_threshold": 0.08471
+    }
+  },
+  "ANN (MLP)": {
+    "model_name": "ANN (MLP)",
+    "balanced_f1_strategy": {
+      "selected_threshold": 0.1075,
+      "optimization_metric": "f1",
+      "val_f1": 0.2113,
+      "val_precision": 0.1605,
+      "val_recall": 0.3089,
+      "val_f2": 0.2607,
+      "val_pr_auc": 0.1537,
+      "val_roc_auc": 0.8537,
+      "test_f1_at_val_threshold": 0.23041,
+      "test_recall_at_val_threshold": 0.35942,
+      "test_precision_at_val_threshold": 0.16955
+    },
+    "disaster_averse_f2_strategy": {
+      "selected_threshold": 0.0133,
+      "optimization_metric": "f2",
+      "val_f1": 0.1776,
+      "val_f2": 0.3398,
+      "val_precision": 0.0989,
+      "val_recall": 0.8692,
+      "test_f2_at_val_threshold": 0.28528124584335696,
+      "test_recall_at_val_threshold": 0.80026,
+      "test_precision_at_val_threshold": 0.07982
+    },
+    "high_sensitivity_strategy": {
+      "selected_threshold": 0.0189,
+      "optimization_metric": "recall_target_0.80",
+      "val_recall": 0.8,
+      "val_precision": 0.1014,
+      "test_recall_at_val_threshold": 0.77999,
+      "test_precision_at_val_threshold": 0.08475
+    }
+  }
+}

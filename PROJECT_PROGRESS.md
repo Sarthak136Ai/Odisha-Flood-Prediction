@@ -65,17 +65,19 @@ The **Odisha Flood Intelligence & Early Warning System** is an end-to-end, spati
 | **25** | GitHub Sync & Version Control | **Completed** | Cleanly committed and pushed to `https://github.com/Sarthak136Ai/Odisha-Flood-Prediction` |
 | **26** | Automated Data Quality Analysis Engine | **Completed** | 15-dimension raw vs processed audit, HTML/CSV reports, 5 plots, and unit test suite |
 | **27** | Walk-Forward Temporal Validation Engine | **Completed** | 5-fold expanding window cross-validation (2017–2021), strict preprocessor isolation, reports & plots |
+| **28** | Multi-Strategy Threshold Selection & Audit Engine | **Completed** | Validation-only (2019–2021) threshold tuning, 7 strategies (F1, F2, Target Recall >=80%/90%, Youden's J, Cost-Sensitive), zero-leakage proof, model metadata JSON & reports |
 
 ---
 
 ## 📊 Benchmark Summary (Test Split: 2022–2024, 343,758 observations)
 
 | Model Architecture | Optimal Threshold | Test ROC-AUC | Test PR-AUC | Test F1 | Test Recall | Test Precision | Test Brier Score |
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | **Logistic Regression (Pure Met)** | 0.8503 | **0.8409** | **0.2399** | **0.3226** | **41.15%** | **26.53%** | 0.1490 |
 | **XGBoost (Production Champion)** | **0.8073** | **0.8388** | 0.1593 | 0.2440 | 33.95% | 19.05% | 0.1445 |
-| **Random Forest (Pure Met)** | 0.7690 | 0.8220 | 0.1529 | 0.2448 | 35.10% | 18.80% | 0.1255 |
-| **ANN (MLP)** | 0.1063 | 0.8245 | 0.1332 | 0.2050 | 31.02% | 15.31% | **0.0263** |
-| **Decision Tree (Baseline)** | 0.8265 | 0.8012 | 0.1295 | 0.2312 | 34.54% | 17.38% | 0.1515 |
+| **Random Forest (Pure Met)** | 0.7607 | 0.8220 | 0.1529 | 0.2374 | 37.04% | 17.46% | 0.1255 |
+| **ANN (MLP)** | 0.1075 | 0.8245 | 0.1332 | 0.2304 | 35.94% | 16.96% | **0.0263** |
+| **Decision Tree (Baseline)** | 0.8265 | 0.8012 | 0.1295 | 0.1834 | 20.09% | 16.88% | 0.1515 |
 
 ---
 
@@ -93,7 +95,8 @@ The **Odisha Flood Intelligence & Early Warning System** is an end-to-end, spati
 
 ## 🧪 Automated Test Verification
 
-All **64 test cases** in `tests/` pass with 100% success rate:
+All **71 test cases** in `tests/` pass with 100% success rate:
+- `tests/test_threshold_selection.py`: 7 Zero-leakage, multi-strategy, F2/recall-oriented & schema tests
 - `tests/test_temporal_validation.py`: 6 Temporal walk-forward causal order, isolation & metric tests
 - `tests/test_data_quality.py`: 7 Data quality validation rules & report integrity tests
 - `tests/test_routes.py`: 12 Flask page route and view tests
