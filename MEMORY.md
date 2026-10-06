@@ -53,5 +53,6 @@
   - `GET /downscaling`: High-resolution statistical downscaling evaluation & comparison.
   - `GET /assistant` & `POST /api/assistant/query`: Grounded AI Flood Assistant.
   - `GET /architecture`: System methodology & dual-pipeline visual architecture.
-- **Automated Test Suite**: 58 tests in `tests/` passing with 100% success rate (including `test_data_quality.py`).
+- **Automated Test Suite**: 64 tests in `tests/` passing with 100% success rate (including `test_temporal_validation.py` & `test_data_quality.py`).
 - **Data Quality Audit Engine**: `src/data/data_quality.py` & `reports/data_quality_report.html` (15-dimension automated audit).
+- **Temporal Walk-Forward Validation Engine**: `src/evaluation/temporal_validation.py` & `docs/temporal_validation_strategy.md` (5-fold expanding window cross-validation, 2017–2021).

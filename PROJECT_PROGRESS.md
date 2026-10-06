@@ -64,6 +64,7 @@ The **Odisha Flood Intelligence & Early Warning System** is an end-to-end, spati
 | **24** | Automated Unit & Integration Test Suite | **Completed** | 51 automated tests passing across 11 test modules with 100% pass rate |
 | **25** | GitHub Sync & Version Control | **Completed** | Cleanly committed and pushed to `https://github.com/Sarthak136Ai/Odisha-Flood-Prediction` |
 | **26** | Automated Data Quality Analysis Engine | **Completed** | 15-dimension raw vs processed audit, HTML/CSV reports, 5 plots, and unit test suite |
+| **27** | Walk-Forward Temporal Validation Engine | **Completed** | 5-fold expanding window cross-validation (2017–2021), strict preprocessor isolation, reports & plots |
 
 ---
 
@@ -78,9 +79,22 @@ The **Odisha Flood Intelligence & Early Warning System** is an end-to-end, spati
 
 ---
 
+## 📈 Walk-Forward Temporal Cross-Validation Benchmark (2017–2021 Folds, Mean ± Std)
+
+| Model Architecture | ROC-AUC (Mean ± Std) | PR-AUC (Mean ± Std) | F1 (Mean ± Std) | Recall (Mean ± Std) | Precision (Mean ± Std) | Brier Score (Mean ± Std) |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **XGBoost** | **0.7730 ± 0.1407** | **0.1670 ± 0.1627** | **0.2156 ± 0.1932** | 68.86% ± 40.53% | 22.05% ± 20.05% | 0.1493 ± 0.0163 |
+| **Logistic Regression** | **0.7815 ± 0.1431** | **0.1583 ± 0.1593** | **0.2065 ± 0.1890** | 67.78% ± 42.21% | 20.69% ± 18.29% | 0.1535 ± 0.0190 |
+| **Random Forest** | 0.7782 ± 0.1208 | 0.1368 ± 0.1630 | 0.1917 ± 0.1976 | 66.81% ± 40.37% | 16.60% ± 18.38% | 0.1291 ± 0.0155 |
+| **ANN (MLP)** | 0.7836 ± 0.1275 | 0.1222 ± 0.1451 | 0.1695 ± 0.1750 | 45.89% ± 42.91% | 14.84% ± 14.08% | **0.0216 ± 0.0265** |
+| **Decision Tree** | 0.7303 ± 0.1448 | 0.1221 ± 0.1205 | 0.2119 ± 0.1632 | 47.73% ± 38.49% | 28.30% ± 26.60% | 0.1583 ± 0.0148 |
+
+---
+
 ## 🧪 Automated Test Verification
 
-All **58 test cases** in `tests/` pass with 100% success rate:
+All **64 test cases** in `tests/` pass with 100% success rate:
+- `tests/test_temporal_validation.py`: 6 Temporal walk-forward causal order, isolation & metric tests
 - `tests/test_data_quality.py`: 7 Data quality validation rules & report integrity tests
 - `tests/test_routes.py`: 12 Flask page route and view tests
 - `tests/test_prediction.py`: 9 Model inference, forecaster & simulator tests
