@@ -1,0 +1,20 @@
+Metric_Category,Metric_Name,Value,Unit
+Overview,Total Records (Raw Historical),2883801,Rows
+Overview,Total Records (Processed 2001-2024),2752252,Rows
+Dimensions,Standard Districts Count,30,Districts
+Dimensions,Raw District Spelling Variants,33,Spellings
+Dimensions,Unique Block Stations Count,365,Stations
+Dimensions,Historical Start Date,2001-01-01,Date
+Dimensions,Historical End Date,2024-12-31,Date
+Data Hygiene,Raw Location-Date Duplicates,67952,Rows
+Data Hygiene,Processed Duplicates,0,Rows (0 after cleaning)
+Data Hygiene,Negative Rainfall Records,0,Rows
+Data Hygiene,Missing Rainfall Records,0,Rows
+Data Hygiene,Stations with 24-Yr Complete Coverage,260,Stations
+Rainfall Spectrum,Max Recorded 24-hr Rainfall,700.0,mm
+Rainfall Spectrum,Mean Daily Rainfall,3.993,mm
+Rainfall Spectrum,Dry Days (0 mm),"2,185,295 (79.4%)",Count (%)
+Rainfall Spectrum,Extremely Heavy Rain Days (>=204.5 mm),1147,Days
+Target Distribution,Total Flood Observation Days,72618,Events
+Target Distribution,Historical Flood Inundation Rate,2.638%,Percentage
+Target Distribution,Next-Day Flood Target Observations,72618,Events

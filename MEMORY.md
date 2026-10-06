@@ -53,4 +53,5 @@
   - `GET /downscaling`: High-resolution statistical downscaling evaluation & comparison.
   - `GET /assistant` & `POST /api/assistant/query`: Grounded AI Flood Assistant.
   - `GET /architecture`: System methodology & dual-pipeline visual architecture.
-- **Automated Test Suite**: 51 tests in `tests/` passing with 100% success rate.
+- **Automated Test Suite**: 58 tests in `tests/` passing with 100% success rate (including `test_data_quality.py`).
+- **Data Quality Audit Engine**: `src/data/data_quality.py` & `reports/data_quality_report.html` (15-dimension automated audit).

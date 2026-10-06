@@ -63,6 +63,7 @@ The **Odisha Flood Intelligence & Early Warning System** is an end-to-end, spati
 | **23** | System Architecture Page (`/architecture`) | **Completed** | Dual-pipeline visual flowcharts and complete feature schema data dictionary |
 | **24** | Automated Unit & Integration Test Suite | **Completed** | 51 automated tests passing across 11 test modules with 100% pass rate |
 | **25** | GitHub Sync & Version Control | **Completed** | Cleanly committed and pushed to `https://github.com/Sarthak136Ai/Odisha-Flood-Prediction` |
+| **26** | Automated Data Quality Analysis Engine | **Completed** | 15-dimension raw vs processed audit, HTML/CSV reports, 5 plots, and unit test suite |
 
 ---
 
@@ -79,7 +80,8 @@ The **Odisha Flood Intelligence & Early Warning System** is an end-to-end, spati
 
 ## 🧪 Automated Test Verification
 
-All **51 test cases** in `tests/` pass with 100% success rate:
+All **58 test cases** in `tests/` pass with 100% success rate:
+- `tests/test_data_quality.py`: 7 Data quality validation rules & report integrity tests
 - `tests/test_routes.py`: 12 Flask page route and view tests
 - `tests/test_prediction.py`: 9 Model inference, forecaster & simulator tests
 - `tests/test_operational_2025.py`: 6 Operational ingestion & pipeline tests
