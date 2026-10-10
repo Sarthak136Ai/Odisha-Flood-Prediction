@@ -63,7 +63,41 @@ The platform provides:
 | **XGBoost (Production Champion)** | **0.8073** | **0.8388** | 0.1593 | 0.2440 | 33.95% | 19.05% | 0.1445 |
 | **Random Forest (Pure Met)** | 0.7690 | 0.8220 | 0.1529 | 0.2448 | 35.10% | 18.80% | 0.1255 |
 | **ANN (MLP)** | 0.1063 | 0.8245 | 0.1332 | 0.2050 | 31.02% | 15.31% | **0.0263** |
-| **Decision Tree (Baseline)** | 0.8265 | 0.8012 | 0.1295 | 0.2312 | 34.54% | 17.38% | 0.1515 |
+| **Decision Tree (Baseline)** | 0.8265 | 0.8012 | 0.1295 | 0.1834 | 20.09% | 16.88% | 0.1515 |
+
+---
+
+## 🎯 Interpreting Confusion Matrices in a Flood Early Warning Context
+
+In hydrological disaster risk reduction (DRR), standard classification metrics like overall Accuracy can be dangerously deceptive due to extreme class imbalance (~2.6% flood rate). The Confusion Matrix decomposes every prediction on the **untouched test set (2022–2024, 343,758 observations)** into four operational outcomes:
+
+```
+                          ┌──────────────────────────┬──────────────────────────┐
+                          │    PREDICTED NO FLOOD    │     PREDICTED FLOOD      │
+  ┌───────────────────────┼──────────────────────────┼──────────────────────────┤
+  │ ACTUAL NO FLOOD (Dry) │   TRUE NEGATIVE (TN)     │   FALSE POSITIVE (FP)    │
+  │                       │   Normal Civic Flow      │   False Alarm Deployment │
+  ├───────────────────────┼──────────────────────────┼──────────────────────────┤
+  │ ACTUAL FLOOD (Inund.) │ ⚠️ FALSE NEGATIVE (FN) ⚠️│    TRUE POSITIVE (TP)    │
+  │                       │   MISSED FLOOD EVENT     │    CAUGHT FLOOD EVENT    │
+  └───────────────────────┴──────────────────────────┴──────────────────────────┘
+```
+
+### 🚨 Operational Cost Asymmetry: Why False Negatives are Critical
+
+| Quadrant | Operational Impact in Flood Early Warning | Civil & Financial Consequences |
+|---|---|---|
+| **True Negatives (TN)** | Correctly identified dry/safe days | Seamless normal civic activities; zero emergency mobilization expense. |
+| **False Positives (FP)** | "False Alarms" — Model predicted flood, but no inundation occurred | Precautionary deployment of emergency teams (ODRAF/NDRF), minor evacuation inconvenience, resource standby cost. **Zero loss of life.** |
+| **⚠️ False Negatives (FN)** | **"Missed Floods" — Model predicted safe dry conditions, but catastrophic inundation occurred** | **CRITICAL FAILURE**: Zero advance warning issued to civil authorities or citizens. Leads to unevacuated floodplains, trapped populations, infrastructure destruction, and loss of life. |
+| **True Positives (TP)** | "Caught Floods" — Timely advance warning issued | Early reservoir pre-discharge, prompt evacuation of vulnerable villages, pre-positioning of rescue boats and relief supplies. **Lives and assets saved.** |
+
+### 📐 Key Diagnostic Ratios for Disaster Management
+
+1. **Recall / Sensitivity ($=\frac{\text{TP}}{\text{TP} + \text{FN}}$)**: The percentage of all actual flood events successfully forecasted. In high-risk cyclonic events, this should be maximized.
+2. **Miss Rate / False Negative Rate ($\text{FNR} = \frac{\text{FN}}{\text{TP} + \text{FN}} = 1 - \text{Recall}$)**: The proportion of flood events that struck without warning. **Minimizing FNR is the platform's primary safety constraint.**
+3. **Fall-Out / False Positive Rate ($\text{FPR} = \frac{\text{FP}}{\text{TN} + \text{FP}} = 1 - \text{Specificity}$)**: The false alarm rate on non-flood days, tracking civil alert fatigue.
+4. **$F_2$ Score ($= 5 \cdot \frac{\text{Precision} \cdot \text{Recall}}{4 \cdot \text{Precision} + \text{Recall}}$)**: Disaster-averse metric weighting Recall twice as heavily as Precision to reflect the asymmetric penalty of missed floods.
 
 ---
 
@@ -90,15 +124,17 @@ Odisha_Flood_Prediction/
 │   └── downscaling/           # downscaling_model.pkl
 │
 ├── results/
-│   ├── metrics/               # model_comparison.csv, shap_feature_importance.csv
-│   ├── plots/                 # roc_curve.png, precision_recall_curve.png, calibration_curves.png
+│   ├── metrics/               # model_comparison.csv, confusion_matrix_evaluation.csv
+│   ├── plots/                 # roc_curve.png, precision_recall_curve.png, confusion_matrix_*.png/svg
 │   └── downscaling/           # downscaling_metrics.csv, rainfall_comparison.png
+│
+├── reports/                   # Automated data quality, temporal validation & confusion matrix reports
 │
 ├── src/
 │   ├── data/                  # Data ingestion, schema validation, and combining
 │   ├── features/              # Feature engineering & climatological anomaly engine
 │   ├── models/                # Training pipelines & FloodPredictor inference
-│   ├── evaluation/            # Metrics, ROC, PR, calibration, and confusion matrix
+│   ├── evaluation/            # Metrics, ROC, PR, calibration, confusion matrix & threshold optimization
 │   ├── explainability/        # SHAP global & local attributions
 │   ├── inference/             # 2025 unseen operational pipeline & retrospective engine
 │   └── geospatial/            # District coordinates & spatial risk calculator
@@ -110,13 +146,7 @@ Odisha_Flood_Prediction/
 │   ├── js/                    # Core main.js, Leaflet map.js, Chart.js charts.js, assistant.js
 │   └── images/plots/          # Pre-computed high-resolution evaluation plots
 │
-└── tests/                     # 51 Automated unit and integration tests (100% passing)
-    ├── test_routes.py         # Flask route tests
-    ├── test_prediction.py     # Prediction & Simulation API tests
-    ├── test_operational_2025.py
-    ├── test_data.py
-    ├── test_features.py
-    └── ...
+└── tests/                     # 80 Automated unit and integration tests (100% passing)
 ```
 
 ---
@@ -163,7 +193,7 @@ http://127.0.0.1:5000
 
 ## 🧪 Running Automated Tests
 
-Run the complete test suite (51 unit & integration tests):
+Run the complete test suite across all 15 test modules:
 ```bash
 pytest -v
 ```

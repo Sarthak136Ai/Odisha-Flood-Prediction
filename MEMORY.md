@@ -53,8 +53,9 @@
   - `GET /downscaling`: High-resolution statistical downscaling evaluation & comparison.
   - `GET /assistant` & `POST /api/assistant/query`: Grounded AI Flood Assistant.
   - `GET /architecture`: System methodology & dual-pipeline visual architecture.
-- **Automated Test Suite**: 76 tests in `tests/` passing with 100% success rate (including `test_class_imbalance.py`, `test_threshold_selection.py`, `test_temporal_validation.py` & `test_data_quality.py`).
+- **Automated Test Suite**: 80 tests in `tests/` passing with 100% success rate (including `test_confusion_matrix.py`, `test_class_imbalance.py`, `test_threshold_selection.py`, `test_temporal_validation.py` & `test_data_quality.py`).
 - **Data Quality Audit Engine**: `src/data/data_quality.py` & `reports/data_quality_report.html` (15-dimension automated audit).
 - **Temporal Walk-Forward Validation Engine**: `src/evaluation/temporal_validation.py` & `docs/temporal_validation_strategy.md` (5-fold expanding window cross-validation, 2017–2021).
 - **Threshold Selection & Audit Engine**: `src/evaluation/threshold_optimization.py` & `docs/threshold_selection_strategy.md` (Validation-only 2019–2021 tuning, F1/F2/Recall>=80%/Youden's J/Cost-Sensitive, unweighted ANN vs class-weighted odds shift justification).
 - **Class Imbalance Analysis Engine**: `src/evaluation/class_imbalance.py` & `docs/class_imbalance_analysis.md` (2.638% historical prevalence, 36.91:1 imbalance ratio, multi-tier confusion matrix evaluation, loss-weighting & SMOTE rejection rationale).
+- **Confusion Matrix Evaluation Engine**: `src/evaluation/confusion_matrix.py` & `reports/plots/confusion_matrices_all_models.png/svg` (Full decomposition TN/FP/FN/TP, Acc, Prec, Rec, F1, F2, FNR/Miss Rate, FPR/Fall-out, dynamic model discovery, PNG/SVG figures, CSV/JSON artifacts).

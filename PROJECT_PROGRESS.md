@@ -67,6 +67,7 @@ The **Odisha Flood Intelligence & Early Warning System** is an end-to-end, spati
 | **27** | Walk-Forward Temporal Validation Engine | **Completed** | 5-fold expanding window cross-validation (2017–2021), strict preprocessor isolation, reports & plots |
 | **28** | Multi-Strategy Threshold Selection & Audit Engine | **Completed** | Validation-only (2019–2021) threshold tuning, 7 strategies (F1, F2, Target Recall >=80%/90%, Youden's J, Cost-Sensitive), zero-leakage proof, model metadata JSON & reports |
 | **29** | Class Imbalance Analysis & Mitigation Engine | **Completed** | Full 24-year target distribution analysis (2.638% flood rate, 36.91:1 imbalance ratio), split & annual tables, SMOTE rejection rationale, confusion matrices, PR-AUC analysis, and plots |
+| **30** | Comprehensive Confusion Matrix Evaluation Engine | **Completed** | Full test set (2022–2024) confusion matrix decomposition (TN, FP, FN, TP, Acc, Prec, Rec, F1, F2, FNR, FPR), dynamic model discovery, individual/grid PNG & SVG plots, CSV/JSON artifacts, and DRR interpretation guide |
 
 ---
 
@@ -96,7 +97,8 @@ The **Odisha Flood Intelligence & Early Warning System** is an end-to-end, spati
 
 ## 🧪 Automated Test Verification
 
-All **76 test cases** in `tests/` pass with 100% success rate:
+All **80 test cases** in `tests/` pass with 100% success rate:
+- `tests/test_confusion_matrix.py`: 4 Confusion matrix decomposition, metric invariance, zero-division & plot generation tests
 - `tests/test_class_imbalance.py`: 5 Target distribution, split consistency, F2 behavior & empirical purity tests
 - `tests/test_threshold_selection.py`: 7 Zero-leakage, multi-strategy, F2/recall-oriented & schema tests
 - `tests/test_temporal_validation.py`: 6 Temporal walk-forward causal order, isolation & metric tests
