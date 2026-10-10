@@ -68,36 +68,26 @@ The **Odisha Flood Intelligence & Early Warning System** is an end-to-end, spati
 | **28** | Multi-Strategy Threshold Selection & Audit Engine | **Completed** | Validation-only (2019–2021) threshold tuning, 7 strategies (F1, F2, Target Recall >=80%/90%, Youden's J, Cost-Sensitive), zero-leakage proof, model metadata JSON & reports |
 | **29** | Class Imbalance Analysis & Mitigation Engine | **Completed** | Full 24-year target distribution analysis (2.638% flood rate, 36.91:1 imbalance ratio), split & annual tables, SMOTE rejection rationale, confusion matrices, PR-AUC analysis, and plots |
 | **30** | Comprehensive Confusion Matrix Evaluation Engine | **Completed** | Full test set (2022–2024) confusion matrix decomposition (TN, FP, FN, TP, Acc, Prec, Rec, F1, F2, FNR, FPR), dynamic model discovery, individual/grid PNG & SVG plots, CSV/JSON artifacts, and DRR interpretation guide |
+| **31** | Event-Based Hydrological Evaluation Engine | **Completed** | Spatiotemporal event segmentation, temporal matching, lead time calculation, 6 real historical disaster episodes (August 2022 Mahanadi, Sept 2024 Subarnarekha, May 2021 Yaas, Aug 2020 Bhadrak, Oct 2018 Titli, Sept 2011 Mahanadi), 1,221 test event benchmarks across 5 models, high-res timeline plots, and comprehensive technical report `docs/flood_event_evaluation.md` |
 
 ---
 
-## 📊 Benchmark Summary (Test Split: 2022–2024, 343,758 observations)
+## 🌊 Test Set (2022–2024) Macro Event-Level Performance Across Models (1,221 Actual Events)
 
-| Model Architecture | Optimal Threshold | Test ROC-AUC | Test PR-AUC | Test F1 | Test Recall | Test Precision | Test Brier Score |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **Logistic Regression (Pure Met)** | 0.8503 | **0.8409** | **0.2399** | **0.3226** | **41.15%** | **26.53%** | 0.1490 |
-| **XGBoost (Production Champion)** | **0.8073** | **0.8388** | 0.1593 | 0.2440 | 33.95% | 19.05% | 0.1445 |
-| **Random Forest (Pure Met)** | 0.7607 | 0.8220 | 0.1529 | 0.2374 | 37.04% | 17.46% | 0.1255 |
-| **ANN (MLP)** | 0.1075 | 0.8245 | 0.1332 | 0.2304 | 35.94% | 16.96% | **0.0263** |
-| **Decision Tree (Baseline)** | 0.8265 | 0.8012 | 0.1295 | 0.1834 | 20.09% | 16.88% | 0.1515 |
-
----
-
-## 📈 Walk-Forward Temporal Cross-Validation Benchmark (2017–2021 Folds, Mean ± Std)
-
-| Model Architecture | ROC-AUC (Mean ± Std) | PR-AUC (Mean ± Std) | F1 (Mean ± Std) | Recall (Mean ± Std) | Precision (Mean ± Std) | Brier Score (Mean ± Std) |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **XGBoost** | **0.7730 ± 0.1407** | **0.1670 ± 0.1627** | **0.2156 ± 0.1932** | 68.86% ± 40.53% | 22.05% ± 20.05% | 0.1493 ± 0.0163 |
-| **Logistic Regression** | **0.7815 ± 0.1431** | **0.1583 ± 0.1593** | **0.2065 ± 0.1890** | 67.78% ± 42.21% | 20.69% ± 18.29% | 0.1535 ± 0.0190 |
-| **Random Forest** | 0.7782 ± 0.1208 | 0.1368 ± 0.1630 | 0.1917 ± 0.1976 | 66.81% ± 40.37% | 16.60% ± 18.38% | 0.1291 ± 0.0155 |
-| **ANN (MLP)** | 0.7836 ± 0.1275 | 0.1222 ± 0.1451 | 0.1695 ± 0.1750 | 45.89% ± 42.91% | 14.84% ± 14.08% | **0.0216 ± 0.0265** |
-| **Decision Tree** | 0.7303 ± 0.1448 | 0.1221 ± 0.1205 | 0.2119 ± 0.1632 | 47.73% ± 38.49% | 28.30% ± 26.60% | 0.1583 ± 0.0148 |
+| Model Architecture | Optimized Threshold ($T^*$) | Detected Hits | Missed Events | Event Hit Rate (Recall) | Event Precision | Event F1 Score | Mean Lead Time | Precautionary False Alarms |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **XGBoost (Champion)** | **0.8073** | **780** | **441** | **63.88%** | **19.36%** | **0.2971** | **1.22 days** | 3,249 |
+| **Logistic Regression** | 0.8503 | 706 | 515 | 57.82% | 19.74% | 0.2943 | 0.65 days | **2,871** |
+| **Random Forest** | 0.7607 | 708 | 513 | 57.99% | 16.67% | 0.2589 | **1.33 days** | 3,540 |
+| **Decision Tree** | 0.8265 | 693 | 528 | 56.76% | 17.97% | 0.2730 | 0.54 days | 3,163 |
+| **ANN (MLP)** | 0.1075 | 821 | 400 | 67.24% | 13.54% | 0.2254 | 1.11 days | 5,242 |
 
 ---
 
 ## 🧪 Automated Test Verification
 
-All **80 test cases** in `tests/` pass with 100% success rate:
+All **89 test cases** in `tests/` pass with 100% success rate:
+- `tests/test_event_evaluation.py`: 9 Spatiotemporal event segmentation, lead time, hit/miss, false alarm & timeline plot tests
 - `tests/test_confusion_matrix.py`: 4 Confusion matrix decomposition, metric invariance, zero-division & plot generation tests
 - `tests/test_class_imbalance.py`: 5 Target distribution, split consistency, F2 behavior & empirical purity tests
 - `tests/test_threshold_selection.py`: 7 Zero-leakage, multi-strategy, F2/recall-oriented & schema tests

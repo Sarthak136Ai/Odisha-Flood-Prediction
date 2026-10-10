@@ -1,0 +1,6 @@
+Model,Threshold,total_actual_events,total_predicted_events,detected_events_hits,missed_events,false_alarm_events,event_recall_hit_rate,event_precision,event_f1_score,event_miss_rate,mean_lead_time_days,mean_missed_days_per_event,mean_event_coverage_pct
+Logistic Regression,0.8503,1221,3577,706,515,2871,0.5782,0.1974,0.2943,0.4218,0.65,4.73,34.26
+Decision Tree,0.8265,1221,3856,693,528,3163,0.5676,0.1797,0.273,0.4324,0.54,6.42,21.14
+Random Forest,0.7607,1221,4248,708,513,3540,0.5799,0.1667,0.2589,0.4201,1.33,5.07,31.17
+XGBoost,0.8073,1221,4029,780,441,3249,0.6388,0.1936,0.2971,0.3612,1.22,5.31,32.35
+ANN (MLP),0.1075,1221,6063,821,400,5242,0.6724,0.1354,0.2254,0.3276,1.11,5.16,32.47
