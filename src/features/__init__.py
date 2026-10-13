@@ -16,6 +16,13 @@ from src.features.rainfall_features import (
     IMD_VERY_HEAVY_MAX,
     IMD_EXTREME_MIN,
 )
+from src.features.multi_horizon import (
+    HORIZON_NAME_MAP,
+    get_horizon_target_name,
+    generate_horizon_target,
+    generate_multi_horizon_targets,
+    verify_target_alignment,
+)
 
 __all__ = [
     "ClimatologicalAnomalyEngine",
@@ -33,4 +40,9 @@ __all__ = [
     "IMD_VERY_HEAVY_MIN",
     "IMD_VERY_HEAVY_MAX",
     "IMD_EXTREME_MIN",
+    "HORIZON_NAME_MAP",
+    "get_horizon_target_name",
+    "generate_horizon_target",
+    "generate_multi_horizon_targets",
+    "verify_target_alignment",
 ]

@@ -54,7 +54,7 @@
   - `GET /downscaling`: High-resolution statistical downscaling evaluation & comparison.
   - `GET /assistant` & `POST /api/assistant/query`: Grounded AI Flood Assistant.
   - `GET /architecture`: System methodology & dual-pipeline visual architecture.
-- **Automated Test Suite**: 100 tests in `tests/` passing with 100% success rate (including `test_feature_ablation.py`, `test_rainfall_features.py`, `test_event_evaluation.py`, `test_confusion_matrix.py`, `test_class_imbalance.py`, `test_threshold_selection.py`, `test_temporal_validation.py` & `test_data_quality.py`).
+- **Automated Test Suite**: 107 tests in `tests/` passing with 100% success rate (including `test_multi_horizon.py`, `test_feature_ablation.py`, `test_rainfall_features.py`, `test_event_evaluation.py`, `test_confusion_matrix.py`, `test_class_imbalance.py`, `test_threshold_selection.py`, `test_temporal_validation.py` & `test_data_quality.py`).
 - **Data Quality Audit Engine**: `src/data/data_quality.py` & `reports/data_quality_report.html` (15-dimension automated audit).
 - **Temporal Walk-Forward Validation Engine**: `src/evaluation/temporal_validation.py` & `docs/temporal_validation_strategy.md` (5-fold expanding window cross-validation, 2017–2021).
 - **Threshold Selection & Audit Engine**: `src/evaluation/threshold_optimization.py` & `docs/threshold_selection_strategy.md` (Validation-only 2019–2021 tuning, F1/F2/Recall>=80%/Youden's J/Cost-Sensitive, unweighted ANN vs class-weighted odds shift justification).
@@ -69,4 +69,9 @@
   - Seasonal harmonics (Exp D) gate monsoon windows (ROC-AUC ~0.854), but produce high false alarms when ungrounded.
   - Baseline synergy (Exp E, 22 feats) achieves top validation PR-AUC (0.178) and well-calibrated Brier loss (0.140).
   - Statutory IMD intensity indicators (Exp F, 29 feats) achieve top disaster safety: F2 rises to 0.385 (LR) and 0.319 (XGBoost), cutting missed flood events by 302–359.
+- **Multi-Horizon Flood Forecasting Engine**: `src/features/multi_horizon.py`, `src/evaluation/multi_horizon_evaluation.py`, `scripts/run_multi_horizon_evaluation.py`, `reports/multi_horizon_evaluation.csv`, `reports/plots/multi_horizon_degradation.png/svg` & `docs/multi_horizon_forecasting.md`.
+  - Configurable horizons: T+1 (24h lead), T+2 (48h lead), T+3 (72h lead) with strict calendar delta validation and zero future rainfall leakage.
+  - Test set performance: LR ROC-AUC 0.841 (T+1) -> 0.831 (T+2) -> 0.823 (T+3); XGBoost ROC-AUC 0.847 (T+1) -> 0.835 (T+2) -> 0.823 (T+3).
+  - PR-AUC degrades from 0.238 to 0.194 (LR) and 0.162 to 0.125 (XGBoost).
+  - Backward compatibility: Preserves and aliases `Flood_Next_Day` with 100% equivalence to `Flood_T+1`.
 

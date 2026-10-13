@@ -222,6 +222,28 @@ The feature engineering pipeline computes standardized rainfall-intensity indica
 
 ---
 
+## ⏱️ Multi-Horizon Flood Forecasting (T+1, T+2, T+3 Lead Times)
+
+The platform supports configurable multi-day forecast horizons to empower phased disaster risk reduction:
+- **Flood_T+1 (24-Hour Lead)**: Next-day warning (equivalent to `Flood_Next_Day`). Highest precision ($24.7\%$), optimized for community evacuation and tactical rescue boat staging.
+- **Flood_T+2 (48-Hour Lead)**: Two-day ahead warning. Strong discrimination ($\text{ROC-AUC} = 0.835$), ideal for reservoir gate pre-discharge and relief shelter mobilization.
+- **Flood_T+3 (72-Hour Lead)**: Three-day ahead warning. High recall retention ($> 38\%$), ideal for state-wide ODRAF/NDRF battalion pre-deployment.
+
+### Performance Across Forecast Horizons (Untouched Test Set 2022–2024):
+| Model | Horizon | Lead Time | ROC-AUC | PR-AUC | Precision | Recall | F1 Score | F2 Score |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Logistic Regression** | **T+1** | 24 Hours | **0.8406** | **0.2383** | **0.2467** | **0.4481** | **0.3182** | **0.3852** |
+| **Logistic Regression** | **T+2** | 48 Hours | 0.8312 | 0.2059 | 0.2445 | 0.3884 | 0.3001 | 0.3475 |
+| **Logistic Regression** | **T+3** | 72 Hours | 0.8227 | 0.1939 | 0.1973 | 0.4168 | 0.2678 | 0.3409 |
+| **XGBoost (Champion)** | **T+1** | 24 Hours | **0.8470** | **0.1625** | **0.1927** | **0.3465** | **0.2477** | **0.2988** |
+| **XGBoost (Champion)** | **T+2** | 48 Hours | 0.8353 | 0.1329 | 0.1703 | 0.3241 | 0.2233 | 0.2745 |
+| **XGBoost (Champion)** | **T+3** | 72 Hours | 0.8232 | 0.1248 | 0.1453 | 0.3897 | 0.2117 | 0.2916 |
+
+- **Zero Temporal Leakage**: Predictions at day $T$ strictly use rainfall telemetry up to day $T$.
+- **Detailed Report**: See [`docs/multi_horizon_forecasting.md`](file:///c:/Users/hp/OneDrive/Desktop/Odisha_Flood_Prediction/docs/multi_horizon_forecasting.md) and [`reports/plots/multi_horizon_degradation.png`](file:///c:/Users/hp/OneDrive/Desktop/Odisha_Flood_Prediction/reports/plots/multi_horizon_degradation.png).
+
+---
+
 ## ⚖️ Scientific Governance & Operational Disclaimers
 
 - **Zero Data Leakage**: All rolling window features use strictly antecedent data (e.g. `shift(1).rolling(...)`). The target `Flood_Next_Day` is evaluated for next-day flood forecasting ($T+1$) and is never used as an input feature.

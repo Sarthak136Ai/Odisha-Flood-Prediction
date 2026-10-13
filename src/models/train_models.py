@@ -39,6 +39,9 @@ def prepare_temporal_datasets(
     Strips ID columns and isolates target Flood_Next_Day.
     """
     target_col = config["target"]["name"]
+    if target_col not in df.columns and "Flood_Occurred" in df.columns:
+        from src.features.multi_horizon import generate_multi_horizon_targets
+        df = generate_multi_horizon_targets(df)
     # Drop rows where target is missing (e.g. boundary day)
     df_clean = df.dropna(subset=[target_col]).copy()
     

@@ -36,8 +36,14 @@ split:
   unseen_inference_year: 2025
 
 target:
-  name: "Flood_Next_Day"
+  name: "Flood_Next_Day"  # Default: Flood_Next_Day (T+1). Configurable to Flood_T+1, Flood_T+2, Flood_T+3
   binary: true
+  forecast_horizon: 1     # 1: T+1 (24h lead), 2: T+2 (48h lead), 3: T+3 (72h lead)
+  available_horizons: [1, 2, 3]
+  horizon_target_map:
+    1: "Flood_T+1"
+    2: "Flood_T+2"
+    3: "Flood_T+3"
 
 features:
   id_cols:
