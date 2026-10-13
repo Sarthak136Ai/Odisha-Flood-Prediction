@@ -54,7 +54,7 @@
   - `GET /downscaling`: High-resolution statistical downscaling evaluation & comparison.
   - `GET /assistant` & `POST /api/assistant/query`: Grounded AI Flood Assistant.
   - `GET /architecture`: System methodology & dual-pipeline visual architecture.
-- **Automated Test Suite**: 94 tests in `tests/` passing with 100% success rate (including `test_rainfall_features.py`, `test_event_evaluation.py`, `test_confusion_matrix.py`, `test_class_imbalance.py`, `test_threshold_selection.py`, `test_temporal_validation.py` & `test_data_quality.py`).
+- **Automated Test Suite**: 100 tests in `tests/` passing with 100% success rate (including `test_feature_ablation.py`, `test_rainfall_features.py`, `test_event_evaluation.py`, `test_confusion_matrix.py`, `test_class_imbalance.py`, `test_threshold_selection.py`, `test_temporal_validation.py` & `test_data_quality.py`).
 - **Data Quality Audit Engine**: `src/data/data_quality.py` & `reports/data_quality_report.html` (15-dimension automated audit).
 - **Temporal Walk-Forward Validation Engine**: `src/evaluation/temporal_validation.py` & `docs/temporal_validation_strategy.md` (5-fold expanding window cross-validation, 2017–2021).
 - **Threshold Selection & Audit Engine**: `src/evaluation/threshold_optimization.py` & `docs/threshold_selection_strategy.md` (Validation-only 2019–2021 tuning, F1/F2/Recall>=80%/Youden's J/Cost-Sensitive, unweighted ANN vs class-weighted odds shift justification).
@@ -62,4 +62,11 @@
 - **Confusion Matrix Evaluation Engine**: `src/evaluation/confusion_matrix.py` & `reports/plots/confusion_matrices_all_models.png/svg` (Full decomposition TN/FP/FN/TP, Acc, Prec, Rec, F1, F2, FNR/Miss Rate, FPR/Fall-out, dynamic model discovery, PNG/SVG figures, CSV/JSON artifacts).
 - **Event-Based Hydrological Evaluation Engine**: `src/evaluation/event_evaluation.py` & `docs/flood_event_evaluation.md` (Spatiotemporal continuous event segmentation, temporal matching, lead-time estimation, 6 real historical disaster episodes across Cuttack/Balasore/Bhadrak/Ganjam, 1,221 test event benchmarks, high-res dual-panel timeline visualizers PNG & SVG).
 - **IMD Rainfall Intensity Feature Engine**: `src/features/rainfall_features.py`, `docs/data_dictionary.md` & `README.md` (Statutory IMD 24-hr criteria: Light, Moderate, Heavy, Very Heavy, Extreme, Heavy-rain indicator, Extreme-rain indicator, strict causal non-leakage and missing-data safety).
+- **Formal Feature Ablation Study**: `src/evaluation/feature_ablation.py`, `scripts/run_feature_ablation.py`, `docs/feature_ablation_study.md`, `reports/feature_ablation_results.csv`, `results/metrics/feature_ablation_results.csv` & `reports/plots/feature_ablation_comparison.png/svg`. Empirically proved:
+  - Point rainfall only (Exp A) achieves poor predictive capacity (ROC-AUC 0.656, PR-AUC 0.080, FN > 7,120).
+  - Antecedent lags (Exp B) capture river hydrodynamics wave travel, jumping ROC-AUC to 0.775 (+11.9%).
+  - Multi-day rolling accumulations (Exp C) capture basin soil saturation, lifting ROC-AUC to 0.810 and test recall to ~0.50.
+  - Seasonal harmonics (Exp D) gate monsoon windows (ROC-AUC ~0.854), but produce high false alarms when ungrounded.
+  - Baseline synergy (Exp E, 22 feats) achieves top validation PR-AUC (0.178) and well-calibrated Brier loss (0.140).
+  - Statutory IMD intensity indicators (Exp F, 29 feats) achieve top disaster safety: F2 rises to 0.385 (LR) and 0.319 (XGBoost), cutting missed flood events by 302–359.
 
