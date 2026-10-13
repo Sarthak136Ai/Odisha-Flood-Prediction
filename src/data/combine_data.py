@@ -11,6 +11,8 @@ import pandas as pd
 import numpy as np
 from typing import Dict, List, Optional, Tuple
 
+from src.features.rainfall_features import compute_rainfall_intensity_features
+
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger(__name__)
 
@@ -176,6 +178,9 @@ def recompute_cross_year_features(df: pd.DataFrame) -> pd.DataFrame:
     for c in lag_cols:
         if c in df.columns:
             df[c] = df[c].fillna(0.0)
+
+    # Compute IMD rainfall intensity features
+    df = compute_rainfall_intensity_features(df, rainfall_col="Rainfall (mm)", missing_flag_col="Rainfall_Missing")
             
     return df
 

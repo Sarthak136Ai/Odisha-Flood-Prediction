@@ -17,6 +17,7 @@ from scipy.stats import ks_2samp
 from typing import Dict, List, Tuple, Any, Optional, Union
 
 from src.data.combine_data import STANDARD_DISTRICTS, DISTRICT_SYNONYMS, standardize_district_name
+from src.features.rainfall_features import compute_rainfall_intensity_features
 from src.evaluation.metrics import calculate_metrics
 from src.explainability.shap_analysis import explain_instance
 
@@ -284,6 +285,11 @@ def engineer_2025_features(
     ]
     for c in lag_cols:
         combined_stream[c] = combined_stream[c].fillna(0.0)
+
+    # Compute IMD rainfall intensity features
+    combined_stream = compute_rainfall_intensity_features(
+        combined_stream, rainfall_col="Rainfall (mm)", missing_flag_col="Rainfall_Missing"
+    )
 
     # Slice back strictly to original 2025 records
     df_out_2025 = combined_stream[combined_stream["Date_Parsed"] >= min_date_25].copy()

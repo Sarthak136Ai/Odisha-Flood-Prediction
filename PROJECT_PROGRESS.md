@@ -69,6 +69,7 @@ The **Odisha Flood Intelligence & Early Warning System** is an end-to-end, spati
 | **29** | Class Imbalance Analysis & Mitigation Engine | **Completed** | Full 24-year target distribution analysis (2.638% flood rate, 36.91:1 imbalance ratio), split & annual tables, SMOTE rejection rationale, confusion matrices, PR-AUC analysis, and plots |
 | **30** | Comprehensive Confusion Matrix Evaluation Engine | **Completed** | Full test set (2022–2024) confusion matrix decomposition (TN, FP, FN, TP, Acc, Prec, Rec, F1, F2, FNR, FPR), dynamic model discovery, individual/grid PNG & SVG plots, CSV/JSON artifacts, and DRR interpretation guide |
 | **31** | Event-Based Hydrological Evaluation Engine | **Completed** | Spatiotemporal event segmentation, temporal matching, lead time calculation, 6 real historical disaster episodes (August 2022 Mahanadi, Sept 2024 Subarnarekha, May 2021 Yaas, Aug 2020 Bhadrak, Oct 2018 Titli, Sept 2011 Mahanadi), 1,221 test event benchmarks across 5 models, high-res timeline plots, and comprehensive technical report `docs/flood_event_evaluation.md` |
+| **32** | IMD Rainfall Intensity Feature Engineering Pipeline | **Completed** | Implemented statutory 24-hr IMD rainfall classification indicators (`Light_Rainfall`, `Moderate_Rainfall`, `Heavy_Rainfall`, `Very_Heavy_Rainfall`, `Extreme_Rainfall`, `Heavy_Rain_Indicator`, `Extreme_Rain_Indicator`), robust missing/negative data masking, full data dictionary `docs/data_dictionary.md`, UI architecture integration, and 7 unit tests |
 
 ---
 
@@ -86,7 +87,8 @@ The **Odisha Flood Intelligence & Early Warning System** is an end-to-end, spati
 
 ## 🧪 Automated Test Verification
 
-All **89 test cases** in `tests/` pass with 100% success rate:
+All **94 test cases** in `tests/` pass with 100% success rate:
+- `tests/test_rainfall_features.py`: 7 IMD threshold boundaries, mutual exclusivity, missing data safety & anomaly tests
 - `tests/test_event_evaluation.py`: 9 Spatiotemporal event segmentation, lead time, hit/miss, false alarm & timeline plot tests
 - `tests/test_confusion_matrix.py`: 4 Confusion matrix decomposition, metric invariance, zero-division & plot generation tests
 - `tests/test_class_imbalance.py`: 5 Target distribution, split consistency, F2 behavior & empirical purity tests
@@ -99,7 +101,6 @@ All **89 test cases** in `tests/` pass with 100% success rate:
 - `tests/test_unseen_2025.py`: 2 Unseen 2025 telemetry tests
 - `tests/test_data.py`: 6 Data loading, schema validation & combination tests
 - `tests/test_features.py`: 3 Feature engineering & lag calculation tests
-- `tests/test_rainfall_features.py`: 2 Anomaly & IMD flag tests
 - `tests/test_model.py`: 2 Frozen model inference tests
 - `tests/test_decision_tree.py`: Baseline Decision Tree tests
 - `tests/test_calibration.py`: Probability calibration tests

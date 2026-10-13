@@ -73,6 +73,11 @@ class FloodPredictor:
         else:
             return "High"
 
+    def get_intensity_classification(self, rainfall_mm: Optional[float]) -> Dict[str, int]:
+        """Classify rainfall into IMD meteorological intensity categories."""
+        from src.features.rainfall_features import RainfallIntensityEngine
+        return RainfallIntensityEngine.classify_single_rainfall(rainfall_mm)
+
     def predict_single(self, feature_dict: Dict[str, Any]) -> Dict[str, Any]:
         """Produce structured prediction output for a single location observation."""
         df_input = pd.DataFrame([feature_dict])
@@ -80,10 +85,17 @@ class FloodPredictor:
         pred_class = int(proba >= self.threshold)
         risk_level = self.get_risk_level(proba)
         
-        return {
+        output = {
             "flood_probability": round(proba, 4),
             "predicted_flood_next_day": pred_class,
             "risk_level": risk_level,
             "classification_threshold": self.threshold,
             "model_type": self.metadata.get("model_name", "Trained ML Model"),
         }
+        
+        rf = feature_dict.get("Rainfall (mm)")
+        if rf is not None:
+            output["rainfall_intensity"] = self.get_intensity_classification(rf)
+            
+        return output
+

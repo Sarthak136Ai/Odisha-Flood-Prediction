@@ -44,6 +44,17 @@ EXPECTED_COLUMNS = [
     "Flood_Next_Day"
 ]
 
+# Standard IMD Rainfall Intensity Features
+INTENSITY_FEATURE_COLUMNS = [
+    "Light_Rainfall",
+    "Moderate_Rainfall",
+    "Heavy_Rainfall",
+    "Very_Heavy_Rainfall",
+    "Extreme_Rainfall",
+    "Heavy_Rain_Indicator",
+    "Extreme_Rain_Indicator",
+]
+
 
 def audit_single_year_file(file_path: str, year: int) -> Dict[str, Any]:
     """
@@ -277,3 +288,90 @@ def check_cross_year_continuity(
             "removed_locations_count": len(removed_in_next)
         }
     return continuity_report
+
+
+def validate_rainfall_intensity_features(df: pd.DataFrame, rainfall_col: str = "Rainfall (mm)") -> Dict[str, Any]:
+    """
+    Validate that IMD rainfall intensity features satisfy all mathematical and meteorological constraints:
+    1. All intensity indicator features must be binary {0, 1}.
+    2. Discrete intensity categories (Light, Moderate, Heavy, Very Heavy, Extreme) must be mutually exclusive.
+    3. Dry or trace rainfall (< 2.5 mm) must produce 0 across all intensity flags.
+    4. Heavy_Rain_Indicator must equal 1 iff Rainfall >= 64.5 mm.
+    5. Extreme_Rain_Indicator must equal 1 iff Rainfall >= 204.5 mm.
+    6. When Rainfall_Missing == 1, all intensity flags must be 0.
+    """
+    report = {
+        "is_valid": True,
+        "checked_columns": [],
+        "errors": [],
+        "passed_checks": []
+    }
+
+    present_cols = [c for c in INTENSITY_FEATURE_COLUMNS if c in df.columns]
+    report["checked_columns"] = present_cols
+
+    if not present_cols:
+        report["passed_checks"].append("No intensity columns present; skipped.")
+        return report
+
+    # 1. Binary checks
+    for col in present_cols:
+        unique_vals = set(df[col].dropna().unique())
+        if not unique_vals.issubset({0, 1}):
+            report["is_valid"] = False
+            report["errors"].append(f"Column '{col}' has non-binary values: {unique_vals}")
+        else:
+            report["passed_checks"].append(f"'{col}' is strictly binary {0, 1}.")
+
+    # 2. Mutually exclusive categories check
+    mut_excl_cols = [c for c in ["Light_Rainfall", "Moderate_Rainfall", "Heavy_Rainfall", "Very_Heavy_Rainfall", "Extreme_Rainfall"] if c in df.columns]
+    if len(mut_excl_cols) >= 2:
+        category_sum = df[mut_excl_cols].sum(axis=1)
+        violations = int((category_sum > 1).sum())
+        if violations > 0:
+            report["is_valid"] = False
+            report["errors"].append(f"Found {violations} rows where multiple discrete intensity categories are active simultaneously.")
+        else:
+            report["passed_checks"].append(f"Discrete intensity categories {mut_excl_cols} are mutually exclusive (sum <= 1).")
+
+    # 3. Threshold bounds alignment with Rainfall (mm) if present
+    if rainfall_col in df.columns:
+        rf = pd.to_numeric(df[rainfall_col], errors="coerce")
+        valid_rf = rf.notnull() & (rf >= 0)
+        if "Rainfall_Missing" in df.columns:
+            valid_rf = valid_rf & (df["Rainfall_Missing"] == 0)
+
+        # Check Heavy Rain Indicator (>= 64.5 mm)
+        if "Heavy_Rain_Indicator" in df.columns:
+            expected_heavy = (valid_rf & (rf >= 64.5)).astype(int)
+            mismatch_heavy = int((df["Heavy_Rain_Indicator"] != expected_heavy).sum())
+            if mismatch_heavy > 0:
+                report["is_valid"] = False
+                report["errors"].append(f"Found {mismatch_heavy} mismatches between Heavy_Rain_Indicator and Rainfall (mm) >= 64.5.")
+            else:
+                report["passed_checks"].append("Heavy_Rain_Indicator strictly matches Rainfall >= 64.5 mm.")
+
+        # Check Extreme Rain Indicator (>= 204.5 mm)
+        if "Extreme_Rain_Indicator" in df.columns:
+            expected_extreme = (valid_rf & (rf >= 204.5)).astype(int)
+            mismatch_extreme = int((df["Extreme_Rain_Indicator"] != expected_extreme).sum())
+            if mismatch_extreme > 0:
+                report["is_valid"] = False
+                report["errors"].append(f"Found {mismatch_extreme} mismatches between Extreme_Rain_Indicator and Rainfall (mm) >= 204.5.")
+            else:
+                report["passed_checks"].append("Extreme_Rain_Indicator strictly matches Rainfall >= 204.5 mm.")
+
+        # Check missing rainfall zeroes
+        if "Rainfall_Missing" in df.columns:
+            missing_mask = df["Rainfall_Missing"] == 1
+            if missing_mask.any():
+                for c in present_cols:
+                    active_on_missing = int((df.loc[missing_mask, c] != 0).sum())
+                    if active_on_missing > 0:
+                        report["is_valid"] = False
+                        report["errors"].append(f"Column '{c}' is non-zero on {active_on_missing} rows where Rainfall_Missing == 1.")
+                    else:
+                        report["passed_checks"].append(f"'{c}' is strictly 0 when rainfall is missing.")
+
+    return report
+

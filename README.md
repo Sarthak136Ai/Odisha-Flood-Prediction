@@ -198,6 +198,28 @@ Run the complete test suite across all 15 test modules:
 pytest -v
 ```
 
+## 🌧️ IMD Rainfall Intensity Classification & Feature Engineering
+
+The feature engineering pipeline computes standardized rainfall-intensity indicators based on statutory 24-hour criteria established by the **India Meteorological Department (IMD)**, Ministry of Earth Sciences, Government of India:
+
+| Category / Indicator | IMD 24-Hour Range ($R$) | Physical & Meteorological Meaning | Feature Name |
+| :--- | :---: | :--- | :--- |
+| **No Rain / Dry** | $R = 0.0\text{ mm}$ | Completely dry; normal civic conditions. | — |
+| **Trace / Very Light** | $0.1 \le R \le 2.4\text{ mm}$ | Below statutory rainy-day threshold ($< 2.5\text{ mm}$). | — |
+| **Light Rainfall** | $2.5 \le R \le 15.5\text{ mm}$ | Meets IMD rainy-day criterion; minimal surface runoff. | `Light_Rainfall` (`Rain_Light`) |
+| **Moderate Rainfall** | $15.6 \le R \le 64.4\text{ mm}$ | Steady precipitation; soil moisture saturation begins. | `Moderate_Rainfall` (`Rain_Moderate`) |
+| **Heavy Rainfall** | $64.5 \le R \le 115.5\text{ mm}$ | Significant surface runoff; urban/deltaic waterlogging. | `Heavy_Rainfall` (`Rain_Heavy`) |
+| **Very Heavy Rainfall** | $115.6 \le R \le 204.4\text{ mm}$ | Catchment inundation; river swelling (Orange Alert). | `Very_Heavy_Rainfall` (`Rain_Very_Heavy`) |
+| **Extremely Heavy Rainfall** | $R \ge 204.5\text{ mm}$ | Catastrophic deluge; major river spates (Red Alert). | `Extreme_Rainfall` (`Rain_Extreme`) |
+| **Heavy Rain Indicator** | $R \ge 64.5\text{ mm}$ | Cumulative warning trigger: Heavy, Very Heavy, or Extreme. | `Heavy_Rain_Indicator` (`Is_Heavy_Rain`) |
+| **Extreme Rain Indicator** | $R \ge 204.5\text{ mm}$ | Highest statutory disaster warning trigger. | `Extreme_Rain_Indicator` (`Is_Extreme_Rain`) |
+
+### Key Properties:
+- **Zero Future Information**: Generated strictly from day $T$ rainfall telemetry (or antecedent lags). No future day $T+1$ information is used.
+- **Robust Missing Data Handling**: If `Rainfall (mm)` is missing (`NaN` or `Rainfall_Missing == 1`), all intensity indicators strictly default to $0$. Negative values are treated as $0$.
+- **Train/Test Invariance**: IMD thresholds are fixed physical constants, ensuring complete consistency across training, validation, test, and unseen operational sets.
+- **Complete Documentation**: Full data dictionary is available in [`docs/data_dictionary.md`](file:///c:/Users/hp/OneDrive/Desktop/Odisha_Flood_Prediction/docs/data_dictionary.md).
+
 ---
 
 ## ⚖️ Scientific Governance & Operational Disclaimers

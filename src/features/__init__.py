@@ -1,4 +1,36 @@
 """Feature engineering package."""
-from src.features.rainfall_features import ClimatologicalAnomalyEngine, enrich_rainfall_features
+from src.features.rainfall_features import (
+    ClimatologicalAnomalyEngine,
+    RainfallIntensityEngine,
+    compute_rainfall_intensity_features,
+    enrich_rainfall_features,
+    RAINFALL_INTENSITY_COLUMNS,
+    IMD_RAINY_DAY_MIN,
+    IMD_LIGHT_MIN,
+    IMD_LIGHT_MAX,
+    IMD_MODERATE_MIN,
+    IMD_MODERATE_MAX,
+    IMD_HEAVY_MIN,
+    IMD_HEAVY_MAX,
+    IMD_VERY_HEAVY_MIN,
+    IMD_VERY_HEAVY_MAX,
+    IMD_EXTREME_MIN,
+)
 
-__all__ = ["ClimatologicalAnomalyEngine", "enrich_rainfall_features"]
+__all__ = [
+    "ClimatologicalAnomalyEngine",
+    "RainfallIntensityEngine",
+    "compute_rainfall_intensity_features",
+    "enrich_rainfall_features",
+    "RAINFALL_INTENSITY_COLUMNS",
+    "IMD_RAINY_DAY_MIN",
+    "IMD_LIGHT_MIN",
+    "IMD_LIGHT_MAX",
+    "IMD_MODERATE_MIN",
+    "IMD_MODERATE_MAX",
+    "IMD_HEAVY_MIN",
+    "IMD_HEAVY_MAX",
+    "IMD_VERY_HEAVY_MIN",
+    "IMD_VERY_HEAVY_MAX",
+    "IMD_EXTREME_MIN",
+]

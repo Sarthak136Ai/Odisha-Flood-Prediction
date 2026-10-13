@@ -129,6 +129,48 @@
             <td><span class="badge bg-success">Wet Spell Multiplier</span></td>
           </tr>
           <tr>
+            <td class="fw-bold text-light">Light_Rainfall</td>
+            <td>Binary (0 / 1)</td>
+            <td>IMD Light Rain standard: 1 if 2.5 mm &le; Rainfall &le; 15.5 mm on day T, else 0.</td>
+            <td><span class="badge bg-success">Observed at T</span></td>
+          </tr>
+          <tr>
+            <td class="fw-bold text-light">Moderate_Rainfall</td>
+            <td>Binary (0 / 1)</td>
+            <td>IMD Moderate Rain standard: 1 if 15.6 mm &le; Rainfall &le; 64.4 mm on day T, else 0.</td>
+            <td><span class="badge bg-success">Observed at T</span></td>
+          </tr>
+          <tr>
+            <td class="fw-bold text-light">Heavy_Rainfall</td>
+            <td>Binary (0 / 1)</td>
+            <td>IMD Heavy Rain standard: 1 if 64.5 mm &le; Rainfall &le; 115.5 mm on day T, else 0.</td>
+            <td><span class="badge bg-success">Observed at T</span></td>
+          </tr>
+          <tr>
+            <td class="fw-bold text-light">Very_Heavy_Rainfall</td>
+            <td>Binary (0 / 1)</td>
+            <td>IMD Very Heavy Rain standard: 1 if 115.6 mm &le; Rainfall &le; 204.4 mm on day T, else 0.</td>
+            <td><span class="badge bg-success">Observed at T</span></td>
+          </tr>
+          <tr>
+            <td class="fw-bold text-light">Extreme_Rainfall</td>
+            <td>Binary (0 / 1)</td>
+            <td>IMD Extremely Heavy Rain standard: 1 if Rainfall &ge; 204.5 mm on day T, else 0.</td>
+            <td><span class="badge bg-success">Observed at T</span></td>
+          </tr>
+          <tr>
+            <td class="fw-bold text-light">Heavy_Rain_Indicator</td>
+            <td>Binary (0 / 1)</td>
+            <td>IMD Heavy Rain Alert Trigger: 1 if Rainfall &ge; 64.5 mm (Heavy / Very Heavy / Extreme), else 0.</td>
+            <td><span class="badge bg-success">Observed at T</span></td>
+          </tr>
+          <tr>
+            <td class="fw-bold text-light">Extreme_Rain_Indicator</td>
+            <td>Binary (0 / 1)</td>
+            <td>IMD Red Alert Trigger: 1 if Rainfall &ge; 204.5 mm, else 0.</td>
+            <td><span class="badge bg-success">Observed at T</span></td>
+          </tr>
+          <tr>
             <td class="fw-bold text-light">Month_sin / Month_cos</td>
             <td>Continuous (Float)</td>
             <td>Cyclical sinusoidal transformation of calendar month capturing monsoon seasonality.</td>

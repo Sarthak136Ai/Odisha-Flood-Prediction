@@ -12,6 +12,7 @@
   - Cumulative Rolling Sums: `Rainfall_Prev_3d_Sum`, `Rainfall_Prev_7d_Sum`, `Rainfall_Prev_15d_Sum`, `Rainfall_Prev_30d_Sum`
   - Cumulative Rolling Maxima: `Rainfall_Prev_3d_Max`, `Rainfall_Prev_7d_Max`, `Rainfall_Prev_15d_Max`, `Rainfall_Prev_30d_Max`
   - Antecedent Wetness: `Rainy_Days_Prev_3d`, `Rainy_Days_Prev_7d`, `Rainy_Days_Prev_15d`, `Rainy_Days_Prev_30d`, `Consecutive_Rainy_Days_Before`
+  - IMD Rainfall Intensity Features: `Light_Rainfall` (2.5-15.5mm), `Moderate_Rainfall` (15.6-64.4mm), `Heavy_Rainfall` (64.5-115.5mm), `Very_Heavy_Rainfall` (115.6-204.4mm), `Extreme_Rainfall` (>=204.5mm), `Heavy_Rain_Indicator` (>=64.5mm), `Extreme_Rain_Indicator` (>=204.5mm)
   - Same-day observation: `Flood_Occurred` (used as antecedent signal only when available; 0 in operational mode).
 
 ## 2. Frozen Production Model & Calibration
@@ -53,11 +54,12 @@
   - `GET /downscaling`: High-resolution statistical downscaling evaluation & comparison.
   - `GET /assistant` & `POST /api/assistant/query`: Grounded AI Flood Assistant.
   - `GET /architecture`: System methodology & dual-pipeline visual architecture.
-- **Automated Test Suite**: 89 tests in `tests/` passing with 100% success rate (including `test_event_evaluation.py`, `test_confusion_matrix.py`, `test_class_imbalance.py`, `test_threshold_selection.py`, `test_temporal_validation.py` & `test_data_quality.py`).
+- **Automated Test Suite**: 94 tests in `tests/` passing with 100% success rate (including `test_rainfall_features.py`, `test_event_evaluation.py`, `test_confusion_matrix.py`, `test_class_imbalance.py`, `test_threshold_selection.py`, `test_temporal_validation.py` & `test_data_quality.py`).
 - **Data Quality Audit Engine**: `src/data/data_quality.py` & `reports/data_quality_report.html` (15-dimension automated audit).
 - **Temporal Walk-Forward Validation Engine**: `src/evaluation/temporal_validation.py` & `docs/temporal_validation_strategy.md` (5-fold expanding window cross-validation, 2017–2021).
 - **Threshold Selection & Audit Engine**: `src/evaluation/threshold_optimization.py` & `docs/threshold_selection_strategy.md` (Validation-only 2019–2021 tuning, F1/F2/Recall>=80%/Youden's J/Cost-Sensitive, unweighted ANN vs class-weighted odds shift justification).
 - **Class Imbalance Analysis Engine**: `src/evaluation/class_imbalance.py` & `docs/class_imbalance_analysis.md` (2.638% historical prevalence, 36.91:1 imbalance ratio, multi-tier confusion matrix evaluation, loss-weighting & SMOTE rejection rationale).
 - **Confusion Matrix Evaluation Engine**: `src/evaluation/confusion_matrix.py` & `reports/plots/confusion_matrices_all_models.png/svg` (Full decomposition TN/FP/FN/TP, Acc, Prec, Rec, F1, F2, FNR/Miss Rate, FPR/Fall-out, dynamic model discovery, PNG/SVG figures, CSV/JSON artifacts).
 - **Event-Based Hydrological Evaluation Engine**: `src/evaluation/event_evaluation.py` & `docs/flood_event_evaluation.md` (Spatiotemporal continuous event segmentation, temporal matching, lead-time estimation, 6 real historical disaster episodes across Cuttack/Balasore/Bhadrak/Ganjam, 1,221 test event benchmarks, high-res dual-panel timeline visualizers PNG & SVG).
+- **IMD Rainfall Intensity Feature Engine**: `src/features/rainfall_features.py`, `docs/data_dictionary.md` & `README.md` (Statutory IMD 24-hr criteria: Light, Moderate, Heavy, Very Heavy, Extreme, Heavy-rain indicator, Extreme-rain indicator, strict causal non-leakage and missing-data safety).
 
