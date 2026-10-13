@@ -18,10 +18,16 @@ class FloodPredictor:
     def __init__(
         self,
         model_path: str = "models/flood_prediction/best_model.pkl",
-        metadata_path: str = "models/flood_prediction/model_metadata.json"
+        metadata_path: str = "models/flood_prediction/model_metadata.json",
+        use_calibrated: bool = False,
+        calibrated_model_path: str = "models/flood_prediction/calibrated_best_model.pkl",
+        calibrated_metadata_path: str = "models/flood_prediction/calibrated_metadata.json"
     ):
         self.model_path = model_path
         self.metadata_path = metadata_path
+        self.use_calibrated = use_calibrated
+        self.calibrated_model_path = calibrated_model_path
+        self.calibrated_metadata_path = calibrated_metadata_path
         self.model = None
         self.metadata = {}
         self.feature_names = []
@@ -35,17 +41,28 @@ class FloodPredictor:
 
     def load(self):
         """Load trained model artifact and metadata."""
-        if not os.path.exists(self.model_path):
-            raise FileNotFoundError(f"Trained model not found at {self.model_path}")
+        target_model_path = self.calibrated_model_path if (self.use_calibrated and os.path.exists(self.calibrated_model_path)) else self.model_path
+        target_meta_path = self.calibrated_metadata_path if (self.use_calibrated and os.path.exists(self.calibrated_metadata_path)) else self.metadata_path
+
+        if not os.path.exists(target_model_path):
+            # Fallback to standard model path if calibrated model not found
+            target_model_path = self.model_path
+            target_meta_path = self.metadata_path
+
+        if not os.path.exists(target_model_path):
+            raise FileNotFoundError(f"Trained model not found at {target_model_path}")
             
-        self.model = joblib.load(self.model_path)
+        self.model = joblib.load(target_model_path)
         
-        if os.path.exists(self.metadata_path):
-            with open(self.metadata_path, "r", encoding="utf-8") as f:
+        if os.path.exists(target_meta_path):
+            with open(target_meta_path, "r", encoding="utf-8") as f:
                 self.metadata = json.load(f)
                 self.feature_names = self.metadata.get("features", [])
                 self.threshold = self.metadata.get("optimal_threshold", 0.5)
-                self.risk_thresholds = self.metadata.get("risk_thresholds", self.risk_thresholds)
+                if self.use_calibrated and "calibrated_risk_thresholds" in self.metadata:
+                    self.risk_thresholds = self.metadata["calibrated_risk_thresholds"]
+                else:
+                    self.risk_thresholds = self.metadata.get("risk_thresholds", self.risk_thresholds)
 
     def predict_probability(self, X: Union[pd.DataFrame, np.ndarray]) -> np.ndarray:
         """Calculate next-day flood probabilities for input features."""

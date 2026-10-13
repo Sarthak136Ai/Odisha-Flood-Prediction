@@ -1,0 +1,73 @@
+{
+  "model_name": "XGBoost (Sigmoid Calibrated)",
+  "base_model": "XGBoost",
+  "calibration_method": "sigmoid",
+  "calibration_dataset": "Validation Set (2019-2021)",
+  "features": [
+    "Month_sin",
+    "Month_cos",
+    "Day_of_Week",
+    "Rainfall (mm)",
+    "Rainfall_Missing",
+    "Rainfall_Lag_1d",
+    "Rainfall_Lag_2d",
+    "Rainfall_Lag_3d",
+    "Rainfall_Lag_7d",
+    "Rainfall_Prev_3d_Sum",
+    "Rainfall_Prev_7d_Sum",
+    "Rainfall_Prev_15d_Sum",
+    "Rainfall_Prev_30d_Sum",
+    "Rainfall_Prev_3d_Max",
+    "Rainfall_Prev_7d_Max",
+    "Rainfall_Prev_15d_Max",
+    "Rainfall_Prev_30d_Max",
+    "Rainy_Days_Prev_3d",
+    "Rainy_Days_Prev_7d",
+    "Rainy_Days_Prev_15d",
+    "Rainy_Days_Prev_30d",
+    "Consecutive_Rainy_Days_Before"
+  ],
+  "test_metrics": [
+    {
+      "Model": "XGBoost",
+      "Calibration_Variant": "Raw (Uncalibrated)",
+      "Brier_Score": 0.14445,
+      "Log_Loss": 0.39912,
+      "ECE": 0.19644,
+      "MCE": 0.67207,
+      "Mean_Predicted_Prob": 0.22319,
+      "Observed_Prevalence": 0.02855,
+      "Brier_Reduction_Pct": 0.0,
+      "ECE_Reduction_Pct": 0.0
+    },
+    {
+      "Model": "XGBoost",
+      "Calibration_Variant": "Calibrated (Sigmoid/Platt)",
+      "Brier_Score": 0.02595,
+      "Log_Loss": 0.10963,
+      "ECE": 0.00479,
+      "MCE": 0.07543,
+      "Mean_Predicted_Prob": 0.03235,
+      "Observed_Prevalence": 0.02855,
+      "Brier_Reduction_Pct": 82.04,
+      "ECE_Reduction_Pct": 97.56
+    },
+    {
+      "Model": "XGBoost",
+      "Calibration_Variant": "Calibrated (Isotonic)",
+      "Brier_Score": 0.02605,
+      "Log_Loss": 0.11177,
+      "ECE": 0.00477,
+      "MCE": 0.48095,
+      "Mean_Predicted_Prob": 0.03069,
+      "Observed_Prevalence": 0.02855,
+      "Brier_Reduction_Pct": 81.97,
+      "ECE_Reduction_Pct": 97.57
+    }
+  ],
+  "calibrated_risk_thresholds": {
+    "low_max": 0.05,
+    "moderate_max": 0.2,
+    "high_min": 0.2
+  }
+}

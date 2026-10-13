@@ -1,9 +1,9 @@
 # Odisha Flood Intelligence & Early Warning System
 ## Master Project Progress & Architecture Tracker
 
-**Last Updated:** 2026-10-13 16:50:00 IST  
+**Last Updated:** 2026-10-13 17:30:00 IST  
 **Current Phase:** Production Deployment & GitHub Sync  
-**Overall Status:** **100% Completed & Verified** (107/107 Automated Unit & Integration Tests Passing)
+**Overall Status:** **100% Completed & Verified** (113/113 Automated Unit & Integration Tests Passing)
 
 ---
 
@@ -72,6 +72,7 @@ The **Odisha Flood Intelligence & Early Warning System** is an end-to-end, spati
 | **32** | IMD Rainfall Intensity Feature Engineering Pipeline | **Completed** | Implemented statutory 24-hr IMD rainfall classification indicators (`Light_Rainfall`, `Moderate_Rainfall`, `Heavy_Rainfall`, `Very_Heavy_Rainfall`, `Extreme_Rainfall`, `Heavy_Rain_Indicator`, `Extreme_Rain_Indicator`), robust missing/negative data masking, full data dictionary `docs/data_dictionary.md`, UI architecture integration, and 7 unit tests |
 | **33** | Formal Feature Ablation Study & Empirical Validation | **Completed** | Evaluated 6 feature groups (Exp A: Rain only [2], Exp B: +Lags [6], Exp C: +Rolling [19], Exp D: Rain+Season [5], Exp E: Full Base [22], Exp F: Full+IMD [29]) across Logistic Regression and XGBoost, validation-only threshold tuning, untouched 2022–2024 test evaluation, full metrics (ROC-AUC, PR-AUC, Prec, Rec, F1, F2, Brier), CSV results, publication comparison plots, technical report `docs/feature_ablation_study.md`, and 6 unit tests |
 | **34** | Multi-Horizon Flood Forecasting & Degradation Engine | **Completed** | Implemented configurable target generation for horizons T+1 (24h), T+2 (48h), T+3 (72h) with strict calendar delta validation, zero future rainfall leakage, backward compatibility with Flood_Next_Day, validation-only threshold tuning, out-of-sample test evaluation, CSV metrics, 4-panel degradation plots, report `docs/multi_horizon_forecasting.md`, and 7 unit tests |
+| **35** | Empirical Probability Calibration & Reliability Upgrade | **Completed** | Audited and corrected legacy raw calibration claim (~19.6% ECE due to class-weight prior shift), implemented validation-only post-hoc calibrators (Platt Sigmoid & Isotonic), reduced ECE by >95% (<0.005) and Brier Score by >80% (to 0.025), evaluated 4 architectures on untouched test set, updated FloodPredictor with calibrated mode, saved calibrated artifacts, created 4-panel publication figures, comprehensive report `docs/probability_calibration.md`, and 7 unit tests |
 
 ---
 
@@ -89,7 +90,8 @@ The **Odisha Flood Intelligence & Early Warning System** is an end-to-end, spati
 
 ## 🧪 Automated Test Verification
 
-All **107 test cases** in `tests/` pass with 100% success rate:
+All **113 test cases** in `tests/` pass with 100% success rate:
+- `tests/test_calibration.py`: 7 ECE/MCE computation, uncalibrated shift detection, validation-only calibrator fitting, Brier reduction, FloodPredictor calibrated mode & publication plot tests
 - `tests/test_multi_horizon.py`: 7 Target naming, consecutive shift, calendar gap masking, cross-station isolation, Flood_Next_Day compatibility, target alignment audit & degradation plotting tests
 - `tests/test_feature_ablation.py`: 6 Feature group integrity, F2 recall priority, validation-only threshold tuning, metric bounds, synthetic end-to-end run & plot generation tests
 - `tests/test_rainfall_features.py`: 7 IMD threshold boundaries, mutual exclusivity, missing data safety & anomaly tests
@@ -107,7 +109,6 @@ All **107 test cases** in `tests/` pass with 100% success rate:
 - `tests/test_features.py`: 3 Feature engineering & lag calculation tests
 - `tests/test_model.py`: 2 Frozen model inference tests
 - `tests/test_decision_tree.py`: Baseline Decision Tree tests
-- `tests/test_calibration.py`: Probability calibration tests
 - `tests/test_chatbot.py`: 5 Grounded chatbot tool tests
 - `tests/test_dashboard.py`: Dashboard view tests
 

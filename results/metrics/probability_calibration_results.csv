@@ -1,0 +1,13 @@
+Model,Calibration_Variant,Brier_Score,Log_Loss,ECE,MCE,Mean_Predicted_Prob,Observed_Prevalence,Brier_Reduction_Pct,ECE_Reduction_Pct
+Logistic Regression,Raw (Uncalibrated),0.14904,0.42496,0.21085,0.70849,0.2394,0.02855,0.0,0.0
+Logistic Regression,Calibrated (Sigmoid/Platt),0.02506,0.10942,0.00922,0.17748,0.03165,0.02855,83.19,95.63
+Logistic Regression,Calibrated (Isotonic),0.02507,0.10641,0.00793,0.13997,0.03157,0.02855,83.18,96.24
+XGBoost,Raw (Uncalibrated),0.14445,0.39912,0.19644,0.67207,0.22319,0.02855,0.0,0.0
+XGBoost,Calibrated (Sigmoid/Platt),0.02595,0.10963,0.00479,0.07543,0.03235,0.02855,82.04,97.56
+XGBoost,Calibrated (Isotonic),0.02605,0.11177,0.00477,0.48095,0.03069,0.02855,81.97,97.57
+Random Forest,Raw (Uncalibrated),0.12548,0.35667,0.17537,0.69238,0.20392,0.02855,0.0,0.0
+Random Forest,Calibrated (Sigmoid/Platt),0.02597,0.10904,0.00551,0.041,0.03344,0.02855,79.3,96.86
+Random Forest,Calibrated (Isotonic),0.02615,0.11751,0.00641,0.70202,0.03163,0.02855,79.16,96.34
+Decision Tree,Raw (Uncalibrated),0.15149,0.46585,0.20113,0.70055,0.22362,0.02855,0.0,0.0
+Decision Tree,Calibrated (Sigmoid/Platt),0.02617,0.11099,0.004,0.05115,0.03208,0.02855,82.72,98.01
+Decision Tree,Calibrated (Isotonic),0.02632,0.11453,0.00377,0.09882,0.03122,0.02855,82.63,98.13

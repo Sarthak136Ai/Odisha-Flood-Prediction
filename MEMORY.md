@@ -54,7 +54,7 @@
   - `GET /downscaling`: High-resolution statistical downscaling evaluation & comparison.
   - `GET /assistant` & `POST /api/assistant/query`: Grounded AI Flood Assistant.
   - `GET /architecture`: System methodology & dual-pipeline visual architecture.
-- **Automated Test Suite**: 107 tests in `tests/` passing with 100% success rate (including `test_multi_horizon.py`, `test_feature_ablation.py`, `test_rainfall_features.py`, `test_event_evaluation.py`, `test_confusion_matrix.py`, `test_class_imbalance.py`, `test_threshold_selection.py`, `test_temporal_validation.py` & `test_data_quality.py`).
+- **Automated Test Suite**: 113 tests in `tests/` passing with 100% success rate (including `test_calibration.py`, `test_multi_horizon.py`, `test_feature_ablation.py`, `test_rainfall_features.py`, `test_event_evaluation.py`, `test_confusion_matrix.py`, `test_class_imbalance.py`, `test_threshold_selection.py`, `test_temporal_validation.py` & `test_data_quality.py`).
 - **Data Quality Audit Engine**: `src/data/data_quality.py` & `reports/data_quality_report.html` (15-dimension automated audit).
 - **Temporal Walk-Forward Validation Engine**: `src/evaluation/temporal_validation.py` & `docs/temporal_validation_strategy.md` (5-fold expanding window cross-validation, 2017–2021).
 - **Threshold Selection & Audit Engine**: `src/evaluation/threshold_optimization.py` & `docs/threshold_selection_strategy.md` (Validation-only 2019–2021 tuning, F1/F2/Recall>=80%/Youden's J/Cost-Sensitive, unweighted ANN vs class-weighted odds shift justification).
@@ -73,5 +73,12 @@
   - Configurable horizons: T+1 (24h lead), T+2 (48h lead), T+3 (72h lead) with strict calendar delta validation and zero future rainfall leakage.
   - Test set performance: LR ROC-AUC 0.841 (T+1) -> 0.831 (T+2) -> 0.823 (T+3); XGBoost ROC-AUC 0.847 (T+1) -> 0.835 (T+2) -> 0.823 (T+3).
   - PR-AUC degrades from 0.238 to 0.194 (LR) and 0.162 to 0.125 (XGBoost).
+  - Backward compatibility: Preserves and aliases `Flood_Next_Day` with 100% equivalence to `Flood_T+1`.
+- **Comprehensive Probability Calibration Engine**: `src/evaluation/calibration.py`, `scripts/run_probability_calibration.py`, `docs/probability_calibration.md`, `reports/probability_calibration_results.csv`, `reports/plots/probability_calibration.png/svg`, and `models/flood_prediction/calibrated_best_model.pkl`.
+  - Audited and corrected legacy raw calibration claim: Raw model outputs suffered from ~19.6% ECE due to class-weight prior shift ($\ln(38.96) \approx +3.66$).
+  - Post-hoc validation-fitted calibration (Platt Sigmoid & Isotonic) reduced ECE from ~0.20 to < 0.005–0.009 (>95% reduction), Brier Score from 0.145 to 0.025 (>82% reduction), and Log Loss from 0.42 to 0.10.
+  - Predicted mean probability aligned with actual test prevalence (2.855%).
+  - Calibrated risk threshold standard: LOW (<5%), MODERATE (5%–20%), HIGH (>=20%).
+  - Production calibrated artifact saved: `models/flood_prediction/calibrated_best_model.pkl` with `FloodPredictor(use_calibrated=True)` support.
   - Backward compatibility: Preserves and aliases `Flood_Next_Day` with 100% equivalence to `Flood_T+1`.
 
