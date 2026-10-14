@@ -52,9 +52,9 @@
   - `GET /benchmarks`: Multi-model benchmark comparisons, ROC, PR, and Calibration curves.
   - `GET /explainability`: SHAP Global & Local feature importance and attributions.
   - `GET /downscaling`: District-to-block statistical downscaling evaluation & comparison.
-  - `GET /assistant` & `POST /api/assistant/query`: Grounded AI Flood Assistant.
+  - `GET /assistant` & `POST /api/assistant/query`: Grounded AI Flood Assistant Interface Layer (deterministic retrieval from live model/metadata, zero invented numerical values, guarded fallbacks).
   - `GET /architecture`: System methodology & dual-pipeline visual architecture.
-- **Automated Test Suite**: 121 tests in `tests/` passing with 100% success rate (including `test_downscaling.py`, `test_calibration.py`, `test_multi_horizon.py`, `test_feature_ablation.py`, `test_rainfall_features.py`, `test_event_evaluation.py`, `test_confusion_matrix.py`, `test_class_imbalance.py`, `test_threshold_selection.py`, `test_temporal_validation.py` & `test_data_quality.py`).
+- **Automated Test Suite**: 133 tests in `tests/` passing with 100% success rate (including `test_chatbot.py` [17 tests], `test_downscaling.py`, `test_calibration.py`, `test_multi_horizon.py`, `test_feature_ablation.py`, `test_rainfall_features.py`, `test_event_evaluation.py`, `test_confusion_matrix.py`, `test_class_imbalance.py`, `test_threshold_selection.py`, `test_temporal_validation.py` & `test_data_quality.py`).
 - **Data Quality Audit Engine**: `src/data/data_quality.py` & `reports/data_quality_report.html` (15-dimension automated audit).
 - **Temporal Walk-Forward Validation Engine**: `src/evaluation/temporal_validation.py` & `docs/temporal_validation_strategy.md` (5-fold expanding window cross-validation, 2017–2021).
 - **Threshold Selection & Audit Engine**: `src/evaluation/threshold_optimization.py` & `docs/threshold_selection_strategy.md` (Validation-only 2019–2021 tuning, F1/F2/Recall>=80%/Youden's J/Cost-Sensitive, unweighted ANN vs class-weighted odds shift justification).
@@ -87,4 +87,10 @@
   - Unbiased Areal Mean Nature: Coarse district baseline is empirical centroid of station network ($\text{Bias} = 0.0000\text{ mm}$); downscaling model matches this ($\text{Bias} = +0.0103\text{ mm}$ on test set).
   - Downstream Early Warning Boost: Feeding downscaled inputs improves flood prediction Test PR-AUC from 0.1593 to 0.1813 (+0.0220), precision from 19.05% to 22.96% (+3.91%), and Brier score from 0.1445 to 0.1397, as spatial averaging filters out hyper-localized single-gauge sensor noise.
   - Zero Leakage: Trained strictly on 2001–2018; evaluated on validation (2019–2021) and untouched test (2022–2024). All rolling flood features use strictly antecedent `shift(1)`.
+- **Chatbot Interface Layer Scientific Audit & Grounded Response System**: `chatbot/`, `tests/test_chatbot.py`, `docs/chatbot_architecture.md`.
+  - Interface Layer Role: Treated strictly as a conversational interpretation interface, never as the underlying forecasting model. Prohibited from computing mathematical predictions or inventing numerical outputs.
+  - Deterministic Grounding: Dynamically retrieves live operational forecasts from `FloodPredictor`, metadata from `models/flood_prediction/model_metadata.json`, benchmarks from `reports/model_comparison.csv`, and local SHAP explanations from `explain_instance()`.
+  - Removal of Unverified Claims: Eliminated all legacy "hallucination-free" phrasing; implemented deterministic retrieval with guarded fallbacks.
+  - Explicit Missing Data Guards: Explicitly returns `"Sufficient project data is not available: ..."` when stations, blocks, or dates lack telemetry, or when model artifacts are uninitialized.
+  - Comprehensive Verification: 17 unit and negative edge-case tests in `tests/test_chatbot.py` verifying supported questions and missing/invalid inputs.
 

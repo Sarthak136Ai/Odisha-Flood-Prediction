@@ -50,7 +50,7 @@ The platform provides:
   - `HistGradientBoostingRegressor` district-to-block spatial disaggregation (~5,190 km² district scale to ~440 km² block scale).
   - Comparative benchmark across Observed vs. Coarse vs. Downscaled series (MAE, RMSE, R², Bias, Pearson correlation; see [`docs/downscaling_methodology.md`](file:///c:/Users/hp/OneDrive/Desktop/Odisha_Flood_Prediction/docs/downscaling_methodology.md)).
 - **11. Grounded AI Flood Assistant (`/assistant`)**:
-  - Domain-specialized chat assistant grounded in 24-year data and frozen ML prediction pipelines without hallucinations.
+  - Domain-specialized chat interface layer dynamically grounded in live model predictions (`FloodPredictor`), official model metadata, and local SHAP explainability without inventing numerical values (see [`docs/chatbot_architecture.md`](file:///c:/Users/hp/OneDrive/Desktop/Odisha_Flood_Prediction/docs/chatbot_architecture.md)).
 - **12. System Architecture & Methodology (`/architecture`)**:
   - Dual-pipeline visual flowcharts (Historical Benchmark vs. 2025 Operational Ingestion) and complete feature schema data dictionary.
 
@@ -260,6 +260,28 @@ To bridge the spatial granularity gap between coarse regional precipitation sign
 - **Downstream Flood Model Benefit**: Feeding downscaled rainfall into the frozen flood early warning model increases Test PR-AUC from **0.1593** to **0.1813** (+0.0220) and improves precision from **19.05%** to **22.96%** (+3.91%), as spatial averaging filters hyper-localized gauge sensor noise.
 - **Zero Leakage**: Trained strictly on 2001–2018; evaluated on validation (2019–2021) and test (2022–2024) with strictly antecedent rolling features (`shift(1)`).
 - **Full Scientific Audit**: Detailed methodology, IMD intensity-tier breakdowns, and limitations are documented in [`docs/downscaling_methodology.md`](file:///c:/Users/hp/OneDrive/Desktop/Odisha_Flood_Prediction/docs/downscaling_methodology.md).
+
+---
+
+## 🤖 Grounded AI Flood Assistant & Chatbot Interface Layer
+
+The conversational assistant (`/assistant`) operates strictly as an **interpretive interface layer**, not as the underlying numerical forecasting model. It bridges the gap between raw machine learning artifacts and civil decision-makers via a deterministic grounded retrieval architecture.
+
+### Key Architectural Standards:
+1. **Interface Layer Separation**: The assistant never computes mathematical predictions itself or invents numerical outputs. Every numerical value (probabilities, risk tiers, model recall, precision, decision thresholds) is queried dynamically from live artifacts:
+   - **Live Model Inference**: `src/models/predict.py` (`FloodPredictor` and `calibrated_best_model.pkl`)
+   - **Official Model Benchmarks**: `models/flood_prediction/model_metadata.json` and `reports/model_comparison.csv`
+   - **Operational Telemetry**: `reports/2025_flood_risk_predictions.csv`
+   - **Feature Attributions**: Real-time local TreeSHAP decompositions via `explain_instance()`
+2. **Deterministic Guardrails & Error Responses**:
+   - When project data or telemetry for a requested station, block, or date is missing, the chatbot explicitly states:
+     `"Sufficient project data is not available: ..."`
+   - If the ML model artifact is offline or uninitialized, it explicitly returns:
+     `"Sufficient project data is not available: The flood prediction model artifact is currently offline or uninitialized."`
+   - Unrecognized queries fall back to a safe domain assistance menu without fabricating facts.
+3. **Removal of Unverified Claims**:
+   - All legacy claims of being "hallucination-free" have been eliminated and replaced with verifiable **grounded retrieval with guarded fallbacks**.
+4. **Complete Architecture & Verification**: Full technical documentation is available in [`docs/chatbot_architecture.md`](file:///c:/Users/hp/OneDrive/Desktop/Odisha_Flood_Prediction/docs/chatbot_architecture.md) and verified by 17 unit and integration tests in `tests/test_chatbot.py`.
 
 ---
 

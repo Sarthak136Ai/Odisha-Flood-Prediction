@@ -1,18 +1,16 @@
 """
 Historical data query module for Odisha flood dataset (2001-2024).
-Provides exact, verified answers from the combined dataset without hallucinations.
+Provides deterministic aggregate and granular queries on verified historical records.
 """
 
 import os
+from typing import Dict, Any, Optional, List
 import pandas as pd
 import numpy as np
-from typing import Dict, Any, Optional, List
-
-from src.data.load_data import load_combined_data
 
 
 class DatasetQueryEngine:
-    """Engine to perform fast aggregate and granular queries on 24-year dataset."""
+    """Engine to perform fast aggregate and granular queries on the 24-year historical dataset."""
     
     def __init__(self, data_path: str = "data/combined/Odisha_Flood_2001_2024.csv"):
         self.data_path = data_path
@@ -27,7 +25,7 @@ class DatasetQueryEngine:
     def get_dataset_overview(self) -> Dict[str, Any]:
         """Return high-level dataset statistics."""
         if self.df is None:
-            return {"error": "Dataset not loaded"}
+            return {"error": "Sufficient project data is not available: Historical dataset is not loaded."}
         return {
             "total_records": len(self.df),
             "years_covered": f"{self.df['Year'].min()} - {self.df['Year'].max()} (24 years)",
@@ -40,10 +38,13 @@ class DatasetQueryEngine:
 
     def query_district_summary(self, district: str) -> Dict[str, Any]:
         """Query 24-year totals for a given district."""
+        if self.df is None:
+            return {"error": "Sufficient project data is not available: Historical dataset is not loaded."}
+            
         d_clean = district.strip().upper()
         sub = self.df[self.df["District"] == d_clean]
         if len(sub) == 0:
-            return {"error": f"District '{district}' not found in dataset."}
+            return {"error": f"Sufficient project data is not available: District '{district}' not found in dataset."}
             
         return {
             "district": d_clean,
@@ -58,6 +59,9 @@ class DatasetQueryEngine:
 
     def query_monthly_rainfall(self, district: str, year: int, month: int) -> Dict[str, Any]:
         """Query total and mean rainfall for a specific month and year."""
+        if self.df is None:
+            return {"error": "Sufficient project data is not available: Historical dataset is not loaded."}
+            
         d_clean = district.strip().upper()
         sub = self.df[
             (self.df["District"] == d_clean) &
@@ -65,7 +69,7 @@ class DatasetQueryEngine:
             (self.df["Month_Number"] == month)
         ]
         if len(sub) == 0:
-            return {"error": f"No records found for {district} in {month}/{year}."}
+            return {"error": f"Sufficient project data is not available: No records found for {district} in {month}/{year}."}
             
         month_names = ["", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
         month_name = month_names[month] if 1 <= month <= 12 else str(month)
@@ -82,6 +86,9 @@ class DatasetQueryEngine:
 
     def query_highest_rainfall_records(self, top_n: int = 5) -> List[Dict[str, Any]]:
         """Retrieve the top N highest single-day rainfall events across Odisha (2001-2024)."""
+        if self.df is None:
+            return []
+            
         top_rows = self.df.sort_values(by="Rainfall (mm)", ascending=False).head(top_n)
         records = []
         for _, row in top_rows.iterrows():
