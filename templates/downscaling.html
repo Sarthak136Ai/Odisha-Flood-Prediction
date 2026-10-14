@@ -1,26 +1,68 @@
 {% extends "base.html" %}
 
 {% block title %}Rainfall Downscaling | Flood Intelligence{% endblock %}
-{% block page_title %}High-Resolution Statistical Rainfall Downscaling{% endblock %}
+{% block page_title %}District-to-Block Statistical Rainfall Downscaling{% endblock %}
 
 {% block content %}
 <div class="container-fluid p-0">
   <!-- Architecture Overview Card -->
   <div class="dashboard-card mb-4">
     <div class="card-header-clean">
-      <h3><i class="fa-solid fa-arrows-split-up-and-left text-cyan"></i> Statistical Downscaling Framework</h3>
-      <span class="badge bg-secondary">Spatial Grid Refinement</span>
+      <h3><i class="fa-solid fa-arrows-split-up-and-left text-cyan"></i> Statistical Spatial Downscaling Framework</h3>
+      <span class="badge bg-secondary">District to Block Spatial Disaggregation</span>
     </div>
     <p class="text-muted small mb-0">
-      To bridge the spatial resolution gap between coarse gridded satellite/reanalysis datasets and local rain gauge telemetry across Odisha's 354 blocks, a dedicated gradient-boosted statistical downscaling model (<code>HistGradientBoostingRegressor</code>) was trained and evaluated on 24 years of telemetry.
+      To bridge the spatial granularity gap between coarse regional precipitation signals (district spatial aggregates averaging ~5,190 km² across Odisha) and local rain gauge stations (averaging ~440 km² per block), a dedicated gradient-boosted statistical downscaling model (<code>HistGradientBoostingRegressor</code>) was trained and evaluated on 24 years of telemetry. The target resolution genuinely represents <strong>district-to-block point gauge disaggregation</strong> rather than unverified high-resolution gridded NWP simulation.
     </p>
   </div>
 
-  <!-- Performance Comparison Table -->
+  <!-- Scientific Meteorological Accuracy Benchmark Table -->
   <div class="dashboard-card mb-4">
     <div class="card-header-clean">
-      <h3><i class="fa-solid fa-scale-balanced text-warning"></i> Predictive Impact: Original Observed vs. Downscaled Rainfall</h3>
-      <span class="badge bg-dark text-info">Test Set Evaluation (2022–2024)</span>
+      <h3><i class="fa-solid fa-square-poll-vertical text-cyan"></i> Meteorological Downscaling Accuracy: Coarse Regional vs. Downscaled Model</h3>
+      <span class="badge bg-dark text-info">Evaluated on Observed Station Rainfall (Ground Truth)</span>
+    </div>
+
+    <div class="table-responsive">
+      <table class="custom-table">
+        <thead>
+          <tr>
+            <th>Partition / Split</th>
+            <th>Precipitation Series</th>
+            <th>MAE (mm)</th>
+            <th>RMSE (mm)</th>
+            <th>R² Score</th>
+            <th>Mean Bias (mm)</th>
+            <th>Pearson r</th>
+            <th>Sample Count</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in eval_records %}
+          <tr {% if 'Downscaled' in row.Series %}class="table-active" style="background: rgba(0, 180, 216, 0.08);"{% endif %}>
+            <td class="text-info fw-bold">{{ row.Split }}</td>
+            <td class="fw-bold text-light">
+              {% if 'Downscaled' in row.Series %}<i class="fa-solid fa-check text-cyan me-1"></i>{% endif %}
+              {{ row.Series }}
+            </td>
+            <td class="fw-bold text-light">{{ row['MAE (mm)']|round(4) if row['MAE (mm)'] is defined else 'N/A' }}</td>
+            <td class="text-warning fw-bold">{{ row['RMSE (mm)']|round(4) if row['RMSE (mm)'] is defined else 'N/A' }}</td>
+            <td class="text-success fw-bold">{{ row['R2']|round(4) if row['R2'] is defined else 'N/A' }}</td>
+            <td class="{% if row['Bias (mm)']|abs < 0.05 %}text-success{% else %}text-danger{% endif %}">{{ row['Bias (mm)']|round(4) if row['Bias (mm)'] is defined else 'N/A' }}</td>
+            <td class="text-cyan fw-bold">{{ row['Pearson_r']|round(4) if row['Pearson_r'] is defined else 'N/A' }}</td>
+            <td class="text-muted small">{{ row['Samples']|string if row['Samples'] is defined else 'N/A' }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Downstream Predictive Impact Table -->
+  <div class="dashboard-card mb-4">
+    <div class="card-header-clean">
+      <h3><i class="fa-solid fa-scale-balanced text-warning"></i> Downstream Flood Prediction Impact: Original Observed vs. Downscaled Inputs</h3>
+      <span class="badge bg-dark text-info">Untouched Test Set Evaluation (2022–2024)</span>
     </div>
 
     <div class="table-responsive">
@@ -61,7 +103,7 @@
     <div class="col-lg-8">
       <div class="dashboard-card h-100">
         <div class="card-header-clean">
-          <h3><i class="fa-solid fa-chart-area text-info"></i> Observed vs. Statistical Downscaling Distribution Match</h3>
+          <h3><i class="fa-solid fa-chart-area text-info"></i> Observed vs. Coarse vs. Downscaled Multi-Panel Audit</h3>
         </div>
         <div class="text-center p-2">
           <img src="{{ url_for('static', filename='images/plots/rainfall_comparison.png') }}" class="img-fluid rounded border border-secondary" alt="Rainfall Comparison Plot">
@@ -77,23 +119,23 @@
           </div>
           <ul class="list-unstyled small text-muted">
             <li class="mb-3">
-              <strong class="text-light d-block mb-1">1. Extreme Value Preservation:</strong>
-              The downscaling engine successfully captures localized convective peak precipitation (&gt;100 mm/day) without severe dampening or artificial smoothing.
+              <strong class="text-light d-block mb-1">1. Mathematical Areal Mean Nature:</strong>
+              The coarse district baseline is the empirical centroid of station telemetry ($\text{Bias} \approx 0.00\text{ mm}$). Tree downscaling matches this unbiased behavior ($\text{Bias} = +0.0103\text{ mm}$ on test set) while preserving non-negative bounds ($\ge 0\text{ mm}$).
             </li>
             <li class="mb-3">
-              <strong class="text-light d-block mb-1">2. Stable Downstream ROC-AUC:</strong>
-              Feeding downscaled inputs into the frozen flood prediction pipeline achieves a Test ROC-AUC of <strong>0.9703</strong> (vs 0.9693 observed), demonstrating high spatial robustness.
+              <strong class="text-light d-block mb-1">2. Downstream Precision &amp; PR-AUC Gain:</strong>
+              Feeding downscaled inputs into the frozen flood prediction model increases Test PR-AUC from <strong>0.1593</strong> to <strong>0.1813</strong> (+0.0220) and improves precision from 19.05% to 22.96% (+3.91%), as spatial regularization dampens single-gauge sensor noise.
             </li>
-            <li>
-              <strong class="text-light d-block mb-1">3. Operational Feasibility:</strong>
-              Enables reliable block-level risk forecasting even when only coarse-grid regional meteorological inputs are available.
+            <li class="mb-3">
+              <strong class="text-light d-block mb-1">3. Peak Intensity Underestimation:</strong>
+              Convective cloudbursts (&gt;115 mm/day) remain partially smoothed due to conditional mean regression shrinkage, a standard physical limitation of spatial disaggregation without radar or topographical grids.
             </li>
           </ul>
         </div>
 
         <div class="p-2 rounded bg-dark border border-secondary text-center small text-muted">
           <i class="fa-solid fa-circle-check text-success me-1"></i>
-          Evaluated strictly on historical test partitions (2022–2024).
+          Evaluated strictly across Train (2001–2018), Val (2019–2021), and Test (2022–2024).
         </div>
       </div>
     </div>

@@ -53,6 +53,7 @@ class AppState:
     model_comparison_df: Optional[pd.DataFrame] = None
     shap_importance_df: Optional[pd.DataFrame] = None
     downscaling_metrics_df: Optional[pd.DataFrame] = None
+    downscaling_eval_df: Optional[pd.DataFrame] = None
     cached_2025_predictions: Optional[pd.DataFrame] = None
     cached_2025_summary: Dict[str, Any] = {}
     historical_summary: Dict[str, Any] = {}
@@ -108,6 +109,8 @@ def load_application_state():
         state.shap_importance_df = pd.read_csv(app.config["SHAP_IMPORTANCE_PATH"])
     if os.path.exists(app.config["DOWNSCALING_METRICS_PATH"]):
         state.downscaling_metrics_df = pd.read_csv(app.config["DOWNSCALING_METRICS_PATH"])
+    if os.path.exists(app.config.get("DOWNSCALING_EVAL_PATH", "")):
+        state.downscaling_eval_df = pd.read_csv(app.config["DOWNSCALING_EVAL_PATH"])
 
     # 5. Load 2025 Predictions Cache
     if os.path.exists(app.config["PREDICTIONS_2025_PATH"]):
@@ -324,12 +327,14 @@ def explainability():
 
 @app.route("/downscaling")
 def downscaling():
-    """Statistical rainfall downscaling evaluation and spatial resolution analysis."""
+    """Statistical rainfall downscaling evaluation and spatial scale analysis."""
     metrics_records = state.downscaling_metrics_df.to_dict(orient="records") if state.downscaling_metrics_df is not None else []
+    eval_records = state.downscaling_eval_df.to_dict(orient="records") if state.downscaling_eval_df is not None else []
     return render_template(
         "downscaling.html",
         active_page="downscaling",
-        metrics_records=metrics_records
+        metrics_records=metrics_records,
+        eval_records=eval_records
     )
 
 

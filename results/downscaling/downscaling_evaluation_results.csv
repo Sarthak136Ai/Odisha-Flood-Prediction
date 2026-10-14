@@ -1,0 +1,7 @@
+Split,Series,MAE (mm),RMSE (mm),R2,Bias (mm),Pearson_r,Samples
+Train (2001-2018),Original Coarse Regional Rainfall (District Mean),2.8827,8.5775,0.6401,-0.0,0.8,2063989
+Train (2001-2018),Statistical Downscaled Rainfall (Model),2.927,8.7999,0.6212,0.0026,0.7882,2063989
+Validation (2019-2021),Original Coarse Regional Rainfall (District Mean),2.9876,8.4989,0.6648,-0.0,0.8153,344140
+Validation (2019-2021),Statistical Downscaled Rainfall (Model),3.0404,8.8406,0.6373,-0.0286,0.7986,344140
+Test (2022-2024),Original Coarse Regional Rainfall (District Mean),2.7156,7.7189,0.6161,-0.0,0.7849,343758
+Test (2022-2024),Statistical Downscaled Rainfall (Model),2.7472,7.8264,0.6053,0.0103,0.778,343758

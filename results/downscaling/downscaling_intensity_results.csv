@@ -1,0 +1,6 @@
+Rainfall_Intensity_Tier,Sample_Count,Sample_Pct,Coarse_MAE_mm,Coarse_Bias_mm,Downscaled_MAE_mm,Downscaled_Bias_mm
+Dry / Trace (< 2.5 mm),279782,81.39,0.8891,0.8702,0.9119,0.893
+Moderate (2.5 - 64.4 mm),60987,17.74,9.1158,-2.0707,9.1473,-2.0914
+Heavy (64.5 - 115.5 mm),2459,0.72,37.5414,-33.5243,38.1105,-33.0537
+Very Heavy (115.6 - 204.4 mm),472,0.14,63.7435,-60.1184,63.7293,-63.418
+Extremely Heavy (>= 204.5 mm),58,0.02,110.04,-109.6917,130.3884,-130.3884

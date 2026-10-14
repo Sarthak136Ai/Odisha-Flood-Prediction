@@ -35,6 +35,7 @@ class Config:
     MODEL_COMPARISON_PATH = os.path.join(BASE_DIR, "results", "metrics", "model_comparison.csv")
     SHAP_IMPORTANCE_PATH = os.path.join(BASE_DIR, "results", "metrics", "shap_feature_importance.csv")
     DOWNSCALING_METRICS_PATH = os.path.join(BASE_DIR, "results", "downscaling", "downscaling_metrics.csv")
+    DOWNSCALING_EVAL_PATH = os.path.join(BASE_DIR, "results", "downscaling", "downscaling_evaluation_results.csv")
     PLOTS_DIR = os.path.join(BASE_DIR, "results", "plots")
     
     # Risk Thresholds

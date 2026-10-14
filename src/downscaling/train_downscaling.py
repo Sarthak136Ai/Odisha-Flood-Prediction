@@ -1,6 +1,6 @@
 """
 Training module for statistical downscaling regression models.
-Maps coarse-resolution regional meteorological drivers to fine-scale station rainfall.
+Maps coarse-resolution regional meteorological drivers (district spatial aggregates) to block-scale station rainfall.
 """
 
 import os
@@ -8,8 +8,9 @@ import joblib
 import numpy as np
 import pandas as pd
 from sklearn.ensemble import HistGradientBoostingRegressor
-from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 from typing import Dict, Any, Tuple, List
+
+from src.downscaling.evaluate_downscaling import evaluate_downscaling_quality
 
 
 def train_downscaling_model(
@@ -25,7 +26,8 @@ def train_downscaling_model(
     save_path: str = "models/downscaling/downscaling_model.pkl"
 ) -> Tuple[HistGradientBoostingRegressor, Dict[str, float]]:
     """
-    Train a HistGradientBoostingRegressor to downscale coarse rainfall signals to local station rainfall.
+    Train a HistGradientBoostingRegressor to downscale coarse district rainfall signals
+    to block/station point rainfall.
     Trained strictly on historical train period (2001-2018).
     """
     X_train = train_df[features]
@@ -43,10 +45,13 @@ def train_downscaling_model(
     y_pred_train = model.predict(X_train)
     y_pred_train = np.clip(y_pred_train, 0.0, None)
     
+    quality = evaluate_downscaling_quality(y_train, y_pred_train)
     metrics = {
-        "train_rmse": float(np.sqrt(mean_squared_error(y_train, y_pred_train))),
-        "train_mae": float(mean_absolute_error(y_train, y_pred_train)),
-        "train_r2": float(r2_score(y_train, y_pred_train))
+        "train_mae": quality["mae_mm"],
+        "train_rmse": quality["rmse_mm"],
+        "train_r2": quality["r2_score"],
+        "train_bias": quality["bias_mm"],
+        "train_pearson_r": quality["pearson_correlation"]
     }
     
     os.makedirs(os.path.dirname(save_path), exist_ok=True)

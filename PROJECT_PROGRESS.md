@@ -73,6 +73,7 @@ The **Odisha Flood Intelligence & Early Warning System** is an end-to-end, spati
 | **33** | Formal Feature Ablation Study & Empirical Validation | **Completed** | Evaluated 6 feature groups (Exp A: Rain only [2], Exp B: +Lags [6], Exp C: +Rolling [19], Exp D: Rain+Season [5], Exp E: Full Base [22], Exp F: Full+IMD [29]) across Logistic Regression and XGBoost, validation-only threshold tuning, untouched 2022–2024 test evaluation, full metrics (ROC-AUC, PR-AUC, Prec, Rec, F1, F2, Brier), CSV results, publication comparison plots, technical report `docs/feature_ablation_study.md`, and 6 unit tests |
 | **34** | Multi-Horizon Flood Forecasting & Degradation Engine | **Completed** | Implemented configurable target generation for horizons T+1 (24h), T+2 (48h), T+3 (72h) with strict calendar delta validation, zero future rainfall leakage, backward compatibility with Flood_Next_Day, validation-only threshold tuning, out-of-sample test evaluation, CSV metrics, 4-panel degradation plots, report `docs/multi_horizon_forecasting.md`, and 7 unit tests |
 | **35** | Empirical Probability Calibration & Reliability Upgrade | **Completed** | Audited and corrected legacy raw calibration claim (~19.6% ECE due to class-weight prior shift), implemented validation-only post-hoc calibrators (Platt Sigmoid & Isotonic), reduced ECE by >95% (<0.005) and Brier Score by >80% (to 0.025), evaluated 4 architectures on untouched test set, updated FloodPredictor with calibrated mode, saved calibrated artifacts, created 4-panel publication figures, comprehensive report `docs/probability_calibration.md`, and 7 unit tests |
+| **36** | Rainfall Downscaling Scientific Audit & Disaggregation Engine | **Completed** | Full scientific audit of district-to-block downscaling (~5,190 km² to ~440 km²), strict non-leakage protocol (Train 2001–2018, Val 2019–2021, Test 2022–2024), evaluated Observed vs Coarse vs Downscaled series across MAE, RMSE, R², Bias, Pearson r, IMD intensity-tier breakdown, downstream flood early warning benchmark (+3.91% precision, +0.0220 PR-AUC), 4-panel publication figures, technical documentation `docs/downscaling_methodology.md`, and 8 unit tests in `tests/test_downscaling.py` (121 total tests passing) |
 
 ---
 
@@ -90,7 +91,8 @@ The **Odisha Flood Intelligence & Early Warning System** is an end-to-end, spati
 
 ## 🧪 Automated Test Verification
 
-All **113 test cases** in `tests/` pass with 100% success rate:
+All **121 test cases** in `tests/` pass with 100% success rate:
+- `tests/test_downscaling.py`: 8 Coarse spatial aggregation, perfect agreement, known bias, zero variance, benchmark table, IMD intensity tiers, non-negativity clipping & lookahead leakage prevention tests
 - `tests/test_calibration.py`: 7 ECE/MCE computation, uncalibrated shift detection, validation-only calibrator fitting, Brier reduction, FloodPredictor calibrated mode & publication plot tests
 - `tests/test_multi_horizon.py`: 7 Target naming, consecutive shift, calendar gap masking, cross-station isolation, Flood_Next_Day compatibility, target alignment audit & degradation plotting tests
 - `tests/test_feature_ablation.py`: 6 Feature group integrity, F2 recall priority, validation-only threshold tuning, metric bounds, synthetic end-to-end run & plot generation tests

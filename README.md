@@ -46,8 +46,9 @@ The platform provides:
 - **9. Explainable AI / SHAP (`/explainability`)**:
   - Global SHAP feature importance ranking (all 20 features) and SHAP summary plots.
   - Key hydrological findings on soil saturation dominance, wet spell duration, and monsoon seasonality.
-- **10. High-Resolution Statistical Downscaling (`/downscaling`)**:
-  - `HistGradientBoostingRegressor` spatial grid refinement evaluation (Observed vs. Downscaled comparative metrics).
+- **10. District-to-Block Statistical Downscaling (`/downscaling`)**:
+  - `HistGradientBoostingRegressor` district-to-block spatial disaggregation (~5,190 km² district scale to ~440 km² block scale).
+  - Comparative benchmark across Observed vs. Coarse vs. Downscaled series (MAE, RMSE, R², Bias, Pearson correlation; see [`docs/downscaling_methodology.md`](file:///c:/Users/hp/OneDrive/Desktop/Odisha_Flood_Prediction/docs/downscaling_methodology.md)).
 - **11. Grounded AI Flood Assistant (`/assistant`)**:
   - Domain-specialized chat assistant grounded in 24-year data and frozen ML prediction pipelines without hallucinations.
 - **12. System Architecture & Methodology (`/architecture`)**:
@@ -241,6 +242,24 @@ The platform supports configurable multi-day forecast horizons to empower phased
 
 - **Zero Temporal Leakage**: Predictions at day $T$ strictly use rainfall telemetry up to day $T$.
 - **Detailed Report**: See [`docs/multi_horizon_forecasting.md`](file:///c:/Users/hp/OneDrive/Desktop/Odisha_Flood_Prediction/docs/multi_horizon_forecasting.md) and [`reports/plots/multi_horizon_degradation.png`](file:///c:/Users/hp/OneDrive/Desktop/Odisha_Flood_Prediction/reports/plots/multi_horizon_degradation.png).
+
+---
+
+## 🔬 District-to-Block Statistical Rainfall Downscaling
+
+To bridge the spatial granularity gap between coarse regional precipitation signals (district spatial aggregates averaging ~5,190 km²) and localized rain gauge stations (~440 km² per block), a dedicated gradient-boosted regression model (`HistGradientBoostingRegressor`) maps macro rainfall to block telemetry.
+
+### Meteorological Benchmark (Untouched Test Set 2022–2024, 343,758 observations):
+| Precipitation Series | MAE (mm) | RMSE (mm) | R² Score | Mean Bias (mm) | Pearson r |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **Original Coarse Regional Rainfall (District Mean)** | **2.7156** | **7.7189** | **0.6161** | **-0.0000** | **0.7849** |
+| **Statistical Downscaled Rainfall (Model Estimate)** | 2.7472 | 7.8264 | 0.6053 | +0.0103 | 0.7780 |
+
+### Key Scientific Findings:
+- **Spatial Granularity Definition**: The model predicts **block-level station rain gauge point telemetry** from district spatial aggregates. It is strictly not termed "high-resolution gridded NWP".
+- **Downstream Flood Model Benefit**: Feeding downscaled rainfall into the frozen flood early warning model increases Test PR-AUC from **0.1593** to **0.1813** (+0.0220) and improves precision from **19.05%** to **22.96%** (+3.91%), as spatial averaging filters hyper-localized gauge sensor noise.
+- **Zero Leakage**: Trained strictly on 2001–2018; evaluated on validation (2019–2021) and test (2022–2024) with strictly antecedent rolling features (`shift(1)`).
+- **Full Scientific Audit**: Detailed methodology, IMD intensity-tier breakdowns, and limitations are documented in [`docs/downscaling_methodology.md`](file:///c:/Users/hp/OneDrive/Desktop/Odisha_Flood_Prediction/docs/downscaling_methodology.md).
 
 ---
 
