@@ -307,6 +307,16 @@ To guarantee end-to-end scientific provenance, every model artifact is paired wi
 
 ## ⚖️ Scientific Governance & Operational Disclaimers
 
-- **Zero Data Leakage**: All rolling window features use strictly antecedent data (e.g. `shift(1).rolling(...)`). The target `Flood_Next_Day` is evaluated for next-day flood forecasting ($T+1$) and is never used as an input feature.
+- **Zero Data Leakage & Automated Verification**: The platform enforces a rigorous 10-point anti-leakage protocol verified by [`tests/test_data_leakage.py`](file:///c:/Users/hp/OneDrive/Desktop/Odisha_Flood_Prediction/tests/test_data_leakage.py):
+  1. `Flood_Next_Day` (and multi-horizon targets) is never used as an input feature.
+  2. Future rainfall is never accessible during feature engineering or inference.
+  3. Rolling accumulation and intensity windows strictly aggregate antecedent days (`shift(1)`).
+  4. Train dates (2001–2018) strictly precede validation (2019–2021) and test (2022–2024) dates without temporal crossover.
+  5. Decision thresholds are tuned strictly on validation data and applied out-of-sample.
+  6. Scalers and encoders are fitted exclusively on training data inside pipelines.
+  7. Probability calibration is fitted strictly on validation data.
+  8. Zero duplicate station-date records cross train/val/test splits.
+  9. Feature columns and ordering are identical between training and inference.
+  10. Operational 2025 inference runs in frozen mode and never retrains the model.
 - **Frozen 2025 Inference**: 2025 is treated as unseen operational telemetry. The model weights, thresholds, and calibration are frozen from the 2001–2024 training baseline.
 - **Advisory Role**: Predictions are probabilistic risk estimates designed for emergency planning and do not supersede statutory warnings issued by the Indian Meteorological Department (IMD) or the Special Relief Commissioner (SRC).

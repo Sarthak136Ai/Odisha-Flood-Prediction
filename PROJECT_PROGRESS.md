@@ -1,9 +1,9 @@
 # Odisha Flood Intelligence & Early Warning System
 ## Master Project Progress & Architecture Tracker
 
-**Last Updated:** 2026-10-18 09:00:00 IST  
+**Last Updated:** 2026-10-18 09:30:00 IST  
 **Current Phase:** Production Deployment & GitHub Sync  
-**Overall Status:** **100% Completed & Verified** (147/147 Automated Unit & Integration Tests Passing)
+**Overall Status:** **100% Completed & Verified** (157/157 Automated Unit & Integration Tests Passing)
 
 ---
 
@@ -76,6 +76,7 @@ The **Odisha Flood Intelligence & Early Warning System** is an end-to-end, spati
 | **36** | Rainfall Downscaling Scientific Audit & Disaggregation Engine | **Completed** | Full scientific audit of district-to-block downscaling (~5,190 km² to ~440 km²), strict non-leakage protocol (Train 2001–2018, Val 2019–2021, Test 2022–2024), evaluated Observed vs Coarse vs Downscaled series across MAE, RMSE, R², Bias, Pearson r, IMD intensity-tier breakdown, downstream flood early warning benchmark (+3.91% precision, +0.0220 PR-AUC), 4-panel publication figures, technical documentation `docs/downscaling_methodology.md`, and 8 unit tests in `tests/test_downscaling.py` |
 | **37** | Chatbot Interface Layer Scientific Audit & Grounded Response System | **Completed** | Strict interface layer design (never computes or invents predictions), deterministic grounding via live `FloodPredictor` and `model_metadata.json`, removed all unverified "hallucination-free" phrasing, dynamic answers for all 7 audited queries, explicit missing data guards (`Sufficient project data is not available: ...`), 17 comprehensive unit/negative tests in `tests/test_chatbot.py`, and technical report `docs/chatbot_architecture.md` |
 | **38** | Experiment Reproducibility, Model Metadata & Feature Schema Validation | **Completed** | Implemented automated model metadata generation (`src/models/metadata.py`), 15 required reproducibility keys, dynamic environment discovery (zero hardcoding), chunked SHA-256 dataset hashing (`1145a2ae6ac1bdaf...`), unified `ModelBundle` loading, strict pre-prediction feature schema validation blocking invalid inputs with `SchemaValidationError`, technical documentation `docs/model_reproducibility.md`, and 14 unit tests in `tests/test_model_metadata.py` (147 total tests passing) |
+| **39** | Dedicated Automated Data Leakage Prevention Engine & Test Suite | **Completed** | Implemented 10 rigorous leakage prevention tests in `tests/test_data_leakage.py` enforcing zero target leakage (`Flood_Next_Day`/`Flood_T+*`), empirical lookahead causality invariance, rolling window antecedent `shift(1)` isolation, chronological split ordering (`Train < Val < Test`), validation-only threshold tuning, scaler fitting isolation on `X_train`, validation-only probability calibration, station/date split uniqueness, feature schema parity, and frozen 2025 operational inference |
 
 ---
 
@@ -93,7 +94,8 @@ The **Odisha Flood Intelligence & Early Warning System** is an end-to-end, spati
 
 ## 🧪 Automated Test Verification
 
-All **147 test cases** in `tests/` pass with 100% success rate:
+All **157 test cases** in `tests/` pass with 100% success rate:
+- `tests/test_data_leakage.py`: 10 Dedicated data leakage prevention tests (target exclusion, future lookahead causality, rolling antecedent shift, temporal order, validation-only threshold tuning, scaler isolation, validation-only calibration, cross-split uniqueness, feature schema parity, and frozen 2025 operational inference)
 - `tests/test_model_metadata.py`: 14 Model metadata schema completeness, SHA-256 verification, dynamic environment discovery, ModelBundle loading, and schema validation edge-case tests
 - `tests/test_downscaling.py`: 8 Coarse spatial aggregation, perfect agreement, known bias, zero variance, benchmark table, IMD intensity tiers, non-negativity clipping & lookahead leakage prevention tests
 - `tests/test_calibration.py`: 7 ECE/MCE computation, uncalibrated shift detection, validation-only calibrator fitting, Brier reduction, FloodPredictor calibrated mode & publication plot tests
