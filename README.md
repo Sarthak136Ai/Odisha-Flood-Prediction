@@ -22,36 +22,42 @@ The platform provides:
 - **2. Interactive Odisha Risk Map (`/risk-map`)**:
   - Interactive Leaflet.js map with 30 districts, colored risk circles, tooltips, and popups with 24-year historical summaries.
   - Searchable District Vulnerability League Table.
-- **3. District & Block Drilldown (`/drilldown`)**:
+- **3. Interactive 3D Geospatial Flood Risk Atlas (`/3d-risk-map`)**:
+  - Hardware-accelerated 3D choropleth map powered by MapLibre GL JS with vertical polygon extrusions proportional to flood risk and rainfall metrics.
+  - Authentic 30-district census boundaries (`EPSG:4326`, DataMeet WGS-84) with deterministic canonical name resolution.
+  - Multi-layer extrusion modes (Predicted Probability, Daily Rain, 7-Day Antecedent Accumulation, 24-Year Baseline Rate).
+  - Smooth 3D camera navigation (pitch, bearing, zoom, reset-view, continuous orbit, 2D/3D toggle, fullscreen).
+  - Hover tooltips, click inspection panel, sub-district block telemetry breakdown, Top-8 vulnerability rankings, and side-by-side district comparator (see [`docs/3d_geospatial_risk_map.md`](file:///c:/Users/hp/OneDrive/Desktop/Odisha_Flood_Prediction/docs/3d_geospatial_risk_map.md)).
+- **4. District & Block Drilldown (`/drilldown`)**:
   - Cascading dropdowns (District &rarr; Block &rarr; Date) with antecedent wetness signals (1d, 3d, 7d, 15d, 30d sums/max).
   - Real-time local SHAP feature breakdown table explaining risk drivers.
-- **4. Historical Timeline & Replay (`/historical`)**:
+- **5. Historical Timeline & Replay (`/historical`)**:
   - 2001–2024 time series chart with daily precipitation, 7-day rolling sums, and flood inundation event markers.
   - Event replay presets: August 2019 (Mahanadi), August 2020 (Baitarani/Brahmani), August 2022 (Coastal Catchment), September 2024 (Subarnarekha).
-- **5. Real-Time Forecaster (`/forecaster`)**:
+- **6. Real-Time Forecaster (`/forecaster`)**:
   - Interactive prediction form for manual station telemetry entry or auto-derived lag parameters.
   - Frozen model inference (`FloodPredictor`), probability gauge, and calibrated risk level classification.
-- **6. What-If Scenario Simulator (`/simulator`)**:
+- **7. What-If Scenario Simulator (`/simulator`)**:
   - Controlled meteorological simulation comparing baseline vs. modified rainfall.
   - Dynamic non-linear sensitivity response curve (0 to 250 mm).
-- **7. 2025 Unseen Operational Risk Monitor (`/unseen-2025`)**:
+- **8. 2025 Unseen Operational Risk Monitor (`/unseen-2025`)**:
   - Dedicated operational ingestion pipeline for `data/raw/operational/2025.csv` (114,610 daily records).
   - CSV/XLSX file upload with automated schema validation and Dec 2024 historical warm-up stitching.
   - Climate Distribution Shift analysis (Kolmogorov-Smirnov 2-sample test).
   - Downloadable prediction repository (`2025_flood_risk_predictions.csv`).
   - Independent Retrospective Evaluation Engine for post-season SRC ground truth verification without model retraining.
-- **8. Model Benchmarks & Calibration (`/benchmarks`)**:
+- **9. Model Benchmarks & Calibration (`/benchmarks`)**:
   - Comprehensive comparison table across 5 architectures (Logistic Regression, Decision Tree, Random Forest, XGBoost, ANN).
   - ROC curves, Precision-Recall curves, and Reliability/Calibration diagrams.
-- **9. Explainable AI / SHAP (`/explainability`)**:
+- **10. Explainable AI / SHAP (`/explainability`)**:
   - Global SHAP feature importance ranking (all 20 features) and SHAP summary plots.
   - Key hydrological findings on soil saturation dominance, wet spell duration, and monsoon seasonality.
-- **10. District-to-Block Statistical Downscaling (`/downscaling`)**:
+- **11. District-to-Block Statistical Downscaling (`/downscaling`)**:
   - `HistGradientBoostingRegressor` district-to-block spatial disaggregation (~5,190 km² district scale to ~440 km² block scale).
   - Comparative benchmark across Observed vs. Coarse vs. Downscaled series (MAE, RMSE, R², Bias, Pearson correlation; see [`docs/downscaling_methodology.md`](file:///c:/Users/hp/OneDrive/Desktop/Odisha_Flood_Prediction/docs/downscaling_methodology.md)).
-- **11. Grounded AI Flood Assistant (`/assistant`)**:
+- **12. Grounded AI Flood Assistant (`/assistant`)**:
   - Domain-specialized chat interface layer dynamically grounded in live model predictions (`FloodPredictor`), official model metadata, and local SHAP explainability without inventing numerical values (see [`docs/chatbot_architecture.md`](file:///c:/Users/hp/OneDrive/Desktop/Odisha_Flood_Prediction/docs/chatbot_architecture.md)).
-- **12. System Architecture & Methodology (`/architecture`)**:
+- **13. System Architecture & Methodology (`/architecture`)**:
   - Dual-pipeline visual flowcharts (Historical Benchmark vs. 2025 Operational Ingestion) and complete feature schema data dictionary.
 
 ---

@@ -1,0 +1,1257 @@
+District,Block/Station,Date,Predicted_Probability,Risk_Level,Rainfall (mm),Rainfall_Prev_3d_Sum,Rainfall_Prev_7d_Sum,Rainfall_Prev_15d_Sum,Rainfall_Prev_30d_Sum,Flood_Occurred,Top_Risk_Driver_1,Top_Risk_Driver_2,Top_Risk_Driver_3
+ANGUL,Angul,2019-08-08,0.7173094,HIGH,16.8,12.19999999999997,17.199999999999942,129.80000000000004,156.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+ANGUL,Angul,2020-08-27,0.9319818,VERY HIGH,76.6,70.89999999999996,134.89999999999992,294.5,392.7,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+ANGUL,Angul,2022-08-15,0.80859786,HIGH,6.6,67.59999999999997,218.5999999999999,247.2,329.00000000000006,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+ANGUL,Angul,2024-09-16,0.6543288,MODERATE,4.0,5.999999999999972,31.199999999999918,59.20000000000003,167.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+ANGUL,Athamalik,2019-08-08,0.895655,VERY HIGH,68.0,28.0,81.1,232.6,244.79999999999995,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+ANGUL,Athamalik,2020-08-27,0.96848273,VERY HIGH,200.8,101.6,145.2,220.2,491.3999999999999,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+ANGUL,Athamalik,2022-08-15,0.9489213,VERY HIGH,119.2,75.6,189.0,208.39999999999995,432.0999999999999,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+ANGUL,Athamalik,2024-09-16,0.707488,HIGH,0.0,0.0,108.49999999999996,111.49999999999994,192.69999999999996,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+ANGUL,Banarpal,2019-08-08,0.7369324,HIGH,15.8,10.60000000000002,10.600000000000028,140.00000000000003,155.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+ANGUL,Banarpal,2020-08-27,0.9260285,VERY HIGH,62.0,92.20000000000002,193.6,324.0,555.4,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+ANGUL,Banarpal,2022-08-15,0.8380952,HIGH,13.4,69.0,194.00000000000003,241.2,369.9999999999999,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+ANGUL,Banarpal,2024-09-16,0.68219197,MODERATE,6.0,17.1,51.90000000000001,72.9,216.89999999999995,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+ANGUL,Chhendipada,2019-08-08,0.7620317,HIGH,16.4,11.800000000000018,15.999999999999917,68.79999999999997,68.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+ANGUL,Chhendipada,2020-08-27,0.9320156,VERY HIGH,75.1,88.80000000000001,132.79999999999993,191.4,331.8,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+ANGUL,Chhendipada,2022-08-15,0.90173954,VERY HIGH,59.6,47.2,158.9999999999999,177.39999999999992,267.79999999999995,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+ANGUL,Chhendipada,2024-09-16,0.7033569,HIGH,11.2,5.4,53.39999999999987,86.99999999999994,250.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+ANGUL,Kaniha,2019-08-08,0.80679154,HIGH,17.2,6.0,65.99999999999999,161.0,191.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+ANGUL,Kaniha,2020-08-27,0.944059,VERY HIGH,85.0,98.0,151.0,274.0,521.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+ANGUL,Kaniha,2022-08-15,0.8580748,VERY HIGH,35.0,55.0,103.0,106.0,173.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+ANGUL,Kaniha,2024-09-16,0.7708902,HIGH,19.2,38.3,74.8,115.7,276.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+ANGUL,Kishorenagar,2019-08-08,0.8361148,HIGH,61.0,9.79999999999997,14.200000000000056,225.4,247.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+ANGUL,Kishorenagar,2020-08-27,0.96667004,VERY HIGH,138.8,133.19999999999996,177.40000000000003,289.0,467.1,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+ANGUL,Kishorenagar,2022-08-15,0.94453657,VERY HIGH,111.8,60.59999999999998,112.00000000000006,118.6,166.2,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+ANGUL,Kishorenagar,2024-09-16,0.6540388,MODERATE,0.6,3.7999999999999856,40.400000000000055,53.59999999999999,193.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+ANGUL,Pallahara,2019-08-08,0.77720374,HIGH,42.0,9.0,15.199999999999942,97.4,117.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+ANGUL,Pallahara,2020-08-27,0.9412938,VERY HIGH,122.0,121.2,236.79999999999995,371.8,530.8,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+ANGUL,Pallahara,2022-08-15,0.88468987,VERY HIGH,35.0,152.0,204.99999999999997,214.0,400.2,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+ANGUL,Pallahara,2024-09-16,0.7593747,HIGH,28.8,23.6,40.599999999999945,76.4,201.3,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+ANGUL,Talcher,2019-08-08,0.7610511,HIGH,12.0,23.0,23.0,92.0,98.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+ANGUL,Talcher,2020-08-27,0.9533525,VERY HIGH,97.0,106.0,200.0,317.0,558.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+ANGUL,Talcher,2022-08-15,0.8409259,HIGH,12.0,76.0,187.0,267.0,361.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+ANGUL,Talcher,2024-09-16,0.75172734,HIGH,15.0,52.0,58.0,96.0,334.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Balangir,2019-08-08,0.9624217,VERY HIGH,212.0,62.99999999999996,67.59999999999985,281.8,313.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Balangir,2020-08-27,0.9269937,VERY HIGH,56.4,71.8,158.79999999999978,264.4,344.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Balangir,2022-08-15,0.91621953,VERY HIGH,68.0,56.6,232.79999999999976,257.4,418.7,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Balangir,2024-09-16,0.74871105,HIGH,6.0,8.4,100.89999999999972,124.29999999999995,286.3,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Bangomunda,2019-08-08,0.87125224,VERY HIGH,78.0,10.0,10.0,79.0,121.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Bangomunda,2020-08-27,0.88509804,VERY HIGH,46.0,44.0,115.0,152.0,206.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Bangomunda,2022-08-15,0.9069995,VERY HIGH,38.0,45.0,139.0,164.0,205.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Bangomunda,2024-09-16,0.7312262,HIGH,0.0,0.0,96.0,110.0,233.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Belpada,2019-08-08,0.8114394,HIGH,63.0,2.0,9.0,144.0,188.5,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Belpada,2020-08-27,0.93320006,VERY HIGH,76.0,50.0,116.0,196.0,310.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Belpada,2022-08-15,0.92174655,VERY HIGH,27.0,139.0,303.0,338.0,461.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Belpada,2024-09-16,0.74992967,HIGH,0.0,0.0,30.0,38.0,171.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Deogaon,2019-08-08,0.96768314,VERY HIGH,242.0,72.0,77.40000000000003,167.4,185.79999999999995,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Deogaon,2020-08-27,0.9380899,VERY HIGH,75.0,72.99999999999999,137.00000000000006,270.4,344.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Deogaon,2022-08-15,0.9490522,VERY HIGH,95.0,92.0,263.00000000000006,289.0,464.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Deogaon,2024-09-16,0.72505563,HIGH,8.0,0.0,48.00000000000006,102.0,283.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Duduka,2019-08-08,0.91265875,VERY HIGH,105.0,5.0,9.0,106.0,131.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Duduka,2020-08-27,0.9662144,VERY HIGH,157.0,149.0,297.0,481.0,617.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Duduka,2022-08-15,0.912256,VERY HIGH,46.0,127.0,219.0,258.0,430.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Duduka,2024-09-16,0.7111837,HIGH,1.0,4.0,80.0,113.0,253.5,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Gudvella,2019-08-08,0.9740613,VERY HIGH,124.0,216.0,216.0,334.0,390.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Gudvella,2020-08-27,0.8972809,VERY HIGH,76.3,36.0,57.2,229.6,321.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Gudvella,2022-08-15,0.9593356,VERY HIGH,169.0,64.99999999999999,230.0,249.0,429.19999999999993,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Gudvella,2024-09-16,0.76696014,HIGH,8.4,2.000000000000014,103.2,187.2,366.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Khaprakhol,2019-08-08,0.8477743,HIGH,71.0,6.0,19.0,147.0,179.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Khaprakhol,2020-08-27,0.8372261,HIGH,59.0,21.0,69.0,132.0,217.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Khaprakhol,2022-08-15,0.88591045,VERY HIGH,39.0,74.0,193.0,195.0,406.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Khaprakhol,2024-09-16,0.662569,MODERATE,7.0,3.0,38.0,57.0,141.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Loisingha,2019-08-08,0.91138005,VERY HIGH,119.0,8.0,10.0,108.2,132.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Loisingha,2020-08-27,0.92603886,VERY HIGH,60.0,57.0,132.0,228.0,291.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Loisingha,2022-08-15,0.8427224,HIGH,23.0,69.0,135.0,149.0,281.2,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Loisingha,2024-09-16,0.692385,MODERATE,7.0,1.0,74.0,101.0,211.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Muribahal,2019-08-08,0.8014784,HIGH,44.0,16.0,18.0,83.0,108.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Muribahal,2020-08-27,0.8188549,HIGH,39.0,18.0,65.0,127.0,169.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Muribahal,2022-08-15,0.90897465,VERY HIGH,49.0,57.2,157.2,178.2,229.2,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Muribahal,2024-09-16,0.6015935,MODERATE,0.0,10.0,31.0,70.0,343.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Patnagarh,2019-08-08,0.91316813,VERY HIGH,109.0,3.3999999999999724,15.8,167.7999999999999,277.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Patnagarh,2020-08-27,0.87301636,VERY HIGH,67.0,32.99999999999997,74.0,208.9999999999999,354.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Patnagarh,2022-08-15,0.92157733,VERY HIGH,46.0,101.79999999999995,249.8,297.7999999999999,442.4,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Patnagarh,2024-09-16,0.7250491,HIGH,9.0,0.0,53.000000000000014,74.99999999999991,190.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Puintala,2019-08-08,0.96820104,VERY HIGH,176.0,60.0,66.0,267.0,294.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Puintala,2020-08-27,0.9338879,VERY HIGH,52.2,83.6,203.6,346.8,418.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Puintala,2022-08-15,0.8826859,VERY HIGH,42.0,61.0,206.0,234.0,435.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Puintala,2024-09-16,0.77455986,HIGH,4.3,11.0,104.0,153.0,343.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Saintala,2019-08-08,0.9562045,VERY HIGH,132.0,44.0,46.0,156.0,201.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Saintala,2020-08-27,0.8619169,VERY HIGH,61.0,42.0,81.0,144.0,254.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Saintala,2022-08-15,0.9148488,VERY HIGH,63.0,80.0,255.0,286.0,563.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Saintala,2024-09-16,0.71497256,HIGH,12.0,8.0,78.0,98.0,362.5,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Titilagarh,2019-08-08,0.89185023,VERY HIGH,70.8,47.09999999999997,51.9,151.49999999999997,191.9,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Titilagarh,2020-08-27,0.9211746,VERY HIGH,95.6,32.79999999999997,122.8,195.19999999999996,279.7,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Titilagarh,2022-08-15,0.93906987,VERY HIGH,76.4,91.99999999999996,208.8,262.99999999999994,383.6,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Titilagarh,2024-09-16,0.7436444,HIGH,7.0,7.599999999999971,113.2,132.59999999999994,224.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Tureikela,2019-08-08,0.9073577,VERY HIGH,94.4,21.4,30.400000000000027,119.69999999999996,192.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Tureikela,2020-08-27,0.7852009,HIGH,50.0,13.4,46.70000000000005,105.09999999999997,201.5,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Tureikela,2022-08-15,0.89175594,VERY HIGH,41.0,58.4,168.40000000000006,175.39999999999998,261.1,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALANGIR,Tureikela,2024-09-16,0.6918669,MODERATE,0.0,0.0,56.00000000000006,119.99999999999996,248.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Bahanaga,2019-08-08,0.7417874,HIGH,14.0,18.0,18.0,43.0,68.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Bahanaga,2020-08-27,0.92662054,VERY HIGH,65.0,95.0,164.0,210.0,355.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Bahanaga,2022-08-15,0.81073165,HIGH,6.0,35.0,173.0,209.0,352.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Bahanaga,2024-09-16,0.83139956,HIGH,40.0,35.0,96.0,137.0,203.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Balasore,2019-08-08,0.74990183,HIGH,6.0,32.0,32.0,146.0,163.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Balasore,2020-08-27,0.9484005,VERY HIGH,89.0,79.0,101.0,166.0,313.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Balasore,2022-08-15,0.85655403,VERY HIGH,18.0,75.0,197.5,241.5,349.5,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Balasore,2024-09-16,0.9412562,VERY HIGH,97.0,84.0,127.0,151.0,333.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Baliapal,2019-08-08,0.72357327,HIGH,7.0,31.0,36.0,116.0,193.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Baliapal,2020-08-27,0.85834014,VERY HIGH,28.0,81.0,156.0,336.0,456.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Baliapal,2022-08-15,0.92426306,VERY HIGH,81.0,27.0,157.0,209.0,360.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Baliapal,2024-09-16,0.964322,VERY HIGH,87.0,195.0,221.0,229.0,308.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Basta,2019-08-08,0.72734296,HIGH,3.0,30.0,30.0,89.0,136.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Basta,2020-08-27,0.9617792,VERY HIGH,127.0,101.0,140.0,260.0,365.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Basta,2022-08-15,0.87016976,VERY HIGH,22.0,75.0,199.0,222.0,382.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Basta,2024-09-16,0.96432465,VERY HIGH,99.0,148.0,189.0,209.0,385.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Bhograi,2019-08-08,0.7958039,HIGH,4.2,40.49999999999997,40.50000000000003,178.40000000000003,225.79999999999995,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Bhograi,2020-08-27,0.88337386,VERY HIGH,30.2,120.19999999999996,184.7,296.1,342.4999999999999,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Bhograi,2022-08-15,0.9196846,VERY HIGH,74.0,18.99999999999997,164.00000000000003,224.00000000000009,359.99999999999994,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Bhograi,2024-09-16,0.9680982,VERY HIGH,78.0,233.0,279.0,302.00000000000006,428.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Jaleswar,2019-08-08,0.76693445,HIGH,2.0,27.0,27.0,185.0,204.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Jaleswar,2020-08-27,0.8104503,HIGH,15.0,77.0,156.0,372.0,459.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Jaleswar,2022-08-15,0.9322654,VERY HIGH,65.0,119.0,253.0,282.0,493.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Jaleswar,2024-09-16,0.95802385,VERY HIGH,83.0,164.0,188.0,194.0,378.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Khaira,2019-08-08,0.806583,HIGH,20.0,27.0,52.0,203.0,248.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Khaira,2020-08-27,0.9064486,VERY HIGH,49.0,83.0,155.0,192.0,297.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Khaira,2022-08-15,0.85407007,VERY HIGH,15.0,75.0,231.0,284.0,411.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Khaira,2024-09-16,0.847843,HIGH,43.0,24.0,91.0,173.0,366.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Nilagiri,2019-08-08,0.7654096,HIGH,9.6,41.39999999999997,72.0,171.20000000000002,201.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Nilagiri,2020-08-27,0.8953926,VERY HIGH,44.0,118.99999999999996,172.4,243.4,381.4,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Nilagiri,2022-08-15,0.84740186,HIGH,13.0,60.99999999999997,225.0,345.0,476.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Nilagiri,2024-09-16,0.924028,VERY HIGH,84.0,59.99999999999997,132.0,150.0,272.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Oupada,2019-08-08,0.77391744,HIGH,14.0,37.0,121.0,191.0,308.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Oupada,2020-08-27,0.9517778,VERY HIGH,91.0,93.0,159.0,207.0,342.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Oupada,2022-08-15,0.8641419,VERY HIGH,14.0,96.0,323.0,407.0,549.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Oupada,2024-09-16,0.8723771,VERY HIGH,53.0,32.0,89.0,155.0,283.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Remuna,2019-08-08,0.6966212,MODERATE,8.0,27.0,35.0,109.0,173.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Remuna,2020-08-27,0.9036196,VERY HIGH,63.0,75.0,105.0,160.0,367.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Remuna,2022-08-15,0.8548452,VERY HIGH,12.0,87.0,206.0,289.0,394.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Remuna,2024-09-16,0.9379979,VERY HIGH,82.0,84.0,149.0,170.0,297.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Simulia,2019-08-08,0.8146022,HIGH,10.0,44.0,98.0,155.0,201.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Simulia,2020-08-27,0.87341803,VERY HIGH,28.0,126.0,179.0,229.0,320.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Simulia,2022-08-15,0.79788184,HIGH,3.0,26.0,179.0,309.0,440.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Simulia,2024-09-16,0.7791751,HIGH,41.0,21.0,55.0,81.0,149.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Soro,2019-08-08,0.7582919,HIGH,10.0,31.0,56.0,139.0,188.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Soro,2020-08-27,0.8980926,VERY HIGH,46.0,97.0,157.0,201.0,320.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Soro,2022-08-15,0.8269051,HIGH,5.0,34.0,229.0,278.0,411.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BALASORE,Soro,2024-09-16,0.8461133,HIGH,36.0,28.0,112.0,142.0,239.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Ambabhona,2019-08-08,0.90567166,VERY HIGH,116.0,3.0,12.0,113.0,165.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Ambabhona,2020-08-27,0.9029701,VERY HIGH,61.3,57.4,212.2,318.40000000000003,562.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Ambabhona,2022-08-15,0.96249413,VERY HIGH,174.0,104.0,220.6,225.6,454.4,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Ambabhona,2024-09-16,0.7224245,HIGH,0.0,2.0,59.0,59.0,216.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Attabira,2019-08-08,0.85068095,VERY HIGH,69.4,22.4,38.40000000000006,221.2,275.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Attabira,2020-08-27,0.8827523,VERY HIGH,87.2,79.6,154.60000000000005,439.4,563.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Attabira,2022-08-15,0.9396584,VERY HIGH,82.4,133.0,227.60000000000005,232.6,374.6,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Attabira,2024-09-16,0.730273,HIGH,0.0,0.0,94.40000000000006,115.79999999999995,281.1,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Bargarh,2019-08-08,0.78878504,HIGH,36.4,5.4,17.6,237.8,288.20000000000005,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Bargarh,2020-08-27,0.9303939,VERY HIGH,94.2,65.8,126.6,272.4,411.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Bargarh,2022-08-15,0.952102,VERY HIGH,96.4,126.6,204.6,220.2,469.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Bargarh,2024-09-16,0.7255633,HIGH,0.0,0.0,68.20000000000003,151.2,289.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Barpali,2019-08-08,0.77569264,HIGH,20.0,4.0,18.0,214.0,233.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Barpali,2020-08-27,0.9149795,VERY HIGH,73.0,168.0,309.0,444.0,702.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Barpali,2022-08-15,0.9190813,VERY HIGH,52.0,141.0,251.0,291.0,450.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Barpali,2024-09-16,0.7313086,HIGH,2.0,4.0,67.0,157.0,263.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Bhatli,2019-08-08,0.8808738,VERY HIGH,77.0,2.0,10.0,228.0,282.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Bhatli,2020-08-27,0.9282166,VERY HIGH,70.0,101.0,163.5,309.5,461.5,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Bhatli,2022-08-15,0.94857854,VERY HIGH,105.0,116.0,230.0,246.0,342.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Bhatli,2024-09-16,0.7330675,HIGH,2.4,0.0,36.2,36.2,257.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Bheden,2019-08-08,0.824626,HIGH,51.4,21.400000000000013,42.39999999999997,284.40000000000003,312.1,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Bheden,2020-08-27,0.9145739,VERY HIGH,54.0,106.0,182.0,313.0,545.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Bheden,2022-08-15,0.9139217,VERY HIGH,54.3,96.49999999999996,192.39999999999995,213.7,387.4,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Bheden,2024-09-16,0.70098174,HIGH,1.0,2.999999999999986,90.99999999999994,116.0,192.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Bijepur,2019-08-08,0.74107337,HIGH,19.0,4.0,18.600000000000016,158.00000000000003,172.60000000000002,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Bijepur,2020-08-27,0.92396426,VERY HIGH,55.0,145.0,221.4,345.6,497.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Bijepur,2022-08-15,0.93499744,VERY HIGH,68.0,124.0,287.0,310.0,453.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Bijepur,2024-09-16,0.7440734,HIGH,0.0,1.0,95.0,120.0,234.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Gaisilet,2019-08-08,0.8591848,VERY HIGH,77.3,3.999999999999986,14.2,161.6,212.9,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Gaisilet,2020-08-27,0.91090083,VERY HIGH,72.2,23.3,67.0,227.0,248.3,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Gaisilet,2022-08-15,0.94042563,VERY HIGH,75.0,80.0,201.0,242.0,484.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Gaisilet,2024-09-16,0.73999655,HIGH,0.0,12.0,120.0,133.0,221.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Jharbandh,2019-08-08,0.8604047,VERY HIGH,82.0,0.0,9.0,168.0,206.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Jharbandh,2020-08-27,0.8934442,VERY HIGH,78.0,16.0,96.0,245.0,340.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Jharbandh,2022-08-15,0.87548614,VERY HIGH,10.0,111.0,270.0,310.0,456.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Jharbandh,2024-09-16,0.70817643,HIGH,0.0,0.0,74.0,85.0,412.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Padampur,2019-08-08,0.8333037,HIGH,62.4,0.0,4.200000000000029,177.4,200.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Padampur,2020-08-27,0.8827821,VERY HIGH,66.0,38.00000000000003,140.00000000000003,393.0,426.5,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Padampur,2022-08-15,0.935549,VERY HIGH,74.0,80.00000000000003,193.00000000000003,200.0,403.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Padampur,2024-09-16,0.72659165,HIGH,4.0,0.0,96.00000000000004,101.0,197.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Paikmal,2019-08-08,0.92367524,VERY HIGH,155.0,3.0,7.0,112.0,160.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Paikmal,2020-08-27,0.94001853,VERY HIGH,123.0,22.0,81.0,203.0,360.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Paikmal,2022-08-15,0.93378127,VERY HIGH,64.4,114.2,259.2,275.20000000000005,468.4,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Paikmal,2024-09-16,0.76148313,HIGH,13.2,0.0,88.0,126.2,376.5,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Sohela,2019-08-08,0.8000739,HIGH,63.0,0.0,9.299999999999986,134.79999999999998,173.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Sohela,2020-08-27,0.94363284,VERY HIGH,83.0,120.0,206.0,292.0,454.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Sohela,2022-08-15,0.9604233,VERY HIGH,148.0,105.0,224.0,257.0,427.3,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BARGARH,Sohela,2024-09-16,0.6940923,MODERATE,0.0,6.0,66.0,72.0,168.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BHADRAK,Basudevpur,2019-08-08,0.81203747,HIGH,10.0,12.0,92.0,120.0,130.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BHADRAK,Basudevpur,2020-08-27,0.88109577,VERY HIGH,27.0,163.0,213.0,339.0,613.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BHADRAK,Basudevpur,2022-08-15,0.7850703,HIGH,2.0,23.0,129.0,182.0,232.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BHADRAK,Basudevpur,2024-09-16,0.7149374,HIGH,9.0,29.0,46.0,102.0,172.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BHADRAK,Bhadrak,2019-08-08,0.8679652,VERY HIGH,52.0,52.0,74.0,131.0,152.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BHADRAK,Bhadrak,2020-08-27,0.86733365,VERY HIGH,25.0,116.2,183.9,368.9,549.9,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BHADRAK,Bhadrak,2022-08-15,0.8065316,HIGH,3.0,34.2,168.0,255.8,355.6,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BHADRAK,Bhadrak,2024-09-16,0.68581355,MODERATE,13.8,18.200000000000003,45.7,59.1,160.7,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BHADRAK,Bhandaripokhari,2019-08-08,0.94807506,VERY HIGH,120.0,29.0,74.0,91.0,108.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BHADRAK,Bhandaripokhari,2020-08-27,0.9237233,VERY HIGH,16.0,208.0,404.0,605.0,798.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BHADRAK,Bhandaripokhari,2022-08-15,0.8207899,HIGH,5.0,64.0,171.0,224.0,360.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BHADRAK,Bhandaripokhari,2024-09-16,0.69620526,MODERATE,2.0,7.0,51.0,58.0,250.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BHADRAK,Bonth,2019-08-08,0.884859,VERY HIGH,56.0,43.2,86.2,141.2,164.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BHADRAK,Bonth,2020-08-27,0.90239906,VERY HIGH,36.0,122.0,254.0,314.0,566.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BHADRAK,Bonth,2022-08-15,0.8648349,VERY HIGH,16.0,100.0,219.0,264.0,366.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BHADRAK,Bonth,2024-09-16,0.65979725,MODERATE,7.0,13.0,26.0,90.0,116.5,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BHADRAK,Chandbali,2019-08-08,0.8961562,VERY HIGH,67.9,44.99999999999994,49.7,87.00000000000006,102.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BHADRAK,Chandbali,2020-08-27,0.90312016,VERY HIGH,14.6,159.89999999999992,265.2,456.2000000000001,784.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BHADRAK,Chandbali,2022-08-15,0.8578305,VERY HIGH,33.4,48.39999999999994,116.59999999999994,265.00000000000006,377.5999999999999,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BHADRAK,Chandbali,2024-09-16,0.63585216,MODERATE,0.0,10.999999999999943,29.999999999999943,47.00000000000006,71.99999999999991,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BHADRAK,Dhamnagar,2019-08-08,0.9438023,VERY HIGH,105.0,47.0,47.0,65.0,97.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BHADRAK,Dhamnagar,2020-08-27,0.8645542,VERY HIGH,14.0,135.0,243.0,504.0,618.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BHADRAK,Dhamnagar,2022-08-15,0.80689627,HIGH,5.0,53.0,114.0,179.0,228.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BHADRAK,Dhamnagar,2024-09-16,0.685464,MODERATE,0.0,5.0,33.0,89.0,155.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BHADRAK,Tihidi,2019-08-08,0.84371483,HIGH,53.0,6.0,28.0,57.0,73.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BHADRAK,Tihidi,2020-08-27,0.88147855,VERY HIGH,16.0,142.4,226.4,393.4,633.4,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BHADRAK,Tihidi,2022-08-15,0.7956554,HIGH,18.0,26.0,85.0,184.0,294.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BHADRAK,Tihidi,2024-09-16,0.6498035,MODERATE,0.0,13.0,29.0,151.0,184.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BOUDH,Boudh,2019-08-08,0.80026007,HIGH,40.2,8.2,13.199999999999942,109.60000000000004,142.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BOUDH,Boudh,2020-08-27,0.9672887,VERY HIGH,100.0,208.2,254.79999999999995,425.9,535.3,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BOUDH,Boudh,2022-08-15,0.9574169,VERY HIGH,149.0,84.2,183.49999999999997,194.00000000000009,354.00000000000006,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BOUDH,Boudh,2024-09-16,0.6660665,MODERATE,0.0,0.0,59.99999999999994,73.00000000000006,155.20000000000005,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BOUDH,Harabhanga,2019-08-08,0.7751684,HIGH,9.0,30.0,31.99999999999997,130.0,136.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BOUDH,Harabhanga,2020-08-27,0.96075207,VERY HIGH,155.0,77.0,101.99999999999996,211.0,290.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BOUDH,Harabhanga,2022-08-15,0.9109777,VERY HIGH,46.0,112.0,265.0,341.0,609.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BOUDH,Harabhanga,2024-09-16,0.7078464,HIGH,0.0,2.2,121.2,137.8,203.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BOUDH,Kantamal,2019-08-08,0.96384287,VERY HIGH,162.4,178.0,186.60000000000005,431.4,456.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BOUDH,Kantamal,2020-08-27,0.95917094,VERY HIGH,87.4,114.8,144.80000000000013,291.40000000000003,452.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BOUDH,Kantamal,2022-08-15,0.9286974,VERY HIGH,65.2,83.20000000000002,218.6000000000001,234.4000000000001,323.4,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+BOUDH,Kantamal,2024-09-16,0.7261747,HIGH,2.4,1.4000000000000283,81.80000000000013,117.2000000000001,258.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Athagarh,2019-08-08,0.81848496,HIGH,43.0,62.0,71.0,162.0,221.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Athagarh,2020-08-27,0.82901555,HIGH,17.0,82.0,175.0,533.0,741.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Athagarh,2022-08-15,0.87763405,VERY HIGH,24.0,95.0,165.0,223.0,354.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Athagarh,2024-09-16,0.73709136,HIGH,9.0,54.0,95.0,125.0,303.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Badamba,2019-08-08,0.8042971,HIGH,28.0,72.0,80.0,166.0,227.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Badamba,2020-08-27,0.8287389,HIGH,14.0,73.0,153.0,319.0,581.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Badamba,2022-08-15,0.91289145,VERY HIGH,58.0,63.0,193.0,223.0,407.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Badamba,2024-09-16,0.7098298,HIGH,2.0,0.0,93.0,135.0,221.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Banki-Dampada,2019-08-08,0.82543045,HIGH,23.0,104.0,114.0,274.0,307.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Banki-Dampada,2020-08-27,0.88448346,VERY HIGH,25.0,147.0,252.0,650.0,1009.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Banki-Dampada,2022-08-15,0.9015971,VERY HIGH,12.0,192.0,437.0,516.0,608.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Banki-Dampada,2024-09-16,0.74538475,HIGH,0.0,16.0,107.0,159.0,468.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Barang,2019-08-08,0.8900455,VERY HIGH,31.0,110.0,164.0,262.0,276.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Barang,2020-08-27,0.83146185,HIGH,6.0,83.0,156.0,294.0,447.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Barang,2022-08-15,0.82353485,HIGH,15.0,58.0,138.0,215.0,430.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Barang,2024-09-16,0.7227014,HIGH,11.0,46.0,64.0,123.0,298.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Cuttack Sadar,2019-08-08,0.8975443,VERY HIGH,20.0,143.0,152.0,359.0,392.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Cuttack Sadar,2020-08-27,0.82976377,HIGH,7.0,95.0,160.0,274.0,433.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Cuttack Sadar,2022-08-15,0.8229638,HIGH,22.0,50.0,107.0,201.0,485.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Cuttack Sadar,2024-09-16,0.747962,HIGH,18.0,31.0,53.0,124.0,268.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Kantapada,2019-08-08,0.8737965,VERY HIGH,22.0,134.0,161.0,361.0,482.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Kantapada,2020-08-27,0.91435754,VERY HIGH,26.0,205.0,279.0,547.0,851.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Kantapada,2022-08-15,0.8746008,VERY HIGH,38.0,162.0,216.0,356.0,653.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Kantapada,2024-09-16,0.7476606,HIGH,6.0,54.0,77.0,162.0,480.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Mahanga,2019-08-08,0.9510712,VERY HIGH,112.0,56.0,58.0,187.0,209.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Mahanga,2020-08-27,0.88511246,VERY HIGH,11.0,137.0,347.0,687.0,832.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Mahanga,2022-08-15,0.87364113,VERY HIGH,36.0,79.0,135.0,191.0,467.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Mahanga,2024-09-16,0.72363853,HIGH,2.0,16.0,54.0,166.0,432.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Narasinghpur,2019-08-08,0.8235214,HIGH,27.0,66.0,66.0,151.0,267.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Narasinghpur,2020-08-27,0.87647736,VERY HIGH,40.0,73.0,132.0,300.0,440.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Narasinghpur,2022-08-15,0.856456,VERY HIGH,52.0,90.0,213.0,412.0,522.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Narasinghpur,2024-09-16,0.6480627,MODERATE,0.0,0.0,46.0,79.0,188.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Niali,2019-08-08,0.8649663,VERY HIGH,9.0,146.5,152.5,392.0,470.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Niali,2020-08-27,0.87122273,VERY HIGH,14.0,144.0,210.0,347.0,571.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Niali,2022-08-15,0.8624969,VERY HIGH,26.0,156.0,214.0,289.0,454.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Niali,2024-09-16,0.71761614,HIGH,3.0,45.0,65.0,130.0,281.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Nischintakoili,2019-08-08,0.90477425,VERY HIGH,49.5,79.69999999999997,107.89999999999998,231.99999999999997,318.1,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Nischintakoili,2020-08-27,0.9079876,VERY HIGH,13.3,195.8,493.3,679.6999999999999,811.8,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Nischintakoili,2022-08-15,0.9410912,VERY HIGH,76.0,104.0,215.0,253.99999999999997,564.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Nischintakoili,2024-09-16,0.771935,HIGH,0.0,30.999999999999982,60.0,182.99999999999997,438.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Salepur,2019-08-08,0.84464645,HIGH,55.0,57.0,68.0,159.0,201.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Salepur,2020-08-27,0.89809066,VERY HIGH,11.7,138.8,449.5,555.9,660.9000000000001,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Salepur,2022-08-15,0.8648408,VERY HIGH,20.0,85.0,167.0,202.0,372.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Salepur,2024-09-16,0.8200613,HIGH,0.0,44.0,107.0,226.0,503.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Tangi-Choudwar,2019-08-08,0.94116604,VERY HIGH,82.0,96.0,116.0,204.0,260.20000000000005,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Tangi-Choudwar,2020-08-27,0.8748958,VERY HIGH,9.0,91.0,259.0,452.0,648.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Tangi-Choudwar,2022-08-15,0.8970204,VERY HIGH,54.0,75.0,128.0,155.0,422.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Tangi-Choudwar,2024-09-16,0.7725944,HIGH,0.0,49.99999999999999,88.0,172.0,359.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Tigiria,2019-08-08,0.807149,HIGH,43.0,30.0,40.0,148.0,221.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Tigiria,2020-08-27,0.7800892,HIGH,9.0,67.0,130.0,271.0,417.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Tigiria,2022-08-15,0.8573087,VERY HIGH,18.0,83.0,170.0,222.0,363.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+CUTTACK,Tigiria,2024-09-16,0.69112074,MODERATE,4.0,17.0,60.0,69.0,235.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DEOGARH,Barkote,2019-08-08,0.7901523,HIGH,33.8,22.6,26.4,221.19999999999996,236.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DEOGARH,Barkote,2020-08-27,0.9646225,VERY HIGH,159.4,129.59999999999994,242.0,432.3999999999999,744.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DEOGARH,Barkote,2022-08-15,0.953017,VERY HIGH,120.0,194.2,273.99999999999994,346.79999999999995,619.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DEOGARH,Barkote,2024-09-16,0.7959892,HIGH,20.4,41.39999999999998,57.59999999999991,142.59999999999997,295.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DEOGARH,Deogarh,2019-08-08,0.75376153,HIGH,34.0,9.399999999999944,18.40000000000004,89.79999999999994,114.39999999999996,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DEOGARH,Deogarh,2020-08-27,0.95123297,VERY HIGH,103.0,83.79999999999994,158.20000000000005,352.19999999999993,581.5999999999999,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DEOGARH,Deogarh,2022-08-15,0.9556237,VERY HIGH,113.0,125.59999999999992,254.8,296.19999999999993,424.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DEOGARH,Deogarh,2024-09-16,0.7172685,HIGH,6.6,43.99999999999993,90.00000000000003,109.19999999999996,217.79999999999995,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DEOGARH,Reamal,2019-08-08,0.7331885,HIGH,10.4,9.2,12.400000000000029,63.39999999999999,98.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DEOGARH,Reamal,2020-08-27,0.96353966,VERY HIGH,123.0,92.0,176.8,373.8,563.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DEOGARH,Reamal,2022-08-15,0.92246085,VERY HIGH,81.8,54.000000000000014,198.0,202.6,347.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DEOGARH,Reamal,2024-09-16,0.6762106,MODERATE,3.0,17.200000000000028,54.99999999999997,87.0,164.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DHENKANAL,Bhuban,2019-08-08,0.91328496,VERY HIGH,47.0,110.0,110.00000000000004,189.0,258.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DHENKANAL,Bhuban,2020-08-27,0.8244702,HIGH,16.0,65.0,173.00000000000003,491.0,704.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DHENKANAL,Bhuban,2022-08-15,0.8942577,VERY HIGH,60.0,60.99999999999999,177.00000000000003,335.2,472.7,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DHENKANAL,Bhuban,2024-09-16,0.7496228,HIGH,10.0,37.0,98.00000000000004,138.0,386.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DHENKANAL,Dhenkanal,2019-08-08,0.7634354,HIGH,10.1,46.50000000000003,50.60000000000001,117.9,164.10000000000002,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DHENKANAL,Dhenkanal,2020-08-27,0.8427575,HIGH,17.3,74.30000000000003,159.8,450.2,668.8000000000001,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DHENKANAL,Dhenkanal,2022-08-15,0.86532444,VERY HIGH,36.7,47.60000000000007,122.7,185.6,355.30000000000007,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DHENKANAL,Dhenkanal,2024-09-16,0.7661051,HIGH,28.2,8.400000000000043,47.8,90.59999999999997,284.4000000000001,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DHENKANAL,Gondia,2019-08-08,0.81686664,HIGH,27.0,87.0,87.0,135.0,193.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DHENKANAL,Gondia,2020-08-27,0.87236214,VERY HIGH,33.0,65.0,149.0,421.2,629.2,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DHENKANAL,Gondia,2022-08-15,0.8558597,VERY HIGH,28.0,49.0,114.0,164.0,323.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DHENKANAL,Gondia,2024-09-16,0.7621024,HIGH,1.5,41.0,96.5,145.5,258.5,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DHENKANAL,Hindol,2019-08-08,0.9075616,VERY HIGH,52.0,126.00000000000004,126.0,183.4,236.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DHENKANAL,Hindol,2020-08-27,0.8702601,VERY HIGH,29.2,86.20000000000003,188.2,274.2,505.2,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DHENKANAL,Hindol,2022-08-15,0.85603815,VERY HIGH,23.0,73.00000000000006,173.70000000000005,371.3,484.9,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DHENKANAL,Hindol,2024-09-16,0.7079882,HIGH,8.0,14.200000000000056,61.50000000000004,107.1,241.60000000000008,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DHENKANAL,Kamakhyanagar,2019-08-08,0.7194839,HIGH,11.3,40.60000000000001,40.6,119.5,185.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DHENKANAL,Kamakhyanagar,2020-08-27,0.8849104,VERY HIGH,55.0,62.3,126.09999999999997,361.2,522.9,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DHENKANAL,Kamakhyanagar,2022-08-15,0.86394376,VERY HIGH,26.1,79.79999999999998,182.99999999999997,337.6,484.3,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DHENKANAL,Kamakhyanagar,2024-09-16,0.7127887,HIGH,4.2,27.6,66.29999999999995,77.79999999999998,256.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DHENKANAL,Kankadahad,2019-08-08,0.7709695,HIGH,21.2,59.39999999999999,74.2,183.6,292.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DHENKANAL,Kankadahad,2020-08-27,0.9322027,VERY HIGH,74.2,131.4,235.79999999999995,512.0,653.6,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DHENKANAL,Kankadahad,2022-08-15,0.9159148,VERY HIGH,49.4,110.40000000000003,155.20000000000005,193.6,337.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DHENKANAL,Kankadahad,2024-09-16,0.7123961,HIGH,7.6,26.00000000000004,60.40000000000003,80.99999999999994,233.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DHENKANAL,Odapada,2019-08-08,0.77958775,HIGH,12.0,74.0,80.0,124.0,156.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DHENKANAL,Odapada,2020-08-27,0.93647647,VERY HIGH,72.0,77.0,214.0,357.0,464.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DHENKANAL,Odapada,2022-08-15,0.82869333,HIGH,12.0,70.0,156.0,240.0,331.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DHENKANAL,Odapada,2024-09-16,0.70780325,HIGH,14.0,22.0,48.0,78.0,173.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DHENKANAL,Parjang,2019-08-08,0.773593,HIGH,22.0,20.0,20.0,117.0,134.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DHENKANAL,Parjang,2020-08-27,0.9562989,VERY HIGH,117.0,88.0,238.0,367.0,512.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DHENKANAL,Parjang,2022-08-15,0.87970495,VERY HIGH,22.0,47.0,146.0,201.0,277.5,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+DHENKANAL,Parjang,2024-09-16,0.72383773,HIGH,15.0,22.0,41.0,60.0,215.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GAJAPATI,Gosani,2019-08-08,0.8906171,VERY HIGH,59.0,73.2,101.99999999999996,187.00000000000009,258.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GAJAPATI,Gosani,2020-08-27,0.7375223,HIGH,1.0,36.0,53.799999999999976,63.80000000000006,189.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GAJAPATI,Gosani,2022-08-15,0.79748213,HIGH,16.0,44.0,86.99999999999997,148.80000000000007,231.5,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GAJAPATI,Gosani,2024-09-16,0.7523828,HIGH,0.0,0.0,40.59999999999997,230.20000000000007,358.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GAJAPATI,Gumma,2019-08-08,0.96037513,VERY HIGH,110.0,106.0,155.0,282.0,335.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GAJAPATI,Gumma,2020-08-27,0.70369077,HIGH,7.0,30.0,40.0,71.0,306.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GAJAPATI,Gumma,2022-08-15,0.7877699,HIGH,8.0,57.0,128.0,259.0,428.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GAJAPATI,Gumma,2024-09-16,0.661053,MODERATE,0.0,0.0,33.0,105.0,211.7,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GAJAPATI,Kasinagar,2019-08-08,0.878056,VERY HIGH,62.0,57.0,76.2,164.6,240.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GAJAPATI,Kasinagar,2020-08-27,0.7804047,HIGH,3.0,38.0,40.0,71.0,121.9,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GAJAPATI,Kasinagar,2022-08-15,0.8536819,VERY HIGH,35.0,22.0,82.6,139.0,245.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GAJAPATI,Kasinagar,2024-09-16,0.682637,MODERATE,0.0,10.000000000000014,31.0,88.4,260.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GAJAPATI,Mohana,2019-08-08,0.8855285,VERY HIGH,44.4,125.20000000000005,126.6,165.39999999999998,278.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GAJAPATI,Mohana,2020-08-27,0.7097216,HIGH,4.6,18.800000000000058,22.60000000000001,39.0,176.39999999999998,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GAJAPATI,Mohana,2022-08-15,0.8813177,VERY HIGH,38.8,63.80000000000006,190.0,231.0,296.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GAJAPATI,Mohana,2024-09-16,0.6668454,MODERATE,0.0,0.0,39.8,84.40000000000003,168.39999999999998,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GAJAPATI,Nuagada,2019-08-08,0.9588837,VERY HIGH,92.6,133.19999999999996,161.60000000000005,266.79999999999995,351.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GAJAPATI,Nuagada,2020-08-27,0.7304282,HIGH,12.8,15.399999999999972,63.60000000000009,171.2,231.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GAJAPATI,Nuagada,2022-08-15,0.9204496,VERY HIGH,41.2,111.29999999999998,281.1,421.3,719.7,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GAJAPATI,Nuagada,2024-09-16,0.6869919,MODERATE,0.0,7.799999999999971,49.80000000000006,121.40000000000003,228.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GAJAPATI,Paralakhemundi,2019-08-08,0.86996394,VERY HIGH,50.0,56.0,104.0,178.4,232.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GAJAPATI,Paralakhemundi,2020-08-27,0.75111896,HIGH,4.8,38.2,60.8,87.4,206.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GAJAPATI,Paralakhemundi,2022-08-15,0.80216265,HIGH,25.2,26.4,92.0,121.6,180.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GAJAPATI,Paralakhemundi,2024-09-16,0.70191604,HIGH,0.0,11.799999999999986,53.39999999999999,139.4,239.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GAJAPATI,R.Udaygiri,2019-08-08,0.9450765,VERY HIGH,62.2,187.6,211.2,309.99999999999994,377.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GAJAPATI,R.Udaygiri,2020-08-27,0.74372435,HIGH,12.6,15.000000000000014,44.20000000000003,104.99999999999991,187.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GAJAPATI,R.Udaygiri,2022-08-15,0.9385839,VERY HIGH,59.2,106.2,289.6,361.3999999999999,690.1,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GAJAPATI,R.Udaygiri,2024-09-16,0.48582405,MODERATE,0.0,0.0,31.800000000000004,46.599999999999945,122.39999999999998,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GAJAPATI,Rayagada,2019-08-08,0.91133845,VERY HIGH,59.3,89.6,123.6,217.8,315.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GAJAPATI,Rayagada,2020-08-27,0.6834428,MODERATE,1.0,18.200000000000024,48.900000000000034,125.8,192.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GAJAPATI,Rayagada,2022-08-15,0.78799915,HIGH,7.0,62.00000000000003,120.20000000000005,207.7,360.7000000000001,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GAJAPATI,Rayagada,2024-09-16,0.7021441,HIGH,0.0,0.0,33.00000000000004,162.0,283.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Aska,2019-08-08,0.8276578,HIGH,0.8,123.2,123.19999999999992,247.8,337.1,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Aska,2020-08-27,0.802426,HIGH,35.0,17.5,78.49999999999993,95.1,139.70000000000005,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Aska,2022-08-15,0.8595507,VERY HIGH,13.6,19.20000000000001,225.5999999999999,326.4,391.00000000000006,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Aska,2024-09-16,0.69884753,MODERATE,2.8,0.0,79.99999999999993,95.60000000000002,219.80000000000007,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Belaguntha,2019-08-08,0.83882135,HIGH,11.1,116.1,116.1,207.8,290.19999999999993,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Belaguntha,2020-08-27,0.784478,HIGH,34.2,17.0,50.20000000000002,95.39999999999998,310.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Belaguntha,2022-08-15,0.8666441,VERY HIGH,35.0,24.0,98.5,162.0,350.99999999999994,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Belaguntha,2024-09-16,0.6529067,MODERATE,1.8,0.0,18.99999999999997,34.0,70.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Bhanjanagar,2019-08-08,0.8076609,HIGH,15.3,92.2,93.4,218.1,362.7,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Bhanjanagar,2020-08-27,0.7788766,HIGH,30.0,20.0,38.0,96.0,298.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Bhanjanagar,2022-08-15,0.898948,VERY HIGH,51.0,46.0,183.2,236.2,394.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Bhanjanagar,2024-09-16,0.5874629,MODERATE,6.1,0.0,23.099999999999994,53.3,118.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Buguda,2019-08-08,0.8692452,VERY HIGH,13.0,130.0,201.0,317.0,355.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Buguda,2020-08-27,0.76115066,HIGH,29.0,34.0,55.0,129.0,225.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Buguda,2022-08-15,0.88524604,VERY HIGH,31.0,62.0,223.0,292.0,408.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Buguda,2024-09-16,0.6856025,MODERATE,0.0,0.0,78.0,86.0,208.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Chhatrapur,2019-08-08,0.90879977,VERY HIGH,36.0,156.3,158.5,245.4,338.3,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Chhatrapur,2020-08-27,0.67955786,MODERATE,5.0,28.0,38.4,72.0,116.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Chhatrapur,2022-08-15,0.8820816,VERY HIGH,14.0,40.0,214.4,252.4,298.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Chhatrapur,2024-09-16,0.71267897,HIGH,0.0,0.0,101.0,125.6,206.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Chikiti,2019-08-08,0.9563373,VERY HIGH,72.0,132.2,132.2,222.6,261.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Chikiti,2020-08-27,0.7303445,HIGH,12.4,63.4,67.4,83.40000000000002,201.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Chikiti,2022-08-15,0.8982678,VERY HIGH,26.4,34.400000000000006,228.1,313.5,358.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Chikiti,2024-09-16,0.7519962,HIGH,0.0,0.0,113.99999999999996,159.0,371.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Dharakote,2019-08-08,0.8535349,VERY HIGH,5.0,132.0,134.0,280.0,368.5,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Dharakote,2020-08-27,0.7265172,HIGH,25.0,8.0,28.0,58.0,157.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Dharakote,2022-08-15,0.864601,VERY HIGH,12.0,18.0,222.0,317.0,388.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Dharakote,2024-09-16,0.6854165,MODERATE,0.0,0.0,42.0,72.0,214.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Digapahandi,2019-08-08,0.9524153,VERY HIGH,75.0,132.0,132.0,172.0,212.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Digapahandi,2020-08-27,0.7421242,HIGH,5.0,53.0,66.0,89.0,198.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Digapahandi,2022-08-15,0.87508184,VERY HIGH,26.0,27.0,142.0,211.0,252.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Digapahandi,2024-09-16,0.8238114,HIGH,3.0,0.0,147.0,196.5,355.5,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Ganjam,2019-08-08,0.89098155,VERY HIGH,2.4,189.4,189.4,269.79999999999995,356.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Ganjam,2020-08-27,0.7278419,HIGH,5.4,30.0,36.39999999999994,91.39999999999996,141.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Ganjam,2022-08-15,0.83988225,HIGH,15.6,43.79999999999997,203.5999999999999,248.6,289.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Ganjam,2024-09-16,0.70051175,HIGH,4.0,0.0,74.39999999999992,137.19999999999996,198.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Hinjilicut,2019-08-08,0.83279216,HIGH,10.0,129.0,129.0,187.3,357.9,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Hinjilicut,2020-08-27,0.688919,MODERATE,5.0,31.0,36.0,56.0,143.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Hinjilicut,2022-08-15,0.8665627,VERY HIGH,14.0,19.0,202.0,288.0,325.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Hinjilicut,2024-09-16,0.7849625,HIGH,0.0,0.0,100.0,175.0,386.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Jagannathprasad,2019-08-08,0.82143456,HIGH,17.0,105.3,120.3,216.5,349.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Jagannathprasad,2020-08-27,0.79721415,HIGH,38.2,24.0,46.30000000000001,173.7,353.9,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Jagannathprasad,2022-08-15,0.9168631,VERY HIGH,41.0,117.2,176.50000000000003,223.6,352.3,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Jagannathprasad,2024-09-16,0.65388733,MODERATE,0.0,2.6,46.400000000000006,64.79999999999998,168.79999999999998,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Kabisuryanagar,2019-08-08,0.8204433,HIGH,0.0,124.0,128.0,230.5,289.5,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Kabisuryanagar,2020-08-27,0.77155805,HIGH,18.0,20.0,48.0,58.0,131.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Kabisuryanagar,2022-08-15,0.8567988,VERY HIGH,12.0,22.0,172.0,263.0,329.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Kabisuryanagar,2024-09-16,0.70456105,HIGH,5.0,0.0,52.0,91.0,267.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Khalikot,2019-08-08,0.8759278,VERY HIGH,2.0,167.0,167.0,287.5,399.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Khalikot,2020-08-27,0.76693135,HIGH,5.0,17.0,44.0,85.0,160.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Khalikot,2022-08-15,0.85982424,VERY HIGH,15.0,58.0,166.0,201.0,278.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Khalikot,2024-09-16,0.66302055,MODERATE,0.0,0.0,48.0,101.0,193.5,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Kodala,2019-08-08,0.8352389,HIGH,2.6,119.39999999999996,120.59999999999998,243.0,323.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Kodala,2020-08-27,0.6663931,MODERATE,13.4,12.999999999999972,17.99999999999997,72.0,123.1,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Kodala,2022-08-15,0.8475408,HIGH,14.7,29.599999999999973,121.39999999999996,133.7,159.9,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Kodala,2024-09-16,0.67546034,MODERATE,0.0,0.0,51.99999999999997,87.6,188.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Kukudakhandi,2019-08-08,0.9013517,VERY HIGH,36.0,141.0,142.0,183.0,273.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Kukudakhandi,2020-08-27,0.7732631,HIGH,7.0,22.0,32.0,78.0,209.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Kukudakhandi,2022-08-15,0.89601654,VERY HIGH,46.0,31.0,161.0,179.5,198.5,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Kukudakhandi,2024-09-16,0.6730385,MODERATE,0.0,0.0,58.5,109.5,210.5,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Patrapur,2019-08-08,0.86948645,VERY HIGH,41.0,82.6,83.6,153.2,223.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Patrapur,2020-08-27,0.66145366,MODERATE,2.2,46.2,51.2,86.79999999999997,149.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Patrapur,2022-08-15,0.90263224,VERY HIGH,27.4,45.4,181.59999999999997,236.39999999999995,335.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Patrapur,2024-09-16,0.7625021,HIGH,0.0,0.0,62.399999999999935,181.6,408.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Polasara,2019-08-08,0.86057335,VERY HIGH,5.0,132.60000000000002,132.60000000000002,337.00000000000006,374.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Polasara,2020-08-27,0.7343155,HIGH,12.4,19.00000000000003,25.200000000000028,86.60000000000007,134.59999999999997,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Polasara,2022-08-15,0.83994466,HIGH,16.6,42.2,175.8,319.4000000000001,526.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Polasara,2024-09-16,0.68744224,MODERATE,0.0,0.0,46.99999999999997,64.20000000000006,193.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Purusottampur,2019-08-08,0.80122393,HIGH,0.0,104.0,104.00000000000004,177.00000000000003,261.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Purusottampur,2020-08-27,0.7251597,HIGH,7.0,36.0,62.00000000000003,154.00000000000003,341.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Purusottampur,2022-08-15,0.8724852,VERY HIGH,12.0,36.0,184.00000000000003,228.00000000000009,254.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Purusottampur,2024-09-16,0.69672185,MODERATE,0.0,0.0,63.00000000000003,109.00000000000006,272.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Rangeilunda,2019-08-08,0.9067995,VERY HIGH,17.0,193.4,193.4,235.8,340.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Rangeilunda,2020-08-27,0.77629775,HIGH,5.0,21.4,35.6,42.59999999999997,54.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Rangeilunda,2022-08-15,0.8344416,HIGH,3.0,37.2,107.6,150.59999999999997,159.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Rangeilunda,2024-09-16,0.7114589,HIGH,2.0,0.0,72.0,106.99999999999996,181.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Sanakhemundi,2019-08-08,0.94697815,VERY HIGH,61.0,163.0,164.0,215.0,296.5,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Sanakhemundi,2020-08-27,0.75285286,HIGH,4.0,70.0,79.0,96.0,200.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Sanakhemundi,2022-08-15,0.8468378,HIGH,14.0,25.0,174.0,311.0,384.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Sanakhemundi,2024-09-16,0.58976275,MODERATE,0.0,0.0,29.0,44.0,103.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Sheragada,2019-08-08,0.9343001,VERY HIGH,53.0,135.0,135.0,201.0,304.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Sheragada,2020-08-27,0.60842085,MODERATE,9.0,20.6,27.0,48.0,110.00000000000004,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Sheragada,2022-08-15,0.8321508,HIGH,14.6,19.0,193.0,282.8,374.80000000000007,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Sheragada,2024-09-16,0.7298236,HIGH,2.0,0.0,95.4,126.8,332.80000000000007,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Sorada,2019-08-08,0.80154395,HIGH,3.2,105.0,108.0,201.99999999999997,316.00000000000006,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Sorada,2020-08-27,0.7423571,HIGH,22.2,44.0,56.0,75.99999999999994,153.00000000000006,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Sorada,2022-08-15,0.86868167,VERY HIGH,46.0,30.2,128.20000000000002,175.19999999999993,334.50000000000006,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+GANJAM,Sorada,2024-09-16,0.5945231,MODERATE,0.0,0.0,10.0,38.39999999999994,117.90000000000006,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAGATSINGHPUR,Balikuda,2019-08-08,0.8117011,HIGH,3.0,44.0,57.0,226.0,228.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAGATSINGHPUR,Balikuda,2020-08-27,0.89502573,VERY HIGH,7.0,159.0,241.0,489.0,573.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAGATSINGHPUR,Balikuda,2022-08-15,0.91470313,VERY HIGH,20.0,204.0,268.0,348.0,605.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAGATSINGHPUR,Balikuda,2024-09-16,0.7145989,HIGH,5.0,39.0,62.99999999999999,133.2,232.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAGATSINGHPUR,Biridi,2019-08-08,0.83097935,HIGH,31.0,76.0,88.0,236.0,295.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAGATSINGHPUR,Biridi,2020-08-27,0.8356759,HIGH,7.0,115.0,162.0,302.0,405.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAGATSINGHPUR,Biridi,2022-08-15,0.89871126,VERY HIGH,32.0,125.0,164.0,262.0,563.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAGATSINGHPUR,Biridi,2024-09-16,0.51285124,MODERATE,14.0,30.0,64.99999999999997,107.00000000000004,551.8000000000001,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAGATSINGHPUR,Erasama,2019-08-08,0.86985874,VERY HIGH,28.0,71.0,71.0,204.0,207.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAGATSINGHPUR,Erasama,2020-08-27,0.9205633,VERY HIGH,16.0,141.0,282.0,519.0,604.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAGATSINGHPUR,Erasama,2022-08-15,0.9052373,VERY HIGH,33.0,235.0,356.0,502.0,835.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAGATSINGHPUR,Erasama,2024-09-16,0.66123474,MODERATE,2.0,29.0,41.0,97.0,166.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAGATSINGHPUR,Jagatsinghpur,2019-08-08,0.8479199,HIGH,20.0,88.0,92.0,255.0,315.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAGATSINGHPUR,Jagatsinghpur,2020-08-27,0.89345956,VERY HIGH,19.0,164.0,236.0,457.0,607.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAGATSINGHPUR,Jagatsinghpur,2022-08-15,0.8871927,VERY HIGH,34.0,173.0,212.0,295.0,531.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAGATSINGHPUR,Jagatsinghpur,2024-09-16,0.71526927,HIGH,12.5,34.0,50.5,100.8,310.79999999999995,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAGATSINGHPUR,Kujanga,2019-08-08,0.8157085,HIGH,22.0,45.0,50.0,159.0,165.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAGATSINGHPUR,Kujanga,2020-08-27,0.9039166,VERY HIGH,10.0,210.0,322.0,521.4,710.2,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAGATSINGHPUR,Kujanga,2022-08-15,0.8932374,VERY HIGH,34.0,107.0,179.0,195.0,466.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAGATSINGHPUR,Kujanga,2024-09-16,0.6904284,MODERATE,2.0,41.0,68.0,103.0,201.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAGATSINGHPUR,Naugaon,2019-08-08,0.823901,HIGH,2.0,81.0,82.0,254.0,267.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAGATSINGHPUR,Naugaon,2020-08-27,0.8984129,VERY HIGH,23.0,130.3,173.3,352.3,447.2,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAGATSINGHPUR,Naugaon,2022-08-15,0.9033486,VERY HIGH,35.0,163.0,211.0,321.0,516.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAGATSINGHPUR,Naugaon,2024-09-16,0.7317188,HIGH,3.0,31.0,91.0,122.0,291.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAGATSINGHPUR,Raghunathpur,2019-08-08,0.8611215,VERY HIGH,21.0,90.0,106.0,273.0,293.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAGATSINGHPUR,Raghunathpur,2020-08-27,0.9234089,VERY HIGH,4.0,210.0,284.0,555.0,704.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAGATSINGHPUR,Raghunathpur,2022-08-15,0.88063663,VERY HIGH,28.0,132.0,173.0,247.0,530.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAGATSINGHPUR,Raghunathpur,2024-09-16,0.7010896,HIGH,8.0,48.0,67.0,101.0,438.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAGATSINGHPUR,Tirtol,2019-08-08,0.8371531,HIGH,25.0,65.0,70.0,245.0,257.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAGATSINGHPUR,Tirtol,2020-08-27,0.9063192,VERY HIGH,12.0,154.0,282.0,482.0,632.8,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAGATSINGHPUR,Tirtol,2022-08-15,0.8854321,VERY HIGH,32.0,158.0,200.0,225.0,507.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAGATSINGHPUR,Tirtol,2024-09-16,0.65123475,MODERATE,2.0,15.0,37.0,74.0,160.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Badachana,2019-08-08,0.9372254,VERY HIGH,90.0,61.0,64.0,210.0,226.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Badachana,2020-08-27,0.856158,VERY HIGH,8.0,120.0,255.0,590.0,805.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Badachana,2022-08-15,0.9190093,VERY HIGH,80.0,42.0,104.0,155.0,462.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Badachana,2024-09-16,0.719028,HIGH,0.0,37.0,54.0,119.0,323.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Bari,2019-08-08,0.9060854,VERY HIGH,70.0,42.0,42.0,75.5,98.5,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Bari,2020-08-27,0.8971282,VERY HIGH,5.2,159.6,308.0,638.0,779.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Bari,2022-08-15,0.8955033,VERY HIGH,58.6,87.20000000000003,142.59999999999997,187.0,469.2000000000001,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Bari,2024-09-16,0.6884505,MODERATE,0.0,3.500000000000042,28.99999999999996,106.0,290.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Binjharpur,2019-08-08,0.9598472,VERY HIGH,233.6,32.0,34.00000000000004,73.2,83.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Binjharpur,2020-08-27,0.90067375,VERY HIGH,8.2,190.6,310.6,682.6,789.8000000000001,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Binjharpur,2022-08-15,0.9359472,VERY HIGH,69.0,112.0,161.0,221.0,350.6,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Binjharpur,2024-09-16,0.71250653,HIGH,8.0,22.0,56.0,121.0,302.00000000000006,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Danagadi,2019-08-08,0.9219372,VERY HIGH,79.0,85.0,85.0,150.0,150.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Danagadi,2020-08-27,0.8616466,VERY HIGH,23.0,106.0,183.0,354.3,490.3,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Danagadi,2022-08-15,0.8649259,VERY HIGH,35.0,43.6,119.2,136.2,339.40000000000003,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Danagadi,2024-09-16,0.7527443,HIGH,17.0,12.2,52.49999999999997,66.5,276.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Dasarathpur,2019-08-08,0.9340181,VERY HIGH,113.2,56.6,63.4,86.2,142.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Dasarathpur,2020-08-27,0.940185,VERY HIGH,11.0,205.2,351.6,657.2,753.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Dasarathpur,2022-08-15,0.9066459,VERY HIGH,58.0,73.0,119.0,229.00000000000009,323.6,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Dasarathpur,2024-09-16,0.65166897,MODERATE,2.0,6.0,48.0,91.00000000000006,172.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Dharmasala,2019-08-08,0.9610755,VERY HIGH,119.0,105.0,107.0,167.0,197.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Dharmasala,2020-08-27,0.88405764,VERY HIGH,7.0,124.0,278.0,649.0,826.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Dharmasala,2022-08-15,0.8322387,HIGH,12.0,64.0,169.0,204.0,366.6,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Dharmasala,2024-09-16,0.6428545,MODERATE,0.0,3.0,30.0,52.0,122.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Jajpur,2019-08-08,0.94951004,VERY HIGH,215.0,30.0,34.0,144.0,197.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Jajpur,2020-08-27,0.91401756,VERY HIGH,11.0,183.0,325.0,660.0,805.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Jajpur,2022-08-15,0.86672866,VERY HIGH,25.0,80.0,168.0,252.0,371.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Jajpur,2024-09-16,0.6546216,MODERATE,2.0,5.0,44.0,72.0,173.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Korei,2019-08-08,0.95312536,VERY HIGH,81.4,92.8,92.79999999999995,201.6,221.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Korei,2020-08-27,0.9067192,VERY HIGH,15.6,150.8,272.79999999999995,470.8,618.8,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Korei,2022-08-15,0.8319969,HIGH,20.2,48.600000000000016,115.59999999999997,166.60000000000002,286.20000000000005,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Korei,2024-09-16,0.6831073,MODERATE,4.0,5.300000000000015,51.49999999999997,78.7,190.7,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Rasulpur,2019-08-08,0.90209156,VERY HIGH,68.8,90.8,90.8,136.0,168.40000000000003,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Rasulpur,2020-08-27,0.8663903,VERY HIGH,7.4,133.20000000000002,259.2,478.8,594.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Rasulpur,2022-08-15,0.7680471,HIGH,5.8,48.39999999999998,108.59999999999998,153.99999999999994,299.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Rasulpur,2024-09-16,0.58888036,MODERATE,0.0,5.799999999999957,33.59999999999998,65.59999999999994,145.20000000000005,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Sukinda,2019-08-08,0.9013996,VERY HIGH,83.5,23.2,45.70000000000006,149.6,248.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Sukinda,2020-08-27,0.86961275,VERY HIGH,36.1,80.0,179.00000000000006,372.0,550.6,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Sukinda,2022-08-15,0.87489504,VERY HIGH,38.0,53.40000000000001,153.80000000000007,184.1,411.7000000000001,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JAJPUR,Sukinda,2024-09-16,0.6546691,MODERATE,8.0,17.30000000000003,33.800000000000054,47.8,150.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JHARSUGUDA,Jharsuguda,2019-08-08,0.93329424,VERY HIGH,248.0,3.3,10.3,120.9,155.3,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JHARSUGUDA,Jharsuguda,2020-08-27,0.9676512,VERY HIGH,167.5,96.5,180.5,279.5,512.5,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JHARSUGUDA,Jharsuguda,2022-08-15,0.9588803,VERY HIGH,146.0,87.0,152.0,186.0,284.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JHARSUGUDA,Jharsuguda,2024-09-16,0.665029,MODERATE,4.0,8.0,41.0,63.99999999999997,226.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JHARSUGUDA,Kirmira,2019-08-08,0.93498063,VERY HIGH,220.0,17.200000000000003,34.39999999999997,88.1,155.70000000000002,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JHARSUGUDA,Kirmira,2020-08-27,0.9609429,VERY HIGH,207.8,53.0,116.39999999999998,182.5,292.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JHARSUGUDA,Kirmira,2022-08-15,0.95715654,VERY HIGH,120.0,74.0,122.0,130.0,181.3,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JHARSUGUDA,Kirmira,2024-09-16,0.6830835,MODERATE,5.2,21.50000000000001,70.20000000000002,80.80000000000001,344.9,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JHARSUGUDA,Kolabira,2019-08-08,0.94557774,VERY HIGH,158.0,29.0,37.3,220.3,295.3,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JHARSUGUDA,Kolabira,2020-08-27,0.96011126,VERY HIGH,199.3,76.2,171.4,299.6,382.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JHARSUGUDA,Kolabira,2022-08-15,0.94017553,VERY HIGH,114.0,76.59999999999997,110.79999999999998,132.2,227.1,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JHARSUGUDA,Kolabira,2024-09-16,0.6780091,MODERATE,6.2,13.79999999999998,41.2,43.799999999999976,194.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JHARSUGUDA,Laikera,2019-08-08,0.94445556,VERY HIGH,245.2,35.199999999999974,47.39999999999991,113.39999999999998,185.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JHARSUGUDA,Laikera,2020-08-27,0.95545006,VERY HIGH,214.8,53.70000000000002,133.59999999999988,176.49999999999997,379.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JHARSUGUDA,Laikera,2022-08-15,0.95944476,VERY HIGH,130.0,95.90000000000003,193.09999999999988,240.1,330.9,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JHARSUGUDA,Laikera,2024-09-16,0.742173,HIGH,4.8,44.00000000000006,96.79999999999988,140.5,446.19999999999993,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JHARSUGUDA,Lakhanpur,2019-08-08,0.9209113,VERY HIGH,165.0,4.0,9.0,81.10000000000001,157.7,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JHARSUGUDA,Lakhanpur,2020-08-27,0.933959,VERY HIGH,94.6,46.20000000000003,124.4,221.10000000000005,409.3,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JHARSUGUDA,Lakhanpur,2022-08-15,0.9564155,VERY HIGH,119.0,177.00000000000003,353.0,412.0,569.4,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+JHARSUGUDA,Lakhanpur,2024-09-16,0.712319,HIGH,1.0,5.400000000000029,74.4,124.60000000000004,306.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Bhabanipatna,2019-08-08,0.89160645,VERY HIGH,65.0,65.0,69.00000000000003,170.2,289.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Bhabanipatna,2020-08-27,0.7923319,HIGH,34.4,54.8,83.30000000000003,114.3,195.1,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Bhabanipatna,2022-08-15,0.9629764,VERY HIGH,157.0,51.0,285.0,341.0,472.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Bhabanipatna,2024-09-16,0.6950147,MODERATE,0.0,0.0,64.00000000000003,126.0,226.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Dharmagarh,2019-08-08,0.95109,VERY HIGH,141.0,21.2,90.8,251.8,305.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Dharmagarh,2020-08-27,0.87758356,VERY HIGH,50.0,56.0,245.0,355.0,398.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Dharmagarh,2022-08-15,0.9516276,VERY HIGH,136.6,29.6,219.2,250.0,453.6,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Dharmagarh,2024-09-16,0.69209534,MODERATE,0.0,0.0,79.4,95.6,222.8,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Golamunda,2019-08-08,0.93156904,VERY HIGH,115.3,14.6,47.0,219.9,335.1,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Golamunda,2020-08-27,0.903855,VERY HIGH,62.7,25.0,156.49999999999997,214.5,246.1,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Golamunda,2022-08-15,0.8882084,VERY HIGH,43.0,35.999999999999986,159.0,168.0,269.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Golamunda,2024-09-16,0.7213939,HIGH,0.0,0.0,65.0,99.0,287.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Jayapatna,2019-08-08,0.9563099,VERY HIGH,134.0,137.0,329.0,644.0,736.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Jayapatna,2020-08-27,0.8260243,HIGH,30.0,8.0,152.0,310.0,410.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Jayapatna,2022-08-15,0.9602496,VERY HIGH,182.0,54.0,179.0,398.0,474.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Jayapatna,2024-09-16,0.72405297,HIGH,0.0,2.0,58.0,103.0,374.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Junagarh,2019-08-08,0.9536923,VERY HIGH,172.0,42.0,83.99999999999994,235.0,279.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Junagarh,2020-08-27,0.81803846,HIGH,36.0,24.0,104.99999999999994,206.0,279.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Junagarh,2022-08-15,0.9686952,VERY HIGH,144.0,35.0,273.99999999999994,288.0,396.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Junagarh,2024-09-16,0.7157641,HIGH,0.0,0.0,73.99999999999991,103.4,328.40000000000003,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Kalampur,2019-08-08,0.9612506,VERY HIGH,214.8,118.89999999999998,265.69999999999993,579.3000000000001,646.4000000000001,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Kalampur,2020-08-27,0.90950567,VERY HIGH,61.2,105.0,260.79999999999995,492.1,553.9,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Kalampur,2022-08-15,0.96453434,VERY HIGH,218.2,48.2,257.7,342.90000000000003,479.30000000000007,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Kalampur,2024-09-16,0.71310276,HIGH,0.0,0.0,75.99999999999997,116.10000000000004,256.40000000000003,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Karlamunda,2019-08-08,0.9669102,VERY HIGH,309.2,91.0,90.99999999999996,167.2,213.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Karlamunda,2020-08-27,0.84004676,HIGH,44.4,57.6,85.00000000000001,160.8,234.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Karlamunda,2022-08-15,0.9681198,VERY HIGH,145.0,105.00000000000004,274.0,283.0,472.4,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Karlamunda,2024-09-16,0.7375423,HIGH,0.0,0.0,87.0,98.2,264.4,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Kesinga,2019-08-08,0.84962994,HIGH,58.0,55.0,56.0,144.0,228.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Kesinga,2020-08-27,0.88041943,VERY HIGH,63.6,36.0,119.2,170.2,219.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Kesinga,2022-08-15,0.95039153,VERY HIGH,92.2,87.6,226.4,266.8,352.4,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Kesinga,2024-09-16,0.7976456,HIGH,0.0,35.99999999999996,115.19999999999992,177.8,307.6,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Kokasara,2019-08-08,0.9541119,VERY HIGH,159.1,37.5,105.8,356.40000000000003,523.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Kokasara,2020-08-27,0.8311201,HIGH,44.1,23.2,123.8,241.2,287.1,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Kokasara,2022-08-15,0.94625604,VERY HIGH,96.0,33.0,164.0,172.0,269.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Kokasara,2024-09-16,0.76574355,HIGH,0.0,0.0,100.0,153.0,295.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Lanjigarh,2019-08-08,0.977514,VERY HIGH,89.8,384.6,408.2000000000001,570.0000000000001,609.8000000000001,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Lanjigarh,2020-08-27,0.7903974,HIGH,34.8,39.2,82.8,106.00000000000006,202.80000000000007,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Lanjigarh,2022-08-15,0.96615154,VERY HIGH,182.4,77.20000000000002,275.2,323.80000000000007,418.2000000000001,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Lanjigarh,2024-09-16,0.85440296,VERY HIGH,0.0,10.600000000000028,318.80000000000007,355.6000000000001,405.0000000000001,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Madanpur Rampur,2019-08-08,0.9657411,VERY HIGH,122.0,173.0,192.0,333.99999999999994,406.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Madanpur Rampur,2020-08-27,0.95018095,VERY HIGH,89.0,85.0,148.0,231.99999999999997,321.99999999999994,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Madanpur Rampur,2022-08-15,0.9647288,VERY HIGH,203.0,155.0,340.0,393.0,564.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Madanpur Rampur,2024-09-16,0.90378326,VERY HIGH,13.0,11.0,316.0,429.0,633.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Narla,2019-08-08,0.93048966,VERY HIGH,67.0,113.0,116.99999999999996,204.0,281.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Narla,2020-08-27,0.85051686,VERY HIGH,35.0,15.0,73.99999999999997,154.99999999999997,212.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Narla,2022-08-15,0.9627554,VERY HIGH,169.0,112.0,334.5,376.5,514.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Narla,2024-09-16,0.8186327,HIGH,9.0,21.0,144.99999999999997,220.0,333.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Thuamul Rampur,2019-08-08,0.9631376,VERY HIGH,312.0,295.0,496.0,1020.0,1161.5,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Thuamul Rampur,2020-08-27,0.9155768,VERY HIGH,68.0,117.1,378.5,803.5,900.5,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Thuamul Rampur,2022-08-15,0.96117777,VERY HIGH,368.0,75.0,294.6,349.6,621.6,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KALAHANDI,Thuamul Rampur,2024-09-16,0.8043159,HIGH,0.0,2.0,139.0,174.0,357.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Baliguda,2019-08-08,0.9231483,VERY HIGH,113.0,156.0,180.00000000000003,387.6,485.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Baliguda,2020-08-27,0.95912194,VERY HIGH,113.0,129.0,225.0,274.0,363.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Baliguda,2022-08-15,0.96725166,VERY HIGH,212.0,92.0,213.0,280.0,393.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Baliguda,2024-09-16,0.6676407,MODERATE,0.0,36.0,76.0,79.0,135.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Chakapad,2019-08-08,0.90092176,VERY HIGH,7.4,187.2,254.2,341.4,380.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Chakapad,2020-08-27,0.92936724,VERY HIGH,73.0,68.19999999999999,163.40000000000003,229.8,355.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Chakapad,2022-08-15,0.95588297,VERY HIGH,160.0,79.19999999999997,175.0,268.6,472.8,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Chakapad,2024-09-16,0.643479,MODERATE,5.2,3.999999999999972,39.2,94.8,124.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Daringibadi,2019-08-08,0.8994519,VERY HIGH,40.0,152.0,159.0,244.0,316.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Daringibadi,2020-08-27,0.843271,HIGH,46.0,64.0,101.0,136.0,327.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Daringibadi,2022-08-15,0.9359661,VERY HIGH,93.0,47.0,169.0,265.0,395.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Daringibadi,2024-09-16,0.8318501,HIGH,41.0,2.0,89.0,166.0,215.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,G.Udayagiri,2019-08-08,0.88480717,VERY HIGH,7.0,175.0,204.0,290.20000000000005,330.20000000000005,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,G.Udayagiri,2020-08-27,0.8557903,VERY HIGH,36.6,65.2,147.40000000000003,195.2,330.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,G.Udayagiri,2022-08-15,0.94085526,VERY HIGH,96.4,63.59999999999998,168.20000000000002,283.4,473.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,G.Udayagiri,2024-09-16,0.677496,MODERATE,2.1,0.0,20.6,84.99999999999999,151.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Khajuripada,2019-08-08,0.8409644,HIGH,8.6,105.2,176.6,298.6,351.40000000000003,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Khajuripada,2020-08-27,0.95742124,VERY HIGH,131.0,67.80000000000001,120.4,231.0,374.2000000000001,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Khajuripada,2022-08-15,0.910385,VERY HIGH,62.0,71.39999999999998,247.2,316.79999999999995,535.5,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Khajuripada,2024-09-16,0.7207623,HIGH,3.0,51.199999999999946,102.79999999999995,138.00000000000006,205.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Kotagarh,2019-08-08,0.97745585,VERY HIGH,162.0,309.0,332.19999999999993,535.4,567.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Kotagarh,2020-08-27,0.80191725,HIGH,28.0,28.0,84.99999999999994,201.0,290.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Kotagarh,2022-08-15,0.95841324,VERY HIGH,142.0,104.0,320.99999999999994,377.2,509.2,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Kotagarh,2024-09-16,0.68676966,MODERATE,6.0,0.0,60.99999999999994,102.0,181.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Nuagaon,2019-08-08,0.9496913,VERY HIGH,104.4,106.40000000000002,120.0,293.4,315.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Nuagaon,2020-08-27,0.9193155,VERY HIGH,79.4,55.400000000000034,112.79999999999998,182.0,274.40000000000003,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Nuagaon,2022-08-15,0.96989393,VERY HIGH,235.4,96.60000000000004,188.4,230.6,452.2,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Nuagaon,2024-09-16,0.7109607,HIGH,0.0,39.00000000000004,86.99999999999997,101.1,137.3,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Phiringia,2019-08-08,0.94020885,VERY HIGH,33.6,299.0,348.19999999999993,483.4,530.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Phiringia,2020-08-27,0.96404207,VERY HIGH,166.8,122.0,284.5999999999999,372.4,561.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Phiringia,2022-08-15,0.9603578,VERY HIGH,179.4,172.19999999999996,367.6,434.2,640.8,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Phiringia,2024-09-16,0.66717696,MODERATE,0.0,13.3,69.7,82.39999999999998,149.9,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Phulbani,2019-08-08,0.86398333,VERY HIGH,6.4,144.20000000000002,185.80000000000004,253.4,294.79999999999995,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Phulbani,2020-08-27,0.96863526,VERY HIGH,148.6,126.00000000000004,264.00000000000006,372.80000000000007,569.5999999999999,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Phulbani,2022-08-15,0.9411323,VERY HIGH,105.0,121.80000000000004,222.00000000000009,289.00000000000006,533.8,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Phulbani,2024-09-16,0.6764786,MODERATE,0.0,16.200000000000028,81.00000000000006,94.60000000000002,175.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Raikia,2019-08-08,0.88591725,VERY HIGH,22.8,173.0,180.8,271.6,343.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Raikia,2020-08-27,0.8499034,HIGH,37.8,49.80000000000001,128.8,156.00000000000003,292.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Raikia,2022-08-15,0.95691,VERY HIGH,117.0,86.80000000000003,158.2,302.8,475.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Raikia,2024-09-16,0.66417146,MODERATE,9.2,5.800000000000028,42.4,85.00000000000004,151.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Tikabali,2019-08-08,0.88711524,VERY HIGH,16.0,180.0,197.0,296.0,322.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Tikabali,2020-08-27,0.92510796,VERY HIGH,73.0,63.0,160.0,224.0,334.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Tikabali,2022-08-15,0.95697093,VERY HIGH,148.0,75.0,178.0,349.0,541.2,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Tikabali,2024-09-16,0.65014505,MODERATE,7.0,0.0,42.7,76.5,125.7,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Tumudibandh,2019-08-08,0.96081567,VERY HIGH,129.4,273.0,295.79999999999995,540.0,594.5999999999999,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Tumudibandh,2020-08-27,0.84631985,HIGH,41.0,62.8,98.59999999999994,194.8,267.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Tumudibandh,2022-08-15,0.90415275,VERY HIGH,41.4,101.2,252.79999999999995,298.4,437.8,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KANDHAMAL,Tumudibandh,2024-09-16,0.7847845,HIGH,41.8,0.0,58.39999999999994,97.8,167.20000000000002,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KENDRAPARA,Aul,2019-08-08,0.93860024,VERY HIGH,87.0,37.0,37.0,67.0,106.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KENDRAPARA,Aul,2020-08-27,0.9302838,VERY HIGH,18.0,208.0,340.0,477.0,759.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KENDRAPARA,Aul,2022-08-15,0.83546454,HIGH,26.0,44.0,101.0,210.0,348.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KENDRAPARA,Aul,2024-09-16,0.6371658,MODERATE,0.0,6.0,16.5,47.5,167.5,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KENDRAPARA,Derabis,2019-08-08,0.935925,VERY HIGH,89.0,45.0,54.0,138.0,189.3,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KENDRAPARA,Derabis,2020-08-27,0.8844559,VERY HIGH,11.0,198.0,280.0,649.0,965.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KENDRAPARA,Derabis,2022-08-15,0.88162434,VERY HIGH,31.0,90.0,161.0,218.0,483.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KENDRAPARA,Derabis,2024-09-16,0.68562084,MODERATE,0.0,9.0,38.0,88.0,271.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KENDRAPARA,Garadapur,2019-08-08,0.86583734,VERY HIGH,28.0,70.0,73.0,181.0,188.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KENDRAPARA,Garadapur,2020-08-27,0.91565144,VERY HIGH,23.0,144.0,249.0,416.0,543.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KENDRAPARA,Garadapur,2022-08-15,0.8704191,VERY HIGH,21.0,122.0,155.0,240.0,411.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KENDRAPARA,Garadapur,2024-09-16,0.7715717,HIGH,0.0,46.0,94.0,147.0,347.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KENDRAPARA,Kendrapara,2019-08-08,0.8669067,VERY HIGH,56.0,39.0,39.0,105.0,136.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KENDRAPARA,Kendrapara,2020-08-27,0.9050876,VERY HIGH,7.0,232.0,310.0,571.0,814.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KENDRAPARA,Kendrapara,2022-08-15,0.8592562,VERY HIGH,29.0,89.0,152.0,276.0,684.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KENDRAPARA,Kendrapara,2024-09-16,0.684736,MODERATE,0.0,9.0,36.0,79.0,238.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KENDRAPARA,Marshaghai,2019-08-08,0.8405897,HIGH,33.0,39.0,39.0,83.0,121.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KENDRAPARA,Marshaghai,2020-08-27,0.9080545,VERY HIGH,12.0,255.0,338.0,599.0,823.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KENDRAPARA,Marshaghai,2022-08-15,0.90240973,VERY HIGH,38.0,177.0,247.0,324.0,526.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KENDRAPARA,Marshaghai,2024-09-16,0.65575284,MODERATE,0.0,11.0,27.0,83.0,188.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KENDRAPARA,Mohakalpara,2019-08-08,0.8437752,HIGH,24.0,27.0,27.0,76.0,81.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KENDRAPARA,Mohakalpara,2020-08-27,0.8677386,VERY HIGH,7.0,172.0,230.0,487.0,695.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KENDRAPARA,Mohakalpara,2022-08-15,0.8504448,VERY HIGH,18.0,132.0,168.0,213.0,407.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KENDRAPARA,Mohakalpara,2024-09-16,0.649135,MODERATE,0.0,7.0,34.0,67.0,163.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KENDRAPARA,Pattamundai,2019-08-08,0.8958672,VERY HIGH,70.0,17.0,17.0,67.0,105.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KENDRAPARA,Pattamundai,2020-08-27,0.88361984,VERY HIGH,8.0,197.0,293.0,589.0,727.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KENDRAPARA,Pattamundai,2022-08-15,0.8827308,VERY HIGH,45.0,66.0,141.0,321.0,496.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KENDRAPARA,Pattamundai,2024-09-16,0.68404096,MODERATE,0.0,3.0,25.5,61.0,243.5,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KENDRAPARA,Rajkanika,2019-08-08,0.891229,VERY HIGH,60.0,45.0,45.0,70.0,124.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KENDRAPARA,Rajkanika,2020-08-27,0.94050115,VERY HIGH,20.0,211.0,349.0,512.0,672.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KENDRAPARA,Rajkanika,2022-08-15,0.83684695,HIGH,33.0,30.0,87.0,181.0,236.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KENDRAPARA,Rajkanika,2024-09-16,0.51643944,MODERATE,0.0,11.0,41.0,72.0,131.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KENDRAPARA,Rajnagar,2019-08-08,0.90067977,VERY HIGH,70.0,21.0,21.0,97.0,122.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KENDRAPARA,Rajnagar,2020-08-27,0.92628765,VERY HIGH,13.0,155.0,336.0,586.0,848.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KENDRAPARA,Rajnagar,2022-08-15,0.9047103,VERY HIGH,43.0,95.0,153.0,233.0,444.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KENDRAPARA,Rajnagar,2024-09-16,0.6405868,MODERATE,0.0,5.0,30.0,46.0,180.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Anandapur,2019-08-08,0.7376313,HIGH,23.2,26.999999999999982,50.5,103.5,204.5,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Anandapur,2020-08-27,0.88691264,VERY HIGH,39.5,105.5,198.5,378.5,574.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Anandapur,2022-08-15,0.7955149,HIGH,12.5,26.599999999999994,112.0,184.4,314.1,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Anandapur,2024-09-16,0.72668993,HIGH,19.7,10.199999999999989,31.9,67.30000000000001,255.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Banspal,2019-08-08,0.8539647,VERY HIGH,72.5,27.700000000000014,38.399999999999984,69.5,101.3,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Banspal,2020-08-27,0.95639527,VERY HIGH,103.3,143.4,273.4,379.7,568.7,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Banspal,2022-08-15,0.91059375,VERY HIGH,31.2,175.5,263.3999999999999,283.1,360.6,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Banspal,2024-09-16,0.7602251,HIGH,18.2,31.199999999999957,75.89999999999995,87.6,256.9,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Champua,2019-08-08,0.80709213,HIGH,20.0,5.0,83.2,180.5,238.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Champua,2020-08-27,0.9415592,VERY HIGH,58.3,217.2,341.3,404.8,506.2,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Champua,2022-08-15,0.95421803,VERY HIGH,90.1,113.3,165.70000000000002,167.8,188.3,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Champua,2024-09-16,0.91787106,VERY HIGH,88.2,10.80000000000003,26.4,26.4,128.1,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Ghasipura,2019-08-08,0.7094299,HIGH,13.3,18.200000000000028,22.5,128.99999999999997,212.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Ghasipura,2020-08-27,0.9307063,VERY HIGH,81.3,127.79999999999994,294.1,491.6,766.3,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Ghasipura,2022-08-15,0.84278727,HIGH,16.2,44.29999999999995,203.90000000000003,293.4,491.4,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Ghasipura,2024-09-16,0.7825276,HIGH,27.2,23.899999999999896,79.70000000000009,119.19999999999996,278.7,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Ghatgaon,2019-08-08,0.7944643,HIGH,58.4,16.80000000000001,16.799999999999976,79.79999999999997,144.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Ghatgaon,2020-08-27,0.913285,VERY HIGH,37.6,128.20000000000002,270.79999999999995,357.79999999999995,557.8,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Ghatgaon,2022-08-15,0.8616339,VERY HIGH,19.4,91.00000000000006,203.99999999999997,278.1,402.1,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Ghatgaon,2024-09-16,0.74234235,HIGH,19.6,10.600000000000014,56.599999999999966,107.89999999999996,230.3,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Harichandanpur,2019-08-08,0.7712342,HIGH,41.0,12.499999999999972,12.5,80.50000000000003,116.1,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Harichandanpur,2020-08-27,0.9380416,VERY HIGH,72.4,103.99999999999996,221.7,293.1,379.1,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Harichandanpur,2022-08-15,0.88304806,VERY HIGH,21.1,122.99999999999996,241.0,332.70000000000005,492.8,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Harichandanpur,2024-09-16,0.7342749,HIGH,16.0,9.999999999999972,57.00000000000001,104.20000000000002,300.20000000000005,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Hatadihi,2019-08-08,0.93295985,VERY HIGH,79.2,60.30000000000004,96.4,208.2,243.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Hatadihi,2020-08-27,0.8426144,HIGH,26.3,69.40000000000006,149.79999999999995,263.79999999999995,623.8,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Hatadihi,2022-08-15,0.8489124,HIGH,12.3,75.40000000000005,219.99999999999997,267.5,338.5,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Hatadihi,2024-09-16,0.682113,MODERATE,7.1,13.500000000000073,33.79999999999994,126.29999999999994,211.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Jhumpura,2019-08-08,0.77669805,HIGH,29.6,30.00000000000005,30.00000000000003,79.59999999999991,157.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Jhumpura,2020-08-27,0.9619107,VERY HIGH,88.8,156.40000000000003,249.00000000000009,360.19999999999993,487.8,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Jhumpura,2022-08-15,0.8883289,VERY HIGH,31.6,152.4,204.2,231.9999999999999,353.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Jhumpura,2024-09-16,0.7841413,HIGH,33.4,31.600000000000016,48.6,83.79999999999988,466.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Joda,2019-08-08,0.78652424,HIGH,29.2,5.000000000000002,20.8,54.0,90.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Joda,2020-08-27,0.9436823,VERY HIGH,74.6,129.6,207.6,311.8,492.8,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Joda,2022-08-15,0.929533,VERY HIGH,68.4,144.4,215.6,221.90000000000003,347.1,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Joda,2024-09-16,0.9079532,VERY HIGH,83.6,29.4,75.80000000000004,83.4,272.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Keonjhar,2019-08-08,0.8643453,VERY HIGH,51.2,60.40000000000006,62.69999999999999,274.3,306.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Keonjhar,2020-08-27,0.92925644,VERY HIGH,52.4,150.60000000000005,260.6,305.0,468.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Keonjhar,2022-08-15,0.9068333,VERY HIGH,36.6,152.60000000000008,250.4,292.8,440.7,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Keonjhar,2024-09-16,0.75744045,HIGH,22.3,19.900000000000052,67.69999999999997,118.7,213.7,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Patna,2019-08-08,0.8391553,HIGH,9.8,82.39999999999998,136.79999999999995,238.00000000000003,268.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Patna,2020-08-27,0.9517329,VERY HIGH,102.0,191.4,268.0,335.80000000000007,484.6,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Patna,2022-08-15,0.8742679,VERY HIGH,26.4,85.19999999999996,192.0,225.8,304.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Patna,2024-09-16,0.79838854,HIGH,35.8,25.29999999999997,41.49999999999999,62.7,235.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Saharpada,2019-08-08,0.74591786,HIGH,10.4,50.80000000000001,74.40000000000005,146.00000000000003,165.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Saharpada,2020-08-27,0.9053492,VERY HIGH,53.4,108.0,171.20000000000005,233.6,318.20000000000005,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Saharpada,2022-08-15,0.88478,VERY HIGH,52.4,56.6,128.60000000000005,161.60000000000002,257.1,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Saharpada,2024-09-16,0.8117755,HIGH,39.4,20.7,47.6,95.89999999999998,261.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Telkoi,2019-08-08,0.7468086,HIGH,24.4,47.400000000000006,65.99999999999997,217.1,275.7,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Telkoi,2020-08-27,0.9695505,VERY HIGH,215.0,150.4,367.0,524.2,806.2,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Telkoi,2022-08-15,0.90609896,VERY HIGH,35.4,184.4,229.5,249.89999999999995,410.1,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KEONJHAR,Telkoi,2024-09-16,0.69555366,MODERATE,12.8,13.999999999999956,36.7,100.29999999999994,187.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Balianta,2019-08-08,0.84299994,HIGH,26.0,100.0,201.0,377.0,532.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Balianta,2020-08-27,0.88623136,VERY HIGH,46.0,106.0,148.0,273.0,472.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Balianta,2022-08-15,0.8944369,VERY HIGH,43.0,77.0,153.0,210.0,487.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Balianta,2024-09-16,0.8132827,HIGH,0.0,28.0,146.0,172.0,334.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Balipatna,2019-08-08,0.8115899,HIGH,17.4,80.39999999999999,96.0,207.8,365.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Balipatna,2020-08-27,0.8506799,VERY HIGH,20.4,106.99999999999996,146.8,260.20000000000005,600.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Balipatna,2022-08-15,0.8297662,HIGH,18.6,80.6,123.40000000000006,207.09999999999997,430.80000000000007,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Balipatna,2024-09-16,0.66720665,MODERATE,4.0,25.0,40.00000000000006,66.99999999999994,151.00000000000006,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Banapur,2019-08-08,0.84128034,HIGH,6.0,126.0,156.0,362.0,482.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Banapur,2020-08-27,0.7224183,HIGH,26.0,30.0,43.0,81.0,161.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Banapur,2022-08-15,0.81227416,HIGH,8.0,118.0,156.0,240.0,564.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Banapur,2024-09-16,0.6845314,MODERATE,0.0,0.0,23.0,96.0,271.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Begunia,2019-08-08,0.7616448,HIGH,11.0,61.0,92.0,169.8,225.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Begunia,2020-08-27,0.79723674,HIGH,7.0,80.0,119.0,232.0,287.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Begunia,2022-08-15,0.80548954,HIGH,8.0,56.0,141.0,211.0,395.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Begunia,2024-09-16,0.7748289,HIGH,1.0,0.0,62.0,202.0,367.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Bhubaneswar,2019-08-08,0.812856,HIGH,16.2,76.80000000000001,137.60000000000002,257.8,337.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Bhubaneswar,2020-08-27,0.83473057,HIGH,12.2,122.60000000000002,176.8,337.19999999999993,606.8,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Bhubaneswar,2022-08-15,0.90373945,VERY HIGH,54.2,59.60000000000003,127.4,245.4,469.8,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Bhubaneswar,2024-09-16,0.7025863,HIGH,4.0,20.60000000000001,43.6,98.43999999999996,286.84,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Bolagarh,2019-08-08,0.7574256,HIGH,0.0,68.0,83.0,188.0,278.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Bolagarh,2020-08-27,0.7981482,HIGH,18.0,118.0,123.0,251.0,301.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Bolagarh,2022-08-15,0.80579937,HIGH,12.0,33.0,127.0,220.0,370.2,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Bolagarh,2024-09-16,0.7261547,HIGH,0.0,0.0,54.0,143.0,307.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Chilika,2019-08-08,0.8985669,VERY HIGH,2.0,220.0,229.0,421.0,527.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Chilika,2020-08-27,0.72601485,HIGH,23.0,41.0,51.0,121.0,223.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Chilika,2022-08-15,0.78418094,HIGH,10.0,81.0,129.2,179.2,656.2,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Chilika,2024-09-16,0.68470204,MODERATE,0.0,0.0,22.0,103.0,246.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Jatani,2019-08-08,0.82936865,HIGH,14.0,95.0,156.0,294.0,385.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Jatani,2020-08-27,0.831282,HIGH,15.0,115.0,148.0,258.0,391.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Jatani,2022-08-15,0.8194711,HIGH,17.0,50.0,125.0,148.0,288.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Jatani,2024-09-16,0.67840564,MODERATE,0.0,0.0,21.0,91.0,163.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Khordha,2019-08-08,0.86874276,VERY HIGH,24.0,111.0,155.0,243.0,341.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Khordha,2020-08-27,0.83785707,HIGH,10.0,106.0,147.0,242.0,387.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Khordha,2022-08-15,0.87894064,VERY HIGH,25.0,85.0,169.0,276.0,425.5,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Khordha,2024-09-16,0.6117849,MODERATE,0.0,3.0,39.0,69.0,187.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Tangi,2019-08-08,0.7979705,HIGH,8.0,117.4,128.8,265.4,367.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Tangi,2020-08-27,0.79407746,HIGH,29.0,36.2,48.6,151.4,228.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Tangi,2022-08-15,0.7879026,HIGH,16.0,62.0,92.0,174.0,539.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KHORDHA,Tangi,2024-09-16,0.67443645,MODERATE,1.0,0.0,22.0,45.0,202.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Bandhugaon,2019-08-08,0.9587511,VERY HIGH,113.0,129.99999999999994,160.0,401.0,529.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Bandhugaon,2020-08-27,0.7415749,HIGH,8.0,8.599999999999943,21.4,49.9,97.49999999999994,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Bandhugaon,2022-08-15,0.8859323,VERY HIGH,54.0,48.99999999999994,110.0,315.0,444.5999999999999,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Bandhugaon,2024-09-16,0.71793723,HIGH,0.0,0.0,42.0,80.6,162.59999999999994,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Boipariguda,2019-08-08,0.9446187,VERY HIGH,172.0,170.0,343.0,777.0,873.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Boipariguda,2020-08-27,0.7417428,HIGH,9.0,36.0,210.0,564.0,806.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Boipariguda,2022-08-15,0.9489395,VERY HIGH,121.0,21.0,236.0,332.0,522.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Boipariguda,2024-09-16,0.9296993,VERY HIGH,0.0,14.0,418.0,806.0,979.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Borigumma,2019-08-08,0.95836323,VERY HIGH,138.6,106.8000000000001,249.7999999999999,442.9999999999999,559.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Borigumma,2020-08-27,0.77908504,HIGH,5.2,10.000000000000114,148.59999999999988,213.79999999999995,327.20000000000005,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Borigumma,2022-08-15,0.94966364,VERY HIGH,175.6,25.80000000000013,205.39999999999984,272.4,387.00000000000006,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Borigumma,2024-09-16,0.9009849,VERY HIGH,0.0,18.800000000000114,217.9999999999999,369.5999999999999,521.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Dasmantpur,2019-08-08,0.9553852,VERY HIGH,157.0,201.0,362.0,791.0,948.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Dasmantpur,2020-08-27,0.8238976,HIGH,27.0,38.0,169.0,443.0,672.0000000000001,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Dasmantpur,2022-08-15,0.96788263,VERY HIGH,140.0,97.0,284.0,388.0,459.0000000000001,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Dasmantpur,2024-09-16,0.8823716,VERY HIGH,0.0,35.0,279.0,301.0,385.0000000000001,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Jeypore,2019-08-08,0.936145,VERY HIGH,131.6,155.8,283.5,566.6,740.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Jeypore,2020-08-27,0.75521356,HIGH,6.8,37.4,231.0,481.8,698.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Jeypore,2022-08-15,0.9309835,VERY HIGH,128.8,50.6,224.4,434.2,653.6,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Jeypore,2024-09-16,0.90148574,VERY HIGH,0.0,17.400000000000013,212.6,434.2,680.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Koraput,2019-08-08,0.9420712,VERY HIGH,125.4,166.20000000000005,289.20000000000005,558.8,662.4000000000001,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Koraput,2020-08-27,0.7560469,HIGH,6.2,37.400000000000055,178.40000000000006,358.8,508.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Koraput,2022-08-15,0.9519045,VERY HIGH,92.4,96.60000000000004,240.0000000000001,306.6,547.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Koraput,2024-09-16,0.8675551,VERY HIGH,0.0,10.400000000000045,182.60000000000008,274.8,396.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Kotpad,2019-08-08,0.93577355,VERY HIGH,143.0,60.2,268.4,717.4,940.9,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Kotpad,2020-08-27,0.8500435,VERY HIGH,6.0,43.0,307.0,434.0,696.3,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Kotpad,2022-08-15,0.96007264,VERY HIGH,293.0,102.0,439.0,716.0,854.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Kotpad,2024-09-16,0.8714406,VERY HIGH,0.0,2.8,208.6,309.0,457.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Kundra,2019-08-08,0.9258089,VERY HIGH,115.0,83.0,192.79999999999995,493.2000000000001,580.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Kundra,2020-08-27,0.76520747,HIGH,4.0,23.0,222.0,375.00000000000006,576.4000000000001,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Kundra,2022-08-15,0.94533265,VERY HIGH,112.0,41.2,218.4,371.2000000000001,502.2,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Kundra,2024-09-16,0.89205533,VERY HIGH,0.0,9.200000000000028,150.79999999999995,466.4,578.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Lamataput,2019-08-08,0.8945813,VERY HIGH,82.4,142.29999999999998,242.9,565.7,689.3000000000001,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Lamataput,2020-08-27,0.72800463,HIGH,4.5,23.4,160.29999999999998,397.5,608.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Lamataput,2022-08-15,0.9199776,VERY HIGH,65.4,52.60000000000001,182.6,351.70000000000005,632.1999999999999,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Lamataput,2024-09-16,0.87467426,VERY HIGH,0.0,4.4,234.6,347.4,602.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Laxmipur,2019-08-08,0.94838226,VERY HIGH,104.0,136.0,191.0,359.0,418.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Laxmipur,2020-08-27,0.77199835,HIGH,25.4,35.599999999999994,61.6,142.6,255.9,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Laxmipur,2022-08-15,0.9323145,VERY HIGH,75.0,63.0,131.8,201.8,332.2,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Laxmipur,2024-09-16,0.70614326,HIGH,0.0,7.200000000000014,69.0,145.2,189.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Nandapur,2019-08-08,0.8699483,VERY HIGH,69.2,137.99999999999997,239.4,511.0,653.7,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Nandapur,2020-08-27,0.7634722,HIGH,7.0,21.19999999999996,115.0,301.00000000000006,517.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Nandapur,2022-08-15,0.8927567,VERY HIGH,58.0,36.99999999999996,127.0,196.00000000000009,380.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Nandapur,2024-09-16,0.8489326,HIGH,0.0,21.999999999999943,138.0,275.00000000000006,573.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Narayanpatna,2019-08-08,0.89410526,VERY HIGH,69.2,68.4,81.80000000000001,190.6,229.00000000000003,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Narayanpatna,2020-08-27,0.7532529,HIGH,6.2,10.6,29.800000000000026,43.59999999999999,151.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Narayanpatna,2022-08-15,0.81792086,HIGH,45.0,14.000000000000014,51.00000000000004,155.60000000000002,246.40000000000003,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Narayanpatna,2024-09-16,0.76661676,HIGH,0.0,0.0,62.40000000000003,195.2,254.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Pottangi,2019-08-08,0.868498,VERY HIGH,41.3,80.39999999999999,121.9,257.79999999999995,294.1,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Pottangi,2020-08-27,0.7299685,HIGH,15.2,14.2,63.19999999999999,96.4,244.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Pottangi,2022-08-15,0.8419451,HIGH,20.0,45.0,217.2,271.4,376.6,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Pottangi,2024-09-16,0.77201337,HIGH,0.0,2.0,75.10000000000001,192.6,301.40000000000003,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Similiguda,2019-08-08,0.89657253,VERY HIGH,86.0,161.0,243.4,499.0,589.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Similiguda,2020-08-27,0.7814205,HIGH,11.0,20.2,209.4,356.8,594.8000000000001,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Similiguda,2022-08-15,0.9527622,VERY HIGH,87.0,70.0,189.4,249.4,463.4,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+KORAPUT,Similiguda,2024-09-16,0.8422893,HIGH,0.0,0.0,151.99999999999997,329.0,427.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MALKANGIRI,Chitrakonda (K.Gumma),2020-08-27,0.68635136,MODERATE,27.0,5.0,123.0,750.0,935.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MALKANGIRI,Chitrakonda (K.Gumma),2022-08-15,0.8277059,HIGH,12.0,9.0,198.0,301.0,423.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MALKANGIRI,Chitrakonda (K.Gumma),2024-09-16,0.91795474,VERY HIGH,0.0,16.0,279.50000000000006,433.9,608.1,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MALKANGIRI,Kalimela,2019-08-08,0.86607766,VERY HIGH,40.0,160.0,339.0,605.0,843.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MALKANGIRI,Kalimela,2020-08-27,0.71352834,HIGH,25.0,6.0,165.0,658.0,849.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MALKANGIRI,Kalimela,2022-08-15,0.7389203,HIGH,9.0,13.0,88.0,114.0,225.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MALKANGIRI,Kalimela,2024-09-16,0.88467586,VERY HIGH,0.0,19.0,196.0,361.3,547.3,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MALKANGIRI,Khoirput,2019-08-08,0.9143735,VERY HIGH,103.0,179.99999999999997,425.69999999999993,767.0,818.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MALKANGIRI,Khoirput,2020-08-27,0.70701015,HIGH,44.0,5.999999999999972,167.99999999999994,624.0,918.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MALKANGIRI,Khoirput,2022-08-15,0.89427537,VERY HIGH,65.0,12.999999999999972,126.99999999999994,219.99999999999997,423.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MALKANGIRI,Khoirput,2024-09-16,0.9194961,VERY HIGH,0.0,10.999999999999972,304.99999999999994,560.9999999999999,838.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MALKANGIRI,Korukonda,2019-08-08,0.955122,VERY HIGH,117.0,247.0,533.0,1067.0,1282.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MALKANGIRI,Korukonda,2020-08-27,0.85801786,VERY HIGH,106.0,21.0,198.0,895.0,1147.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MALKANGIRI,Korukonda,2022-08-15,0.9078873,VERY HIGH,63.0,43.0,197.0,281.0,446.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MALKANGIRI,Korukonda,2024-09-16,0.9160375,VERY HIGH,0.0,19.0,287.0,380.0,560.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MALKANGIRI,Kudumulgumma,2019-08-08,0.8791787,VERY HIGH,46.0,180.0,412.0,722.0,750.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MALKANGIRI,Malkangiri,2019-08-08,0.889609,VERY HIGH,60.2,162.20000000000002,378.6,739.0,795.5999999999999,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MALKANGIRI,Malkangiri,2020-08-27,0.7373692,HIGH,35.4,14.6,225.8,627.6,854.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MALKANGIRI,Malkangiri,2022-08-15,0.87307113,VERY HIGH,42.0,22.200000000000014,161.0,281.6,413.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MALKANGIRI,Malkangiri,2024-09-16,0.8915142,VERY HIGH,0.0,0.0,366.4,443.4,824.5000000000001,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MALKANGIRI,Mathili,2019-08-08,0.92237777,VERY HIGH,121.0,154.0,379.0,769.0,916.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MALKANGIRI,Mathili,2020-08-27,0.742462,HIGH,48.0,30.0,199.0,685.0,953.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MALKANGIRI,Mathili,2022-08-15,0.91777325,VERY HIGH,65.0,36.0,208.0,372.0,519.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MALKANGIRI,Mathili,2024-09-16,0.9044657,VERY HIGH,0.0,11.0,239.0,475.0,654.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MALKANGIRI,Podia,2019-08-08,0.887175,VERY HIGH,44.4,133.4,298.4,589.8,664.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MALKANGIRI,Podia,2020-08-27,0.71104324,HIGH,17.3,3.0,221.9,684.9,870.1,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MALKANGIRI,Podia,2022-08-15,0.74882746,HIGH,8.0,14.299999999999972,85.7,127.9,248.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MALKANGIRI,Podia,2024-09-16,0.85216,VERY HIGH,0.0,0.0,180.0,369.0,534.7,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Badasahi,2019-08-08,0.80310297,HIGH,13.0,64.0,64.0,168.0,176.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Badasahi,2020-08-27,0.9658393,VERY HIGH,130.0,139.0,210.0,342.0,453.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Badasahi,2022-08-15,0.84284186,HIGH,15.0,60.0,218.0,255.0,368.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Badasahi,2024-09-16,0.9654298,VERY HIGH,124.0,89.0,139.0,169.0,405.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Bahalda,2019-08-08,0.8014056,HIGH,14.4,34.6,52.00000000000003,317.00000000000006,318.40000000000003,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Bahalda,2020-08-27,0.9061645,VERY HIGH,31.8,112.40000000000002,256.80000000000007,301.0,395.8,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Bahalda,2022-08-15,0.861546,VERY HIGH,24.6,67.00000000000001,106.60000000000002,157.4,199.6,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Bahalda,2024-09-16,0.9133445,VERY HIGH,105.0,55.000000000000014,72.80000000000003,81.80000000000001,202.6,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Bangriposi,2019-08-08,0.8273184,HIGH,29.6,50.59999999999994,63.40000000000005,240.8,249.40000000000003,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Bangriposi,2020-08-27,0.9249199,VERY HIGH,44.0,150.99999999999991,262.4000000000001,432.2000000000001,521.8000000000001,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Bangriposi,2022-08-15,0.796673,HIGH,17.4,29.199999999999918,107.20000000000006,111.39999999999998,170.20000000000005,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Bangriposi,2024-09-16,0.94385993,VERY HIGH,75.0,97.59999999999994,131.00000000000009,174.79999999999998,354.4000000000001,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Baripada,2019-08-08,0.74758476,HIGH,14.0,27.0,37.0,223.0,257.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Baripada,2020-08-27,0.9204132,VERY HIGH,32.0,224.0,321.0,520.0,669.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Baripada,2022-08-15,0.94342184,VERY HIGH,86.0,125.0,259.0,293.0,406.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Baripada,2024-09-16,0.89144075,VERY HIGH,72.6,84.80000000000001,94.8,97.2,130.8,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Besoi,2019-08-08,0.8349746,HIGH,49.0,58.0,58.0,132.0,158.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Besoi,2020-08-27,0.90477484,VERY HIGH,50.0,162.0,256.0,404.0,556.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Besoi,2022-08-15,0.8358119,HIGH,14.0,98.0,190.0,333.0,462.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Besoi,2024-09-16,0.9673621,VERY HIGH,92.0,96.0,146.0,222.0,407.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Betanati,2019-08-08,0.75117093,HIGH,5.0,41.0,41.0,218.0,251.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Betanati,2020-08-27,0.956677,VERY HIGH,89.0,159.0,207.0,392.0,537.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Betanati,2022-08-15,0.852227,VERY HIGH,18.0,60.0,234.0,332.0,428.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Betanati,2024-09-16,0.96798617,VERY HIGH,113.0,132.0,187.0,260.0,456.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Bijatala,2019-08-08,0.7892539,HIGH,22.1,30.099999999999973,33.10000000000006,68.19999999999992,108.40000000000008,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Bijatala,2020-08-27,0.88392496,VERY HIGH,47.0,122.99999999999996,155.00000000000006,292.9999999999999,373.00000000000006,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Bijatala,2022-08-15,0.89549965,VERY HIGH,28.0,145.99999999999997,262.00000000000006,292.9999999999999,435.00000000000006,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Bijatala,2024-09-16,0.96016586,VERY HIGH,87.0,91.99999999999996,160.00000000000006,187.99999999999991,386.00000000000006,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Gopabandhunagar,2019-08-08,0.73730326,HIGH,22.0,18.49999999999997,20.69999999999997,120.00000000000004,147.7,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Gopabandhunagar,2020-08-27,0.9621912,VERY HIGH,127.0,157.29999999999995,236.5,336.70000000000005,506.7,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Gopabandhunagar,2022-08-15,0.8916492,VERY HIGH,41.0,56.199999999999946,230.0,255.9000000000001,400.9,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Gopabandhunagar,2024-09-16,0.9715195,VERY HIGH,122.0,81.29999999999994,145.5,226.10000000000008,328.1,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Jamda,2019-08-08,0.8048444,HIGH,18.0,14.0,62.0,117.0,118.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Jamda,2020-08-27,0.8811808,VERY HIGH,29.0,132.0,229.0,291.0,424.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Jamda,2022-08-15,0.8701671,VERY HIGH,55.0,39.0,91.0,139.0,199.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Jamda,2024-09-16,0.8461312,HIGH,41.0,50.0,86.0,106.0,277.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Joshipur,2019-08-08,0.8763295,VERY HIGH,26.1,106.1,121.09999999999994,175.5,175.49999999999997,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Joshipur,2020-08-27,0.93915254,VERY HIGH,83.0,82.6,147.39999999999992,205.6,349.6,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Joshipur,2022-08-15,0.8912679,VERY HIGH,11.2,167.2,269.49999999999994,296.9,383.9,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Joshipur,2024-09-16,0.9279196,VERY HIGH,100.0,83.80000000000001,95.2,95.19999999999996,191.2,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Kaptipada,2019-08-08,0.7870353,HIGH,6.0,102.0,115.0,211.0,321.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Kaptipada,2020-08-27,0.90724736,VERY HIGH,65.0,69.0,180.0,277.0,359.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Kaptipada,2022-08-15,0.88603395,VERY HIGH,34.0,117.0,329.0,402.0,695.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Kaptipada,2024-09-16,0.9610916,VERY HIGH,104.0,103.0,221.0,256.0,531.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Karanjia,2019-08-08,0.81295913,HIGH,11.0,88.0,141.0,199.0,211.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Karanjia,2020-08-27,0.9061336,VERY HIGH,38.0,145.7,215.7,291.7,474.7,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Karanjia,2022-08-15,0.87330484,VERY HIGH,28.0,92.0,203.0,237.0,325.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Karanjia,2024-09-16,0.9106844,VERY HIGH,105.2,24.000000000000007,46.0,94.8,247.8,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Khunta,2019-08-08,0.73730326,HIGH,22.0,18.49999999999997,20.69999999999997,120.00000000000004,147.7,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Khunta,2020-08-27,0.9621912,VERY HIGH,127.0,157.29999999999995,236.5,336.70000000000005,506.7,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Khunta,2022-08-15,0.87864065,VERY HIGH,30.5,58.69999999999994,205.9,229.00000000000009,362.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Khunta,2024-09-16,0.9707,VERY HIGH,128.0,82.99999999999994,139.2,216.40000000000003,308.8,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Kuliana,2019-08-08,0.7260257,HIGH,15.0,37.2,57.599999999999966,144.5,153.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Kuliana,2020-08-27,0.8968209,VERY HIGH,17.0,204.0,243.3,393.3,515.4,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Kuliana,2022-08-15,0.80554354,HIGH,13.0,69.0,110.99999999999996,113.0,219.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Kuliana,2024-09-16,0.94433427,VERY HIGH,65.0,140.0,167.99999999999997,180.0,280.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Kusumi,2019-08-08,0.82403946,HIGH,31.0,60.0,75.0,214.0,224.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Kusumi,2020-08-27,0.9438845,VERY HIGH,84.0,169.4,217.5,327.5,612.5,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Kusumi,2022-08-15,0.89308274,VERY HIGH,22.0,122.0,296.0,459.0,508.6,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Kusumi,2024-09-16,0.9580448,VERY HIGH,88.0,164.0,174.0,210.0,371.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Morda,2019-08-08,0.70519197,HIGH,8.0,17.0,36.0,107.0,184.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Morda,2020-08-27,0.89736706,VERY HIGH,52.0,105.0,157.0,349.0,456.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Morda,2022-08-15,0.86049616,VERY HIGH,17.0,44.0,168.0,171.0,240.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Morda,2024-09-16,0.9338772,VERY HIGH,76.0,101.4,148.10000000000002,155.5,273.4,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Rairangapur,2019-08-08,0.7691136,HIGH,18.0,26.0,26.0,103.0,105.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Rairangapur,2020-08-27,0.8878371,VERY HIGH,27.0,154.0,207.0,279.0,366.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Rairangapur,2022-08-15,0.8616062,VERY HIGH,11.0,48.0,135.0,153.0,176.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Rairangapur,2024-09-16,0.9257796,VERY HIGH,94.0,64.0,106.0,106.0,238.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Raruana,2019-08-08,0.7330067,HIGH,11.0,30.0,39.0,144.0,151.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Raruana,2020-08-27,0.8861212,VERY HIGH,32.0,122.0,147.0,187.0,351.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Raruana,2022-08-15,0.87096024,VERY HIGH,17.0,125.5,194.5,207.5,237.5,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Raruana,2024-09-16,0.93853754,VERY HIGH,114.0,17.3,20.5,22.3,158.5,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Rasgovindapur,2019-08-08,0.73501235,HIGH,5.0,32.8,54.400000000000006,164.00000000000003,252.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Rasgovindapur,2020-08-27,0.9334932,VERY HIGH,86.0,94.6,128.60000000000002,328.5,375.3,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Rasgovindapur,2022-08-15,0.83316123,HIGH,8.0,72.00000000000003,167.20000000000005,194.4,308.6,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Rasgovindapur,2024-09-16,0.9357659,VERY HIGH,79.4,107.00000000000004,136.60000000000002,150.8,298.2,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Samakhunta,2019-08-08,0.7502897,HIGH,16.0,41.00000000000006,70.0,179.00000000000003,205.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Samakhunta,2020-08-27,0.90109783,VERY HIGH,24.0,179.00000000000006,276.0,426.0,531.5,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Samakhunta,2022-08-15,0.8800496,VERY HIGH,37.0,62.00000000000006,188.0,226.00000000000003,340.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Samakhunta,2024-09-16,0.9044232,VERY HIGH,65.0,79.00000000000006,120.0,148.00000000000003,266.99999999999994,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Sarasakana,2019-08-08,0.719188,HIGH,15.0,32.0,41.0,78.0,100.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Sarasakana,2020-08-27,0.9252397,VERY HIGH,62.0,125.2,208.2,380.2000000000001,481.6,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Sarasakana,2022-08-15,0.8635901,VERY HIGH,23.0,97.0,181.0,240.0,328.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Sarasakana,2024-09-16,0.9584489,VERY HIGH,94.0,103.0,140.0,181.0,370.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Sukuruli,2019-08-08,0.75828236,HIGH,10.0,25.0,25.0,150.0,165.3,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Sukuruli,2020-08-27,0.9393961,VERY HIGH,46.0,207.0,263.0,305.0,483.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Sukuruli,2022-08-15,0.9061304,VERY HIGH,24.0,130.39999999999998,228.4,238.2,278.6,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Sukuruli,2024-09-16,0.8790484,VERY HIGH,64.6,12.000000000000009,16.999999999999986,17.0,79.2,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Suliapada,2019-08-08,0.75978833,HIGH,13.0,2.500000000000014,9.500000000000014,233.0,262.00000000000006,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Suliapada,2020-08-27,0.851841,VERY HIGH,23.0,114.30000000000004,197.5,414.5,503.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Suliapada,2022-08-15,0.86344373,VERY HIGH,22.0,142.00000000000003,205.0,284.1,420.1,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Suliapada,2024-09-16,0.9310067,VERY HIGH,70.2,123.00000000000004,143.4,158.2,304.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Thakurmunda,2019-08-08,0.8264477,HIGH,13.3,123.2,144.2,295.6,400.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Thakurmunda,2020-08-27,0.9309409,VERY HIGH,58.0,209.0,298.0,353.0,445.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Thakurmunda,2022-08-15,0.9069605,VERY HIGH,54.0,66.0,221.0,370.0,525.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Thakurmunda,2024-09-16,0.8276017,HIGH,64.0,19.0,42.0,57.0,177.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Tiring,2019-08-08,0.79487795,HIGH,22.2,44.6,82.99999999999997,167.99999999999997,187.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Tiring,2020-08-27,0.8671342,VERY HIGH,29.4,85.4,162.39999999999998,199.8,312.5,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Tiring,2022-08-15,0.7802958,HIGH,10.0,45.59999999999998,96.19999999999996,160.59999999999994,250.4,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Tiring,2024-09-16,0.9259497,VERY HIGH,93.8,62.8,83.79999999999997,87.99999999999999,260.2,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Udala,2019-08-08,0.77548164,HIGH,25.4,38.19999999999989,72.59999999999997,132.20000000000007,231.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Udala,2020-08-27,0.90609896,VERY HIGH,25.4,169.59999999999988,250.79999999999995,323.80000000000007,481.6,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Udala,2022-08-15,0.8577685,VERY HIGH,28.4,67.39999999999988,206.0,262.8000000000001,377.00000000000006,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+MAYURBHANJ,Udala,2024-09-16,0.9776068,VERY HIGH,141.7,138.59999999999985,269.6,347.9000000000001,664.8,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Chandahandi,2019-08-08,0.9542135,VERY HIGH,127.0,16.99999999999997,70.0,266.0,330.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Chandahandi,2020-08-27,0.7928434,HIGH,46.4,16.299999999999972,65.1,122.9,164.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Chandahandi,2022-08-15,0.9390346,VERY HIGH,93.0,16.99999999999997,100.0,127.0,213.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Chandahandi,2024-09-16,0.78531194,HIGH,0.0,3.999999999999972,133.5,160.5,227.5,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Dabugaon,2019-08-08,0.8855274,VERY HIGH,90.0,39.0,226.0,503.0,599.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Dabugaon,2020-08-27,0.829271,HIGH,23.0,24.0,227.0,388.0,434.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Dabugaon,2022-08-15,0.9502163,VERY HIGH,213.3,64.6,429.3,477.7000000000001,641.6999999999999,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Dabugaon,2024-09-16,0.84103507,HIGH,0.0,12.19999999999997,138.6,299.4,441.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Jharigaon,2019-08-08,0.89279073,VERY HIGH,83.8,12.999999999999972,49.40000000000003,280.40000000000003,370.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Jharigaon,2020-08-27,0.7755796,HIGH,34.6,9.799999999999969,56.2,113.0,282.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Jharigaon,2022-08-15,0.95153415,VERY HIGH,128.4,24.39999999999997,150.8,241.80000000000004,413.19999999999993,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Jharigaon,2024-09-16,0.6980943,MODERATE,0.0,0.0,71.1,139.10000000000002,224.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Kosagumuda,2019-08-08,0.9101071,VERY HIGH,105.4,15.6,152.0,447.5,568.5,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Kosagumuda,2020-08-27,0.8548543,VERY HIGH,7.2,12.4,316.4,415.2,667.4000000000001,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Kosagumuda,2022-08-15,0.96259964,VERY HIGH,171.2,75.40000000000003,411.6,477.6000000000001,676.4000000000001,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Kosagumuda,2024-09-16,0.8530565,VERY HIGH,0.0,9.800000000000017,156.39999999999992,272.20000000000005,372.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Nandahandi,2019-08-08,0.9159915,VERY HIGH,124.0,88.99999999999997,223.0,498.0,612.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Nandahandi,2020-08-27,0.807878,HIGH,15.0,15.999999999999972,235.0,354.3,538.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Nandahandi,2022-08-15,0.96018565,VERY HIGH,149.0,55.49999999999997,209.5,329.70000000000005,421.5,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Nandahandi,2024-09-16,0.85664696,VERY HIGH,0.0,13.999999999999972,168.2,286.5,417.9,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Nawarangpur,2019-08-08,0.9291341,VERY HIGH,108.0,55.99999999999997,199.6,482.9,628.6999999999999,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Nawarangpur,2020-08-27,0.8485209,HIGH,8.0,32.99999999999997,337.0,462.0,608.4000000000001,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Nawarangpur,2022-08-15,0.9621467,VERY HIGH,167.0,78.99999999999997,250.0,328.4,440.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Nawarangpur,2024-09-16,0.8546349,VERY HIGH,0.0,16.79999999999997,151.19999999999996,278.79999999999995,393.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Papadahandi,2019-08-08,0.907458,VERY HIGH,120.0,62.0,261.79999999999995,566.0,635.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Papadahandi,2020-08-27,0.8479383,HIGH,15.0,10.0,347.0,478.4,624.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Papadahandi,2022-08-15,0.9393925,VERY HIGH,195.0,43.0,311.0,420.0,519.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Papadahandi,2024-09-16,0.807831,HIGH,0.0,2.0,113.0,200.0,313.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Raighar,2019-08-08,0.87587273,VERY HIGH,74.0,7.0,28.0,213.0,315.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Raighar,2020-08-27,0.83644617,HIGH,43.0,24.0,193.4,334.4,397.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Raighar,2022-08-15,0.9250179,VERY HIGH,78.0,31.0,189.5,284.9,480.7,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Raighar,2024-09-16,0.7092935,HIGH,0.0,2.0,62.99999999999997,151.0,205.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Tentulikhunti,2019-08-08,0.92906016,VERY HIGH,85.4,88.20000000000003,185.2,479.0,647.1999999999999,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Tentulikhunti,2020-08-27,0.823472,HIGH,35.4,23.400000000000027,194.60000000000005,311.4,396.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Tentulikhunti,2022-08-15,0.96008825,VERY HIGH,146.0,37.40000000000003,161.90000000000003,270.29999999999995,376.5,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Tentulikhunti,2024-09-16,0.8518941,VERY HIGH,0.0,11.000000000000028,141.20000000000005,225.19999999999996,444.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Umerkote,2019-08-08,0.8523741,VERY HIGH,61.4,10.19999999999997,28.40000000000004,252.4,327.79999999999995,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Umerkote,2020-08-27,0.79704404,HIGH,14.2,15.199999999999983,127.80000000000004,203.0,305.9,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Umerkote,2022-08-15,0.954252,VERY HIGH,126.0,44.19999999999999,155.20000000000005,216.0,322.79999999999995,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAWARANGPUR,Umerkote,2024-09-16,0.6520263,MODERATE,0.0,12.999999999999972,63.200000000000045,110.6,191.9,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAYAGARH,Bhapur,2019-08-08,0.87256205,VERY HIGH,61.4,61.39999999999998,86.89999999999996,145.60000000000002,220.7,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAYAGARH,Bhapur,2020-08-27,0.796039,HIGH,16.3,60.29999999999997,100.49999999999996,248.00000000000009,365.3,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAYAGARH,Bhapur,2022-08-15,0.8531069,VERY HIGH,7.0,49.49999999999997,276.49999999999994,394.8,551.8,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAYAGARH,Bhapur,2024-09-16,0.67968965,MODERATE,4.1,3.199999999999972,57.49999999999997,97.7,202.7,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAYAGARH,Daspalla,2019-08-08,0.7322301,HIGH,8.6,35.600000000000016,39.799999999999926,179.39999999999995,252.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAYAGARH,Daspalla,2020-08-27,0.89814913,VERY HIGH,68.0,54.600000000000016,93.39999999999996,271.99999999999994,395.2,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAYAGARH,Daspalla,2022-08-15,0.8533539,VERY HIGH,12.8,75.30000000000004,274.69999999999993,425.9,674.3,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAYAGARH,Daspalla,2024-09-16,0.6632759,MODERATE,0.0,0.0,19.59999999999997,42.000000000000014,125.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAYAGARH,Gania,2019-08-08,0.774493,HIGH,15.0,54.0,102.0,178.0,206.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAYAGARH,Gania,2020-08-27,0.8444213,HIGH,41.0,69.0,103.0,194.0,413.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAYAGARH,Gania,2022-08-15,0.8537415,VERY HIGH,22.0,54.0,190.0,298.0,429.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAYAGARH,Gania,2024-09-16,0.6516925,MODERATE,0.0,0.0,48.8,69.80000000000001,170.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAYAGARH,Khandapara,2019-08-08,0.8031881,HIGH,0.0,87.5,115.0,214.0,282.9,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAYAGARH,Khandapara,2020-08-27,0.8101334,HIGH,19.3,77.30000000000001,114.1,200.9,281.29999999999995,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAYAGARH,Khandapara,2022-08-15,0.8942601,VERY HIGH,22.0,96.0,283.2,383.5,461.7000000000001,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAYAGARH,Khandapara,2024-09-16,0.71221733,HIGH,2.2,0.0,67.49999999999994,148.60000000000002,277.79999999999995,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAYAGARH,Nayagarh,2019-08-08,0.85503745,VERY HIGH,9.2,152.00000000000003,172.2,258.80000000000007,372.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAYAGARH,Nayagarh,2020-08-27,0.7831924,HIGH,24.2,52.8,86.59999999999998,183.30000000000007,250.20000000000005,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAYAGARH,Nayagarh,2022-08-15,0.78885573,HIGH,18.0,41.19999999999997,91.19999999999996,199.20000000000005,363.1,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAYAGARH,Nayagarh,2024-09-16,0.71739984,HIGH,0.0,17.39999999999997,84.99999999999993,112.80000000000004,250.1,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAYAGARH,Nuagaon,2019-08-08,0.8024373,HIGH,0.0,53.0,91.0,138.0,180.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAYAGARH,Nuagaon,2020-08-27,0.8400946,HIGH,44.0,56.0,78.0,139.0,245.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAYAGARH,Nuagaon,2022-08-15,0.8149545,HIGH,10.1,71.2,209.4,313.4,552.4,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAYAGARH,Nuagaon,2024-09-16,0.70117354,HIGH,0.0,0.0,30.1,45.1,221.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAYAGARH,Odagaon,2019-08-08,0.9211099,VERY HIGH,67.7,118.1,118.1,198.5,318.9,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAYAGARH,Odagaon,2020-08-27,0.84785503,HIGH,38.5,87.10000000000002,107.00000000000004,174.0,269.7,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAYAGARH,Odagaon,2022-08-15,0.87745285,VERY HIGH,28.4,97.1,154.2,254.40000000000003,475.8,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAYAGARH,Odagaon,2024-09-16,0.69218516,MODERATE,0.0,0.0,64.4,113.10000000000002,219.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAYAGARH,Ranpur,2019-08-08,0.7893502,HIGH,0.2,94.59999999999997,114.00000000000004,177.8,232.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAYAGARH,Ranpur,2020-08-27,0.8030863,HIGH,26.4,65.99999999999997,91.60000000000004,243.99999999999997,306.4,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAYAGARH,Ranpur,2022-08-15,0.779036,HIGH,20.6,33.79999999999998,69.00000000000004,173.59999999999997,295.4,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NAYAGARH,Ranpur,2024-09-16,0.7385515,HIGH,0.0,1.199999999999957,88.40000000000003,167.39999999999995,366.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NUAPADA,Boden,2019-08-08,0.8748542,VERY HIGH,55.4,45.600000000000016,94.6,207.4,264.40000000000003,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NUAPADA,Boden,2020-08-27,0.8726815,VERY HIGH,53.4,53.20000000000002,102.6,122.6,202.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NUAPADA,Boden,2022-08-15,0.80394036,HIGH,18.0,23.00000000000001,105.0,242.0,313.6,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NUAPADA,Boden,2024-09-16,0.5870088,MODERATE,0.0,0.0,15.0,32.0,142.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NUAPADA,Khariar,2019-08-08,0.83816564,HIGH,52.4,27.19999999999997,29.400000000000013,132.4,173.9,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NUAPADA,Khariar,2020-08-27,0.93349874,VERY HIGH,73.8,55.4,239.60000000000005,277.8,322.20000000000005,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NUAPADA,Khariar,2022-08-15,0.8326961,HIGH,18.8,41.19999999999998,126.0,167.0,220.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NUAPADA,Khariar,2024-09-16,0.6611842,MODERATE,0.0,0.0,36.399999999999984,113.4,224.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NUAPADA,Komna,2019-08-08,0.92214537,VERY HIGH,96.0,19.200000000000028,27.2,195.1,230.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NUAPADA,Komna,2020-08-27,0.91984665,VERY HIGH,100.2,31.200000000000028,79.8,139.0,196.7,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NUAPADA,Komna,2022-08-15,0.8742689,VERY HIGH,26.3,61.70000000000005,219.7,261.69999999999993,360.3,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NUAPADA,Komna,2024-09-16,0.66256213,MODERATE,0.0,0.0,37.0,112.0,181.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NUAPADA,Nuapada,2019-08-08,0.89352316,VERY HIGH,79.0,9.0,13.0,102.0,117.20000000000006,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NUAPADA,Nuapada,2020-08-27,0.87611306,VERY HIGH,78.0,9.0,48.0,106.0,181.00000000000009,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NUAPADA,Nuapada,2022-08-15,0.9021129,VERY HIGH,51.6,69.19999999999999,198.0,212.8,365.00000000000006,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NUAPADA,Nuapada,2024-09-16,0.8211687,HIGH,0.0,0.0,144.8,223.8,374.2000000000001,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NUAPADA,Sinapali,2019-08-08,0.8845723,VERY HIGH,86.0,10.0,27.0,124.0,147.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NUAPADA,Sinapali,2020-08-27,0.8241348,HIGH,38.0,46.0,94.0,125.0,176.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NUAPADA,Sinapali,2022-08-15,0.8767536,VERY HIGH,32.6,36.2,226.4,310.19999999999993,449.5,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+NUAPADA,Sinapali,2024-09-16,0.7217432,HIGH,0.0,0.0,26.399999999999984,38.59999999999996,298.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Astarang,2019-08-08,0.856578,VERY HIGH,8.0,85.0,138.0,291.0,333.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Astarang,2020-08-27,0.91055214,VERY HIGH,37.0,119.1,179.1,247.1,410.1,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Astarang,2022-08-15,0.8954553,VERY HIGH,5.0,219.0,268.0,393.0,634.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Astarang,2024-09-16,0.6535955,MODERATE,0.0,9.0,24.0,81.0,158.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Brahmagiri,2019-08-08,0.8901321,VERY HIGH,0.0,168.0,168.0,380.2,421.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Brahmagiri,2020-08-27,0.8228904,HIGH,20.0,32.0,87.0,147.0,219.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Brahmagiri,2022-08-15,0.8933517,VERY HIGH,10.0,96.0,160.0,274.0,488.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Brahmagiri,2024-09-16,0.651799,MODERATE,0.0,10.0,38.0,87.0,179.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Delang,2019-08-08,0.8332689,HIGH,0.0,119.0,123.0,361.2,397.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Delang,2020-08-27,0.849179,HIGH,15.0,115.0,175.0,295.0,424.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Delang,2022-08-15,0.8368416,HIGH,0.0,93.0,153.0,279.0,395.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Delang,2024-09-16,0.6884751,MODERATE,0.0,2.0,19.0,19.0,89.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Gop,2019-08-08,0.8508025,VERY HIGH,0.0,127.2,134.2,359.4,382.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Gop,2020-08-27,0.8601125,VERY HIGH,25.0,86.3,181.5,267.1,543.7,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Gop,2022-08-15,0.85828733,VERY HIGH,4.0,180.4,289.9,345.1,496.3,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Gop,2024-09-16,0.69296944,MODERATE,0.0,16.0,50.0,132.0,282.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Kakatpur,2019-08-08,0.8340809,HIGH,0.0,98.0,98.0,315.9,325.9,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Kakatpur,2020-08-27,0.88278407,VERY HIGH,25.0,119.5,186.8,311.0,554.1,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Kakatpur,2022-08-15,0.8435399,HIGH,4.3,155.2,229.8,314.2,520.5,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Kakatpur,2024-09-16,0.632693,MODERATE,0.0,14.0,36.0,91.0,163.99999999999997,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Kanas,2019-08-08,0.87163985,VERY HIGH,5.0,172.0,211.0,480.0,560.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Kanas,2020-08-27,0.8863122,VERY HIGH,43.0,72.0,122.0,317.0,484.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Kanas,2022-08-15,0.8274287,HIGH,6.0,131.0,147.0,268.0,540.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Kanas,2024-09-16,0.6619519,MODERATE,0.0,2.0,28.0,53.0,212.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Krushnaprasad,2019-08-08,0.9229351,VERY HIGH,0.0,245.0,244.99999999999997,407.0999999999999,465.3,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Krushnaprasad,2020-08-27,0.6934897,MODERATE,17.5,21.8,38.199999999999946,94.19999999999992,166.20000000000002,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Krushnaprasad,2022-08-15,0.89457893,VERY HIGH,25.0,106.9,162.89999999999995,191.8999999999999,478.7000000000001,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Krushnaprasad,2024-09-16,0.68754536,MODERATE,0.0,29.0,44.39999999999993,137.3999999999999,214.3,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Nimapara,2019-08-08,0.8042764,HIGH,10.0,85.0,88.0,177.0,190.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Nimapara,2020-08-27,0.9128816,VERY HIGH,24.0,107.0,177.0,330.0,513.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Nimapara,2022-08-15,0.76336825,HIGH,3.0,50.0,94.2,138.2,283.7,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Nimapara,2024-09-16,0.705077,HIGH,0.0,22.0,62.0,118.0,317.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Pipili,2019-08-08,0.8139617,HIGH,8.0,77.0,95.0,280.0,323.99999999999994,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Pipili,2020-08-27,0.90307796,VERY HIGH,26.0,86.0,126.0,258.0,592.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Pipili,2022-08-15,0.8029127,HIGH,13.0,63.5,112.8,211.0,383.19999999999993,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Pipili,2024-09-16,0.6905578,MODERATE,0.0,19.0,49.0,85.0,280.99999999999994,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Puri,2019-08-08,0.8863725,VERY HIGH,0.0,191.0,209.0,615.0,657.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Puri,2020-08-27,0.8417812,HIGH,16.0,70.0,115.0,224.0,348.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Puri,2022-08-15,0.8241125,HIGH,6.0,110.0,155.0,307.0,583.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Puri,2024-09-16,0.6555326,MODERATE,0.0,9.0,37.0,114.0,188.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Satyabadi,2019-08-08,0.85900015,VERY HIGH,3.0,131.0,195.0,417.0,430.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Satyabadi,2020-08-27,0.855815,VERY HIGH,34.0,56.1,97.1,183.1,389.5,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Satyabadi,2022-08-15,0.8575054,VERY HIGH,18.0,88.0,162.0,289.0,471.2,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+PURI,Satyabadi,2024-09-16,0.7222167,HIGH,0.0,11.0,62.0,155.0,297.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Bissam Cuttack,2019-08-08,0.9507623,VERY HIGH,85.8,141.0,151.5999999999999,296.00000000000006,345.5,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Bissam Cuttack,2020-08-27,0.80450004,HIGH,32.6,36.99999999999997,128.19999999999987,143.8,186.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Bissam Cuttack,2022-08-15,0.93110037,VERY HIGH,85.4,39.39999999999997,163.99999999999986,235.60000000000005,331.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Bissam Cuttack,2024-09-16,0.7325297,HIGH,0.0,0.0,118.59999999999988,141.60000000000005,239.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Chandrapur,2019-08-08,0.9236176,VERY HIGH,59.5,153.0,179.8,404.1,471.5,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Chandrapur,2020-08-27,0.771161,HIGH,10.2,49.0,123.3,170.8,197.3,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Chandrapur,2022-08-15,0.93163127,VERY HIGH,55.7,115.0,274.0,277.0,380.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Chandrapur,2024-09-16,0.59642786,MODERATE,0.0,0.0,34.3,44.8,70.79999999999998,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Gudari,2019-08-08,0.9456403,VERY HIGH,75.3,193.4000000000001,208.40000000000003,290.80000000000007,335.80000000000007,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Gudari,2020-08-27,0.7252669,HIGH,8.4,31.000000000000057,45.60000000000003,175.90000000000003,263.1,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Gudari,2022-08-15,0.93776697,VERY HIGH,75.4,59.80000000000005,161.0,187.8,287.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Gudari,2024-09-16,0.73238415,HIGH,0.0,0.0,56.2,114.60000000000004,235.5,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Gunupur,2019-08-08,0.9485989,VERY HIGH,70.2,108.0,139.0,241.0,286.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Gunupur,2020-08-27,0.71571296,HIGH,10.0,42.0,73.0,102.3,192.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Gunupur,2022-08-15,0.8893535,VERY HIGH,46.0,66.0,125.0,218.0,375.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Gunupur,2024-09-16,0.641179,MODERATE,0.0,0.0,19.0,60.99999999999999,154.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Kalyansingpur,2019-08-08,0.9700015,VERY HIGH,118.5,246.79999999999995,267.5999999999999,477.0,525.1,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Kalyansingpur,2020-08-27,0.8068681,HIGH,22.8,35.59999999999996,110.99999999999989,159.80000000000004,191.5,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Kalyansingpur,2022-08-15,0.94462276,VERY HIGH,96.4,52.59999999999994,153.79999999999987,203.3,359.29999999999995,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Kalyansingpur,2024-09-16,0.6834914,MODERATE,0.0,0.0,93.39999999999988,118.00000000000004,177.79999999999995,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Kashipur,2019-08-08,0.9662663,VERY HIGH,144.2,352.19999999999993,426.8,639.5999999999999,802.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Kashipur,2020-08-27,0.8527777,VERY HIGH,27.4,71.39999999999992,222.7,483.0,601.7,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Kashipur,2022-08-15,0.96069235,VERY HIGH,154.0,70.59999999999994,183.6,231.3,485.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Kashipur,2024-09-16,0.72168237,HIGH,2.3,10.099999999999914,78.2,149.29999999999998,194.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Kolnara,2019-08-08,0.94011724,VERY HIGH,70.7,106.0,122.4,237.79999999999995,272.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Kolnara,2020-08-27,0.7656269,HIGH,8.4,33.3,50.10000000000001,84.99999999999994,220.5,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Kolnara,2022-08-15,0.9371566,VERY HIGH,109.1,33.599999999999994,85.30000000000001,125.19999999999992,203.5,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Kolnara,2024-09-16,0.6877439,MODERATE,0.0,0.0,28.6,92.39999999999996,137.3,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Muniguda,2019-08-08,0.95168376,VERY HIGH,76.6,236.6,256.8,481.0,557.8000000000001,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Muniguda,2020-08-27,0.7687449,HIGH,24.0,46.59999999999999,91.20000000000002,122.2,197.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Muniguda,2022-08-15,0.9521944,VERY HIGH,127.0,67.60000000000001,239.2,255.0,348.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Muniguda,2024-09-16,0.6700785,MODERATE,0.0,0.0,68.00000000000001,100.0,116.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Padmapur,2019-08-08,0.94363,VERY HIGH,74.1,126.20000000000002,134.8,227.8,303.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Padmapur,2020-08-27,0.7797952,HIGH,7.6,74.7,87.80000000000004,146.69999999999996,159.5,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Padmapur,2022-08-15,0.86056805,VERY HIGH,38.0,56.5,130.20000000000002,314.6,481.5,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Padmapur,2024-09-16,0.69496137,MODERATE,0.0,0.0,20.50000000000003,32.7,150.40000000000003,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Ramanaguda,2019-08-08,0.9077166,VERY HIGH,53.5,116.6,137.2999999999999,253.4,312.70000000000005,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Ramanaguda,2020-08-27,0.7989024,HIGH,11.6,91.8,126.49999999999989,179.2,207.7,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Ramanaguda,2022-08-15,0.8947715,VERY HIGH,50.8,61.20000000000003,133.3999999999999,348.2,484.9,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Ramanaguda,2024-09-16,0.64913744,MODERATE,0.0,0.0,47.59999999999989,62.59999999999998,198.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Rayagada,2019-08-08,0.9159149,VERY HIGH,53.2,105.5,112.09999999999997,218.89999999999992,262.69999999999993,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Rayagada,2020-08-27,0.7180227,HIGH,10.2,47.19999999999999,63.39999999999998,92.59999999999994,184.79999999999995,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Rayagada,2022-08-15,0.8799375,VERY HIGH,60.5,31.599999999999994,88.19999999999997,119.1999999999999,182.59999999999997,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+RAYAGADA,Rayagada,2024-09-16,0.65562654,MODERATE,0.0,0.0,23.19999999999998,77.79999999999991,154.59999999999994,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SAMBALPUR,Bamra,2019-08-08,0.89794296,VERY HIGH,81.3,52.200000000000045,55.40000000000013,183.8,230.20000000000005,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SAMBALPUR,Bamra,2020-08-27,0.96363217,VERY HIGH,152.0,76.40000000000005,122.40000000000012,232.8,327.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SAMBALPUR,Bamra,2022-08-15,0.96310145,VERY HIGH,165.0,87.20000000000005,184.0000000000001,263.8,350.6000000000001,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SAMBALPUR,Bamra,2024-09-16,0.4587926,MODERATE,3.8,13.800000000000058,28.000000000000146,82.00000000000003,536.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SAMBALPUR,Dhankauda,2019-08-08,0.82542646,HIGH,50.2,15.3,25.89999999999994,129.2,129.20000000000002,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SAMBALPUR,Dhankauda,2020-08-27,0.90923613,VERY HIGH,65.4,83.9,165.39999999999995,339.4,473.5,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SAMBALPUR,Dhankauda,2022-08-15,0.92842484,VERY HIGH,52.0,221.0,378.0,388.3,488.2,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SAMBALPUR,Dhankauda,2024-09-16,0.7353121,HIGH,2.0,0.0,52.199999999999946,68.59999999999994,366.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SAMBALPUR,Jamankira,2019-08-08,0.80149174,HIGH,42.6,16.4,24.40000000000004,72.39999999999993,110.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SAMBALPUR,Jamankira,2020-08-27,0.96580327,VERY HIGH,173.0,78.00000000000001,145.80000000000004,269.9999999999999,463.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SAMBALPUR,Jamankira,2022-08-15,0.93990934,VERY HIGH,116.2,108.60000000000002,296.00000000000006,309.3999999999999,472.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SAMBALPUR,Jamankira,2024-09-16,0.7471601,HIGH,10.6,41.0,78.80000000000001,89.99999999999993,246.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SAMBALPUR,Jujumura,2019-08-08,0.82007134,HIGH,66.6,0.9999999999999964,43.4,116.79999999999998,177.79999999999998,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SAMBALPUR,Jujumura,2020-08-27,0.8863142,VERY HIGH,46.6,153.99999999999994,235.2,386.8,812.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SAMBALPUR,Jujumura,2022-08-15,0.9436756,VERY HIGH,82.6,121.79999999999995,247.6,295.6,575.4,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SAMBALPUR,Jujumura,2024-09-16,0.6558612,MODERATE,2.8,7.800000000000003,48.40000000000002,63.80000000000006,197.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SAMBALPUR,Kuchinda,2019-08-08,0.9496641,VERY HIGH,204.2,57.60000000000003,62.79999999999985,140.89999999999998,182.29999999999995,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SAMBALPUR,Kuchinda,2020-08-27,0.9680167,VERY HIGH,153.8,89.40000000000003,159.19999999999985,267.79999999999995,469.5,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SAMBALPUR,Kuchinda,2022-08-15,0.95006573,VERY HIGH,115.2,144.90000000000003,200.69999999999987,226.19999999999996,286.49999999999994,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SAMBALPUR,Kuchinda,2024-09-16,0.70872766,HIGH,7.2,37.80000000000004,84.39999999999984,102.19999999999992,282.99999999999994,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SAMBALPUR,Maneswar,2019-08-08,0.82770354,HIGH,66.2,14.8,30.0,112.09999999999994,158.70000000000002,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SAMBALPUR,Maneswar,2020-08-27,0.9241125,VERY HIGH,63.4,95.0,154.5,334.29999999999995,545.3,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SAMBALPUR,Maneswar,2022-08-15,0.9465054,VERY HIGH,85.4,187.8,283.20000000000005,306.79999999999995,407.80000000000007,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SAMBALPUR,Maneswar,2024-09-16,0.6928857,MODERATE,0.6,13.399999999999986,48.6,48.59999999999992,326.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SAMBALPUR,Naktideul,2019-08-08,0.7573175,HIGH,18.0,0.0,16.0,62.0,72.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SAMBALPUR,Naktideul,2020-08-27,0.9613149,VERY HIGH,125.0,70.0,174.0,303.0,553.9,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SAMBALPUR,Naktideul,2022-08-15,0.9495839,VERY HIGH,115.0,106.0,232.5,243.5,376.5,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SAMBALPUR,Naktideul,2024-09-16,0.7083568,HIGH,18.0,12.0,45.0,60.0,180.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SAMBALPUR,Rairakhol,2019-08-08,0.8934039,VERY HIGH,76.0,9.0,42.4,263.6,299.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SAMBALPUR,Rairakhol,2020-08-27,0.9440126,VERY HIGH,99.0,116.0,179.0,346.0,552.3,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SAMBALPUR,Rairakhol,2022-08-15,0.9454779,VERY HIGH,93.0,68.0,163.0,191.5,278.5,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SAMBALPUR,Rairakhol,2024-09-16,0.7699763,HIGH,1.0,20.0,128.0,149.0,307.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SAMBALPUR,Rengali,2019-08-08,0.87603354,VERY HIGH,82.6,9.799999999999986,28.199999999999942,107.40000000000003,127.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SAMBALPUR,Rengali,2020-08-27,0.95445734,VERY HIGH,171.8,82.59999999999997,236.39999999999995,464.0,621.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SAMBALPUR,Rengali,2022-08-15,0.9488375,VERY HIGH,99.4,128.99999999999997,246.99999999999997,275.6,380.6,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SAMBALPUR,Rengali,2024-09-16,0.6874213,MODERATE,0.0,10.799999999999994,47.799999999999976,59.400000000000006,319.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUBARNAPUR,Binika,2019-08-08,0.9338271,VERY HIGH,73.4,48.4,53.6,190.70000000000005,198.5,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUBARNAPUR,Binika,2020-08-27,0.9104373,VERY HIGH,42.2,201.6,250.0,384.6,522.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUBARNAPUR,Binika,2022-08-15,0.8751096,VERY HIGH,21.1,172.5,242.2,271.50000000000006,430.9,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUBARNAPUR,Binika,2024-09-16,0.69331235,MODERATE,0.0,5.000000000000014,92.0,109.00000000000006,191.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUBARNAPUR,Birmaharajpur,2019-08-08,0.8103956,HIGH,38.0,33.0,34.0,167.80000000000004,197.1,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUBARNAPUR,Birmaharajpur,2020-08-27,0.95728314,VERY HIGH,111.2,163.3,218.7,427.1000000000001,594.8000000000001,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUBARNAPUR,Birmaharajpur,2022-08-15,0.90615296,VERY HIGH,46.0,141.0,234.0,247.4000000000001,406.3,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUBARNAPUR,Birmaharajpur,2024-09-16,0.7971131,HIGH,0.0,5.0,167.0,169.0000000000001,351.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUBARNAPUR,Dunguripali,2019-08-08,0.7689075,HIGH,25.0,10.0,22.0,230.0,255.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUBARNAPUR,Dunguripali,2020-08-27,0.92951035,VERY HIGH,57.0,173.0,308.0,474.0,579.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUBARNAPUR,Dunguripali,2022-08-15,0.93756294,VERY HIGH,61.0,153.0,323.0,348.0,539.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUBARNAPUR,Dunguripali,2024-09-16,0.75206846,HIGH,0.0,18.0,111.0,128.0,264.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUBARNAPUR,Sonepur,2019-08-08,0.96374154,VERY HIGH,124.0,69.99999999999997,76.0,240.2,244.3,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUBARNAPUR,Sonepur,2020-08-27,0.9510996,VERY HIGH,88.0,168.99999999999997,231.0,452.0,710.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUBARNAPUR,Sonepur,2022-08-15,0.9067406,VERY HIGH,26.0,169.99999999999997,253.0,323.0,505.2,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUBARNAPUR,Sonepur,2024-09-16,0.7732328,HIGH,0.0,0.0,118.0,168.0,328.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUBARNAPUR,Tarbha,2019-08-08,0.9766898,VERY HIGH,132.0,243.6,251.6,396.2,401.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUBARNAPUR,Tarbha,2020-08-27,0.9043393,VERY HIGH,49.4,104.0,140.0,243.6,409.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUBARNAPUR,Tarbha,2022-08-15,0.8823189,VERY HIGH,34.0,97.0,190.8,215.2,504.6,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUBARNAPUR,Tarbha,2024-09-16,0.844243,HIGH,2.0,20.4,146.0,192.2,395.19999999999993,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUBARNAPUR,Ullunda,2019-08-08,0.93632054,VERY HIGH,103.0,53.4,63.60000000000005,314.2,336.00000000000006,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUBARNAPUR,Ullunda,2020-08-27,0.91654265,VERY HIGH,54.0,192.4,259.6,407.2,580.4000000000001,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUBARNAPUR,Ullunda,2022-08-15,0.89769787,VERY HIGH,27.4,188.4,267.40000000000003,323.8,541.4000000000001,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUBARNAPUR,Ullunda,2024-09-16,0.78908116,HIGH,1.0,0.9999999999999716,128.4000000000001,151.60000000000002,309.0000000000001,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Balisankara,2019-08-08,0.83982444,HIGH,40.4,56.1,59.60000000000001,152.6,157.39999999999998,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Balisankara,2020-08-27,0.9151636,VERY HIGH,92.4,14.399999999999986,117.6,158.2,317.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Balisankara,2022-08-15,0.94403476,VERY HIGH,76.6,206.2,236.0,385.6,477.6,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Balisankara,2024-09-16,0.682605,MODERATE,5.0,25.99999999999996,51.399999999999984,98.4,368.19999999999993,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Bargaon,2019-08-08,0.85529566,VERY HIGH,55.6,64.2,67.79999999999995,156.0,174.3,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Bargaon,2020-08-27,0.9422452,VERY HIGH,114.2,42.99999999999999,98.39999999999996,195.4,321.79999999999995,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Bargaon,2022-08-15,0.95417374,VERY HIGH,107.2,147.6,190.19999999999996,199.8,310.6,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Bargaon,2024-09-16,0.73023486,HIGH,1.6,3.6,4.999999999999957,9.2,326.99999999999994,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Bisra,2019-08-08,0.79578286,HIGH,30.5,0.0,2.400000000000156,137.70000000000002,159.99999999999994,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Bisra,2020-08-27,0.9409497,VERY HIGH,88.2,48.199999999999946,184.20000000000013,267.4,422.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Bisra,2022-08-15,0.9012233,VERY HIGH,42.4,118.79999999999995,144.20000000000013,173.79999999999995,331.8999999999999,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Bisra,2024-09-16,0.8022198,HIGH,26.2,54.299999999999926,71.50000000000011,113.89999999999992,287.0999999999999,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Bonai,2019-08-08,0.90903354,VERY HIGH,104.0,13.4,13.4,102.0,111.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Bonai,2020-08-27,0.9671061,VERY HIGH,129.0,158.0,268.0,329.0,515.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Bonai,2022-08-15,0.9468977,VERY HIGH,75.0,202.0,269.0,308.0,455.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Bonai,2024-09-16,0.71679,HIGH,13.0,60.0,67.0,96.0,345.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Gurundia,2019-08-08,0.9467527,VERY HIGH,145.6,13.799999999999963,14.8,138.60000000000002,207.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Gurundia,2020-08-27,0.96671826,VERY HIGH,150.0,83.79999999999994,253.6,306.79999999999995,518.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Gurundia,2022-08-15,0.947981,VERY HIGH,95.0,128.99999999999994,177.40000000000003,191.2,251.8,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Gurundia,2024-09-16,0.7646346,HIGH,17.4,51.39999999999994,70.20000000000003,92.20000000000005,335.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Hemgir,2019-08-08,0.9501049,VERY HIGH,190.0,17.6,29.599999999999945,103.40000000000008,121.9,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Hemgir,2020-08-27,0.94903,VERY HIGH,128.0,81.6,192.19999999999996,424.80000000000007,559.5999999999999,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Hemgir,2022-08-15,0.96054935,VERY HIGH,140.0,242.4,284.2,338.8000000000001,528.8,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Hemgir,2024-09-16,0.71306396,HIGH,2.0,5.999999999999993,78.39999999999998,87.60000000000011,291.99999999999994,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Koira,2019-08-08,0.76127785,HIGH,46.0,8.0,15.0,62.0,116.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Koira,2020-08-27,0.970005,VERY HIGH,178.0,130.0,217.0,305.0,435.9,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Koira,2022-08-15,0.9173616,VERY HIGH,47.2,226.0,288.8,291.4,404.8,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Koira,2024-09-16,0.86068165,VERY HIGH,47.0,52.0,88.0,91.00000000000004,276.7,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Kuarmunda,2019-08-08,0.81698734,HIGH,38.4,35.800000000000004,40.39999999999997,185.2,201.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Kuarmunda,2020-08-27,0.88458973,VERY HIGH,52.2,48.20000000000003,162.0,217.0,419.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Kuarmunda,2022-08-15,0.9260273,VERY HIGH,71.2,99.60000000000002,117.39999999999998,133.0,210.4,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Kuarmunda,2024-09-16,0.7233862,HIGH,6.2,77.80000000000004,92.39999999999998,125.2,365.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Kutra,2019-08-08,0.78806216,HIGH,29.6,16.800000000000058,16.800000000000022,91.60000000000002,139.80000000000004,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Kutra,2020-08-27,0.8542426,VERY HIGH,57.6,25.800000000000058,98.20000000000005,141.20000000000002,356.50000000000006,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Kutra,2022-08-15,0.96143526,VERY HIGH,136.3,118.30000000000004,163.8,182.20000000000005,330.70000000000005,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Kutra,2024-09-16,0.77267003,HIGH,32.4,35.40000000000004,43.59999999999999,54.00000000000006,352.50000000000006,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Lahunipara,2019-08-08,0.8907992,VERY HIGH,93.3,5.000000000000057,10.000000000000028,84.0,124.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Lahunipara,2020-08-27,0.95729285,VERY HIGH,108.0,133.20000000000005,257.40000000000003,301.6,504.7,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Lahunipara,2022-08-15,0.885884,VERY HIGH,38.6,141.20000000000007,177.8,231.6,291.4,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Lahunipara,2024-09-16,0.70079404,HIGH,8.0,28.20000000000004,34.60000000000002,41.8,263.8,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Lathikata,2019-08-08,0.8276978,HIGH,54.0,3.5,6.0,152.7,164.3,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Lathikata,2020-08-27,0.9493048,VERY HIGH,108.0,107.0,223.0,306.0,559.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Lathikata,2022-08-15,0.9286665,VERY HIGH,86.0,87.0,126.0,132.0,203.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Lathikata,2024-09-16,0.71259815,HIGH,15.0,33.999999999999986,39.000000000000014,59.0,338.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Lephripara,2019-08-08,0.8943856,VERY HIGH,117.0,0.0,7.0,40.2,42.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Lephripara,2020-08-27,0.9646014,VERY HIGH,140.0,63.0,210.0,332.0,462.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Lephripara,2022-08-15,0.94881326,VERY HIGH,101.3,200.0,240.7,282.5,414.0,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Lephripara,2024-09-16,0.6889014,MODERATE,0.0,7.4,46.2,55.50000000000003,278.7,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Nuagaon,2019-08-08,0.77969533,HIGH,17.2,57.5,64.60000000000001,156.59999999999994,192.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Nuagaon,2020-08-27,0.8285556,HIGH,33.1,37.3,123.8,190.29999999999995,331.7,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Nuagaon,2022-08-15,0.8809268,VERY HIGH,38.2,67.70000000000002,100.4,108.99999999999994,147.9,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Nuagaon,2024-09-16,0.8248571,HIGH,23.3,93.40000000000003,111.90000000000002,123.29999999999998,303.6,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Rajgangpur,2019-08-08,0.80864316,HIGH,38.2,15.399999999999984,16.4,69.79999999999995,82.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Rajgangpur,2020-08-27,0.9440756,VERY HIGH,138.8,26.79999999999995,96.6,125.39999999999996,352.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Rajgangpur,2022-08-15,0.9626961,VERY HIGH,183.2,196.79999999999995,249.4,250.4,303.4,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Rajgangpur,2024-09-16,0.7904275,HIGH,32.0,56.79999999999994,72.00000000000003,84.8,494.9,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Subdega,2019-08-08,0.7915551,HIGH,40.0,10.0,10.0,62.0,75.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Subdega,2020-08-27,0.9474779,VERY HIGH,126.0,18.0,163.0,237.0,391.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Subdega,2022-08-15,0.94672936,VERY HIGH,72.6,222.8,251.8,414.0,508.6,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Subdega,2024-09-16,0.7047273,HIGH,15.0,0.0,30.999999999999982,75.0,371.0,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Sundargarh,2019-08-08,0.7857627,HIGH,45.1,19.400000000000016,23.700000000000056,156.10000000000008,197.3,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Sundargarh,2020-08-27,0.93936914,VERY HIGH,101.2,40.3,172.50000000000006,275.4000000000001,405.2,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Sundargarh,2022-08-15,0.9368871,VERY HIGH,72.3,202.0,253.60000000000008,270.6000000000001,378.9,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Sundargarh,2024-09-16,0.6875643,MODERATE,5.4,15.000000000000032,48.80000000000005,62.70000000000009,493.7,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Tangarpali,2019-08-08,0.7997834,HIGH,45.4,2.4,6.9,107.3,129.1,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Tangarpali,2020-08-27,0.9633885,VERY HIGH,130.4,75.80000000000001,252.1,348.3,467.7,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Tangarpali,2022-08-15,0.9420349,VERY HIGH,90.4,194.00000000000003,227.40000000000003,275.4,352.2,1,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos
+SUNDARGARH,Tangarpali,2024-09-16,0.7127353,HIGH,6.2,43.800000000000026,68.00000000000003,72.60000000000005,487.4,0,Rainfall_Prev_7d_Sum,Rainfall_Prev_3d_Sum,Month_cos

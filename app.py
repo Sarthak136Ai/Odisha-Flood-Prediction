@@ -21,7 +21,12 @@ from werkzeug.utils import secure_filename
 
 from config import Config
 from src.data.combine_data import STANDARD_DISTRICTS, standardize_district_name
-from src.geospatial.spatial_risk import ODISHA_DISTRICT_COORDINATES, calculate_district_historical_risk
+from src.geospatial.spatial_risk import (
+    ODISHA_DISTRICT_COORDINATES,
+    calculate_district_historical_risk,
+    build_3d_risk_geojson,
+    load_odisha_districts_geojson
+)
 from src.models.predict import FloodPredictor
 from src.explainability.shap_analysis import explain_instance
 from src.inference.unseen_2025_pipeline import (
@@ -230,6 +235,29 @@ def risk_map():
     )
 
 
+@app.route("/3d-risk-map")
+def risk_map_3d():
+    """Interactive 3D Geospatial Flood Risk & Extrusion Map of Odisha."""
+    available_dates = [
+        {"value": "2025-08-15", "label": "2025-08-15 (Peak Monsoon 2025 - Operational)", "badge": "2025 Operational"},
+        {"value": "2025-07-25", "label": "2025-07-25 (High Inundation Risk Day)", "badge": "2025 Operational"},
+        {"value": "2025-09-08", "label": "2025-09-08 (Late Monsoon Surge)", "badge": "2025 Operational"},
+        {"value": "2022-08-15", "label": "2022-08-15 (Mahanadi River Basin Mega-Flood)", "badge": "Historical Replay"},
+        {"value": "2024-09-16", "label": "2024-09-16 (Subarnarekha / Balasore Extreme)", "badge": "Historical Replay"},
+        {"value": "2020-08-27", "label": "2020-08-27 (Bhadrak / Coastal Inundation)", "badge": "Historical Replay"},
+        {"value": "2019-08-08", "label": "2019-08-08 (Statewide Monsoon Depression)", "badge": "Historical Replay"}
+    ]
+    return render_template(
+        "risk_map_3d.html",
+        active_page="3d-risk-map",
+        districts=STANDARD_DISTRICTS,
+        available_dates=available_dates,
+        default_date="2025-08-15",
+        default_layer="probability",
+        optimal_threshold=state.predictor.threshold if state.predictor else 0.8073
+    )
+
+
 @app.route("/drilldown")
 def drilldown():
     """District & Block level station inspection with real-time SHAP attributions."""
@@ -381,6 +409,56 @@ def api_district_risk():
             for d in STANDARD_DISTRICTS
         ]
     return jsonify({"status": "success", "districts": data})
+
+
+@app.route("/api/3d-risk-data", methods=["GET"])
+def api_3d_risk_data():
+    """
+    Returns enriched 3D GeoJSON FeatureCollection and state summary for a specified date and layer.
+    Extrusion heights and properties are dynamically calculated using frozen model outputs.
+    """
+    date_str = request.args.get("date", "2025-08-15").strip()
+    data_layer = request.args.get("layer", "probability").strip().lower()
+    district_filter = request.args.get("district", "").strip().upper()
+
+    try:
+        enriched_geojson, summary = build_3d_risk_geojson(
+            date_str=date_str,
+            cached_2025_df=state.cached_2025_predictions,
+            district_risk_df=state.district_risk_df,
+            data_layer=data_layer
+        )
+
+        # Optional single-district filtering
+        if district_filter:
+            dist_std = standardize_district_name(district_filter)
+            filtered_features = [
+                f for f in enriched_geojson.get("features", [])
+                if f["properties"].get("district_name") == dist_std
+            ]
+            if filtered_features:
+                enriched_geojson["features"] = filtered_features
+
+        return jsonify({
+            "status": "success",
+            "geojson": enriched_geojson,
+            "summary": summary
+        })
+    except Exception as e:
+        logger.error(f"Error generating 3D risk data: {e}", exc_info=True)
+        return jsonify({"status": "error", "message": str(e)}), 500
+
+
+@app.route("/api/geospatial/odisha-districts.geojson", methods=["GET"])
+def api_odisha_districts_geojson():
+    """Serve base Odisha 30-district GeoJSON boundary file."""
+    try:
+        data = load_odisha_districts_geojson()
+        return jsonify(data)
+    except Exception as e:
+        logger.error(f"Failed to load district boundaries: {e}")
+        return jsonify({"status": "error", "message": "Boundary data not found."}), 404
+
 
 
 @app.route("/api/districts", methods=["GET"])

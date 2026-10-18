@@ -1,9 +1,9 @@
 # Odisha Flood Intelligence & Early Warning System
 ## Master Project Progress & Architecture Tracker
 
-**Last Updated:** 2026-10-18 09:30:00 IST  
+**Last Updated:** 2026-10-18 10:15:00 IST  
 **Current Phase:** Production Deployment & GitHub Sync  
-**Overall Status:** **100% Completed & Verified** (157/157 Automated Unit & Integration Tests Passing)
+**Overall Status:** **100% Completed & Verified** (169/169 Automated Unit & Integration Tests Passing)
 
 ---
 
@@ -77,6 +77,7 @@ The **Odisha Flood Intelligence & Early Warning System** is an end-to-end, spati
 | **37** | Chatbot Interface Layer Scientific Audit & Grounded Response System | **Completed** | Strict interface layer design (never computes or invents predictions), deterministic grounding via live `FloodPredictor` and `model_metadata.json`, removed all unverified "hallucination-free" phrasing, dynamic answers for all 7 audited queries, explicit missing data guards (`Sufficient project data is not available: ...`), 17 comprehensive unit/negative tests in `tests/test_chatbot.py`, and technical report `docs/chatbot_architecture.md` |
 | **38** | Experiment Reproducibility, Model Metadata & Feature Schema Validation | **Completed** | Implemented automated model metadata generation (`src/models/metadata.py`), 15 required reproducibility keys, dynamic environment discovery (zero hardcoding), chunked SHA-256 dataset hashing (`1145a2ae6ac1bdaf...`), unified `ModelBundle` loading, strict pre-prediction feature schema validation blocking invalid inputs with `SchemaValidationError`, technical documentation `docs/model_reproducibility.md`, and 14 unit tests in `tests/test_model_metadata.py` (147 total tests passing) |
 | **39** | Dedicated Automated Data Leakage Prevention Engine & Test Suite | **Completed** | Implemented 10 rigorous leakage prevention tests in `tests/test_data_leakage.py` enforcing zero target leakage (`Flood_Next_Day`/`Flood_T+*`), empirical lookahead causality invariance, rolling window antecedent `shift(1)` isolation, chronological split ordering (`Train < Val < Test`), validation-only threshold tuning, scaler fitting isolation on `X_train`, validation-only probability calibration, station/date split uniqueness, feature schema parity, and frozen 2025 operational inference |
+| **40** | Interactive 3D Geospatial Flood Risk Atlas & Vertical Extrusion Engine | **Completed** | Integrated MapLibre GL JS 3D choropleth map (`/3d-risk-map`), authentic 30-district census boundaries (`EPSG:4326`, DataMeet WGS-84), dynamic vertical polygon extrusion based on model predictions and rainfall metrics, REST endpoint `/api/3d-risk-data`, 4 extrusion layers, hover tooltips, detailed inspector panel, Top-8 vulnerability rankings, side-by-side comparator, full technical report `docs/3d_geospatial_risk_map.md`, and 10 unit tests in `tests/test_3d_risk_map.py` (169 total tests passing) |
 
 ---
 
@@ -94,7 +95,8 @@ The **Odisha Flood Intelligence & Early Warning System** is an end-to-end, spati
 
 ## 🧪 Automated Test Verification
 
-All **157 test cases** in `tests/` pass with 100% success rate:
+All **169 test cases** in `tests/` pass with 100% success rate:
+- `tests/test_3d_risk_map.py`: 10 Dedicated 3D Geospatial Flood Risk Atlas tests (page route, GeoJSON schema, geometry bounds, census identifier matching, risk color mapping, missing prediction fallback, invalid date resilience, multi-layer extrusion heights, historical disaster presets, raw GeoJSON API)
 - `tests/test_data_leakage.py`: 10 Dedicated data leakage prevention tests (target exclusion, future lookahead causality, rolling antecedent shift, temporal order, validation-only threshold tuning, scaler isolation, validation-only calibration, cross-split uniqueness, feature schema parity, and frozen 2025 operational inference)
 - `tests/test_model_metadata.py`: 14 Model metadata schema completeness, SHA-256 verification, dynamic environment discovery, ModelBundle loading, and schema validation edge-case tests
 - `tests/test_downscaling.py`: 8 Coarse spatial aggregation, perfect agreement, known bias, zero variance, benchmark table, IMD intensity tiers, non-negativity clipping & lookahead leakage prevention tests
@@ -108,7 +110,7 @@ All **157 test cases** in `tests/` pass with 100% success rate:
 - `tests/test_threshold_selection.py`: 7 Zero-leakage, multi-strategy, F2/recall-oriented & schema tests
 - `tests/test_temporal_validation.py`: 6 Temporal walk-forward causal order, isolation & metric tests
 - `tests/test_data_quality.py`: 7 Data quality validation rules & report integrity tests
-- `tests/test_routes.py`: 12 Flask page route and view tests
+- `tests/test_routes.py`: 19 Flask page route, REST endpoint & 3D view tests
 - `tests/test_prediction.py`: 9 Model inference, forecaster & simulator tests
 - `tests/test_operational_2025.py`: 6 Operational ingestion & pipeline tests
 - `tests/test_unseen_2025.py`: 2 Unseen 2025 telemetry tests

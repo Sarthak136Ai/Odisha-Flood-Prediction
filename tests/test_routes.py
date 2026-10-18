@@ -145,3 +145,25 @@ def test_api_system_status(client):
     json_data = response.get_json()
     assert json_data["status"] == "operational"
     assert json_data["predictor_ready"] is True
+
+
+def test_3d_risk_map_route(client):
+    """Test /3d-risk-map route renders 3D Geospatial Atlas view."""
+    response = client.get("/3d-risk-map")
+    assert response.status_code == 200
+    assert b"3D Geospatial Flood Risk Atlas" in response.data or b"3D Flood Risk Map" in response.data
+    assert b"odisha-3d-map" in response.data
+
+
+def test_api_3d_risk_data_endpoint(client):
+    """Test /api/3d-risk-data endpoint returns valid GeoJSON and summary."""
+    response = client.get("/api/3d-risk-data?date=2025-08-15&layer=probability")
+    assert response.status_code == 200
+    data = response.get_json()
+    assert data["status"] == "success"
+    assert "geojson" in data
+    assert "summary" in data
+    assert len(data["geojson"]["features"]) == 30
+    assert data["summary"]["total_districts"] == 30
+    assert "highest_risk_district" in data["summary"]
+

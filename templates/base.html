@@ -48,6 +48,10 @@
           <i class="fa-solid fa-map-location-dot"></i>
           <span>Odisha Risk Map</span>
         </a>
+        <a href="{{ url_for('risk_map_3d') }}" class="nav-link-item {% if active_page == '3d-risk-map' %}active{% endif %}">
+          <i class="fa-solid fa-cube"></i>
+          <span>3D Flood Risk Map</span>
+        </a>
         <a href="{{ url_for('drilldown') }}" class="nav-link-item {% if active_page == 'drilldown' %}active{% endif %}">
           <i class="fa-solid fa-magnifying-glass-location"></i>
           <span>District & Block Drilldown</span>
