@@ -73,21 +73,23 @@ def classify_flood_risk(probability: float) -> Tuple[str, str, float]:
     """
     Categorize predicted probability into standardized risk tier, hex color, and base extrusion scale.
     
-    Tiers:
-    - LOW (< 0.30): #10b981 (Green)
-    - MODERATE (0.30 to < 0.70): #eab308 (Yellow)
-    - HIGH (0.70 to < 0.85): #f97316 (Orange)
-    - VERY HIGH (>= 0.85): #ef4444 (Red)
+    Tiers (aligned with champion model decision threshold T* = 0.8073):
+    - LOW (< 0.35): #10b981 (Green)
+    - MODERATE (0.35 to < 0.65): #eab308 (Yellow)
+    - HIGH (0.65 to < 0.80): #f97316 (Orange)
+    - VERY HIGH (>= 0.80): #ef4444 (Red)
     """
     p = float(max(0.0, min(1.0, probability)))
-    if p >= 0.85:
-        return "VERY HIGH", "#ef4444", p * 60000.0 + 2000.0
-    elif p >= 0.70:
-        return "HIGH", "#f97316", p * 55000.0 + 1500.0
-    elif p >= 0.30:
-        return "MODERATE", "#eab308", p * 45000.0 + 1000.0
+    # Non-linear power scale creates distinct vertical relief across low, moderate, and critical districts
+    extrusion_h = float(max(1000.0, min(62000.0, (p ** 2.2) * 60000.0 + 1200.0)))
+    if p >= 0.80:
+        return "VERY HIGH", "#ef4444", extrusion_h
+    elif p >= 0.65:
+        return "HIGH", "#f97316", extrusion_h
+    elif p >= 0.35:
+        return "MODERATE", "#eab308", extrusion_h
     else:
-        return "LOW", "#10b981", max(1000.0, p * 35000.0)
+        return "LOW", "#10b981", extrusion_h
 
 
 def calculate_district_historical_risk(df: pd.DataFrame) -> pd.DataFrame:

@@ -104,9 +104,9 @@ In [`src/data/combine_data.py`](file:///c:/Users/hp/OneDrive/Desktop/Odisha_Floo
 
 ### 4.1 Technology Choice: MapLibre GL JS
 The module utilizes **MapLibre GL JS (v3.6.2)**, an open-source, non-commercial WebGL mapping engine:
-- **Zero API Key Requirements:** Runs without proprietary tokens or usage limits.
+- **Zero API Key Requirements:** Runs without proprietary tokens, subscriptions, or watermarks.
 - **Native 3D Fill Extrusion:** Uses hardware-accelerated GPU polygon extrusion (`type: 'fill-extrusion'`).
-- **Free Vector/Raster Tiles:** Integrates CARTO Dark Matter raster tiles (high-contrast disaster response basemap displaying rivers, coastlines, state borders, and roads).
+- **Free Vector/Raster Tiles:** Integrates Esri World Dark Gray Base & Reference raster tiles (clean, high-contrast, non-watermarked disaster response basemap displaying rivers, coastlines, state borders, and roads).
 - **Directional 3D Shading:** Configured with a directional sun light anchor (`viewport`, intensity: $0.62$, position: $[1.15, 210, 30]$), generating photorealistic wall shading and depth gradients.
 
 ### 4.2 Multi-Layer 3D Extrusion Scale
@@ -114,17 +114,17 @@ The map supports 4 data layers selectable from the toolbar. Each layer calculate
 
 | Extrusion Layer | Data Driver | Formula / Scale Range | Height Range ($\text{meters}$) |
 | :--- | :--- | :--- | :---: |
-| **Predicted Flood Probability (Default)** | Model $P(\text{Flood})$ | $H = P \times 55,000\text{ m} + 1,000\text{ m}$ (tiered up to $62,000\text{ m}$) | $1,000\text{ m} - 62,000\text{ m}$ |
+| **Predicted Flood Probability (Default)** | Model $P(\text{Flood})$ | $H = (P^{2.2}) \times 60,000\text{ m} + 1,200\text{ m}$ (power-scaled for vivid vertical contrast) | $1,200\text{ m} - 61,200\text{ m}$ |
 | **Daily Rainfall** | 24-hr Precipitation | $H = \min\left(50,000, \frac{R_{\text{daily}}}{200\text{ mm}} \times 49,000 + 1,000\right)$ | $1,000\text{ m} - 50,000\text{ m}$ |
 | **7-Day Antecedent Rainfall** | Prev 7-Day Cumulative | $H = \min\left(50,000, \frac{R_{\text{7d}}}{400\text{ mm}} \times 49,000 + 1,000\right)$ | $1,000\text{ m} - 50,000\text{ m}$ |
 | **24-Year Historical Flood Rate** | 2001–2024 Frequency | $H = \min\left(50,000, \frac{\text{Rate}_{\%}}{6\%} \times 49,000 + 1,000\right)$ | $1,000\text{ m} - 50,000\text{ m}$ |
 
 ### 4.3 Risk Classification Color Hierarchy
-Color styling adheres strictly to disaster management communication standards:
-- 🟢 **LOW RISK ($P < 0.30$):** `#10b981` (Emerald Green)
-- 🟡 **MODERATE RISK ($0.30 \le P < 0.70$):** `#eab308` (Amber Yellow)
-- 🟠 **HIGH RISK ($0.70 \le P < 0.85$):** `#f97316` (Vibrant Orange)
-- 🔴 **VERY HIGH RISK ($P \ge 0.85$):** `#ef4444` (Crimson Red)
+Color styling adheres strictly to disaster management communication standards and is calibrated to the champion model's optimal classification decision threshold ($T^* = 0.8073$):
+- 🟢 **LOW RISK ($P < 0.35$):** `#10b981` (Emerald Green)
+- 🟡 **MODERATE RISK ($0.35 \le P < 0.65$):** `#eab308` (Amber Yellow)
+- 🟠 **HIGH RISK ($0.65 \le P < 0.80$):** `#f97316` (Vibrant Orange)
+- 🔴 **VERY HIGH RISK ($P \ge 0.80$):** `#ef4444` (Crimson Red)
 
 ---
 
@@ -141,9 +141,11 @@ Color styling adheres strictly to disaster management communication standards:
    - **Reset View:** Re-centers camera on Odisha ($20.45^\circ\text{ N}, 84.45^\circ\text{ E}$, zoom: $6.85$, pitch: $55^\circ$, bearing: $-12^\circ$).
    - **2D/3D Mode Toggle:** Transitions smoothly between 3D extrusion ($55^\circ$ pitch) and planar 2D choropleth ($0^\circ$ pitch).
    - **Continuous Orbit (Auto-Rotate):** Automatically rotates camera around the state for disaster monitoring displays.
-   - **Basemap Switcher:** CARTO Dark Canvas (default), CARTO Light, OpenStreetMap, and Esri Satellite.
-4. **Historical Replay Presets:**
-   - `2025-08-15`: Peak Monsoon 2025 (Operational Telemetry)
+   - **Basemap Switcher:** Esri Dark Canvas (clean, default), Esri Light Gray, OpenStreetMap, and Esri Satellite.
+4. **Operational & Replay Presets:**
+   - `2025-07-15`: Mid-Monsoon Active Inundation Surge (Operational Telemetry)
+   - `2025-08-15`: Peak Monsoon Statewide Depression (Operational Telemetry)
+   - `2025-06-20`: Early Monsoon Onset - Low/Mod Baseline (Operational Telemetry)
    - `2025-07-25`: High Inundation Risk Event (Operational Telemetry)
    - `2025-09-08`: Late Monsoon Surge (Operational Telemetry)
    - `2022-08-15`: Mahanadi River Basin Mega-Flood (Historical Replay)

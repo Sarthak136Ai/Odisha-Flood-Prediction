@@ -12,7 +12,8 @@
   .map-3d-container {
     position: relative;
     width: 100%;
-    height: 680px;
+    height: calc(100vh - 205px);
+    min-height: 560px;
     border-radius: 8px;
     overflow: hidden;
     background-color: #070d1e;
@@ -24,31 +25,32 @@
   .map-floating-panel {
     position: absolute;
     z-index: 10;
-    background: rgba(11, 21, 43, 0.90);
+    background: rgba(11, 21, 43, 0.92);
     backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 8px;
     padding: 10px 14px;
     color: #f1f5f9;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55);
   }
   .legend-3d {
     bottom: 24px;
     left: 20px;
     font-size: 11px;
-    max-width: 260px;
+    max-width: 270px;
   }
   .legend-item {
     display: flex;
     align-items: center;
     gap: 8px;
     margin-bottom: 4px;
+    color: #e2e8f0;
   }
   .legend-color-box {
     width: 16px;
     height: 12px;
     border-radius: 2px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.25);
   }
   .map-loading-overlay {
     position: absolute;
@@ -66,7 +68,7 @@
   }
   .tooltip-3d-card {
     background: rgba(11, 21, 43, 0.96);
-    border: 1px solid rgba(0, 180, 216, 0.4);
+    border: 1px solid rgba(0, 180, 216, 0.5);
     border-radius: 6px;
     padding: 8px 12px;
     color: #f1f5f9;
@@ -98,129 +100,170 @@
   .cursor-pointer:hover {
     background-color: rgba(0, 180, 216, 0.1) !important;
   }
+
+  /* High-Contrast Inspector Elements */
+  .inspector-label {
+    color: #94a3b8 !important; /* High-contrast Slate 400 */
+    font-size: 11px;
+    font-weight: 500;
+  }
+  .inspector-subtext {
+    color: #cbd5e1 !important; /* Soft Slate 300 */
+  }
+  .inspector-card-dark {
+    background: rgba(15, 23, 42, 0.85) !important;
+    border: 1px solid rgba(148, 163, 184, 0.22) !important;
+    border-radius: 6px;
+  }
+  .inspector-body {
+    max-height: calc(100vh - 280px);
+    min-height: 460px;
+    overflow-y: auto;
+    padding-right: 4px;
+  }
+  .inspector-body::-webkit-scrollbar {
+    width: 6px;
+  }
+  .inspector-body::-webkit-scrollbar-track {
+    background: rgba(15, 23, 42, 0.4);
+    border-radius: 4px;
+  }
+  .inspector-body::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.35);
+    border-radius: 4px;
+  }
+  .inspector-body::-webkit-scrollbar-thumb:hover {
+    background: #00b4d8;
+  }
 </style>
 {% endblock %}
 
 {% block content %}
 <div class="container-fluid p-0">
   
-  <!-- TOP SUMMARY STRIP -->
-  <div class="dashboard-card mb-3 p-3">
-    <div class="d-flex flex-wrap align-items-center justify-content-between gap-2">
+  <!-- UNIFIED DASHBOARD TOOLBAR HEADER -->
+  <div class="dashboard-card mb-2 p-3">
+    <!-- Row 1: Title & Key Metric Pills -->
+    <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 pb-2 border-bottom border-secondary border-opacity-25">
       <div>
-        <h4 class="mb-1 text-light fw-bold">
-          <i class="fa-solid fa-cube text-cyan me-2"></i>3D Geospatial Flood Risk Atlas
+        <h4 class="mb-0 text-light fw-bold fs-5">
+          <i class="fa-solid fa-cube text-cyan me-2"></i>Odisha 3D Geospatial Flood Risk Atlas
         </h4>
-        <span class="text-muted small">
-          Statewide vertical 3D polygon choropleth rendered from authentic Odisha Census district geometries & frozen ML models
+        <span class="text-secondary small" style="font-size: 11px;">
+          Interactive WebGL 3D extrusion engine powered by authentic Odisha Census boundaries &amp; ML inference
         </span>
       </div>
       
       <!-- Key Metric Pills -->
-      <div class="d-flex flex-wrap align-items-center gap-2">
-        <div class="badge-tag" title="Selected Evaluation Date">
-          <i class="fa-regular fa-calendar text-cyan"></i>
+      <div class="d-flex flex-wrap align-items-center gap-1">
+        <div class="badge-tag py-1 px-2" title="Selected Evaluation Date">
+          <i class="fa-regular fa-calendar text-cyan me-1"></i>
           <span id="summaryDateBadge">{{ default_date }}</span>
         </div>
-        <div class="badge-tag" title="Forecast Horizon">
-          <i class="fa-solid fa-hourglass-half text-warning"></i>
-          <span id="summaryHorizonBadge">T+1 (Next-Day)</span>
+        <div class="badge-tag py-1 px-2" title="Forecast Horizon">
+          <i class="fa-solid fa-hourglass-half text-warning me-1"></i>
+          <span id="summaryHorizonBadge">T+1</span>
         </div>
-        <div class="badge-tag" title="Highest Risk Location">
-          <i class="fa-solid fa-triangle-exclamation text-danger"></i>
-          <span id="summaryHighestDistrict">PURI (82.1%)</span>
+        <div class="badge-tag py-1 px-2" title="Highest Risk Location">
+          <i class="fa-solid fa-triangle-exclamation text-danger me-1"></i>
+          <span id="summaryHighestDistrict">PURI</span>
         </div>
-        <div class="badge-tag bg-danger bg-opacity-25 border border-danger text-danger">
-          <strong>Elevated Risk (&ge;70%):</strong> <span id="summaryHighCount" class="fw-bold ms-1">0</span>
+        <div class="badge-tag py-1 px-2 bg-danger bg-opacity-25 border border-danger text-danger">
+          <strong>Elevated (&ge;65%):</strong> <span id="summaryHighCount" class="fw-bold ms-1">0</span>
         </div>
-        <div class="badge-tag bg-warning bg-opacity-25 border border-warning text-warning">
-          <strong>Moderate:</strong> <span id="summaryModCount" class="fw-bold ms-1">0</span>
+        <div class="badge-tag py-1 px-2 bg-warning bg-opacity-25 border border-warning text-warning">
+          <strong>Mod:</strong> <span id="summaryModCount" class="fw-bold ms-1">0</span>
         </div>
-        <div class="badge-tag bg-success bg-opacity-25 border border-success text-success">
-          <strong>Low:</strong> <span id="summaryLowCount" class="fw-bold ms-1">30</span>
+        <div class="badge-tag py-1 px-2 bg-success bg-opacity-25 border border-success text-success">
+          <strong>Low:</strong> <span id="summaryLowCount" class="fw-bold ms-1">0</span>
         </div>
-        <div class="badge-tag">
-          <span class="text-muted">Mean Risk:</span> <strong id="summaryAvgProb" class="text-cyan ms-1">0.0%</strong>
+        <div class="badge-tag py-1 px-2">
+          <span class="text-secondary">Mean:</span> <strong id="summaryAvgProb" class="text-cyan ms-1">0.0%</strong>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- CONTROL & FILTER TOOLBAR -->
-  <div class="dashboard-card mb-3 p-3">
-    <div class="row g-2 align-items-center">
+    <!-- Row 2: Compact Interactive Controls Strip -->
+    <div class="row g-2 align-items-center pt-2">
       <!-- Date Presets & Picker -->
-      <div class="col-xl-3 col-md-6">
-        <label class="form-label-clean small mb-1"><i class="fa-solid fa-calendar-day text-cyan me-1"></i> Prediction / Replay Date:</label>
-        <div class="input-group input-group-sm">
-          <select id="datePresetSelect" class="form-select form-control-dark" style="max-width: 60%;">
-            {% for dt in available_dates %}
-            <option value="{{ dt.value }}" {% if dt.value == default_date %}selected{% endif %}>
-              {{ dt.label }}
-            </option>
-            {% endfor %}
-          </select>
-          <input type="date" id="datePicker" class="form-control form-control-dark" value="{{ default_date }}">
+      <div class="col-xl-3 col-lg-4 col-md-6">
+        <div class="d-flex align-items-center gap-1">
+          <label class="form-label-clean small text-nowrap mb-0 me-1"><i class="fa-solid fa-calendar-day text-cyan"></i> Date:</label>
+          <div class="input-group input-group-sm flex-grow-1">
+            <select id="datePresetSelect" class="form-select form-control-dark" style="max-width: 58%;">
+              {% for dt in available_dates %}
+              <option value="{{ dt.value }}" {% if dt.value == default_date %}selected{% endif %}>
+                {{ dt.label }}
+              </option>
+              {% endfor %}
+            </select>
+            <input type="date" id="datePicker" class="form-control form-control-dark" value="{{ default_date }}">
+          </div>
         </div>
       </div>
 
       <!-- 3D Extrusion Data Layer -->
-      <div class="col-xl-2 col-md-6">
-        <label class="form-label-clean small mb-1"><i class="fa-solid fa-layer-group text-primary me-1"></i> 3D Extrusion Layer:</label>
-        <select id="dataLayerSelect" class="form-select form-select-sm form-control-dark">
-          <option value="probability" selected>Predicted Flood Probability (%)</option>
-          <option value="rainfall">Daily Rainfall (mm)</option>
-          <option value="antecedent_rainfall">7-Day Cumulative Rain (mm)</option>
-          <option value="historical_risk">24-Yr Historical Flood Rate (%)</option>
-        </select>
-      </div>
-
-      <!-- District Fly-To -->
-      <div class="col-xl-2 col-md-6">
-        <label class="form-label-clean small mb-1"><i class="fa-solid fa-crosshairs text-info me-1"></i> Focus District:</label>
-        <select id="districtSelect" class="form-select form-select-sm form-control-dark">
-          <option value="">-- Select District to Focus --</option>
-          {% for d in districts %}
-          <option value="{{ d }}">{{ d.title() }}</option>
-          {% endfor %}
-        </select>
-      </div>
-
-      <!-- Risk Tier Filter Buttons -->
-      <div class="col-xl-2 col-md-6">
-        <label class="form-label-clean small mb-1"><i class="fa-solid fa-filter text-warning me-1"></i> Filter Tier:</label>
-        <div class="btn-group btn-group-sm w-100" role="group">
-          <button type="button" class="btn btn-outline-secondary active" id="filterAllBtn" onclick="applyRiskFilter('ALL')">All</button>
-          <button type="button" class="btn btn-outline-danger" id="filterElevatedBtn" onclick="applyRiskFilter('ELEVATED')">High+</button>
-          <button type="button" class="btn btn-outline-warning" id="filterModBtn" onclick="applyRiskFilter('MODERATE')">Mod</button>
-          <button type="button" class="btn btn-outline-success" id="filterLowBtn" onclick="applyRiskFilter('LOW')">Low</button>
+      <div class="col-xl-2 col-lg-4 col-md-6">
+        <div class="d-flex align-items-center gap-1">
+          <label class="form-label-clean small text-nowrap mb-0 me-1"><i class="fa-solid fa-layer-group text-primary"></i> Layer:</label>
+          <select id="dataLayerSelect" class="form-select form-select-sm form-control-dark flex-grow-1">
+            <option value="probability" selected>Flood Probability (%)</option>
+            <option value="rainfall">Daily Rain (mm)</option>
+            <option value="antecedent_rainfall">7-Day Rain (mm)</option>
+            <option value="historical_risk">24-Yr Flood Rate (%)</option>
+          </select>
         </div>
       </div>
 
-      <!-- 3D Camera Controls -->
-      <div class="col-xl-3 col-md-12 text-xl-end">
-        <label class="form-label-clean small mb-1 d-none d-xl-block"><i class="fa-solid fa-camera text-muted me-1"></i> 3D View Controls:</label>
-        <div class="d-flex gap-1 justify-content-xl-end flex-wrap">
-          <button type="button" class="btn btn-sm btn-outline-cyan" onclick="resetOdishaView()" title="Reset to default Odisha center and 55° pitch">
-            <i class="fa-solid fa-arrows-rotate me-1"></i> Reset View
+      <!-- District Fly-To -->
+      <div class="col-xl-2 col-lg-4 col-md-6">
+        <div class="d-flex align-items-center gap-1">
+          <label class="form-label-clean small text-nowrap mb-0 me-1"><i class="fa-solid fa-crosshairs text-info"></i> Focus:</label>
+          <select id="districtSelect" class="form-select form-select-sm form-control-dark flex-grow-1">
+            <option value="">-- All Odisha --</option>
+            {% for d in districts %}
+            <option value="{{ d }}">{{ d.title() }}</option>
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+
+      <!-- Risk Tier Filter Buttons -->
+      <div class="col-xl-2 col-lg-6 col-md-6">
+        <div class="d-flex align-items-center gap-1">
+          <label class="form-label-clean small text-nowrap mb-0 me-1"><i class="fa-solid fa-filter text-warning"></i> Filter:</label>
+          <div class="btn-group btn-group-sm flex-grow-1" role="group">
+            <button type="button" class="btn btn-outline-secondary active py-1" id="filterAllBtn" onclick="applyRiskFilter('ALL')">All</button>
+            <button type="button" class="btn btn-outline-danger py-1" id="filterElevatedBtn" onclick="applyRiskFilter('ELEVATED')">High+</button>
+            <button type="button" class="btn btn-outline-warning py-1" id="filterModBtn" onclick="applyRiskFilter('MODERATE')">Mod</button>
+            <button type="button" class="btn btn-outline-success py-1" id="filterLowBtn" onclick="applyRiskFilter('LOW')">Low</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3D Camera Controls & Basemap Dropdown -->
+      <div class="col-xl-3 col-lg-6 col-md-12 text-xl-end">
+        <div class="d-flex gap-1 justify-content-xl-end flex-wrap align-items-center">
+          <button type="button" class="btn btn-sm btn-outline-cyan py-1" onclick="resetOdishaView()" title="Reset to Odisha centroid and 55° pitch">
+            <i class="fa-solid fa-arrows-rotate me-1"></i> Reset
           </button>
-          <button type="button" class="btn btn-sm btn-outline-secondary" id="togglePitchBtn" onclick="toggle2D3D()" title="Toggle between 3D tilted extrusion and 2D flat view">
-            <i class="fa-solid fa-cube me-1"></i> 3D Mode
+          <button type="button" class="btn btn-sm btn-outline-secondary py-1" id="togglePitchBtn" onclick="toggle2D3D()" title="Toggle between 3D tilted extrusion and 2D flat view">
+            <i class="fa-solid fa-cube me-1"></i> 3D/2D
           </button>
-          <button type="button" class="btn btn-sm btn-outline-secondary" id="toggleRotateBtn" onclick="toggleAutoRotate()" title="Toggle continuous slow rotation">
+          <button type="button" class="btn btn-sm btn-outline-secondary py-1" id="toggleRotateBtn" onclick="toggleAutoRotate()" title="Toggle continuous orbit rotation">
             <i class="fa-solid fa-compass me-1"></i> Orbit
           </button>
           
-          <!-- Basemap Dropdown -->
+          <!-- Basemap Dropdown (100% Free, No Watermark Tiles) -->
           <div class="dropdown">
-            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-              <i class="fa-solid fa-map"></i> Basemap
+            <button class="btn btn-sm btn-outline-secondary dropdown-toggle py-1" type="button" data-bs-toggle="dropdown">
+              <i class="fa-solid fa-map me-1"></i> Map
             </button>
-            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
-              <li><a class="dropdown-item active" href="javascript:switchBasemap('carto-dark')"><i class="fa-solid fa-moon me-2"></i>CARTO Dark Canvas (Default)</a></li>
-              <li><a class="dropdown-item" href="javascript:switchBasemap('carto-light')"><i class="fa-solid fa-sun me-2"></i>CARTO Light Matter</a></li>
-              <li><a class="dropdown-item" href="javascript:switchBasemap('osm')"><i class="fa-solid fa-road me-2"></i>OpenStreetMap</a></li>
-              <li><a class="dropdown-item" href="javascript:switchBasemap('satellite')"><i class="fa-solid fa-satellite me-2"></i>Esri Satellite Imagery</a></li>
+            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end shadow">
+              <li><a class="dropdown-item active" href="javascript:switchBasemap('esri-dark')"><i class="fa-solid fa-moon me-2 text-cyan"></i>Esri Dark Canvas (Clean, No Watermark)</a></li>
+              <li><a class="dropdown-item" href="javascript:switchBasemap('esri-light')"><i class="fa-solid fa-sun me-2 text-warning"></i>Esri Light Gray Canvas</a></li>
+              <li><a class="dropdown-item" href="javascript:switchBasemap('osm')"><i class="fa-solid fa-road me-2 text-info"></i>OpenStreetMap Standard</a></li>
+              <li><a class="dropdown-item" href="javascript:switchBasemap('satellite')"><i class="fa-solid fa-satellite me-2 text-success"></i>Esri Satellite Imagery</a></li>
             </ul>
           </div>
         </div>
@@ -252,28 +295,28 @@
           <!-- Floating 3D Legend -->
           <div class="map-floating-panel legend-3d">
             <div class="fw-bold mb-2 text-cyan d-flex justify-content-between align-items-center">
-              <span><i class="fa-solid fa-layer-group me-1"></i> Risk & Height Legend</span>
+              <span><i class="fa-solid fa-layer-group me-1"></i> Risk &amp; Height Legend</span>
               <span class="badge bg-secondary" style="font-size: 9px;">T+1 Horizon</span>
             </div>
             <div class="legend-item">
               <div class="legend-color-box" style="background-color: #ef4444;"></div>
-              <span>Very High Risk (&ge;85% prob)</span>
+              <span>Very High Risk (&ge;80% prob)</span>
             </div>
             <div class="legend-item">
               <div class="legend-color-box" style="background-color: #f97316;"></div>
-              <span>High Risk (70% &ndash; 84.9%)</span>
+              <span>High Risk (65% &ndash; 79.9%)</span>
             </div>
             <div class="legend-item">
               <div class="legend-color-box" style="background-color: #eab308;"></div>
-              <span>Moderate Risk (30% &ndash; 69.9%)</span>
+              <span>Moderate Risk (35% &ndash; 64.9%)</span>
             </div>
             <div class="legend-item">
               <div class="legend-color-box" style="background-color: #10b981;"></div>
-              <span>Low Risk (&lt;30% prob)</span>
+              <span>Low Risk (&lt;35% prob)</span>
             </div>
-            <div class="border-top border-secondary mt-2 pt-2 text-muted" style="font-size: 10px;">
+            <div class="border-top border-secondary mt-2 pt-2 text-secondary" style="font-size: 10px;">
               <i class="fa-solid fa-up-long text-info me-1"></i>
-              <strong>Polygon Height:</strong> Proportional to risk (up to 60 km vertical elevation).
+              <strong>Polygon Height:</strong> Dynamic relief up to 62 km vertical elevation.
               <div class="mt-1">
                 <i class="fa-solid fa-mouse-pointer text-cyan me-1"></i> Click district to inspect telemetry.
               </div>
@@ -299,26 +342,26 @@
         <!-- Inspector Header -->
         <div class="card-header-clean pb-2">
           <div>
-            <h3 class="mb-0 text-light fw-bold" id="inspectorDistName">CUTTACK</h3>
-            <span class="text-muted small" id="inspectorHq">Headquarters: Cuttack (Census Code: 388)</span>
+            <h3 class="mb-0 text-white fw-bold" id="inspectorDistName">CUTTACK</h3>
+            <span class="inspector-subtext small" id="inspectorHq">Headquarters: Cuttack (Census Code: 388)</span>
           </div>
           <span class="badge" id="inspectorRiskBadge" style="background-color: #10b981; font-size: 12px; padding: 6px 10px;">
             LOW RISK
           </span>
         </div>
 
-        <div class="inspector-body flex-grow-1 overflow-auto" style="max-height: 600px;">
+        <div class="inspector-body flex-grow-1">
           
           <!-- Big Probability Gauge -->
-          <div class="p-3 my-2 rounded bg-dark border border-secondary text-center">
-            <span class="text-muted small text-uppercase">Predicted Next-Day Flood Probability</span>
+          <div class="p-3 my-2 rounded inspector-card-dark text-center">
+            <span class="inspector-label text-uppercase fw-semibold" style="letter-spacing: 0.5px;">Predicted Next-Day Flood Probability</span>
             <div class="display-5 fw-bold text-cyan my-1" id="inspectorProbGauge">4.5%</div>
-            <div class="progress" style="height: 6px; background-color: rgba(255,255,255,0.1);">
-              <div class="progress-bar" id="inspectorProbBar" role="progressbar" style="width: 4.5%; background-color: #10b981;"></div>
+            <div class="progress" style="height: 8px; background-color: rgba(255,255,255,0.1); border-radius: 4px;">
+              <div class="progress-bar" id="inspectorProbBar" role="progressbar" style="width: 4.5%; background-color: #10b981; border-radius: 4px;"></div>
             </div>
-            <div class="d-flex justify-content-between text-muted mt-1" style="font-size: 10px;">
+            <div class="d-flex justify-content-between inspector-label mt-1" style="font-size: 11px;">
               <span>0% Low</span>
-              <span>Threshold: {{ optimal_threshold|round(4) }}</span>
+              <span class="badge bg-secondary bg-opacity-50 text-light px-2">Decision Threshold: {{ optimal_threshold|round(4) }}</span>
               <span>100% Critical</span>
             </div>
           </div>
@@ -326,38 +369,38 @@
           <!-- Rainfall Telemetry Grid -->
           <div class="mb-3">
             <div class="d-flex justify-content-between align-items-center mb-1">
-              <strong class="text-light small"><i class="fa-solid fa-cloud-rain text-primary me-1"></i> Precipitation Telemetry</strong>
-              <span class="badge bg-secondary" style="font-size: 10px;">IMD Gauge Net</span>
+              <strong class="text-white small"><i class="fa-solid fa-cloud-rain text-primary me-1"></i> Precipitation Telemetry</strong>
+              <span class="badge bg-secondary bg-opacity-75 text-light" style="font-size: 10px;">IMD Gauge Net</span>
             </div>
             <div class="row g-2 text-center">
               <div class="col-4">
-                <div class="p-2 rounded bg-dark border border-secondary">
-                  <div class="text-muted" style="font-size: 10px;">Daily Rain</div>
-                  <div class="fw-bold text-light" id="inspectorRainDaily">12.0 mm</div>
+                <div class="p-2 rounded inspector-card-dark">
+                  <div class="inspector-label">Daily Rain</div>
+                  <div class="fw-bold text-white fs-6" id="inspectorRainDaily">12.0 mm</div>
                 </div>
               </div>
               <div class="col-4">
-                <div class="p-2 rounded bg-dark border border-secondary">
-                  <div class="text-muted" style="font-size: 10px;">3-Day Cumul.</div>
-                  <div class="fw-bold text-light" id="inspectorRain3d">35.0 mm</div>
+                <div class="p-2 rounded inspector-card-dark">
+                  <div class="inspector-label">3-Day Cumul.</div>
+                  <div class="fw-bold text-white fs-6" id="inspectorRain3d">35.0 mm</div>
                 </div>
               </div>
               <div class="col-4">
-                <div class="p-2 rounded bg-dark border border-secondary">
-                  <div class="text-muted" style="font-size: 10px;">7-Day Antecedent</div>
-                  <div class="fw-bold text-cyan" id="inspectorRain7d">68.0 mm</div>
+                <div class="p-2 rounded inspector-card-dark">
+                  <div class="inspector-label">7-Day Antecedent</div>
+                  <div class="fw-bold text-cyan fs-6" id="inspectorRain7d">68.0 mm</div>
                 </div>
               </div>
               <div class="col-6">
-                <div class="p-2 rounded bg-dark border border-secondary">
-                  <div class="text-muted" style="font-size: 10px;">15-Day Accumulation</div>
-                  <div class="fw-bold text-light" id="inspectorRain15d">145.0 mm</div>
+                <div class="p-2 rounded inspector-card-dark">
+                  <div class="inspector-label">15-Day Accumulation</div>
+                  <div class="fw-bold text-white fs-6" id="inspectorRain15d">145.0 mm</div>
                 </div>
               </div>
               <div class="col-6">
-                <div class="p-2 rounded bg-dark border border-secondary">
-                  <div class="text-muted" style="font-size: 10px;">30-Day Monsoon Total</div>
-                  <div class="fw-bold text-light" id="inspectorRain30d">280.0 mm</div>
+                <div class="p-2 rounded inspector-card-dark">
+                  <div class="inspector-label">30-Day Monsoon Total</div>
+                  <div class="fw-bold text-white fs-6" id="inspectorRain30d">280.0 mm</div>
                 </div>
               </div>
             </div>
@@ -365,19 +408,19 @@
 
           <!-- SHAP Explanatory Risk Drivers -->
           <div class="mb-3">
-            <strong class="text-light small"><i class="fa-solid fa-brain text-info me-1"></i> Top Model Attribution Drivers</strong>
+            <strong class="text-white small"><i class="fa-solid fa-brain text-info me-1"></i> Top Model Attribution Drivers</strong>
             <div class="mt-2">
-              <div class="p-2 mb-1 rounded bg-dark border border-secondary d-flex justify-content-between align-items-center">
-                <span class="small text-light" id="inspectorFactor1">Rainfall_Prev_7d_Sum</span>
-                <span class="badge bg-danger bg-opacity-25 text-danger" style="font-size: 10px;">+Risk</span>
+              <div class="p-2 mb-1 rounded inspector-card-dark d-flex justify-content-between align-items-center">
+                <span class="small text-white fw-medium" id="inspectorFactor1">Rainfall_Prev_7d_Sum</span>
+                <span class="badge bg-danger bg-opacity-25 text-danger border border-danger border-opacity-50" style="font-size: 10px;">+Risk Driver</span>
               </div>
-              <div class="p-2 mb-1 rounded bg-dark border border-secondary d-flex justify-content-between align-items-center">
-                <span class="small text-light" id="inspectorFactor2">Rainfall_Prev_3d_Sum</span>
-                <span class="badge bg-warning bg-opacity-25 text-warning" style="font-size: 10px;">+Risk</span>
+              <div class="p-2 mb-1 rounded inspector-card-dark d-flex justify-content-between align-items-center">
+                <span class="small text-white fw-medium" id="inspectorFactor2">Rainfall_Prev_3d_Sum</span>
+                <span class="badge bg-warning bg-opacity-25 text-warning border border-warning border-opacity-50" style="font-size: 10px;">+Risk Driver</span>
               </div>
-              <div class="p-2 mb-1 rounded bg-dark border border-secondary d-flex justify-content-between align-items-center">
-                <span class="small text-light" id="inspectorFactor3">Month_cos</span>
-                <span class="badge bg-info bg-opacity-25 text-info" style="font-size: 10px;">Seasonal</span>
+              <div class="p-2 mb-1 rounded inspector-card-dark d-flex justify-content-between align-items-center">
+                <span class="small text-white fw-medium" id="inspectorFactor3">Month_cos</span>
+                <span class="badge bg-info bg-opacity-25 text-info border border-info border-opacity-50" style="font-size: 10px;">Seasonal</span>
               </div>
             </div>
           </div>
@@ -385,35 +428,35 @@
           <!-- Block Stations Integration -->
           <div class="mb-3">
             <div class="d-flex justify-content-between align-items-center mb-1">
-              <strong class="text-light small"><i class="fa-solid fa-sitemap text-warning me-1"></i> Sub-District Block Coverage</strong>
+              <strong class="text-white small"><i class="fa-solid fa-sitemap text-warning me-1"></i> Sub-District Block Coverage</strong>
               <span class="badge bg-dark border border-secondary text-info" id="inspectorBlocksCount">14 Blocks</span>
             </div>
-            <div class="p-2 rounded bg-dark border border-secondary mb-2">
-              <div class="d-flex justify-content-between text-muted small">
-                <span>Peak Inundation Vulnerability Station:</span>
-                <strong class="text-warning" id="inspectorPeakBlock">Banki</strong>
+            <div class="p-2 rounded inspector-card-dark mb-2">
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="inspector-label">Peak Vulnerability Station:</span>
+                <strong class="text-warning fs-6" id="inspectorPeakBlock">Banki</strong>
               </div>
             </div>
-            <div class="small text-muted mb-1">Reporting Stations:</div>
+            <div class="small inspector-label mb-1">Reporting Stations:</div>
             <div id="inspectorBlocksList" class="d-flex flex-wrap gap-1"></div>
-            <div class="text-muted mt-2" style="font-size: 10px;">
+            <div class="inspector-label mt-2" style="font-size: 11px;">
               <i class="fa-solid fa-circle-exclamation text-warning me-1"></i>
-              <strong>Scope Notice:</strong> 3D polygons are currently extruded at district boundary scale; block-level station coordinates and individual SHAP attributions are available in Station Drilldown.
+              <strong>Scope Notice:</strong> 3D polygons are extruded at district boundary scale; block-level station coordinates and individual SHAP attributions are available in Station Drilldown.
             </div>
           </div>
 
           <!-- Historical Disaster Benchmark -->
-          <div class="mb-3 p-2 rounded bg-dark border border-secondary">
+          <div class="mb-3 p-2 rounded inspector-card-dark">
             <div class="d-flex justify-content-between align-items-center mb-1">
-              <span class="text-muted small">24-Year Benchmark (2001&ndash;2024):</span>
+              <span class="inspector-label">24-Year Benchmark (2001&ndash;2024):</span>
               <span class="badge bg-secondary" style="font-size: 9px;">SRC Ground Truth</span>
             </div>
-            <div class="d-flex justify-content-between small text-light">
-              <span>Historical Flood Inundation Days:</span>
+            <div class="d-flex justify-content-between small text-white">
+              <span class="inspector-subtext">Historical Flood Inundation Days:</span>
               <strong class="text-cyan" id="inspectorHistDays">150 days</strong>
             </div>
-            <div class="d-flex justify-content-between small text-light mt-1">
-              <span>Baseline Disaster Frequency:</span>
+            <div class="d-flex justify-content-between small text-white mt-1">
+              <span class="inspector-subtext">Baseline Disaster Frequency:</span>
               <strong class="text-cyan" id="inspectorHistRate">5.4%</strong>
             </div>
           </div>

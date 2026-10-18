@@ -239,8 +239,10 @@ def risk_map():
 def risk_map_3d():
     """Interactive 3D Geospatial Flood Risk & Extrusion Map of Odisha."""
     available_dates = [
-        {"value": "2025-08-15", "label": "2025-08-15 (Peak Monsoon 2025 - Operational)", "badge": "2025 Operational"},
-        {"value": "2025-07-25", "label": "2025-07-25 (High Inundation Risk Day)", "badge": "2025 Operational"},
+        {"value": "2025-07-15", "label": "2025-07-15 (Mid-Monsoon Active Inundation Surge)", "badge": "2025 Operational"},
+        {"value": "2025-08-15", "label": "2025-08-15 (Peak Monsoon Statewide Depression)", "badge": "2025 Operational"},
+        {"value": "2025-06-20", "label": "2025-06-20 (Early Monsoon Onset - Low/Mod Baseline)", "badge": "2025 Operational"},
+        {"value": "2025-07-25", "label": "2025-07-25 (Coastal Inundation Risk Day)", "badge": "2025 Operational"},
         {"value": "2025-09-08", "label": "2025-09-08 (Late Monsoon Surge)", "badge": "2025 Operational"},
         {"value": "2022-08-15", "label": "2022-08-15 (Mahanadi River Basin Mega-Flood)", "badge": "Historical Replay"},
         {"value": "2024-09-16", "label": "2024-09-16 (Subarnarekha / Balasore Extreme)", "badge": "Historical Replay"},
@@ -252,7 +254,7 @@ def risk_map_3d():
         active_page="3d-risk-map",
         districts=STANDARD_DISTRICTS,
         available_dates=available_dates,
-        default_date="2025-08-15",
+        default_date="2025-07-15",
         default_layer="probability",
         optimal_threshold=state.predictor.threshold if state.predictor else 0.8073
     )

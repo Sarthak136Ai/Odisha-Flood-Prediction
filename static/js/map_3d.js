@@ -20,39 +20,57 @@ let rotationFrameId = null;
 let is3DMode = true;
 let leagueChart = null;
 
-// Free, non-token basemap style specifications
+// Free, non-token, non-watermarked basemap style specifications
 const BASEMAP_STYLES = {
-  "carto-dark": {
+  "esri-dark": {
     version: 8,
     sources: {
-      "base-raster": {
+      "esri-dark-base": {
         type: "raster",
         tiles: [
-          "https://a.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png",
-          "https://b.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png",
-          "https://c.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png"
+          "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}"
         ],
         tileSize: 256,
-        attribution: "&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> &copy; <a href='https://carto.com/'>CARTO</a>"
+        attribution: "Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ"
+      },
+      "esri-dark-ref": {
+        type: "raster",
+        tiles: [
+          "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}"
+        ],
+        tileSize: 256,
+        attribution: ""
       }
     },
-    layers: [{ id: "base-raster-layer", type: "raster", source: "base-raster" }]
+    layers: [
+      { id: "esri-dark-base-layer", type: "raster", source: "esri-dark-base" },
+      { id: "esri-dark-ref-layer", type: "raster", source: "esri-dark-ref" }
+    ]
   },
-  "carto-light": {
+  "esri-light": {
     version: 8,
     sources: {
-      "base-raster": {
+      "esri-light-base": {
         type: "raster",
         tiles: [
-          "https://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png",
-          "https://b.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png",
-          "https://c.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png"
+          "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}"
         ],
         tileSize: 256,
-        attribution: "&copy; OpenStreetMap &copy; CARTO"
+        attribution: "Tiles &copy; Esri"
+      },
+      "esri-light-ref": {
+        type: "raster",
+        tiles: [
+          "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}"
+        ],
+        tileSize: 256,
+        attribution: ""
       }
     },
-    layers: [{ id: "base-raster-layer", type: "raster", source: "base-raster" }]
+    layers: [
+      { id: "esri-light-base-layer", type: "raster", source: "esri-light-base" },
+      { id: "esri-light-ref-layer", type: "raster", source: "esri-light-ref" }
+    ]
   },
   "osm": {
     version: 8,
@@ -89,10 +107,10 @@ function init3DRiskMap(containerId = "odisha-3d-map") {
   const container = document.getElementById(containerId);
   if (!container) return;
 
-  // Initialize MapLibre GL
+  // Initialize MapLibre GL with clean, non-watermarked Esri Dark Canvas
   map3d = new maplibregl.Map({
     container: containerId,
-    style: BASEMAP_STYLES["carto-dark"],
+    style: BASEMAP_STYLES["esri-dark"],
     center: [84.45, 20.45], // Odisha geographic centroid (lon, lat)
     zoom: 6.85,
     pitch: 55, // 3D Perspective angle
@@ -131,7 +149,7 @@ function init3DRiskMap(containerId = "odisha-3d-map") {
 
     // Fetch initial dataset
     const dateInput = document.getElementById("datePicker");
-    const initialDate = dateInput ? dateInput.value : "2025-08-15";
+    const initialDate = dateInput && dateInput.value ? dateInput.value : "2025-07-15";
     const layerSelect = document.getElementById("dataLayerSelect");
     const initialLayer = layerSelect ? layerSelect.value : "probability";
 
@@ -547,7 +565,7 @@ function renderLeagueChart(leagueList) {
         {
           label: "Predicted Flood Probability (%)",
           data: probs,
-          backgroundColor: probs.map(p => p >= 85 ? "#ef4444" : (p >= 70 ? "#f97316" : (p >= 30 ? "#eab308" : "#10b981"))),
+          backgroundColor: probs.map(p => p >= 80 ? "#ef4444" : (p >= 65 ? "#f97316" : (p >= 35 ? "#eab308" : "#10b981"))),
           borderColor: "#1e293b",
           borderWidth: 1,
           borderRadius: 4
@@ -625,7 +643,7 @@ function filterRiskTiers(tier) {
  */
 function switchDataLayer(layerName) {
   const dateInput = document.getElementById("datePicker");
-  const targetDate = dateInput ? dateInput.value : "2025-08-15";
+  const targetDate = dateInput && dateInput.value ? dateInput.value : "2025-07-15";
   load3DRiskData(targetDate, layerName);
 }
 
