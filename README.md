@@ -285,6 +285,26 @@ The conversational assistant (`/assistant`) operates strictly as an **interpreti
 
 ---
 
+## 🔬 Experiment Reproducibility, Model Metadata & Schema Validation
+
+To guarantee end-to-end scientific provenance, every model artifact is paired with dynamically generated metadata (`model_metadata.json` & `calibrated_metadata.json`), ensuring full auditability without hardcoded runtime parameters:
+
+### Key Architectural Pillars:
+1. **Dynamic Environment Introspection (Zero Hardcoding)**:
+   - Python runtime (`3.10.0`), core dependencies (`numpy`, `pandas`, `scipy`, `scikit-learn`, `xgboost`, `joblib`, `matplotlib`, `seaborn`, `flask`), and model hyperparameters are discovered dynamically via `importlib.metadata` and `estimator.get_params()`.
+2. **Cryptographic Dataset Hashing**:
+   - Computes a chunked SHA-256 hash of the training data snapshot (`1145a2ae6ac1bdaf798ae4f44c86c5f057c0a11cca9cba369dba49450df8f5f9`), ensuring any data drift or mutation is immediately detectable.
+3. **Atomic Model Bundle Loading (`ModelBundle`)**:
+   - `load_model_with_metadata()` atomically verifies that the model object and metadata JSON correspond to each other before initializing the `FloodPredictor` engine.
+4. **Strict Pre-Prediction Feature Schema Validation**:
+   - Inputs are validated for: missing columns, dimensional mismatch, non-numeric dtypes, null/NaN/infinite values, and empty datasets.
+   - Any schema violation raises `SchemaValidationError(ValueError)` and immediately prevents model execution on invalid inputs.
+5. **Full Technical Documentation & Tests**:
+   - Comprehensive documentation is provided in [`docs/model_reproducibility.md`](file:///c:/Users/hp/OneDrive/Desktop/Odisha_Flood_Prediction/docs/model_reproducibility.md).
+   - 14 automated unit and integration tests are verified in `tests/test_model_metadata.py`.
+
+---
+
 ## ⚖️ Scientific Governance & Operational Disclaimers
 
 - **Zero Data Leakage**: All rolling window features use strictly antecedent data (e.g. `shift(1).rolling(...)`). The target `Flood_Next_Day` is evaluated for next-day flood forecasting ($T+1$) and is never used as an input feature.

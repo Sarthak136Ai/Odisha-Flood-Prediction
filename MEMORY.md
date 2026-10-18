@@ -54,7 +54,7 @@
   - `GET /downscaling`: District-to-block statistical downscaling evaluation & comparison.
   - `GET /assistant` & `POST /api/assistant/query`: Grounded AI Flood Assistant Interface Layer (deterministic retrieval from live model/metadata, zero invented numerical values, guarded fallbacks).
   - `GET /architecture`: System methodology & dual-pipeline visual architecture.
-- **Automated Test Suite**: 133 tests in `tests/` passing with 100% success rate (including `test_chatbot.py` [17 tests], `test_downscaling.py`, `test_calibration.py`, `test_multi_horizon.py`, `test_feature_ablation.py`, `test_rainfall_features.py`, `test_event_evaluation.py`, `test_confusion_matrix.py`, `test_class_imbalance.py`, `test_threshold_selection.py`, `test_temporal_validation.py` & `test_data_quality.py`).
+- **Automated Test Suite**: 147 tests in `tests/` passing with 100% success rate (including `test_model_metadata.py` [14 tests], `test_chatbot.py` [17 tests], `test_downscaling.py`, `test_calibration.py`, `test_multi_horizon.py`, `test_feature_ablation.py`, `test_rainfall_features.py`, `test_event_evaluation.py`, `test_confusion_matrix.py`, `test_class_imbalance.py`, `test_threshold_selection.py`, `test_temporal_validation.py` & `test_data_quality.py`).
 - **Data Quality Audit Engine**: `src/data/data_quality.py` & `reports/data_quality_report.html` (15-dimension automated audit).
 - **Temporal Walk-Forward Validation Engine**: `src/evaluation/temporal_validation.py` & `docs/temporal_validation_strategy.md` (5-fold expanding window cross-validation, 2017–2021).
 - **Threshold Selection & Audit Engine**: `src/evaluation/threshold_optimization.py` & `docs/threshold_selection_strategy.md` (Validation-only 2019–2021 tuning, F1/F2/Recall>=80%/Youden's J/Cost-Sensitive, unweighted ANN vs class-weighted odds shift justification).
@@ -93,4 +93,10 @@
   - Removal of Unverified Claims: Eliminated all legacy "hallucination-free" phrasing; implemented deterministic retrieval with guarded fallbacks.
   - Explicit Missing Data Guards: Explicitly returns `"Sufficient project data is not available: ..."` when stations, blocks, or dates lack telemetry, or when model artifacts are uninitialized.
   - Comprehensive Verification: 17 unit and negative edge-case tests in `tests/test_chatbot.py` verifying supported questions and missing/invalid inputs.
+- **Experiment Reproducibility, Model Metadata & Feature Schema Validation Engine**: `src/models/metadata.py`, `src/models/predict.py`, `tests/test_model_metadata.py`, `docs/model_reproducibility.md`.
+  - Comprehensive Metadata Schema: 15 required reproducibility keys (`model_name`, `training_date`, `dataset_version`, `dataset_hash`, `training_period`, `validation_period`, `test_period`, `feature_list`, `preprocessing_version`, `random_seed`, `hyperparameters`, `threshold`, `calibration_method`, `python_version`, `library_versions`).
+  - Zero Hardcoding: Dynamically inspects Python runtime (`platform.python_version()`), installed packages (`importlib.metadata.version()`), estimator hyperparameters (`model.get_params()`), and chunked SHA-256 dataset hash (`1145a2ae6ac1bdaf...`).
+  - Unified Model Bundle Loading: `load_model_with_metadata()` loads model binary and metadata JSON together as an atomic `ModelBundle`.
+  - Pre-Prediction Feature Schema Validation: Strict validation in `FloodPredictor` prevents inference and raises `SchemaValidationError` on missing feature columns, array dimension mismatches, non-numeric dtypes, NaN/inf values, or empty inputs.
+  - Comprehensive Verification: 14 automated unit and integration tests in `tests/test_model_metadata.py` passing with 100% success rate (147 total tests across repo).
 

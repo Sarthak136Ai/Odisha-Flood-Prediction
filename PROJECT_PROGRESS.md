@@ -1,9 +1,9 @@
 # Odisha Flood Intelligence & Early Warning System
 ## Master Project Progress & Architecture Tracker
 
-**Last Updated:** 2026-10-14 13:30:00 IST  
+**Last Updated:** 2026-10-18 09:00:00 IST  
 **Current Phase:** Production Deployment & GitHub Sync  
-**Overall Status:** **100% Completed & Verified** (133/133 Automated Unit & Integration Tests Passing)
+**Overall Status:** **100% Completed & Verified** (147/147 Automated Unit & Integration Tests Passing)
 
 ---
 
@@ -74,7 +74,8 @@ The **Odisha Flood Intelligence & Early Warning System** is an end-to-end, spati
 | **34** | Multi-Horizon Flood Forecasting & Degradation Engine | **Completed** | Implemented configurable target generation for horizons T+1 (24h), T+2 (48h), T+3 (72h) with strict calendar delta validation, zero future rainfall leakage, backward compatibility with Flood_Next_Day, validation-only threshold tuning, out-of-sample test evaluation, CSV metrics, 4-panel degradation plots, report `docs/multi_horizon_forecasting.md`, and 7 unit tests |
 | **35** | Empirical Probability Calibration & Reliability Upgrade | **Completed** | Audited and corrected legacy raw calibration claim (~19.6% ECE due to class-weight prior shift), implemented validation-only post-hoc calibrators (Platt Sigmoid & Isotonic), reduced ECE by >95% (<0.005) and Brier Score by >80% (to 0.025), evaluated 4 architectures on untouched test set, updated FloodPredictor with calibrated mode, saved calibrated artifacts, created 4-panel publication figures, comprehensive report `docs/probability_calibration.md`, and 7 unit tests |
 | **36** | Rainfall Downscaling Scientific Audit & Disaggregation Engine | **Completed** | Full scientific audit of district-to-block downscaling (~5,190 km² to ~440 km²), strict non-leakage protocol (Train 2001–2018, Val 2019–2021, Test 2022–2024), evaluated Observed vs Coarse vs Downscaled series across MAE, RMSE, R², Bias, Pearson r, IMD intensity-tier breakdown, downstream flood early warning benchmark (+3.91% precision, +0.0220 PR-AUC), 4-panel publication figures, technical documentation `docs/downscaling_methodology.md`, and 8 unit tests in `tests/test_downscaling.py` |
-| **37** | Chatbot Interface Layer Scientific Audit & Grounded Response System | **Completed** | Strict interface layer design (never computes or invents predictions), deterministic grounding via live `FloodPredictor` and `model_metadata.json`, removed all unverified "hallucination-free" phrasing, dynamic answers for all 7 audited queries, explicit missing data guards (`Sufficient project data is not available: ...`), 17 comprehensive unit/negative tests in `tests/test_chatbot.py`, and technical report `docs/chatbot_architecture.md` (133 total tests passing) |
+| **37** | Chatbot Interface Layer Scientific Audit & Grounded Response System | **Completed** | Strict interface layer design (never computes or invents predictions), deterministic grounding via live `FloodPredictor` and `model_metadata.json`, removed all unverified "hallucination-free" phrasing, dynamic answers for all 7 audited queries, explicit missing data guards (`Sufficient project data is not available: ...`), 17 comprehensive unit/negative tests in `tests/test_chatbot.py`, and technical report `docs/chatbot_architecture.md` |
+| **38** | Experiment Reproducibility, Model Metadata & Feature Schema Validation | **Completed** | Implemented automated model metadata generation (`src/models/metadata.py`), 15 required reproducibility keys, dynamic environment discovery (zero hardcoding), chunked SHA-256 dataset hashing (`1145a2ae6ac1bdaf...`), unified `ModelBundle` loading, strict pre-prediction feature schema validation blocking invalid inputs with `SchemaValidationError`, technical documentation `docs/model_reproducibility.md`, and 14 unit tests in `tests/test_model_metadata.py` (147 total tests passing) |
 
 ---
 
@@ -92,7 +93,8 @@ The **Odisha Flood Intelligence & Early Warning System** is an end-to-end, spati
 
 ## 🧪 Automated Test Verification
 
-All **133 test cases** in `tests/` pass with 100% success rate:
+All **147 test cases** in `tests/` pass with 100% success rate:
+- `tests/test_model_metadata.py`: 14 Model metadata schema completeness, SHA-256 verification, dynamic environment discovery, ModelBundle loading, and schema validation edge-case tests
 - `tests/test_downscaling.py`: 8 Coarse spatial aggregation, perfect agreement, known bias, zero variance, benchmark table, IMD intensity tiers, non-negativity clipping & lookahead leakage prevention tests
 - `tests/test_calibration.py`: 7 ECE/MCE computation, uncalibrated shift detection, validation-only calibrator fitting, Brier reduction, FloodPredictor calibrated mode & publication plot tests
 - `tests/test_multi_horizon.py`: 7 Target naming, consecutive shift, calendar gap masking, cross-station isolation, Flood_Next_Day compatibility, target alignment audit & degradation plotting tests

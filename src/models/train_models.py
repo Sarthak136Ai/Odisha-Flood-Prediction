@@ -248,22 +248,23 @@ def train_and_evaluate_all_models(
     model_save_path = os.path.join(models_dir, "best_model.pkl")
     joblib.dump(best_model, model_save_path)
     
-    metadata = {
-        "model_name": best_model_name,
-        "optimal_threshold": best_threshold,
-        "features": feature_cols,
-        "risk_thresholds": config["risk_thresholds"],
-        "train_years": config["split"]["train_years"],
-        "val_years": config["split"]["val_years"],
-        "test_years": config["split"]["test_years"],
-        "test_metrics": best_row.to_dict(),
-        "brier_score": float(best_row["Test_Brier_Score"]),
-        "calibration_ece": float(best_row["Test_Calibration_ECE"])
-    }
+    from src.models.metadata import generate_model_metadata, save_model_metadata
+
+    metadata = generate_model_metadata(
+        model=best_model,
+        model_name=best_model_name,
+        feature_cols=feature_cols,
+        threshold=best_threshold,
+        config=config,
+        dataset_path=combined_path,
+        test_metrics=best_row.to_dict(),
+        brier_score=float(best_row["Test_Brier_Score"]),
+        calibration_ece=float(best_row["Test_Calibration_ECE"]),
+        calibration_method="none"
+    )
     
     metadata_save_path = os.path.join(models_dir, "model_metadata.json")
-    with open(metadata_save_path, "w", encoding="utf-8") as f:
-        json.dump(metadata, f, indent=2)
+    save_model_metadata(metadata, metadata_save_path)
         
     logger.info(f"Best model artifact saved to {model_save_path}")
     logger.info(f"Model metadata saved to {metadata_save_path}")
